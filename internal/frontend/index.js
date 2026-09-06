@@ -91,6 +91,8 @@ const language_to_flag = (language) => {
             return "\u{1f1f5}\u{1f1f1}";
         case "hebrew":
             return "\u{1f1ee}\u{1f1f1}";
+        case "indonesian":
+            return "\u{1f1ee}\u{1f1e9}";
     }
 };
 

@@ -77,6 +77,10 @@ var (
 			LanguageCode: "fa",
 			Lowercaser:   func() cases.Caser { return cases.Lower(language.Persian) },
 		},
+		"indonesian": {
+			LanguageCode: "id",
+			Lowercaser:   func() cases.Caser { return cases.Lower(language.Make("id")) },
+		},
 	}
 
 	//go:embed words/*

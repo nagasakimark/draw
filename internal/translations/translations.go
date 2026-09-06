@@ -19,6 +19,7 @@ func init() {
 	initHebrewTranslation()
 	initPersianTranslation()
 	initFrenchTranslation()
+	initIndonesianTranslation()
 }
 
 var translationRegistry = make(map[string]*Translation)
