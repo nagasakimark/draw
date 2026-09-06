@@ -197,5 +197,5 @@ func WritePreparedMessage(player *game.Player, message *gws.Broadcaster) error {
 		return ErrPlayerNotConnected
 	}
 
-	return message.Broadcast(socket)
+	return message.Broadcast(socket, nil)
 }
