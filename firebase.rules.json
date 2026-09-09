@@ -24,7 +24,7 @@
           ".validate": "newData.isNumber() && (!data.exists() || newData.val() == data.val())"
         },
         "expiresAt": {
-          ".validate": "newData.isNumber() && (!data.exists() ? (newData.val() > now && newData.val() <= now + 21600000) : newData.val() == data.val())"
+          ".validate": "newData.isNumber() && (!data.exists() ? (newData.val() > now - 86400000 && newData.val() < now + 604800000) : newData.val() == data.val())"
         },
         "phase": {
           ".validate": "newData.isString() && (newData.val() == 'lobby' || newData.val() == 'choosing' || newData.val() == 'drawing' || newData.val() == 'gameOver')"

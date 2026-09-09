@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 import {
   getDatabase,
   ref,
@@ -115,14 +115,17 @@ async function boot() {
 }
 
 async function ensureAnonymousAuth() {
-  await state.auth.authStateReady();
-  if (state.auth.currentUser?.uid) {
-    return state.auth.currentUser.uid;
-  }
   try {
-    const result = await signInAnonymously(state.auth);
     await state.auth.authStateReady();
-    return result.user.uid;
+
+    if (!state.auth.currentUser) {
+      await signInAnonymously(state.auth);
+    }
+
+    const user = await waitForSignedInUser();
+    // Ensure the RTDB client has a fresh ID token before any read/write.
+    await user.getIdToken(true);
+    return user.uid;
   } catch (error) {
     const code = error?.code || "";
     if (code === "auth/unauthorized-domain") {
@@ -137,6 +140,33 @@ async function ensureAnonymousAuth() {
     }
     throw new Error(`ログインに失敗しました: ${error.message || code || error}`);
   }
+}
+
+function waitForSignedInUser() {
+  if (state.auth.currentUser) {
+    return Promise.resolve(state.auth.currentUser);
+  }
+  return new Promise((resolve, reject) => {
+    const timer = window.setTimeout(() => {
+      unsubscribe();
+      reject(new Error("認証がタイムアウトしました。ページを再読み込みしてください。"));
+    }, 10000);
+    const unsubscribe = onAuthStateChanged(
+      state.auth,
+      (user) => {
+        if (user) {
+          window.clearTimeout(timer);
+          unsubscribe();
+          resolve(user);
+        }
+      },
+      (error) => {
+        window.clearTimeout(timer);
+        unsubscribe();
+        reject(error);
+      }
+    );
+  });
 }
 
 function explainFirebaseError(error, fallback) {
