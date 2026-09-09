@@ -31,6 +31,7 @@
         },
         "players": {
           "$playerId": {
+            ".write": "auth != null && auth.uid == $playerId",
             ".validate": "newData.hasChildren(['name', 'score', 'connected'])"
           }
         },

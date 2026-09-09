@@ -174,7 +174,7 @@ function waitForSignedInUser() {
 function explainFirebaseError(error, fallback) {
   const message = String(error?.message || error || "");
   if (message.includes("PERMISSION_DENIED") || error?.code === "PERMISSION_DENIED") {
-    return "Firebase の権限エラーです。① Anonymous 認証を有効化 ② Authorized domains に nagasakimark.github.io を追加 ③ Realtime Database の Rules に firebase.rules.json を Publish してください。";
+    return "Firebase の権限エラーです。Realtime Database → いまアプリが使う DB（asia-southeast1）を選び、firebase.rules.json を Publish し直してください。App Check を強制している場合は一時的にオフにしてください。";
   }
   return fallback || message;
 }
@@ -583,15 +583,34 @@ async function subscribeToRoom(roomCode) {
 
 async function attachPresence(roomCode) {
   await cancelDisconnectHandlers();
-  const playerRef = ref(state.db, `rooms/${roomCode}/players/${state.playerId}`);
-  state.playerDisconnect = onDisconnect(playerRef);
-  await state.playerDisconnect.remove();
-  await update(playerRef, {
-    connected: true,
-    lastSeen: Date.now()
-  });
+  const uid = state.auth.currentUser?.uid || state.playerId;
+  state.playerId = uid;
+  const playerRef = ref(state.db, `rooms/${roomCode}/players/${uid}`);
+  const existingScore = state.roomData?.players?.[uid]?.score || 0;
+  const playerData = makePlayerRecord(readPlayerName() || "Player", existingScore);
+
+  await update(playerRef, playerData);
+
+  // Use update-on-disconnect (not remove). remove() was rejected by rules
+  // after room create and blocked entering the lobby.
+  try {
+    state.playerDisconnect = onDisconnect(playerRef);
+    await state.playerDisconnect.update({
+      connected: false,
+      leftAt: Date.now()
+    });
+  } catch (error) {
+    console.warn("onDisconnect player setup failed", error);
+    state.playerDisconnect = null;
+  }
+
   state.presenceReady = true;
-  await refreshRoomDisconnectHandler(roomCode);
+
+  try {
+    await refreshRoomDisconnectHandler(roomCode);
+  } catch (error) {
+    console.warn("room disconnect setup failed", error);
+  }
 }
 
 async function refreshRoomDisconnectHandler(roomCode) {
@@ -612,9 +631,16 @@ async function refreshRoomDisconnectHandler(roomCode) {
     state.roomDisconnect = null;
   }
 
-  if (onlyMe) {
+  if (!onlyMe) {
+    return;
+  }
+
+  try {
     state.roomDisconnect = onDisconnect(ref(state.db, `rooms/${roomCode}`));
     await state.roomDisconnect.remove();
+  } catch (error) {
+    console.warn("onDisconnect room remove not permitted; relying on leave/expiry cleanup", error);
+    state.roomDisconnect = null;
   }
 }
 
@@ -1227,16 +1253,24 @@ async function leaveRoom() {
   if (roomCode && state.playerId) {
     await cancelDisconnectHandlers();
     try {
-      await remove(ref(state.db, `rooms/${roomCode}/players/${state.playerId}`));
+      await update(ref(state.db, `rooms/${roomCode}/players/${state.playerId}`), {
+        connected: false,
+        leftAt: Date.now()
+      });
       const snapshot = await get(ref(state.db, `rooms/${roomCode}`));
       if (snapshot.exists()) {
         const room = snapshot.val();
-        if (!hasConnectedPlayers(room) || Object.keys(room.players || {}).length === 0) {
+        if (!hasConnectedPlayers(room)) {
           await remove(ref(state.db, `rooms/${roomCode}`));
         }
       }
     } catch (error) {
       console.warn("Leave room cleanup failed", error);
+      try {
+        await remove(ref(state.db, `rooms/${roomCode}`));
+      } catch (removeError) {
+        console.warn("Room remove failed", removeError);
+      }
     }
   }
   clearRoomState("部屋をでました。");
