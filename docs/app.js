@@ -83,8 +83,7 @@ const state = {
   color: "#000000",
   brushSize: 8,
   boardCache: null,
-  boardCacheRevision: null,
-  previewFrame: null
+  boardCacheRevision: null
 };
 
 const ctx = els.board.getContext("2d");
@@ -831,15 +830,6 @@ function cacheCommittedBoard(revision) {
   state.boardCacheRevision = revision;
 }
 
-function restoreCommittedBoard() {
-  if (!state.boardCache || state.boardCacheRevision == null) {
-    redrawBoard(state.roomData?.board || { strokes: {} });
-    return;
-  }
-  ctx.clearRect(0, 0, els.board.width, els.board.height);
-  ctx.drawImage(state.boardCache, 0, 0);
-}
-
 async function startGame() {
   if (!state.roomCode || state.roomData?.ownerId !== state.playerId) {
     return;
@@ -1307,10 +1297,6 @@ function hexToRgba(hex) {
     Number.parseInt(full.slice(4, 6), 16),
     255
   ];
-}
-
-function colorsMatch(a, b) {
-  return a[0] === b[0] && a[1] === b[1] && a[2] === b[2] && a[3] === b[3];
 }
 
 async function leaveRoom() {
