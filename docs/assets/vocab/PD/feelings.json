@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "Feelings"
+  },
+  "items": [
+    {
+      "english": "angry",
+      "japanese": {
+        "kanji": "怒っている",
+        "furigana": "おこっている"
+      },
+      "image": "assets/images/categories/Feelings/Angry.jpg"
+    },
+    {
+      "english": "busy",
+      "japanese": {
+        "kanji": "忙しい",
+        "furigana": "いそがしい"
+      },
+      "image": "assets/images/categories/Feelings/Busy.jpg"
+    },
+    {
+      "english": "fine",
+      "japanese": {
+        "kanji": "元気",
+        "furigana": "げんき"
+      },
+      "image": "assets/images/categories/Feelings/Fine.jpg"
+    },
+    {
+      "english": "full",
+      "japanese": {
+        "kanji": "満腹",
+        "furigana": "まんぷく"
+      },
+      "image": "assets/images/categories/Feelings/Full.jpg"
+    },
+    {
+      "english": "good",
+      "japanese": {
+        "kanji": "良い",
+        "furigana": "よい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Good.jpg"
+    },
+    {
+      "english": "great",
+      "japanese": {
+        "kanji": "素晴らしい",
+        "furigana": "すばらしい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Great.jpg"
+    },
+    {
+      "english": "happy",
+      "japanese": {
+        "kanji": "嬉しい",
+        "furigana": "うれしい"
+      },
+      "image": "assets/images/categories/Feelings/Happy.jpg"
+    },
+    {
+      "english": "hungry",
+      "japanese": {
+        "kanji": "お腹空いた",
+        "furigana": "おなかすいた"
+      },
+      "image": "assets/images/categories/Feelings/Hungry.jpg"
+    },
+    {
+      "english": "nervous",
+      "japanese": {
+        "kanji": "緊張している",
+        "furigana": "きんちょうしている"
+      },
+      "image": "assets/images/categories/Feelings/Nervous.jpg"
+    },
+    {
+      "english": "sad",
+      "japanese": {
+        "kanji": "悲しい",
+        "furigana": "かなしい"
+      },
+      "image": "assets/images/categories/Feelings/Sad.jpg"
+    },
+    {
+      "english": "sick",
+      "japanese": {
+        "kanji": "病気",
+        "furigana": "びょうき"
+      },
+      "image": "assets/images/categories/Feelings/Sick.jpg"
+    },
+    {
+      "english": "sleepy",
+      "japanese": {
+        "kanji": "眠い",
+        "furigana": "ねむい"
+      },
+      "image": "assets/images/categories/Feelings/Sleepy.jpg"
+    },
+    {
+      "english": "thirsty",
+      "japanese": {
+        "kanji": "喉が渇いた",
+        "furigana": "のどがかわいた"
+      },
+      "image": "assets/images/categories/Feelings/Thirsty.jpg"
+    },
+    {
+      "english": "tired",
+      "japanese": {
+        "kanji": "疲れた",
+        "furigana": "つかれた"
+      },
+      "image": "assets/images/categories/Feelings/Tired.jpg"
+    }
+  ]
+}

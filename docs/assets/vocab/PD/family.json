@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "title": "Family"
+  },
+  "items": [
+    {
+      "english": "aunt",
+      "japanese": {
+        "kanji": "叔母",
+        "furigana": "おば"
+      },
+      "image": "assets/images/categories/Family/Aunt.jpg"
+    },
+    {
+      "english": "brother",
+      "japanese": {
+        "kanji": "兄弟",
+        "furigana": "きょうだい"
+      },
+      "image": "assets/images/categories/Family/Brother.jpg"
+    },
+    {
+      "english": "cousin",
+      "japanese": {
+        "kanji": "いとこ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Family/Cousin.jpg"
+    },
+    {
+      "english": "family",
+      "japanese": {
+        "kanji": "家族",
+        "furigana": "かぞく"
+      },
+      "image": "assets/images/categories/Family/Family.jpg"
+    },
+    {
+      "english": "father",
+      "japanese": {
+        "kanji": "父",
+        "furigana": "ちち"
+      },
+      "image": "assets/images/categories/Family/Father.jpg"
+    },
+    {
+      "english": "grandfather",
+      "japanese": {
+        "kanji": "祖父",
+        "furigana": "そふ"
+      },
+      "image": "assets/images/categories/Family/Grandfather.jpg"
+    },
+    {
+      "english": "grandmother",
+      "japanese": {
+        "kanji": "祖母",
+        "furigana": "そぼ"
+      },
+      "image": "assets/images/categories/Family/Grandmother.jpg"
+    },
+    {
+      "english": "grandparents",
+      "japanese": {
+        "kanji": "祖父母",
+        "furigana": "そふぼ"
+      },
+      "image": "assets/images/categories/Family/Grandparents.jpg"
+    },
+    {
+      "english": "me",
+      "japanese": {
+        "kanji": "私",
+        "furigana": "わたし"
+      },
+      "image": "assets/images/categories/Family/Me.jpg"
+    },
+    {
+      "english": "mother",
+      "japanese": {
+        "kanji": "母",
+        "furigana": "はは"
+      },
+      "image": "assets/images/categories/Family/Mother.jpg"
+    },
+    {
+      "english": "parents",
+      "japanese": {
+        "kanji": "両親",
+        "furigana": "りょうしん"
+      },
+      "image": "assets/images/categories/Family/Parents.jpg"
+    },
+    {
+      "english": "sister",
+      "japanese": {
+        "kanji": "姉妹",
+        "furigana": "しまい"
+      },
+      "image": "assets/images/categories/Family/Sister.jpg"
+    },
+    {
+      "english": "uncle",
+      "japanese": {
+        "kanji": "叔父",
+        "furigana": "おじ"
+      },
+      "image": "assets/images/categories/Family/Uncle.jpg"
+    }
+  ]
+}

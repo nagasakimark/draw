@@ -1,0 +1,130 @@
+[
+  {
+    "english": "sunny",
+    "japanese": {
+      "kanji": "晴れ",
+      "furigana": "はれ"
+    },
+    "image": "assets/images/categories/Weather/Sunny.jpg"
+  },
+  {
+    "english": "cloudy",
+    "japanese": {
+      "kanji": "曇り",
+      "furigana": "くもり"
+    },
+    "image": "assets/images/categories/Weather/Cloudy.jpg"
+  },
+  {
+    "english": "rainy",
+    "japanese": {
+      "kanji": "雨",
+      "furigana": "あめ"
+    },
+    "image": "assets/images/categories/Weather/Rainy.jpg"
+  },
+  {
+    "english": "snowy",
+    "japanese": {
+      "kanji": "雪",
+      "furigana": "ゆき"
+    },
+    "image": "assets/images/categories/Weather/Snowy.jpg"
+  },
+  {
+    "english": "hot",
+    "japanese": {
+      "kanji": "暑い",
+      "furigana": "あつい"
+    },
+    "image": "assets/images/categories/Tastes/Hot.jpg"
+  },
+  {
+    "english": "cold",
+    "japanese": {
+      "kanji": "寒い",
+      "furigana": "さむい"
+    },
+    "image": "assets/images/categories/Tastes/Cold.jpg"
+  },
+  {
+    "english": "shorts",
+    "japanese": {
+      "kanji": "短パン",
+      "furigana": "たんぱん"
+    },
+    "image": "assets/images/categories/LT2/Shorts.jpg"
+  },
+  {
+    "english": "shirt",
+    "japanese": {
+      "kanji": "シャツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Shirt.jpg"
+  },
+  {
+    "english": "pants",
+    "japanese": {
+      "kanji": "ズボン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Pants.jpg"
+  },
+  {
+    "english": "jacket",
+    "japanese": {
+      "kanji": "ジャケット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Clothes+/Jacket.jpg"
+  },
+  {
+    "english": "boots",
+    "japanese": {
+      "kanji": "ブーツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Clothes+/Boots.jpg"
+  },
+  {
+    "english": "hat",
+    "japanese": {
+      "kanji": "帽子",
+      "furigana": "ぼうし"
+    },
+    "image": "assets/images/categories/Clothes/Hat.jpg"
+  },
+  {
+    "english": "play tag",
+    "japanese": {
+      "kanji": "鬼ごっこする",
+      "furigana": "おにごっこする"
+    },
+    "image": "assets/images/categories/LT2/Play tag.jpg"
+  },
+  {
+    "english": "play cards",
+    "japanese": {
+      "kanji": "トランプする",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Play cards.jpg"
+  },
+  {
+    "english": "play dodgeball",
+    "japanese": {
+      "kanji": "ドッジボールする",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Play Dodgeball.jpg"
+  },
+  {
+    "english": "make a snowman",
+    "japanese": {
+      "kanji": "雪だるまを作る",
+      "furigana": "ゆきだるまをつくる"
+    },
+    "image": "assets/images/categories/LT2/Make a snowman.jpg"
+  }
+]

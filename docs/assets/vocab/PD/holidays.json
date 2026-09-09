@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "title": "Holidays"
+  },
+  "items": [
+    {
+      "english": "birthday",
+      "japanese": {
+        "kanji": "誕生日",
+        "furigana": "たんじょうび"
+      },
+      "image": "assets/images/categories/Annual Events/Birthday.jpg"
+    },
+    {
+      "english": "New Year's Day",
+      "japanese": {
+        "kanji": "元日",
+        "furigana": "がんじつ"
+      },
+      "image": "assets/images/categories/Annual Events/New Year_s Day.jpg"
+    },
+    {
+      "english": "Doll's Festival",
+      "japanese": {
+        "kanji": "ひな祭り",
+        "furigana": "ひなまつり"
+      },
+      "image": "assets/images/categories/Annual Events/Dolls_ Festival.jpg"
+    },
+    {
+      "english": "cherry blossom viewing",
+      "japanese": {
+        "kanji": "花見",
+        "furigana": "はなみ"
+      },
+      "image": "assets/images/categories/Annual Events/Cherry Blossom Viewing.jpg"
+    },
+    {
+      "english": "Children's Day",
+      "japanese": {
+        "kanji": "こどもの日",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Annual Events/Children_s Day.jpg"
+    },
+    {
+      "english": "Star Festival",
+      "japanese": {
+        "kanji": "七夕",
+        "furigana": "たなばた"
+      },
+      "image": "assets/images/categories/Annual Events/Star Festival.jpg"
+    },
+    {
+      "english": "fireworks festival",
+      "japanese": {
+        "kanji": "花火大会",
+        "furigana": "はなびたいかい"
+      },
+      "image": "assets/images/categories/Annual Events/Fireworks Festival.jpg"
+    },
+    {
+      "english": "Halloween",
+      "japanese": {
+        "kanji": "ハロウィン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Annual Events/Halloween.jpg"
+    },
+    {
+      "english": "Christmas",
+      "japanese": {
+        "kanji": "クリスマス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Annual Events/Christmas.jpg"
+    },
+    {
+      "english": "New Year's Eve",
+      "japanese": {
+        "kanji": "大晦日",
+        "furigana": "おおみそか"
+      },
+      "image": "assets/images/categories/Annual Events/New Year_s Eve.jpg"
+    },
+    {
+      "english": "Snow Festival",
+      "japanese": {
+        "kanji": "雪祭り",
+        "furigana": "ゆきまつり"
+      },
+      "image": "assets/images/categories/Annual Events/Annual Events+/Snow Festival.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Annual Events/bonuswords/snowfestival.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "April Fool's Day",
+      "japanese": {
+        "kanji": "エイプリルフール",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Annual Events/Annual Events+/April Fool_s Day.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Annual Events/bonuswords/aprilfoolsday.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

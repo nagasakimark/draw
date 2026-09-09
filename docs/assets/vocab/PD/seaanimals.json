@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "title": "Sea Animals"
+  },
+  "items": [
+    {
+      "english": "crab",
+      "japanese": {
+        "kanji": "蟹",
+        "furigana": "かに"
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Crab.jpg"
+    },
+    {
+      "english": "dolphin",
+      "japanese": {
+        "kanji": "イルカ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Sea Animals/Dolphin.jpg"
+    },
+    {
+      "english": "eel",
+      "japanese": {
+        "kanji": "鰻",
+        "furigana": "うなぎ"
+      },
+      "image": "assets/images/categories/Sea Animals/Sea Animals+/Eel.jpg",
+      "bonus": true
+    },
+    {
+      "english": "fish",
+      "japanese": {
+        "kanji": "魚",
+        "furigana": "さかな"
+      },
+      "image": "assets/images/categories/Ingredients/Fish.jpg"
+    },
+    {
+      "english": "jellyfish",
+      "japanese": {
+        "kanji": "クラゲ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Sea Animals/Jellyfish.jpg"
+    },
+    {
+      "english": "octopus",
+      "japanese": {
+        "kanji": "蛸",
+        "furigana": "たこ"
+      },
+      "image": "assets/images/categories/Ingredients/Octopus.jpg",
+      "bonus": true
+    },
+    {
+      "english": "penguin",
+      "japanese": {
+        "kanji": "ペンギン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Sea Animals/Penguin.jpg"
+    },
+    {
+      "english": "sea animals",
+      "japanese": {
+        "kanji": "海の動物",
+        "furigana": "うみのどうぶつ"
+      },
+      "image": "assets/images/categories/Sea Animals/Sea Animals.jpg",
+      "original_image": "assets/images/categories/Sea Animals/Sea animals.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "sea otter",
+      "japanese": {
+        "kanji": "ラッコ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Sea Animals/Sea Animals+/Sea Otter.jpg",
+      "bonus": true
+    },
+    {
+      "english": "sea turtle",
+      "japanese": {
+        "kanji": "海亀",
+        "furigana": "うみがめ"
+      },
+      "image": "assets/images/categories/Sea Animals/Sea Turtle.jpg",
+      "original_image": "assets/images/categories/Sea Animals/Sea turtle.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "shark",
+      "japanese": {
+        "kanji": "サメ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Sea Animals/Shark.jpg"
+    },
+    {
+      "english": "shrimp",
+      "japanese": {
+        "kanji": "海老",
+        "furigana": "えび"
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Shrimp.jpg",
+      "bonus": true
+    },
+    {
+      "english": "squid",
+      "japanese": {
+        "kanji": "イカ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Squid.jpg",
+      "bonus": true
+    },
+    {
+      "english": "starfish",
+      "japanese": {
+        "kanji": "ヒトデ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Sea Animals/Sea Animals+/Starfish.jpg",
+      "bonus": true
+    },
+    {
+      "english": "tuna",
+      "japanese": {
+        "kanji": "マグロ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Tuna.jpg",
+      "bonus": true
+    },
+    {
+      "english": "whale",
+      "japanese": {
+        "kanji": "鯨",
+        "furigana": "くじら"
+      },
+      "image": "assets/images/categories/Sea Animals/Whale.jpg"
+    }
+  ]
+}

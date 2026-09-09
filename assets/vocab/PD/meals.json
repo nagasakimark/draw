@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "title": "Meals"
+  },
+  "items": [
+    {
+      "english": "breakfast",
+      "japanese": {
+        "kanji": "朝食",
+        "furigana": "ちょうしょく"
+      },
+      "image": "assets/images/categories/Meals/Breakfast.jpg"
+    },
+    {
+      "english": "dinner",
+      "japanese": {
+        "kanji": "夕食",
+        "furigana": "ゆうしょく"
+      },
+      "image": "assets/images/categories/Meals/Dinner.jpg"
+    },
+    {
+      "english": "lunch",
+      "japanese": {
+        "kanji": "昼食",
+        "furigana": "ちゅうしょく"
+      },
+      "image": "assets/images/categories/Meals/Lunch.jpg"
+    },
+    {
+      "english": "meals",
+      "japanese": {
+        "kanji": "食事",
+        "furigana": "しょくじ"
+      },
+      "image": "assets/images/categories/Meals/Meals.jpg"
+    },
+    {
+      "english": "school lunch",
+      "japanese": {
+        "kanji": "給食",
+        "furigana": "きゅうしょく"
+      },
+      "image": "assets/images/categories/Meals/Meals+/School Lunch.jpg",
+      "bonus": true
+    },
+    {
+      "english": "snack",
+      "japanese": {
+        "kanji": "おやつ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Meals/Meals+/Snack.jpg",
+      "bonus": true
+    }
+  ]
+}

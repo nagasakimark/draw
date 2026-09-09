@@ -1,0 +1,372 @@
+[
+  {
+    "english": "world",
+    "japanese": {
+      "kanji": "世界",
+      "furigana": "せかい"
+    },
+    "image": "assets/images/categories/World/World.jpg"
+  },
+  {
+    "english": "country",
+    "japanese": {
+      "kanji": "国",
+      "furigana": "くに"
+    },
+    "image": "assets/images/categories/World/Country.jpg"
+  },
+  {
+    "english": "culture",
+    "japanese": {
+      "kanji": "文化",
+      "furigana": "ぶんか"
+    },
+    "image": "assets/images/categories/World/Culture.jpg"
+  },
+  {
+    "english": "north",
+    "japanese": {
+      "kanji": "北",
+      "furigana": "きた"
+    },
+    "image": "assets/images/categories/World/North.jpg"
+  },
+  {
+    "english": "east",
+    "japanese": {
+      "kanji": "東",
+      "furigana": "ひがし"
+    },
+    "image": "assets/images/categories/World/East.jpg"
+  },
+  {
+    "english": "south",
+    "japanese": {
+      "kanji": "南",
+      "furigana": "みなみ"
+    },
+    "image": "assets/images/categories/World/South.jpg"
+  },
+  {
+    "english": "west",
+    "japanese": {
+      "kanji": "西",
+      "furigana": "にし"
+    },
+    "image": "assets/images/categories/World/West.jpg"
+  },
+  {
+    "english": "North America",
+    "japanese": {
+      "kanji": "北アメリカ",
+      "furigana": "きたあめりか"
+    },
+    "image": "assets/images/categories/World/North America.jpg"
+  },
+  {
+    "english": "South America",
+    "japanese": {
+      "kanji": "南アメリカ",
+      "furigana": "みなみあめりか"
+    },
+    "image": "assets/images/categories/World/South America.jpg"
+  },
+  {
+    "english": "Asia",
+    "japanese": {
+      "kanji": "アジア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Asia.jpg"
+  },
+  {
+    "english": "Europe",
+    "japanese": {
+      "kanji": "ヨーロッパ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Europe.jpg"
+  },
+  {
+    "english": "Africa",
+    "japanese": {
+      "kanji": "アフリカ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Africa.jpg"
+  },
+  {
+    "english": "Oceania",
+    "japanese": {
+      "kanji": "オセアニア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Oceania.jpg"
+  },
+  {
+    "english": "Antarctica",
+    "japanese": {
+      "kanji": "南極",
+      "furigana": "なんきょく"
+    },
+    "image": "assets/images/categories/World/Antarctica.jpg"
+  },
+  {
+    "english": "The U.K.",
+    "japanese": {
+      "kanji": "イギリス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/The UK.jpg"
+  },
+  {
+    "english": "France",
+    "japanese": {
+      "kanji": "フランス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/France.jpg"
+  },
+  {
+    "english": "Egypt",
+    "japanese": {
+      "kanji": "エジプト",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Egypt.jpg"
+  },
+  {
+    "english": "China",
+    "japanese": {
+      "kanji": "中国",
+      "furigana": "ちゅうごく"
+    },
+    "image": "assets/images/categories/World/China.jpg"
+  },
+  {
+    "english": "Australia",
+    "japanese": {
+      "kanji": "オーストラリア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Australia.jpg"
+  },
+  {
+    "english": "Japan",
+    "japanese": {
+      "kanji": "日本",
+      "furigana": "にほん"
+    },
+    "image": "assets/images/categories/World/Japan.jpg"
+  },
+  {
+    "english": "America",
+    "japanese": {
+      "kanji": "アメリカ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/America.jpg"
+  },
+  {
+    "english": "Brazil",
+    "japanese": {
+      "kanji": "ブラジル",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Brazil.jpg"
+  },
+  {
+    "english": "clothes",
+    "japanese": {
+      "kanji": "服",
+      "furigana": "ふく"
+    },
+    "image": "assets/images/categories/Clothes/Clothes.jpg"
+  },
+  {
+    "english": "shirt",
+    "japanese": {
+      "kanji": "シャツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Shirt.jpg"
+  },
+  {
+    "english": "T-shirt",
+    "japanese": {
+      "kanji": "Tシャツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/T-shirt.jpg"
+  },
+  {
+    "english": "sweatshirt",
+    "japanese": {
+      "kanji": "トレーナー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Sweatshirt.jpg"
+  },
+  {
+    "english": "sweater",
+    "japanese": {
+      "kanji": "セーター",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Sweater.jpg"
+  },
+  {
+    "english": "uniform",
+    "japanese": {
+      "kanji": "制服",
+      "furigana": "せいふく"
+    },
+    "image": "assets/images/categories/Clothes/Uniform.jpg"
+  },
+  {
+    "english": "pants",
+    "japanese": {
+      "kanji": "ズボン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Pants.jpg"
+  },
+  {
+    "english": "jeans",
+    "japanese": {
+      "kanji": "ジーンズ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Jeans.jpg"
+  },
+  {
+    "english": "cap",
+    "japanese": {
+      "kanji": "キャップ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Cap.jpg"
+  },
+  {
+    "english": "hat",
+    "japanese": {
+      "kanji": "帽子",
+      "furigana": "ぼうし"
+    },
+    "image": "assets/images/categories/Clothes/Hat.jpg"
+  },
+  {
+    "english": "gloves",
+    "japanese": {
+      "kanji": "手袋",
+      "furigana": "てぶくろ"
+    },
+    "image": "assets/images/categories/Things Around You/Glove.jpg"
+  },
+  {
+    "english": "socks",
+    "japanese": {
+      "kanji": "靴下",
+      "furigana": "くつした"
+    },
+    "image": "assets/images/categories/Clothes/Socks.jpg"
+  },
+  {
+    "english": "shoes",
+    "japanese": {
+      "kanji": "靴",
+      "furigana": "くつ"
+    },
+    "image": "assets/images/categories/Clothes/Shoes.jpg"
+  },
+  {
+    "english": "meat",
+    "japanese": {
+      "kanji": "肉",
+      "furigana": "にく"
+    },
+    "image": "assets/images/categories/Ingredients/Meat.jpg"
+  },
+  {
+    "english": "beef",
+    "japanese": {
+      "kanji": "牛肉",
+      "furigana": "ぎゅうにく"
+    },
+    "image": "assets/images/categories/Ingredients/Beef.jpg"
+  },
+  {
+    "english": "chicken",
+    "japanese": {
+      "kanji": "鶏肉",
+      "furigana": "とりにく"
+    },
+    "image": "assets/images/categories/Animals/Animals+/Chicken.jpg",
+    "bonus": true
+  },
+  {
+    "english": "pork",
+    "japanese": {
+      "kanji": "豚肉",
+      "furigana": "ぶたにく"
+    },
+    "image": "assets/images/categories/Ingredients/Pork.jpg"
+  },
+  {
+    "english": "bacon",
+    "japanese": {
+      "kanji": "ベーコン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Ingredients/Bacon.jpg"
+  },
+  {
+    "english": "ham",
+    "japanese": {
+      "kanji": "ハム",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Ingredients/Ham.jpg"
+  },
+  {
+    "english": "cheese",
+    "japanese": {
+      "kanji": "チーズ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Ingredients/Cheese.jpg"
+  },
+  {
+    "english": "egg",
+    "japanese": {
+      "kanji": "卵",
+      "furigana": "たまご"
+    },
+    "image": "assets/images/categories/Ingredients/Egg.jpg"
+  },
+  {
+    "english": "fish",
+    "japanese": {
+      "kanji": "魚",
+      "furigana": "さかな"
+    },
+    "image": "assets/images/categories/Ingredients/Fish.jpg"
+  },
+  {
+    "english": "salmon",
+    "japanese": {
+      "kanji": "鮭",
+      "furigana": "さけ"
+    },
+    "image": "assets/images/categories/Ingredients/Salmon.jpg"
+  },
+  {
+    "english": "octopus",
+    "japanese": {
+      "kanji": "蛸",
+      "furigana": "たこ"
+    },
+    "image": "assets/images/categories/Ingredients/Octopus.jpg",
+    "bonus": true
+  }
+]

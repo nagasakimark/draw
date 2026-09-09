@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "title": "Problems with Living Things"
+  },
+  "items": [
+    {
+      "english": "forest loss",
+      "japanese": {
+        "kanji": "森林破壊",
+        "furigana": "しんりんはかい"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Forest Loss.jpg"
+    },
+    {
+      "english": "plant trees",
+      "japanese": {
+        "kanji": "植樹する",
+        "furigana": "しょくじゅする"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Plant Trees.jpg"
+    },
+    {
+      "english": "global warming",
+      "japanese": {
+        "kanji": "地球温暖化",
+        "furigana": "ちきゅうおんだんか"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Global Warming.jpg"
+    },
+    {
+      "english": "save energy",
+      "japanese": {
+        "kanji": "エネルギーを節約する",
+        "furigana": "えねるぎーをせつやくする"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Save Energy.jpg"
+    },
+    {
+      "english": "plastic",
+      "japanese": {
+        "kanji": "プラスチック",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Plastic.jpg"
+    },
+    {
+      "english": "use eco-friendly bags",
+      "japanese": {
+        "kanji": "エコバッグを使う",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Use Eco-Friendly Bags.jpg"
+    },
+    {
+      "english": "refuse",
+      "japanese": {
+        "kanji": "拒否する",
+        "furigana": "きょひする"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Refuse.jpg"
+    },
+    {
+      "english": "reduce",
+      "japanese": {
+        "kanji": "減らす",
+        "furigana": "へらす"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Reduce.jpg"
+    },
+    {
+      "english": "reuse",
+      "japanese": {
+        "kanji": "再利用する",
+        "furigana": "さいりようする"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Reuse.jpg"
+    },
+    {
+      "english": "recycle",
+      "japanese": {
+        "kanji": "リサイクルする",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Recycle.jpg"
+    },
+    {
+      "english": "hunting",
+      "japanese": {
+        "kanji": "狩猟",
+        "furigana": "しゅりょう"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Problems with living things & what we can do+/Hunting.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Problems with living things & what we can do/bonuswords/hunting.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "over fishing",
+      "japanese": {
+        "kanji": "乱獲",
+        "furigana": "らんかく"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Problems with living things & what we can do+/Overfishing.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Problems with living things & what we can do/bonuswords/overfishing.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "air pollution",
+      "japanese": {
+        "kanji": "大気汚染",
+        "furigana": "たいきおせん"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Problems with living things & what we can do+/Air Pollution.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Problems with living things & what we can do/bonuswords/airpollution.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "chemicals",
+      "japanese": {
+        "kanji": "化学物質",
+        "furigana": "かがくぶっしつ"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Problems with living things & what we can do+/Chemicals.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Problems with living things & what we can do/bonuswords/chemicals.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "traffic accidents",
+      "japanese": {
+        "kanji": "交通事故",
+        "furigana": "こうつうじこ"
+      },
+      "image": "assets/images/categories/Problems with living things & what we can do/Problems with living things & what we can do+/Traffic Accidents.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Problems with living things & what we can do/bonuswords/trafficaccidents.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

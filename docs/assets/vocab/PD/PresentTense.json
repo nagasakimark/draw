@@ -1,0 +1,685 @@
+{
+  "metadata": {
+    "title": "Present Tense"
+  },
+  "items": [
+    {
+      "english": "spell",
+      "japanese": {
+        "kanji": "綴る",
+        "furigana": "つづる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Spell.jpg"
+    },
+    {
+      "english": "like",
+      "japanese": {
+        "kanji": "好き",
+        "furigana": "すき"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Like.jpg"
+    },
+    {
+      "english": "listen",
+      "japanese": {
+        "kanji": "聞く",
+        "furigana": "きく"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Listen.jpg"
+    },
+    {
+      "english": "want",
+      "japanese": {
+        "kanji": "欲しい",
+        "furigana": "ほしい"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Want.jpg"
+    },
+    {
+      "english": "play",
+      "japanese": {
+        "kanji": "遊ぶ",
+        "furigana": "あそぶ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Play.jpg"
+    },
+    {
+      "english": "walk",
+      "japanese": {
+        "kanji": "歩く",
+        "furigana": "あるく"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Walk.jpg"
+    },
+    {
+      "english": "run",
+      "japanese": {
+        "kanji": "走る",
+        "furigana": "はしる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Run.jpg"
+    },
+    {
+      "english": "dance",
+      "japanese": {
+        "kanji": "踊る",
+        "furigana": "おどる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Dance.jpg"
+    },
+    {
+      "english": "jump",
+      "japanese": {
+        "kanji": "跳ぶ",
+        "furigana": "とぶ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Jump.jpg"
+    },
+    {
+      "english": "catch",
+      "japanese": {
+        "kanji": "捕まえる",
+        "furigana": "つかまえる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Catch.jpg"
+    },
+    {
+      "english": "swim",
+      "japanese": {
+        "kanji": "泳ぐ",
+        "furigana": "およぐ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Swim.jpg"
+    },
+    {
+      "english": "fly",
+      "japanese": {
+        "kanji": "飛ぶ",
+        "furigana": "とぶ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Fly.jpg"
+    },
+    {
+      "english": "sing",
+      "japanese": {
+        "kanji": "歌う",
+        "furigana": "うたう"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Sing.jpg"
+    },
+    {
+      "english": "cook",
+      "japanese": {
+        "kanji": "料理する",
+        "furigana": "りょうりする"
+      },
+      "image": "assets/images/categories/Jobs/Cook.jpg"
+    },
+    {
+      "english": "have",
+      "japanese": {
+        "kanji": "持つ",
+        "furigana": "もつ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Have.jpg"
+    },
+    {
+      "english": "go",
+      "japanese": {
+        "kanji": "行く",
+        "furigana": "いく"
+      },
+      "image": "assets/images/categories/Directions/Go.jpg"
+    },
+    {
+      "english": "turn",
+      "japanese": {
+        "kanji": "曲がる",
+        "furigana": "まがる"
+      },
+      "image": "assets/images/categories/Directions/Turn.jpg"
+    },
+    {
+      "english": "see",
+      "japanese": {
+        "kanji": "見る",
+        "furigana": "みる"
+      },
+      "image": "assets/images/categories/Directions/See.jpg"
+    },
+    {
+      "english": "look",
+      "japanese": {
+        "kanji": "見る",
+        "furigana": "みる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Look.jpg"
+    },
+    {
+      "english": "drink",
+      "japanese": {
+        "kanji": "飲む",
+        "furigana": "のむ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Drink.jpg"
+    },
+    {
+      "english": "eat",
+      "japanese": {
+        "kanji": "食べる",
+        "furigana": "たべる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Eat.jpg"
+    },
+    {
+      "english": "buy",
+      "japanese": {
+        "kanji": "買う",
+        "furigana": "かう"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Buy.jpg"
+    },
+    {
+      "english": "speak",
+      "japanese": {
+        "kanji": "話す",
+        "furigana": "はなす"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Speak.jpg"
+    },
+    {
+      "english": "live",
+      "japanese": {
+        "kanji": "住む",
+        "furigana": "すむ"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Live.jpg"
+    },
+    {
+      "english": "make",
+      "japanese": {
+        "kanji": "作る",
+        "furigana": "つくる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Make.jpg"
+    },
+    {
+      "english": "wear",
+      "japanese": {
+        "kanji": "着る",
+        "furigana": "きる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Wear.jpg"
+    },
+    {
+      "english": "talk",
+      "japanese": {
+        "kanji": "話す",
+        "furigana": "はなす"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Talk.jpg"
+    },
+    {
+      "english": "watch",
+      "japanese": {
+        "kanji": "見る",
+        "furigana": "みる"
+      },
+      "image": "assets/images/categories/Things Around You/Watch.jpg"
+    },
+    {
+      "english": "read",
+      "japanese": {
+        "kanji": "読む",
+        "furigana": "よむ"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Read.jpg"
+    },
+    {
+      "english": "help",
+      "japanese": {
+        "kanji": "助ける",
+        "furigana": "たすける"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Help.jpg"
+    },
+    {
+      "english": "practice",
+      "japanese": {
+        "kanji": "練習する",
+        "furigana": "れんしゅうする"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Practice.jpg"
+    },
+    {
+      "english": "clean",
+      "japanese": {
+        "kanji": "掃除する",
+        "furigana": "そうじする"
+      },
+      "image": "assets/images/categories/State/State+/Clean.jpg",
+      "bonus": true
+    },
+    {
+      "english": "enjoy",
+      "japanese": {
+        "kanji": "楽しむ",
+        "furigana": "たのしむ"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Enjoy.jpg"
+    },
+    {
+      "english": "visit",
+      "japanese": {
+        "kanji": "訪れる",
+        "furigana": "おとずれる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Visit.jpg"
+    },
+    {
+      "english": "ride",
+      "japanese": {
+        "kanji": "乗る",
+        "furigana": "のる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Ride.jpg"
+    },
+    {
+      "english": "come",
+      "japanese": {
+        "kanji": "来る",
+        "furigana": "くる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Come.jpg"
+    },
+    {
+      "english": "get",
+      "japanese": {
+        "kanji": "得る",
+        "furigana": "える"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Get.jpg"
+    },
+    {
+      "english": "save",
+      "japanese": {
+        "kanji": "節約する",
+        "furigana": "せつやくする"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Save.jpg"
+    },
+    {
+      "english": "stop",
+      "japanese": {
+        "kanji": "止まる",
+        "furigana": "とまる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Stop.jpg"
+    },
+    {
+      "english": "study",
+      "japanese": {
+        "kanji": "勉強する",
+        "furigana": "べんきょうする"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Study.jpg"
+    },
+    {
+      "english": "join",
+      "japanese": {
+        "kanji": "参加する",
+        "furigana": "さんかする"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Join.jpg"
+    },
+    {
+      "english": "work",
+      "japanese": {
+        "kanji": "働く",
+        "furigana": "はたらく"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Work.jpg"
+    },
+    {
+      "english": "call",
+      "japanese": {
+        "kanji": "呼ぶ",
+        "furigana": "よぶ"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Call.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/call.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "chat",
+      "japanese": {
+        "kanji": "おしゃべりする",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Chat.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/chat.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "check",
+      "japanese": {
+        "kanji": "確認する",
+        "furigana": "かくにんする"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Check.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/check.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "climb",
+      "japanese": {
+        "kanji": "登る",
+        "furigana": "のぼる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Climb.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/climb.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "collect",
+      "japanese": {
+        "kanji": "集める",
+        "furigana": "あつめる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Collect.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/collect.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "cut",
+      "japanese": {
+        "kanji": "切る",
+        "furigana": "きる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Cut.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/cut.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "dig",
+      "japanese": {
+        "kanji": "掘る",
+        "furigana": "ほる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Dig.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/dig.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "disappear",
+      "japanese": {
+        "kanji": "消える",
+        "furigana": "きえる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Disappear.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/disappear.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "draw",
+      "japanese": {
+        "kanji": "描く",
+        "furigana": "えがく"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Draw.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/draw.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "drive",
+      "japanese": {
+        "kanji": "運転する",
+        "furigana": "うんてんする"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Drive.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/drive.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "feed",
+      "japanese": {
+        "kanji": "餌をやる",
+        "furigana": "えさをやる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Feed.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/feed.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "grow",
+      "japanese": {
+        "kanji": "育てる",
+        "furigana": "そだてる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Grow.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/grow.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "hit",
+      "japanese": {
+        "kanji": "打つ",
+        "furigana": "うつ"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Hit.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/hit.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "hop",
+      "japanese": {
+        "kanji": "跳ねる",
+        "furigana": "はねる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Hop.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/hop.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "hug",
+      "japanese": {
+        "kanji": "抱きしめる",
+        "furigana": "だきしめる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Hug.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/hug.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "keep",
+      "japanese": {
+        "kanji": "保つ",
+        "furigana": "たもつ"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Keep.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/keep.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "kick",
+      "japanese": {
+        "kanji": "蹴る",
+        "furigana": "ける"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Kick.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/kick.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "meet",
+      "japanese": {
+        "kanji": "会う",
+        "furigana": "あう"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Meet.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/meet.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "mix",
+      "japanese": {
+        "kanji": "混ぜる",
+        "furigana": "まぜる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Mix.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/mix.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "whip",
+      "japanese": {
+        "kanji": "泡立てる",
+        "furigana": "あわだてる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Whip.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/whip.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "put",
+      "japanese": {
+        "kanji": "置く",
+        "furigana": "おく"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Put.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/put.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "sit",
+      "japanese": {
+        "kanji": "座る",
+        "furigana": "すわる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Sit.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/sit.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "sleep",
+      "japanese": {
+        "kanji": "寝る",
+        "furigana": "ねる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Sleep.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/sleep.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "stand",
+      "japanese": {
+        "kanji": "立つ",
+        "furigana": "たつ"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Stand.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/stand.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "teach",
+      "japanese": {
+        "kanji": "教える",
+        "furigana": "おしえる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Teach.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/teach.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "travel",
+      "japanese": {
+        "kanji": "旅行する",
+        "furigana": "りょこうする"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Travel.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/travel.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "try",
+      "japanese": {
+        "kanji": "試す",
+        "furigana": "ためす"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Try.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/try.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "wait",
+      "japanese": {
+        "kanji": "待つ",
+        "furigana": "まつ"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Wait.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/wait.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "wash",
+      "japanese": {
+        "kanji": "洗う",
+        "furigana": "あらう"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Wash.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/wash.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "water",
+      "japanese": {
+        "kanji": "水をやる",
+        "furigana": "みずをやる"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Water.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/water.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "write",
+      "japanese": {
+        "kanji": "書く",
+        "furigana": "かく"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Write.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Present Tense/bonuswords/write.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

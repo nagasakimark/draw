@@ -1,0 +1,358 @@
+[
+  {
+    "english": "subjects",
+    "japanese": {
+      "kanji": "教科",
+      "furigana": "きょうか"
+    },
+    "image": "assets/images/categories/Subjects/Subjects.jpg"
+  },
+  {
+    "english": "English",
+    "japanese": {
+      "kanji": "英語",
+      "furigana": "えいご"
+    },
+    "image": "assets/images/categories/Subjects/English.jpg"
+  },
+  {
+    "english": "Japanese",
+    "japanese": {
+      "kanji": "国語",
+      "furigana": "こくご"
+    },
+    "image": "assets/images/categories/Subjects/Japanese.jpg"
+  },
+  {
+    "english": "calligraphy",
+    "japanese": {
+      "kanji": "書道",
+      "furigana": "しょどう"
+    },
+    "image": "assets/images/categories/Subjects/Calligraphy.jpg"
+  },
+  {
+    "english": "social studies",
+    "japanese": {
+      "kanji": "社会",
+      "furigana": "しゃかい"
+    },
+    "image": "assets/images/categories/Subjects/Social Studies.jpg",
+    "original_image": "assets/images/categories/Subjects/Social studies.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "math",
+    "japanese": {
+      "kanji": "数学",
+      "furigana": "すうがく"
+    },
+    "image": "assets/images/categories/Subjects/Math.jpg"
+  },
+  {
+    "english": "science",
+    "japanese": {
+      "kanji": "理科",
+      "furigana": "りか"
+    },
+    "image": "assets/images/categories/Subjects/Science.jpg"
+  },
+  {
+    "english": "music",
+    "japanese": {
+      "kanji": "音楽",
+      "furigana": "おんがく"
+    },
+    "image": "assets/images/categories/Subjects/Music.jpg"
+  },
+  {
+    "english": "arts and crafts",
+    "japanese": {
+      "kanji": "図工",
+      "furigana": "ずこう"
+    },
+    "image": "assets/images/categories/Subjects/Arts and Crafts.jpg",
+    "original_image": "assets/images/categories/Subjects/Arts and crafts.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "home economics",
+    "japanese": {
+      "kanji": "家庭科",
+      "furigana": "かていか"
+    },
+    "image": "assets/images/categories/Subjects/Home Economics.jpg",
+    "original_image": "assets/images/categories/Subjects/Home economics.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "P.E.",
+    "japanese": {
+      "kanji": "体育",
+      "furigana": "たいいく"
+    },
+    "image": "assets/images/categories/Subjects/P.E.jpg"
+  },
+  {
+    "english": "moral education",
+    "japanese": {
+      "kanji": "道徳",
+      "furigana": "どうとく"
+    },
+    "image": "assets/images/categories/Subjects/Moral Education.jpg",
+    "original_image": "assets/images/categories/Subjects/Moral education.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "homeroom",
+    "japanese": {
+      "kanji": "ホームルーム",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Subjects/Homeroom.jpg"
+  },
+  {
+    "english": "badminton",
+    "japanese": {
+      "kanji": "バドミントン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Badminton.jpg"
+  },
+  {
+    "english": "baseball",
+    "japanese": {
+      "kanji": "野球",
+      "furigana": "やきゅう"
+    },
+    "image": "assets/images/categories/Sports/Baseball.jpg"
+  },
+  {
+    "english": "basketball",
+    "japanese": {
+      "kanji": "バスケットボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Basketball.jpg"
+  },
+  {
+    "english": "cricket",
+    "japanese": {
+      "kanji": "クリケット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Cricket.jpg"
+  },
+  {
+    "english": "dancing",
+    "japanese": {
+      "kanji": "ダンス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Dancing.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Dancing.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "dodgeball",
+    "japanese": {
+      "kanji": "ドッジボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Dodgeball.jpg"
+  },
+  {
+    "english": "golf",
+    "japanese": {
+      "kanji": "ゴルフ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Golf.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Golf.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "gymnastics",
+    "japanese": {
+      "kanji": "体操",
+      "furigana": "たいそう"
+    },
+    "image": "assets/images/categories/Sports/Gymnastics.jpg"
+  },
+  {
+    "english": "judo",
+    "japanese": {
+      "kanji": "柔道",
+      "furigana": "じゅうどう"
+    },
+    "image": "assets/images/categories/Sports/Judo.jpg"
+  },
+  {
+    "english": "karate",
+    "japanese": {
+      "kanji": "空手",
+      "furigana": "からて"
+    },
+    "image": "assets/images/categories/Sports/Sports+/Karate.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Karate.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "kendo",
+    "japanese": {
+      "kanji": "剣道",
+      "furigana": "けんどう"
+    },
+    "image": "assets/images/categories/Sports/Kendo.jpg"
+  },
+  {
+    "english": "marathon",
+    "japanese": {
+      "kanji": "マラソン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Marathon.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Marathon.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "rugby",
+    "japanese": {
+      "kanji": "ラグビー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Rugby.jpg"
+  },
+  {
+    "english": "skateboarding",
+    "japanese": {
+      "kanji": "スケートボード",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Skateboarding.jpg"
+  },
+  {
+    "english": "skating",
+    "japanese": {
+      "kanji": "スケート",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Skating.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Skating.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "skiing",
+    "japanese": {
+      "kanji": "スキー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Skiing.jpg"
+  },
+  {
+    "english": "soccer",
+    "japanese": {
+      "kanji": "サッカー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Soccer.jpg"
+  },
+  {
+    "english": "softball",
+    "japanese": {
+      "kanji": "ソフトボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Softball.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Softball.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "sports",
+    "japanese": {
+      "kanji": "スポーツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports.jpg"
+  },
+  {
+    "english": "sumo",
+    "japanese": {
+      "kanji": "相撲",
+      "furigana": "すもう"
+    },
+    "image": "assets/images/categories/Sports/Sumo.jpg"
+  },
+  {
+    "english": "surfing",
+    "japanese": {
+      "kanji": "サーフィン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Surfing.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Surfing.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "swimming",
+    "japanese": {
+      "kanji": "水泳",
+      "furigana": "すいえい"
+    },
+    "image": "assets/images/categories/Sports/Swimming.jpg"
+  },
+  {
+    "english": "table tennis",
+    "japanese": {
+      "kanji": "卓球",
+      "furigana": "たっきゅう"
+    },
+    "image": "assets/images/categories/Sports/Table Tennis.jpg",
+    "original_image": "assets/images/categories/Sports/Table tennis.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "tennis",
+    "japanese": {
+      "kanji": "テニス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Tennis.jpg"
+  },
+  {
+    "english": "track and field",
+    "japanese": {
+      "kanji": "陸上競技",
+      "furigana": "りくじょうきょうぎ"
+    },
+    "image": "assets/images/categories/Sports/Track and Field.jpg",
+    "original_image": "assets/images/categories/Sports/Track and field.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "volleyball",
+    "japanese": {
+      "kanji": "バレーボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Volleyball.jpg"
+  },
+  {
+    "english": "wrestling",
+    "japanese": {
+      "kanji": "レスリング",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Wrestling.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Wrestling.jpg",
+    "original_image_kept": true
+  }
+]

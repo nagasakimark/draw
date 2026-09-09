@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "title": "Activities"
+  },
+  "items": [
+    {
+      "english": "camping",
+      "japanese": {
+        "kanji": "キャンプ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Activities/Camping.jpg"
+    },
+    {
+      "english": "dancing",
+      "japanese": {
+        "kanji": "ダンス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Sports/Sports+/Dancing.jpg",
+      "bonus": true
+    },
+    {
+      "english": "fishing",
+      "japanese": {
+        "kanji": "釣り",
+        "furigana": "つり"
+      },
+      "image": "assets/images/categories/Activities/Fishing.jpg"
+    },
+    {
+      "english": "hiking",
+      "japanese": {
+        "kanji": "ハイキング",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Activities/Hiking.jpg"
+    },
+    {
+      "english": "shopping",
+      "japanese": {
+        "kanji": "買い物",
+        "furigana": "かいもの"
+      },
+      "image": "assets/images/categories/Activities/Shopping.jpg"
+    },
+    {
+      "english": "reading",
+      "japanese": {
+        "kanji": "読書",
+        "furigana": "どくしょ"
+      },
+      "image": "assets/images/categories/Activities/Reading.jpg"
+    },
+    {
+      "english": "drawing",
+      "japanese": {
+        "kanji": "絵を描く",
+        "furigana": "えをかく"
+      },
+      "image": "assets/images/categories/Activities/Drawing.jpg"
+    },
+    {
+      "english": "jogging",
+      "japanese": {
+        "kanji": "ジョギング",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Activities/Jogging.jpg"
+    },
+    {
+      "english": "skateboarding",
+      "japanese": {
+        "kanji": "スケートボード",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Sports/Skateboarding.jpg"
+    },
+    {
+      "english": "swinging",
+      "japanese": {
+        "kanji": "ブランコ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Activities/Swinging.jpg"
+    },
+    {
+      "english": "playing the piano",
+      "japanese": {
+        "kanji": "ピアノを弾く",
+        "furigana": "ぴあのをひく"
+      },
+      "image": "assets/images/categories/Activities/Playing The Piano.jpg"
+    },
+    {
+      "english": "playing video games",
+      "japanese": {
+        "kanji": "テレビゲームをする",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Activities/Playing Video Games.jpg"
+    },
+    {
+      "english": "seeing movies",
+      "japanese": {
+        "kanji": "映画を見る",
+        "furigana": "えいがをみる"
+      },
+      "image": "assets/images/categories/Activities/Seeing Movies.jpg"
+    },
+    {
+      "english": "cards",
+      "japanese": {
+        "kanji": "トランプ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Activities/Cards.jpg"
+    },
+    {
+      "english": "jump rope",
+      "japanese": {
+        "kanji": "縄跳び",
+        "furigana": "なわとび"
+      },
+      "image": "assets/images/categories/Activities/Jump Rope.jpg"
+    },
+    {
+      "english": "tag",
+      "japanese": {
+        "kanji": "鬼ごっこ",
+        "furigana": "おにごっこ"
+      },
+      "image": "assets/images/categories/Activities/Tag.jpg"
+    },
+    {
+      "english": "hide-and-seek",
+      "japanese": {
+        "kanji": "かくれんぼ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Activities/Hide-and-seek.jpg"
+    },
+    {
+      "english": "rock-paper-scissors",
+      "japanese": {
+        "kanji": "じゃんけん",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Activities/Rock-Paper-Scissors.jpg",
+      "original_image": "assets/images/categories/Activities/Rock-paper-scissors.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "running",
+      "japanese": {
+        "kanji": "走る",
+        "furigana": "はしる"
+      },
+      "image": "assets/images/categories/Activities/Activities+/Running.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Activities/bonuswords/running.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "kite flying",
+      "japanese": {
+        "kanji": "凧揚げ",
+        "furigana": "たこあげ"
+      },
+      "image": "assets/images/categories/Activities/Activities+/Kite Flying.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Activities/bonuswords/kiteflying.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "top spinning",
+      "japanese": {
+        "kanji": "独楽回し",
+        "furigana": "こままわし"
+      },
+      "image": "assets/images/categories/Activities/Activities+/Top Spinning.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Activities/bonuswords/topspinning.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "playing dodge ball",
+      "japanese": {
+        "kanji": "ドッジボール",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Activities/Activities+/Playing Dodgeball.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Activities/bonuswords/playingdodgeball.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "playing the guitar",
+      "japanese": {
+        "kanji": "ギターを弾く",
+        "furigana": "ぎたーをひく"
+      },
+      "image": "assets/images/categories/Activities/Activities+/Playing The Guitar.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Activities/bonuswords/playingtheguitar.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "playing the recorder",
+      "japanese": {
+        "kanji": "リコーダーを吹く",
+        "furigana": "りこーだーをふく"
+      },
+      "image": "assets/images/categories/Activities/Activities+/Playing The Recorder.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Activities/bonuswords/playingtherecorder.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

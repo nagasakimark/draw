@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "title": "Stationery"
+  },
+  "items": [
+    {
+      "english": "ballpoint pen",
+      "japanese": {
+        "kanji": "ボールペン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Stationery/Stationary+/Ballpoint Pen.jpg",
+      "bonus": true
+    },
+    {
+      "english": "brush",
+      "japanese": {
+        "kanji": "筆",
+        "furigana": "ふで"
+      },
+      "image": "assets/images/categories/Stationery/Stationary+/Brush.jpg",
+      "bonus": true
+    },
+    {
+      "english": "calendar",
+      "japanese": {
+        "kanji": "カレンダー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Calendar.jpg",
+      "bonus": true
+    },
+    {
+      "english": "colored pencil",
+      "japanese": {
+        "kanji": "色鉛筆",
+        "furigana": "いろえんぴつ"
+      },
+      "image": "assets/images/categories/Stationery/Stationary+/Colored Pencil.jpg",
+      "bonus": true
+    },
+    {
+      "english": "eraser",
+      "japanese": {
+        "kanji": "消しゴム",
+        "furigana": "けしごむ"
+      },
+      "image": "assets/images/categories/Stationery/Eraser.jpg"
+    },
+    {
+      "english": "glue",
+      "japanese": {
+        "kanji": "のり",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Stationery/Glue.jpg"
+    },
+    {
+      "english": "ink",
+      "japanese": {
+        "kanji": "インク",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Stationery/Stationary+/Ink.jpg",
+      "bonus": true
+    },
+    {
+      "english": "marker",
+      "japanese": {
+        "kanji": "マーカー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Stationery/Marker.jpg"
+    },
+    {
+      "english": "notebook",
+      "japanese": {
+        "kanji": "ノート",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Stationery/Notebook.jpg"
+    },
+    {
+      "english": "pen",
+      "japanese": {
+        "kanji": "ペン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Stationery/Pen.jpg"
+    },
+    {
+      "english": "pencil",
+      "japanese": {
+        "kanji": "鉛筆",
+        "furigana": "えんぴつ"
+      },
+      "image": "assets/images/categories/Stationery/Pencil.jpg"
+    },
+    {
+      "english": "pencil case",
+      "japanese": {
+        "kanji": "筆箱",
+        "furigana": "ふでばこ"
+      },
+      "image": "assets/images/categories/Stationery/Pencil Case.jpg"
+    },
+    {
+      "english": "pencil sharpener",
+      "japanese": {
+        "kanji": "鉛筆削り",
+        "furigana": "えんぴつけずり"
+      },
+      "image": "assets/images/categories/Stationery/Pencil Sharpener.jpg"
+    },
+    {
+      "english": "pin",
+      "japanese": {
+        "kanji": "ピン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Stationery/Stationary+/Pin.jpg",
+      "bonus": true
+    },
+    {
+      "english": "ruler",
+      "japanese": {
+        "kanji": "もの刺し",
+        "furigana": "ものざし"
+      },
+      "image": "assets/images/categories/Stationery/Ruler.jpg"
+    },
+    {
+      "english": "stapler",
+      "japanese": {
+        "kanji": "ホッチキス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Stationery/Stapler.jpg"
+    }
+  ]
+}

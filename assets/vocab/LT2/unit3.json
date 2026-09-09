@@ -1,0 +1,72 @@
+[
+  {
+    "english": "Monday",
+    "japanese": {
+      "kanji": "月曜日",
+      "furigana": "げつようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Monday.jpg",
+    "original_image": "assets/images/categories/weekdays/monday.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "Tuesday",
+    "japanese": {
+      "kanji": "火曜日",
+      "furigana": "かようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Tuesday.jpg",
+    "original_image": "assets/images/categories/weekdays/tuesday.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "Wednesday",
+    "japanese": {
+      "kanji": "水曜日",
+      "furigana": "すいようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Wednesday.jpg",
+    "original_image": "assets/images/categories/weekdays/wednesday.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "Thursday",
+    "japanese": {
+      "kanji": "木曜日",
+      "furigana": "もくようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Thursday.jpg",
+    "original_image": "assets/images/categories/weekdays/thursday.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "Friday",
+    "japanese": {
+      "kanji": "金曜日",
+      "furigana": "きんようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Friday.jpg",
+    "original_image": "assets/images/categories/weekdays/friday.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "Saturday",
+    "japanese": {
+      "kanji": "土曜日",
+      "furigana": "どようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Saturday.jpg",
+    "original_image": "assets/images/categories/weekdays/saturday.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "Sunday",
+    "japanese": {
+      "kanji": "日曜日",
+      "furigana": "にちようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Sunday.jpg",
+    "original_image": "assets/images/categories/weekdays/sunday.jpg",
+    "original_image_kept": true
+  }
+]

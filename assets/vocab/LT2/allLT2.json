@@ -1,0 +1,1274 @@
+[
+  {
+    "english": "America",
+    "japanese": {
+      "kanji": "アメリカ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/America.jpg"
+  },
+  {
+    "english": "Canada",
+    "japanese": {
+      "kanji": "カナダ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Canada.jpg"
+  },
+  {
+    "english": "England",
+    "japanese": {
+      "kanji": "イギリス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/The UK.jpg"
+  },
+  {
+    "english": "Australia",
+    "japanese": {
+      "kanji": "オーストラリア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Australia.jpg"
+  },
+  {
+    "english": "China",
+    "japanese": {
+      "kanji": "中国",
+      "furigana": "ちゅうごく"
+    },
+    "image": "assets/images/categories/World/China.jpg"
+  },
+  {
+    "english": "Finland",
+    "japanese": {
+      "kanji": "フィンランド",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Finland.jpg"
+  },
+  {
+    "english": "Germany",
+    "japanese": {
+      "kanji": "ドイツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Germany.jpg"
+  },
+  {
+    "english": "France",
+    "japanese": {
+      "kanji": "フランス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/France.jpg"
+  },
+  {
+    "english": "India",
+    "japanese": {
+      "kanji": "インド",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/India.jpg"
+  },
+  {
+    "english": "Japan",
+    "japanese": {
+      "kanji": "日本",
+      "furigana": "にほん"
+    },
+    "image": "assets/images/categories/World/Japan.jpg"
+  },
+  {
+    "english": "Kenya",
+    "japanese": {
+      "kanji": "ケニア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Kenya.jpg"
+  },
+  {
+    "english": "Korea",
+    "japanese": {
+      "kanji": "韓国",
+      "furigana": "かんこく"
+    },
+    "image": "assets/images/categories/World/Korea.jpg"
+  },
+  {
+    "english": "Hello",
+    "japanese": {
+      "kanji": "こんにちは",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Hello.jpg"
+  },
+  {
+    "english": "Good-Bye",
+    "japanese": {
+      "kanji": "さようなら",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Goodbye.jpg"
+  },
+  {
+    "english": "like",
+    "japanese": {
+      "kanji": "好き",
+      "furigana": "すき"
+    },
+    "image": "assets/images/categories/LT2/Like.jpg"
+  },
+  {
+    "english": "dislike",
+    "japanese": {
+      "kanji": "好きじゃない",
+      "furigana": "すきじゃない"
+    },
+    "image": "assets/images/categories/LT2/Dislike.jpg"
+  },
+  {
+    "english": "sunny",
+    "japanese": {
+      "kanji": "晴れ",
+      "furigana": "はれ"
+    },
+    "image": "assets/images/categories/Weather/Sunny.jpg"
+  },
+  {
+    "english": "cloudy",
+    "japanese": {
+      "kanji": "曇り",
+      "furigana": "くもり"
+    },
+    "image": "assets/images/categories/Weather/Cloudy.jpg"
+  },
+  {
+    "english": "rainy",
+    "japanese": {
+      "kanji": "雨",
+      "furigana": "あめ"
+    },
+    "image": "assets/images/categories/Weather/Rainy.jpg"
+  },
+  {
+    "english": "snowy",
+    "japanese": {
+      "kanji": "雪",
+      "furigana": "ゆき"
+    },
+    "image": "assets/images/categories/Weather/Snowy.jpg"
+  },
+  {
+    "english": "hot",
+    "japanese": {
+      "kanji": "暑い",
+      "furigana": "あつい"
+    },
+    "image": "assets/images/categories/Tastes/Hot.jpg"
+  },
+  {
+    "english": "cold",
+    "japanese": {
+      "kanji": "寒い",
+      "furigana": "さむい"
+    },
+    "image": "assets/images/categories/Tastes/Cold.jpg"
+  },
+  {
+    "english": "shorts",
+    "japanese": {
+      "kanji": "短パン",
+      "furigana": "たんぱん"
+    },
+    "image": "assets/images/categories/LT2/Shorts.jpg"
+  },
+  {
+    "english": "shirt",
+    "japanese": {
+      "kanji": "シャツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Shirt.jpg"
+  },
+  {
+    "english": "pants",
+    "japanese": {
+      "kanji": "ズボン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Pants.jpg"
+  },
+  {
+    "english": "jacket",
+    "japanese": {
+      "kanji": "ジャケット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Clothes+/Jacket.jpg"
+  },
+  {
+    "english": "boots",
+    "japanese": {
+      "kanji": "ブーツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Clothes/Clothes+/Boots.jpg"
+  },
+  {
+    "english": "hat",
+    "japanese": {
+      "kanji": "帽子",
+      "furigana": "ぼうし"
+    },
+    "image": "assets/images/categories/Clothes/Hat.jpg"
+  },
+  {
+    "english": "play tag",
+    "japanese": {
+      "kanji": "鬼ごっこする",
+      "furigana": "おにごっこする"
+    },
+    "image": "assets/images/categories/LT2/Play tag.jpg"
+  },
+  {
+    "english": "play cards",
+    "japanese": {
+      "kanji": "トランプする",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Play cards.jpg"
+  },
+  {
+    "english": "play dodgeball",
+    "japanese": {
+      "kanji": "ドッジボールする",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Play Dodgeball.jpg"
+  },
+  {
+    "english": "make a snowman",
+    "japanese": {
+      "kanji": "雪だるまを作る",
+      "furigana": "ゆきだるまをつくる"
+    },
+    "image": "assets/images/categories/LT2/Make a snowman.jpg"
+  },
+  {
+    "english": "Monday",
+    "japanese": {
+      "kanji": "月曜日",
+      "furigana": "げつようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Monday.jpg"
+  },
+  {
+    "english": "Tuesday",
+    "japanese": {
+      "kanji": "火曜日",
+      "furigana": "かようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Tuesday.jpg"
+  },
+  {
+    "english": "Wednesday",
+    "japanese": {
+      "kanji": "水曜日",
+      "furigana": "すいようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Wednesday.jpg"
+  },
+  {
+    "english": "Thursday",
+    "japanese": {
+      "kanji": "木曜日",
+      "furigana": "もくようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Thursday.jpg"
+  },
+  {
+    "english": "Friday",
+    "japanese": {
+      "kanji": "金曜日",
+      "furigana": "きんようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Friday.jpg"
+  },
+  {
+    "english": "Saturday",
+    "japanese": {
+      "kanji": "土曜日",
+      "furigana": "どようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Saturday.jpg"
+  },
+  {
+    "english": "Sunday",
+    "japanese": {
+      "kanji": "日曜日",
+      "furigana": "にちようび"
+    },
+    "image": "assets/images/categories/Days of the Week/Sunday.jpg"
+  },
+  {
+    "english": "wake up time",
+    "japanese": {
+      "kanji": "起床時間",
+      "furigana": "きしょうじかん"
+    },
+    "image": "assets/images/categories/LT2/Wake up time.jpg"
+  },
+  {
+    "english": "breakfast time",
+    "japanese": {
+      "kanji": "朝食時間",
+      "furigana": "ちょうしょくじかん"
+    },
+    "image": "assets/images/categories/LT2/Breakfast time.jpg"
+  },
+  {
+    "english": "class time",
+    "japanese": {
+      "kanji": "授業時間",
+      "furigana": "じゅぎょうじかん"
+    },
+    "image": "assets/images/categories/LT2/Class time.jpg"
+  },
+  {
+    "english": "lunch time",
+    "japanese": {
+      "kanji": "昼食時間",
+      "furigana": "ちゅうしょくじかん"
+    },
+    "image": "assets/images/categories/LT2/Lunch time.jpg"
+  },
+  {
+    "english": "snack time",
+    "japanese": {
+      "kanji": "おやつ時間",
+      "furigana": "おやつじかん"
+    },
+    "image": "assets/images/categories/LT2/Snack time.jpg"
+  },
+  {
+    "english": "study time",
+    "japanese": {
+      "kanji": "勉強時間",
+      "furigana": "べんきょうじかん"
+    },
+    "image": "assets/images/categories/LT2/Study time.jpg"
+  },
+  {
+    "english": "dinner time",
+    "japanese": {
+      "kanji": "夕食時間",
+      "furigana": "ゆうしょくじかん"
+    },
+    "image": "assets/images/categories/LT2/Dinner time.jpg"
+  },
+  {
+    "english": "bath time",
+    "japanese": {
+      "kanji": "お風呂時間",
+      "furigana": "おふろじかん"
+    },
+    "image": "assets/images/categories/LT2/Bath time.jpg"
+  },
+  {
+    "english": "bedtime",
+    "japanese": {
+      "kanji": "就寝時間",
+      "furigana": "しゅうしんじかん"
+    },
+    "image": "assets/images/categories/LT2/Bed time.jpg"
+  },
+  {
+    "english": "dream time",
+    "japanese": {
+      "kanji": "夢の時間",
+      "furigana": "ゆめのじかん"
+    },
+    "image": "assets/images/categories/LT2/Dream time.jpg"
+  },
+  {
+    "english": "What time is it?",
+    "japanese": {
+      "kanji": "何時ですか？",
+      "furigana": "なんじですか？"
+    },
+    "image": "assets/images/categories/LT2/Time.jpg"
+  },
+  {
+    "english": "A.M.",
+    "japanese": {
+      "kanji": "午前",
+      "furigana": "ごぜん"
+    },
+    "image": "assets/images/categories/LT2/AM.jpg"
+  },
+  {
+    "english": "P.M.",
+    "japanese": {
+      "kanji": "午後",
+      "furigana": "ごご"
+    },
+    "image": "assets/images/categories/LT2/PM.jpg"
+  },
+  {
+    "english": "twelve o'clock",
+    "japanese": {
+      "kanji": "12:00",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/1200.jpg"
+  },
+  {
+    "english": "twelve thirty",
+    "japanese": {
+      "kanji": "12:30",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/1230.jpg"
+  },
+  {
+    "english": "one o'clock",
+    "japanese": {
+      "kanji": "01:00",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/0100.jpg"
+  },
+  {
+    "english": "one thirty",
+    "japanese": {
+      "kanji": "01:30",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/0130.jpg"
+  },
+  {
+    "english": "pencil",
+    "japanese": {
+      "kanji": "鉛筆",
+      "furigana": "えんぴつ"
+    },
+    "image": "assets/images/categories/Stationery/Pencil.jpg"
+  },
+  {
+    "english": "eraser",
+    "japanese": {
+      "kanji": "消しゴム",
+      "furigana": "けしごむ"
+    },
+    "image": "assets/images/categories/Stationery/Eraser.jpg"
+  },
+  {
+    "english": "pencil case",
+    "japanese": {
+      "kanji": "筆箱",
+      "furigana": "ふでばこ"
+    },
+    "image": "assets/images/categories/Stationery/Pencil case.jpg"
+  },
+  {
+    "english": "ruler",
+    "japanese": {
+      "kanji": "もの刺し",
+      "furigana": "ものざし"
+    },
+    "image": "assets/images/categories/Stationery/Ruler.jpg"
+  },
+  {
+    "english": "glue stick",
+    "japanese": {
+      "kanji": "のり",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Glue.jpg"
+  },
+  {
+    "english": "pen",
+    "japanese": {
+      "kanji": "ペン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Pen.jpg"
+  },
+  {
+    "english": "notebook",
+    "japanese": {
+      "kanji": "ノート",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Notebook.jpg"
+  },
+  {
+    "english": "calendar",
+    "japanese": {
+      "kanji": "カレンダー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Things Around You+/Calendar.jpg"
+  },
+  {
+    "english": "stapler",
+    "japanese": {
+      "kanji": "ホッチキス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Stapler.jpg"
+  },
+  {
+    "english": "pencil sharpener",
+    "japanese": {
+      "kanji": "鉛筆削り",
+      "furigana": "えんぴつけずり"
+    },
+    "image": "assets/images/categories/Stationery/Pencil sharpener.jpg"
+  },
+  {
+    "english": "marker",
+    "japanese": {
+      "kanji": "マーカー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Marker.jpg"
+  },
+  {
+    "english": "magnet",
+    "japanese": {
+      "kanji": "磁石",
+      "furigana": "じしゃく"
+    },
+    "image": "assets/images/categories/LT2/Magnet.jpg"
+  },
+  {
+    "english": "vegetables",
+    "japanese": {
+      "kanji": "野菜",
+      "furigana": "やさい"
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Vegetables.jpg"
+  },
+  {
+    "english": "onions",
+    "japanese": {
+      "kanji": "玉ねぎ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Onion.jpg"
+  },
+  {
+    "english": "mushrooms",
+    "japanese": {
+      "kanji": "きのこ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Mushroom.jpg"
+  },
+  {
+    "english": "green peppers",
+    "japanese": {
+      "kanji": "ピーマン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/GreenPepper.jpg"
+  },
+  {
+    "english": "tomatoes",
+    "japanese": {
+      "kanji": "トマト",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Tomato.jpg"
+  },
+  {
+    "english": "cabbages",
+    "japanese": {
+      "kanji": "キャベツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Cabbage.jpg"
+  },
+  {
+    "english": "corn",
+    "japanese": {
+      "kanji": "とうもろこし",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Corn.jpg"
+  },
+  {
+    "english": "carrots",
+    "japanese": {
+      "kanji": "にんじん",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Carrot.jpg"
+  },
+  {
+    "english": "cucumbers",
+    "japanese": {
+      "kanji": "きゅうり",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Cucumber.jpg"
+  },
+  {
+    "english": "potatoes",
+    "japanese": {
+      "kanji": "じゃがいも",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Potato.jpg"
+  },
+  {
+    "english": "fruits",
+    "japanese": {
+      "kanji": "果物",
+      "furigana": "くだもの"
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Fruit.jpg"
+  },
+  {
+    "english": "melons",
+    "japanese": {
+      "kanji": "メロン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Melon.jpg"
+  },
+  {
+    "english": "peaches",
+    "japanese": {
+      "kanji": "桃",
+      "furigana": "もも"
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Peach.jpg"
+  },
+  {
+    "english": "bananas",
+    "japanese": {
+      "kanji": "バナナ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Banana.jpg"
+  },
+  {
+    "english": "apples",
+    "japanese": {
+      "kanji": "りんご",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Apple.jpg"
+  },
+  {
+    "english": "pineapples",
+    "japanese": {
+      "kanji": "パイナップル",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Pineapple.jpg"
+  },
+  {
+    "english": "cherries",
+    "japanese": {
+      "kanji": "さくらんぼ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Cherry.jpg"
+  },
+  {
+    "english": "strawberries",
+    "japanese": {
+      "kanji": "いちご",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Strawberry.jpg"
+  },
+  {
+    "english": "oranges",
+    "japanese": {
+      "kanji": "オレンジ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/FruitAndVegetables/Orange.jpg"
+  },
+  {
+    "english": "kiwi fruits",
+    "japanese": {
+      "kanji": "キウイフルーツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/Kiwi Fruit.jpg"
+  },
+  {
+    "english": "classroom",
+    "japanese": {
+      "kanji": "教室",
+      "furigana": "きょうしつ"
+    },
+    "image": "assets/images/categories/School/Classroom.jpg"
+  },
+  {
+    "english": "entrance",
+    "japanese": {
+      "kanji": "玄関",
+      "furigana": "げんかん"
+    },
+    "image": "assets/images/categories/School/Entrance.jpg"
+  },
+  {
+    "english": "library",
+    "japanese": {
+      "kanji": "図書室",
+      "furigana": "としょしつ"
+    },
+    "image": "assets/images/categories/School/Library.jpg"
+  },
+  {
+    "english": "gym",
+    "japanese": {
+      "kanji": "体育館",
+      "furigana": "たいいくかん"
+    },
+    "image": "assets/images/categories/School/Gym.jpg"
+  },
+  {
+    "english": "computer room",
+    "japanese": {
+      "kanji": "コンピュータ室",
+      "furigana": "こんぴゅーたしつ"
+    },
+    "image": "assets/images/categories/School/Computer room.jpg"
+  },
+  {
+    "english": "music room",
+    "japanese": {
+      "kanji": "音楽室",
+      "furigana": "おんがくしつ"
+    },
+    "image": "assets/images/categories/School/Music room.jpg"
+  },
+  {
+    "english": "science room",
+    "japanese": {
+      "kanji": "理科室",
+      "furigana": "りかしつ"
+    },
+    "image": "assets/images/categories/LT2/Science room.jpg"
+  },
+  {
+    "english": "restroom",
+    "japanese": {
+      "kanji": "お手洗い",
+      "furigana": "おてあらい"
+    },
+    "image": "assets/images/categories/School/Restroom.jpg"
+  },
+  {
+    "english": "playground",
+    "japanese": {
+      "kanji": "運動場",
+      "furigana": "うんどうじょう"
+    },
+    "image": "assets/images/categories/School/Playground.jpg"
+  },
+  {
+    "english": "nurse's office",
+    "japanese": {
+      "kanji": "保健室",
+      "furigana": "ほけんしつ"
+    },
+    "image": "assets/images/categories/School/School Nurse_s Office.jpg"
+  },
+  {
+    "english": "teacher's office",
+    "japanese": {
+      "kanji": "職員室",
+      "furigana": "しょくいんしつ"
+    },
+    "image": "assets/images/categories/School/Teachers_ Office.jpg"
+  },
+  {
+    "english": "principal's office",
+    "japanese": {
+      "kanji": "校長室",
+      "furigana": "こうちょうしつ"
+    },
+    "image": "assets/images/categories/School/School Principal_s Office.jpg"
+  },
+  {
+    "english": "school office",
+    "japanese": {
+      "kanji": "事務室",
+      "furigana": "じむしつ"
+    },
+    "image": "assets/images/categories/LT2/School Office.jpg"
+  },
+  {
+    "english": "lunch room",
+    "japanese": {
+      "kanji": "給食室",
+      "furigana": "きゅうしょくしつ"
+    },
+    "image": "assets/images/categories/LT2/Lunch room.jpg"
+  },
+  {
+    "english": "cooking room",
+    "japanese": {
+      "kanji": "調理室",
+      "furigana": "ちょうりしつ"
+    },
+    "image": "assets/images/categories/LT2/Cooking room.jpg"
+  },
+  {
+    "english": "arts and crafts room",
+    "japanese": {
+      "kanji": "図工室",
+      "furigana": "ずこうしつ"
+    },
+    "image": "assets/images/categories/LT2/Art room.jpg"
+  },
+  {
+    "english": "wash my face",
+    "japanese": {
+      "kanji": "顔を洗う",
+      "furigana": "かおをあらう"
+    },
+    "image": "assets/images/categories/LT2/Wash my face.jpg"
+  },
+  {
+    "english": "brush my teeth",
+    "japanese": {
+      "kanji": "歯を磨く",
+      "furigana": "はをみがく"
+    },
+    "image": "assets/images/categories/LT2/Brush my teeth.jpg"
+  },
+  {
+    "english": "put away my futon",
+    "japanese": {
+      "kanji": "布団を片付ける",
+      "furigana": "ふとんをかたづける"
+    },
+    "image": "assets/images/categories/LT2/Put away my futon.jpg"
+  },
+  {
+    "english": "check my schoolbag",
+    "japanese": {
+      "kanji": "かばんを確認する",
+      "furigana": "かばんをかくにんする"
+    },
+    "image": "assets/images/categories/LT2/Check my schoolbag.jpg"
+  },
+  {
+    "english": "leave my house",
+    "japanese": {
+      "kanji": "家を出る",
+      "furigana": "いえをでる"
+    },
+    "image": "assets/images/categories/LT2/Leave my home.jpg"
+  },
+  {
+    "english": "take out the garbage",
+    "japanese": {
+      "kanji": "ゴミを出す",
+      "furigana": "ごみをだす"
+    },
+    "image": "assets/images/categories/LT2/Take out the garbage.jpg"
+  },
+  {
+    "english": "go to school",
+    "japanese": {
+      "kanji": "学校へ行く",
+      "furigana": "がっこうへいく"
+    },
+    "image": "assets/images/categories/LT2/Go to school.jpg"
+  },
+  {
+    "english": "go home",
+    "japanese": {
+      "kanji": "家へ帰る",
+      "furigana": "いえへかえる"
+    },
+    "image": "assets/images/categories/LT2/Go home.jpg"
+  },
+  {
+    "english": "do my homework",
+    "japanese": {
+      "kanji": "宿題をする",
+      "furigana": "しゅくだいをする"
+    },
+    "image": "assets/images/categories/LT2/Do my homework.jpg"
+  },
+  {
+    "english": "finish my dinner",
+    "japanese": {
+      "kanji": "夕食を終える",
+      "furigana": "ゆうしょくをおえる"
+    },
+    "image": "assets/images/categories/LT2/Finish my dinner.jpg"
+  },
+  {
+    "english": "red",
+    "japanese": {
+      "kanji": "赤",
+      "furigana": "あか"
+    },
+    "image": "assets/images/categories/Colors/Red.jpg"
+  },
+  {
+    "english": "blue",
+    "japanese": {
+      "kanji": "青",
+      "furigana": "あお"
+    },
+    "image": "assets/images/categories/Colors/Blue.jpg"
+  },
+  {
+    "english": "green",
+    "japanese": {
+      "kanji": "緑",
+      "furigana": "みどり"
+    },
+    "image": "assets/images/categories/Colors/Green.jpg"
+  },
+  {
+    "english": "yellow",
+    "japanese": {
+      "kanji": "黄色",
+      "furigana": "きいろ"
+    },
+    "image": "assets/images/categories/Colors/Yellow.jpg"
+  },
+  {
+    "english": "orange",
+    "japanese": {
+      "kanji": "オレンジ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Colors/Orange.jpg"
+  },
+  {
+    "english": "brown",
+    "japanese": {
+      "kanji": "茶色",
+      "furigana": "ちゃいろ"
+    },
+    "image": "assets/images/categories/Colors/Brown.jpg"
+  },
+  {
+    "english": "purple",
+    "japanese": {
+      "kanji": "紫",
+      "furigana": "むらさき"
+    },
+    "image": "assets/images/categories/Colors/Purple.jpg"
+  },
+  {
+    "english": "pink",
+    "japanese": {
+      "kanji": "桃色",
+      "furigana": "ももいろ"
+    },
+    "image": "assets/images/categories/Colors/Pink.jpg"
+  },
+  {
+    "english": "black",
+    "japanese": {
+      "kanji": "黒",
+      "furigana": "くろ"
+    },
+    "image": "assets/images/categories/Colors/Black.jpg"
+  },
+  {
+    "english": "white",
+    "japanese": {
+      "kanji": "白",
+      "furigana": "しろ"
+    },
+    "image": "assets/images/categories/Colors/White.jpg"
+  },
+  {
+    "english": "gray",
+    "japanese": {
+      "kanji": "灰色",
+      "furigana": "はいいろ"
+    },
+    "image": "assets/images/categories/Colors/Gray.jpg"
+  },
+  {
+    "english": "silver",
+    "japanese": {
+      "kanji": "銀",
+      "furigana": "ぎん"
+    },
+    "image": "assets/images/categories/Colors/Silver.jpg"
+  },
+  {
+    "english": "gold",
+    "japanese": {
+      "kanji": "金",
+      "furigana": "きん"
+    },
+    "image": "assets/images/categories/Colors/Gold.jpg"
+  },
+  {
+    "english": "go",
+    "japanese": {
+      "kanji": "行く",
+      "furigana": "いく"
+    },
+    "image": "assets/images/categories/Directions/Go.jpg"
+  },
+  {
+    "english": "straight",
+    "japanese": {
+      "kanji": "まっすぐ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Directions/Straight.jpg"
+  },
+  {
+    "english": "turn",
+    "japanese": {
+      "kanji": "曲がる",
+      "furigana": "まがる"
+    },
+    "image": "assets/images/categories/Directions/Turn.jpg"
+  },
+  {
+    "english": "right",
+    "japanese": {
+      "kanji": "右",
+      "furigana": "みぎ"
+    },
+    "image": "assets/images/categories/Directions/Right.jpg"
+  },
+  {
+    "english": "left",
+    "japanese": {
+      "kanji": "左",
+      "furigana": "ひだり"
+    },
+    "image": "assets/images/categories/Directions/Left.jpg"
+  },
+  {
+    "english": "step",
+    "japanese": {
+      "kanji": "歩調",
+      "furigana": "ほちょう"
+    },
+    "image": "assets/images/categories/LT2/Steps.jpg"
+  },
+  {
+    "english": "a",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/A.jpg"
+  },
+  {
+    "english": "b",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/B.jpg"
+  },
+  {
+    "english": "c",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/C.jpg"
+  },
+  {
+    "english": "d",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/D.jpg"
+  },
+  {
+    "english": "e",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/E.jpg"
+  },
+  {
+    "english": "f",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/F.jpg"
+  },
+  {
+    "english": "g",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/G.jpg"
+  },
+  {
+    "english": "h",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/H.jpg"
+  },
+  {
+    "english": "i",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/I.jpg"
+  },
+  {
+    "english": "j",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/J.jpg"
+  },
+  {
+    "english": "k",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/K.jpg"
+  },
+  {
+    "english": "l",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/L.jpg"
+  },
+  {
+    "english": "m",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/M.jpg"
+  },
+  {
+    "english": "n",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/N.jpg"
+  },
+  {
+    "english": "o",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/O.jpg"
+  },
+  {
+    "english": "p",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/P.jpg"
+  },
+  {
+    "english": "q",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/Q.jpg"
+  },
+  {
+    "english": "r",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/R.jpg"
+  },
+  {
+    "english": "s",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/S.jpg"
+  },
+  {
+    "english": "t",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/T.jpg"
+  },
+  {
+    "english": "u",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/U.jpg"
+  },
+  {
+    "english": "v",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/V.jpg"
+  },
+  {
+    "english": "w",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/W.jpg"
+  },
+  {
+    "english": "x",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/X.jpg"
+  },
+  {
+    "english": "y",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/Y.jpg"
+  },
+  {
+    "english": "z",
+    "japanese": {
+      "kanji": "",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT1/Z.jpg"
+  }
+]

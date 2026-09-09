@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "title": "Directions"
+  },
+  "items": [
+    {
+      "english": "block",
+      "japanese": {
+        "kanji": "区画",
+        "furigana": "くかく"
+      },
+      "image": "assets/images/categories/Directions/Block.jpg"
+    },
+    {
+      "english": "corner",
+      "japanese": {
+        "kanji": "角",
+        "furigana": "かど"
+      },
+      "image": "assets/images/categories/Directions/Corner.jpg"
+    },
+    {
+      "english": "down",
+      "japanese": {
+        "kanji": "下",
+        "furigana": "した"
+      },
+      "image": "assets/images/categories/Directions/Down.jpg"
+    },
+    {
+      "english": "go",
+      "japanese": {
+        "kanji": "行く",
+        "furigana": "いく"
+      },
+      "image": "assets/images/categories/Directions/Go.jpg"
+    },
+    {
+      "english": "left",
+      "japanese": {
+        "kanji": "左",
+        "furigana": "ひだり"
+      },
+      "image": "assets/images/categories/Directions/Left.jpg"
+    },
+    {
+      "english": "right",
+      "japanese": {
+        "kanji": "右",
+        "furigana": "みぎ"
+      },
+      "image": "assets/images/categories/Directions/Right.jpg"
+    },
+    {
+      "english": "see",
+      "japanese": {
+        "kanji": "見る",
+        "furigana": "みる"
+      },
+      "image": "assets/images/categories/Directions/See.jpg"
+    },
+    {
+      "english": "straight",
+      "japanese": {
+        "kanji": "まっすぐ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Directions/Straight.jpg"
+    },
+    {
+      "english": "traffic light",
+      "japanese": {
+        "kanji": "信号",
+        "furigana": "しんごう"
+      },
+      "image": "assets/images/categories/Directions/Traffic Light.jpg",
+      "original_image": "assets/images/categories/Directions/Traffic light.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "turn",
+      "japanese": {
+        "kanji": "曲がる",
+        "furigana": "まがる"
+      },
+      "image": "assets/images/categories/Directions/Turn.jpg"
+    },
+    {
+      "english": "up",
+      "japanese": {
+        "kanji": "上",
+        "furigana": "うえ"
+      },
+      "image": "assets/images/categories/Directions/Up.jpg"
+    }
+  ]
+}

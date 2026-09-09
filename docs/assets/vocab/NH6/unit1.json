@@ -1,0 +1,751 @@
+[
+  {
+    "english": "world",
+    "japanese": {
+      "kanji": "世界",
+      "furigana": "せかい"
+    },
+    "image": "assets/images/categories/World/World.jpg"
+  },
+  {
+    "english": "country",
+    "japanese": {
+      "kanji": "国",
+      "furigana": "くに"
+    },
+    "image": "assets/images/categories/World/Country.jpg"
+  },
+  {
+    "english": "culture",
+    "japanese": {
+      "kanji": "文化",
+      "furigana": "ぶんか"
+    },
+    "image": "assets/images/categories/World/Culture.jpg"
+  },
+  {
+    "english": "north",
+    "japanese": {
+      "kanji": "北",
+      "furigana": "きた"
+    },
+    "image": "assets/images/categories/World/North.jpg"
+  },
+  {
+    "english": "east",
+    "japanese": {
+      "kanji": "東",
+      "furigana": "ひがし"
+    },
+    "image": "assets/images/categories/World/East.jpg"
+  },
+  {
+    "english": "south",
+    "japanese": {
+      "kanji": "南",
+      "furigana": "みなみ"
+    },
+    "image": "assets/images/categories/World/South.jpg"
+  },
+  {
+    "english": "west",
+    "japanese": {
+      "kanji": "西",
+      "furigana": "にし"
+    },
+    "image": "assets/images/categories/World/West.jpg"
+  },
+  {
+    "english": "North America",
+    "japanese": {
+      "kanji": "北アメリカ",
+      "furigana": "きたあめりか"
+    },
+    "image": "assets/images/categories/World/North America.jpg"
+  },
+  {
+    "english": "South America",
+    "japanese": {
+      "kanji": "南アメリカ",
+      "furigana": "みなみあめりか"
+    },
+    "image": "assets/images/categories/World/South America.jpg"
+  },
+  {
+    "english": "Asia",
+    "japanese": {
+      "kanji": "アジア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Asia.jpg"
+  },
+  {
+    "english": "Europe",
+    "japanese": {
+      "kanji": "ヨーロッパ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Europe.jpg"
+  },
+  {
+    "english": "Africa",
+    "japanese": {
+      "kanji": "アフリカ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Africa.jpg"
+  },
+  {
+    "english": "Oceania",
+    "japanese": {
+      "kanji": "オセアニア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Oceania.jpg"
+  },
+  {
+    "english": "The U.K.",
+    "japanese": {
+      "kanji": "イギリス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/The UK.jpg"
+  },
+  {
+    "english": "France",
+    "japanese": {
+      "kanji": "フランス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/France.jpg"
+  },
+  {
+    "english": "Egypt",
+    "japanese": {
+      "kanji": "エジプト",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Egypt.jpg"
+  },
+  {
+    "english": "China",
+    "japanese": {
+      "kanji": "中国",
+      "furigana": "ちゅうごく"
+    },
+    "image": "assets/images/categories/World/China.jpg"
+  },
+  {
+    "english": "Australia",
+    "japanese": {
+      "kanji": "オーストラリア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Australia.jpg"
+  },
+  {
+    "english": "Japan",
+    "japanese": {
+      "kanji": "日本",
+      "furigana": "にほん"
+    },
+    "image": "assets/images/categories/World/Japan.jpg"
+  },
+  {
+    "english": "America",
+    "japanese": {
+      "kanji": "アメリカ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/America.jpg"
+  },
+  {
+    "english": "Brazil",
+    "japanese": {
+      "kanji": "ブラジル",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Brazil.jpg"
+  },
+  {
+    "english": "camping",
+    "japanese": {
+      "kanji": "キャンプ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Camping.jpg"
+  },
+  {
+    "english": "dancing",
+    "japanese": {
+      "kanji": "ダンス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Dancing.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Dancing.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "fishing",
+    "japanese": {
+      "kanji": "釣り",
+      "furigana": "つり"
+    },
+    "image": "assets/images/categories/Activities/Fishing.jpg"
+  },
+  {
+    "english": "hiking",
+    "japanese": {
+      "kanji": "ハイキング",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Hiking.jpg"
+  },
+  {
+    "english": "shopping",
+    "japanese": {
+      "kanji": "買い物",
+      "furigana": "かいもの"
+    },
+    "image": "assets/images/categories/Activities/Shopping.jpg"
+  },
+  {
+    "english": "reading",
+    "japanese": {
+      "kanji": "読書",
+      "furigana": "どくしょ"
+    },
+    "image": "assets/images/categories/Activities/Reading.jpg"
+  },
+  {
+    "english": "drawing",
+    "japanese": {
+      "kanji": "絵を描く",
+      "furigana": "えをかく"
+    },
+    "image": "assets/images/categories/Activities/Drawing.jpg"
+  },
+  {
+    "english": "jogging",
+    "japanese": {
+      "kanji": "ジョギング",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Jogging.jpg"
+  },
+  {
+    "english": "skateboarding",
+    "japanese": {
+      "kanji": "スケートボード",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Skateboarding.jpg"
+  },
+  {
+    "english": "swinging",
+    "japanese": {
+      "kanji": "ブランコ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Swinging.jpg"
+  },
+  {
+    "english": "playing the piano",
+    "japanese": {
+      "kanji": "ピアノを弾く",
+      "furigana": "ぴあのをひく"
+    },
+    "image": "assets/images/categories/Activities/Playing The Piano.jpg"
+  },
+  {
+    "english": "playing video games",
+    "japanese": {
+      "kanji": "テレビゲームをする",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Playing Video Games.jpg"
+  },
+  {
+    "english": "watching a movie",
+    "japanese": {
+      "kanji": "映画を見る",
+      "furigana": "えいがをみる"
+    },
+    "image": "assets/images/categories/Activities/Seeing Movies.jpg"
+  },
+  {
+    "english": "cards",
+    "japanese": {
+      "kanji": "トランプ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Cards.jpg"
+  },
+  {
+    "english": "jump rope",
+    "japanese": {
+      "kanji": "縄跳び",
+      "furigana": "なわとび"
+    },
+    "image": "assets/images/categories/Activities/Jump Rope.jpg"
+  },
+  {
+    "english": "tag",
+    "japanese": {
+      "kanji": "鬼ごっこ",
+      "furigana": "おにごっこ"
+    },
+    "image": "assets/images/categories/Activities/Tag.jpg"
+  },
+  {
+    "english": "hide-and-seek",
+    "japanese": {
+      "kanji": "かくれんぼ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Hide-and-seek.jpg"
+  },
+  {
+    "english": "rock-paper-scissors",
+    "japanese": {
+      "kanji": "じゃんけん",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Rock-Paper-Scissors.jpg"
+  },
+  {
+    "english": "badminton",
+    "japanese": {
+      "kanji": "バドミントン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Badminton.jpg"
+  },
+  {
+    "english": "baseball",
+    "japanese": {
+      "kanji": "野球",
+      "furigana": "やきゅう"
+    },
+    "image": "assets/images/categories/Sports/Baseball.jpg"
+  },
+  {
+    "english": "basketball",
+    "japanese": {
+      "kanji": "バスケットボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Basketball.jpg"
+  },
+  {
+    "english": "cricket",
+    "japanese": {
+      "kanji": "クリケット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Cricket.jpg"
+  },
+  {
+    "english": "dancing",
+    "japanese": {
+      "kanji": "ダンス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Dancing.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Dancing.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "dodgeball",
+    "japanese": {
+      "kanji": "ドッジボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Dodgeball.jpg"
+  },
+  {
+    "english": "golf",
+    "japanese": {
+      "kanji": "ゴルフ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Golf.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Golf.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "gymnastics",
+    "japanese": {
+      "kanji": "体操",
+      "furigana": "たいそう"
+    },
+    "image": "assets/images/categories/Sports/Gymnastics.jpg"
+  },
+  {
+    "english": "judo",
+    "japanese": {
+      "kanji": "柔道",
+      "furigana": "じゅうどう"
+    },
+    "image": "assets/images/categories/Sports/Judo.jpg"
+  },
+  {
+    "english": "karate",
+    "japanese": {
+      "kanji": "空手",
+      "furigana": "からて"
+    },
+    "image": "assets/images/categories/Sports/Sports+/Karate.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Karate.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "kendo",
+    "japanese": {
+      "kanji": "剣道",
+      "furigana": "けんどう"
+    },
+    "image": "assets/images/categories/Sports/Kendo.jpg"
+  },
+  {
+    "english": "marathon",
+    "japanese": {
+      "kanji": "マラソン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Marathon.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Marathon.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "rugby",
+    "japanese": {
+      "kanji": "ラグビー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Rugby.jpg"
+  },
+  {
+    "english": "skateboarding",
+    "japanese": {
+      "kanji": "スケートボード",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Skateboarding.jpg"
+  },
+  {
+    "english": "skating",
+    "japanese": {
+      "kanji": "スケート",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Skating.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Skating.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "skiing",
+    "japanese": {
+      "kanji": "スキー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Skiing.jpg"
+  },
+  {
+    "english": "soccer",
+    "japanese": {
+      "kanji": "サッカー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Soccer.jpg"
+  },
+  {
+    "english": "softball",
+    "japanese": {
+      "kanji": "ソフトボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Softball.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Softball.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "sports",
+    "japanese": {
+      "kanji": "スポーツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports.jpg"
+  },
+  {
+    "english": "sumo",
+    "japanese": {
+      "kanji": "相撲",
+      "furigana": "すもう"
+    },
+    "image": "assets/images/categories/Sports/Sumo.jpg"
+  },
+  {
+    "english": "surfing",
+    "japanese": {
+      "kanji": "サーフィン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Surfing.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Surfing.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "swimming",
+    "japanese": {
+      "kanji": "水泳",
+      "furigana": "すいえい"
+    },
+    "image": "assets/images/categories/Sports/Swimming.jpg"
+  },
+  {
+    "english": "table tennis",
+    "japanese": {
+      "kanji": "卓球",
+      "furigana": "たっきゅう"
+    },
+    "image": "assets/images/categories/Sports/Table Tennis.jpg",
+    "original_image": "assets/images/categories/Sports/Table tennis.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "tennis",
+    "japanese": {
+      "kanji": "テニス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Tennis.jpg"
+  },
+  {
+    "english": "track and field",
+    "japanese": {
+      "kanji": "陸上競技",
+      "furigana": "りくじょうきょうぎ"
+    },
+    "image": "assets/images/categories/Sports/Track and Field.jpg",
+    "original_image": "assets/images/categories/Sports/Track and field.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "volleyball",
+    "japanese": {
+      "kanji": "バレーボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Volleyball.jpg"
+  },
+  {
+    "english": "wrestling",
+    "japanese": {
+      "kanji": "レスリング",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Wrestling.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Wrestling.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "bag",
+    "japanese": {
+      "kanji": "かばん",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Bag.jpg"
+  },
+  {
+    "english": "bat",
+    "japanese": {
+      "kanji": "バット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Bat.jpg"
+  },
+  {
+    "english": "glove",
+    "japanese": {
+      "kanji": "グローブ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Glove.jpg"
+  },
+  {
+    "english": "racket",
+    "japanese": {
+      "kanji": "ラケット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Racket.jpg"
+  },
+  {
+    "english": "soccer shoes",
+    "japanese": {
+      "kanji": "サッカーシューズ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Soccer Shoes.jpg",
+    "original_image": "assets/images/categories/Things Around You/Soccer shoes.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "umbrella",
+    "japanese": {
+      "kanji": "傘",
+      "furigana": "かさ"
+    },
+    "image": "assets/images/categories/Things Around You/Umbrella.jpg"
+  },
+  {
+    "english": "glass",
+    "japanese": {
+      "kanji": "グラス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Glass.jpg"
+  },
+  {
+    "english": "mug",
+    "japanese": {
+      "kanji": "マグカップ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Mug.jpg"
+  },
+  {
+    "english": "textbook",
+    "japanese": {
+      "kanji": "教科書",
+      "furigana": "きょうかしょ"
+    },
+    "image": "assets/images/categories/Things Around You/Textbook.jpg"
+  },
+  {
+    "english": "comic book",
+    "japanese": {
+      "kanji": "漫画",
+      "furigana": "まんが"
+    },
+    "image": "assets/images/categories/Things Around You/Comic Book.jpg",
+    "original_image": "assets/images/categories/Things Around You/Comic book.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "dictionary",
+    "japanese": {
+      "kanji": "辞書",
+      "furigana": "じしょ"
+    },
+    "image": "assets/images/categories/Things Around You/Dictionary.jpg"
+  },
+  {
+    "english": "present",
+    "japanese": {
+      "kanji": "プレゼント",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Present.jpg"
+  },
+  {
+    "english": "treasure",
+    "japanese": {
+      "kanji": "宝物",
+      "furigana": "たからもの"
+    },
+    "image": "assets/images/categories/Things Around You/Treasure.jpg"
+  },
+  {
+    "english": "sticker",
+    "japanese": {
+      "kanji": "シール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Sticker.jpg"
+  },
+  {
+    "english": "ticket",
+    "japanese": {
+      "kanji": "チケット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Ticket.jpg"
+  },
+  {
+    "english": "watch",
+    "japanese": {
+      "kanji": "時計",
+      "furigana": "とけい"
+    },
+    "image": "assets/images/categories/Things Around You/Watch.jpg"
+  },
+  {
+    "english": "TV",
+    "japanese": {
+      "kanji": "テレビ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/TV.jpg",
+    "original_image": "assets/images/categories/Things Around You/Tv.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "computer",
+    "japanese": {
+      "kanji": "コンピューター",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Computer.jpg"
+  },
+  {
+    "english": "smartphone",
+    "japanese": {
+      "kanji": "スマートフォン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Smartphone.jpg"
+  },
+  {
+    "english": "tablet",
+    "japanese": {
+      "kanji": "タブレット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Tablet.jpg"
+  },
+  {
+    "english": "desk",
+    "japanese": {
+      "kanji": "机",
+      "furigana": "つくえ"
+    },
+    "image": "assets/images/categories/Things Around You/Desk.jpg"
+  },
+  {
+    "english": "chair",
+    "japanese": {
+      "kanji": "椅子",
+      "furigana": "いす"
+    },
+    "image": "assets/images/categories/Things Around You/Chair.jpg"
+  },
+  {
+    "english": "bed",
+    "japanese": {
+      "kanji": "ベッド",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Bed.jpg"
+  }
+]

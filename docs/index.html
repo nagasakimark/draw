@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomachi Draw</title>
+  <meta name="description" content="Tomachi Draw — classroom English drawing game for elementary students">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <section id="home-screen" class="home-screen">
+      <div class="home-stage">
+        <img class="home-logo" src="./assets/logo.png" alt="Tomachi Draw">
+
+        <div class="home-panels">
+          <section id="home-entry" class="home-card home-card-narrow home-entry-card">
+            <p class="home-kicker">えいごで おえかき</p>
+            <h2 class="home-title">いっしょに あそぼう！</h2>
+            <p class="home-lead">なまえをかいて、部屋をつくるか はいろう</p>
+            <p id="home-error" class="notice notice-error" hidden></p>
+
+            <label class="field-block">
+              <span class="field-label">あなたの なまえ</span>
+              <input id="player-name" type="text" maxlength="30" placeholder="例：たろう">
+            </label>
+
+            <div class="entry-actions entry-actions-stack">
+              <button id="show-create-button" type="button" class="btn-play btn-create">部屋をつくる</button>
+              <button id="show-join-button" type="button" class="btn-play btn-join">部屋にはいる</button>
+            </div>
+          </section>
+
+          <section id="home-create" class="home-create-layout" hidden>
+            <div class="home-card home-settings-card">
+              <p class="home-kicker">せってい</p>
+              <h2 class="home-title home-title-sm">部屋の設定</h2>
+              <p id="create-error" class="notice notice-error" hidden></p>
+
+              <div class="settings-stack">
+                <label>
+                  <span class="field-label">ラウンド数</span>
+                  <input id="rounds-input" type="number" min="1" max="12" value="4">
+                </label>
+                <label>
+                  <span class="field-label">かく時間（秒）</span>
+                  <input id="drawing-time-input" type="number" min="30" max="180" value="90">
+                </label>
+                <label>
+                  <span class="field-label">さいだい人数</span>
+                  <input id="max-players-input" type="number" min="2" max="60" value="20">
+                </label>
+              </div>
+
+              <div class="entry-actions entry-actions-stack">
+                <button id="create-room-button" type="button" class="btn-play btn-create">この設定でつくる</button>
+                <button id="back-from-create-button" type="button" class="btn-play btn-back">もどる</button>
+              </div>
+            </div>
+
+            <div class="home-card home-category-card">
+              <p class="home-kicker">ピクチャー辞書</p>
+              <h2 class="home-title home-title-sm">カテゴリーを選ぼう</h2>
+              <div id="deck-grid" class="card-grid"></div>
+            </div>
+          </section>
+
+          <section id="home-join" class="home-card home-card-narrow home-entry-card" hidden>
+            <p class="home-kicker">ともだちの部屋</p>
+            <h2 class="home-title home-title-sm">部屋にはいろう</h2>
+            <p class="home-lead">先生やおともだちの 部屋コードをいれてね</p>
+            <p id="join-error" class="notice notice-error" hidden></p>
+
+            <label class="field-block">
+              <span class="field-label">部屋コード</span>
+              <input id="join-room-input" type="text" maxlength="8" placeholder="例：AB12CD" class="code-input">
+            </label>
+
+            <div class="entry-actions entry-actions-stack">
+              <button id="join-room-button" type="button" class="btn-play btn-join">はいる！</button>
+              <button id="back-from-join-button" type="button" class="btn-play btn-back">もどる</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="game-screen" class="game-screen" hidden>
+      <header class="game-topbar">
+        <div class="topbar-box">
+          <img class="topbar-icon" src="./resources/round.svg" alt="">
+          <span id="round-label">-</span>
+        </div>
+        <div class="topbar-title">
+          <span class="room-code-label">部屋コード:</span>
+          <div id="room-title" class="room-code-display">----</div>
+        </div>
+        <div class="topbar-box topbar-timer">
+          <img class="topbar-icon" src="./resources/clock.svg" alt="">
+          <span id="timer-label">-</span>
+        </div>
+      </header>
+
+      <main class="game-layout">
+        <aside class="sidebar left-sidebar">
+          <div class="sidebar-header">
+            <span id="phase-label">待機中</span>
+            <button id="start-game-button" type="button">スタート</button>
+          </div>
+          <div id="players-list" class="player-list"></div>
+          <button id="leave-room-button" class="secondary" type="button" hidden>部屋をでる</button>
+        </aside>
+
+        <section class="board-column">
+          <div class="word-strip">
+            <div class="hint-box">ヒント: <span id="word-hint-label">-</span></div>
+            <div class="hint-box" id="drawer-word-badge" hidden>あなたの単語: <span id="drawer-word-label"></span></div>
+          </div>
+
+          <div id="word-choice-panel" class="choice-overlay" hidden>
+            <div class="choice-modal">
+              <h3>単語を選んでください</h3>
+              <div id="word-choice-grid" class="card-grid word-grid"></div>
+            </div>
+          </div>
+
+          <div class="board-frame">
+            <canvas id="board" width="1280" height="720"></canvas>
+          </div>
+
+          <div id="toolbox" class="toolbox" hidden>
+            <div class="color-button-container toolbox-group" title="いろを変える">
+              <div id="first-color-button-row" class="color-button-row">
+                <button type="button" class="color-button" style="background-color:#ffffff" data-color="#ffffff"></button>
+                <button type="button" class="color-button" style="background-color:#c1c1c1" data-color="#c1c1c1"></button>
+                <button type="button" class="color-button" style="background-color:#ef130b" data-color="#ef130b"></button>
+                <button type="button" class="color-button" style="background-color:#ff7100" data-color="#ff7100"></button>
+                <button type="button" class="color-button" style="background-color:#ffe400" data-color="#ffe400"></button>
+                <button type="button" class="color-button" style="background-color:#00cc00" data-color="#00cc00"></button>
+                <button type="button" class="color-button" style="background-color:#00b2ff" data-color="#00b2ff"></button>
+                <button type="button" class="color-button" style="background-color:#231fd3" data-color="#231fd3"></button>
+                <button type="button" class="color-button" style="background-color:#a300ba" data-color="#a300ba"></button>
+                <button type="button" class="color-button" style="background-color:#d37caa" data-color="#d37caa"></button>
+                <button type="button" class="color-button" style="background-color:#a0522d" data-color="#a0522d"></button>
+                <button type="button" class="color-button" style="background-color:#592f2a" data-color="#592f2a"></button>
+                <button type="button" class="color-button" style="background-color:#ecbcb4" data-color="#ecbcb4"></button>
+              </div>
+              <div id="second-color-button-row" class="color-button-row">
+                <button type="button" class="color-button" style="background-color:#000000" data-color="#000000"></button>
+                <button type="button" class="color-button" style="background-color:#4c4c4c" data-color="#4c4c4c"></button>
+                <button type="button" class="color-button" style="background-color:#740b07" data-color="#740b07"></button>
+                <button type="button" class="color-button" style="background-color:#c23800" data-color="#c23800"></button>
+                <button type="button" class="color-button" style="background-color:#e8a200" data-color="#e8a200"></button>
+                <button type="button" class="color-button" style="background-color:#005510" data-color="#005510"></button>
+                <button type="button" class="color-button" style="background-color:#00569e" data-color="#00569e"></button>
+                <button type="button" class="color-button" style="background-color:#0e0865" data-color="#0e0865"></button>
+                <button type="button" class="color-button" style="background-color:#550069" data-color="#550069"></button>
+                <button type="button" class="color-button" style="background-color:#a75574" data-color="#a75574"></button>
+                <button type="button" class="color-button" style="background-color:#63300d" data-color="#63300d"></button>
+                <button type="button" class="color-button" style="background-color:#492f31" data-color="#492f31"></button>
+                <button type="button" class="color-button" style="background-color:#d1a3a4" data-color="#d1a3a4"></button>
+              </div>
+            </div>
+
+            <div class="pencil-sizes-container toolbox-group">
+              <label for="tool-type-pencil">
+                <input id="tool-type-pencil" class="custom-check-or-radio line-width-button" type="radio" name="tool-type" value="pencil" checked>
+                <div class="line-width-button-content">
+                  <img src="./resources/pencil.svg" alt="えんぴつ" title="えんぴつ" style="transform: scaleX(-1)">
+                </div>
+              </label>
+              <label for="tool-type-fill">
+                <input id="tool-type-fill" class="custom-check-or-radio line-width-button" type="radio" name="tool-type" value="fill">
+                <div class="line-width-button-content">
+                  <img src="./resources/fill.svg" alt="ぬりつぶし" title="ぬりつぶし">
+                </div>
+              </label>
+              <label for="tool-type-rubber">
+                <input id="tool-type-rubber" class="custom-check-or-radio line-width-button" type="radio" name="tool-type" value="rubber">
+                <div class="line-width-button-content">
+                  <img src="./resources/rubber.svg" alt="けしゴム" title="けしゴム">
+                </div>
+              </label>
+            </div>
+
+            <div id="size-buttons" class="pencil-sizes-container toolbox-group">
+              <label for="size-8-button">
+                <input id="size-8-button" class="custom-check-or-radio line-width-button" type="radio" name="line-width" value="8" checked>
+                <div class="line-width-button-content" title="太さ 8">
+                  <div class="dot" style="width:8px;height:8px"></div>
+                </div>
+              </label>
+              <label for="size-16-button">
+                <input id="size-16-button" class="custom-check-or-radio line-width-button" type="radio" name="line-width" value="16">
+                <div class="line-width-button-content" title="太さ 16">
+                  <div class="dot" style="width:16px;height:16px"></div>
+                </div>
+              </label>
+              <label for="size-24-button">
+                <input id="size-24-button" class="custom-check-or-radio line-width-button" type="radio" name="line-width" value="24">
+                <div class="line-width-button-content" title="太さ 24">
+                  <div class="dot" style="width:24px;height:24px"></div>
+                </div>
+              </label>
+              <label for="size-32-button">
+                <input id="size-32-button" class="custom-check-or-radio line-width-button" type="radio" name="line-width" value="32">
+                <div class="line-width-button-content" title="太さ 32">
+                  <div class="dot" style="width:32px;height:32px"></div>
+                </div>
+              </label>
+            </div>
+
+            <button type="button" id="clear-board-button" class="canvas-button toolbox-group" title="ぜんぶ消す">
+              <img src="./resources/trash.svg" alt="消す">
+            </button>
+            <button type="button" id="undo-button" class="canvas-button toolbox-group" title="ひとつもどす">
+              <img src="./resources/undo.svg" alt="もどす">
+            </button>
+          </div>
+        </section>
+
+        <aside class="sidebar right-sidebar">
+          <div id="chat-log" class="chat-log"></div>
+          <div class="chat-input-row">
+            <input id="chat-input" type="text" placeholder="こたえやメッセージを入力">
+            <button id="send-chat-button" class="secondary" type="button">送信</button>
+          </div>
+        </aside>
+      </main>
+    </section>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

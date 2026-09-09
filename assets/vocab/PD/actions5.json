@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "title": "Actions (5th Grade)"
+  },
+  "items": [
+    {
+      "english": "spell",
+      "japanese": {
+        "kanji": "綴る",
+        "furigana": "つづる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Spell.jpg"
+    },
+    {
+      "english": "like",
+      "japanese": {
+        "kanji": "好き",
+        "furigana": "すき"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Like.jpg"
+    },
+    {
+      "english": "listen",
+      "japanese": {
+        "kanji": "聞く",
+        "furigana": "きく"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Listen.jpg"
+    },
+    {
+      "english": "want",
+      "japanese": {
+        "kanji": "欲しい",
+        "furigana": "ほしい"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Want.jpg"
+    },
+    {
+      "english": "play",
+      "japanese": {
+        "kanji": "遊ぶ",
+        "furigana": "あそぶ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Play.jpg"
+    },
+    {
+      "english": "walk",
+      "japanese": {
+        "kanji": "歩く",
+        "furigana": "あるく"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Walk.jpg"
+    },
+    {
+      "english": "run",
+      "japanese": {
+        "kanji": "走る",
+        "furigana": "はしる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Run.jpg"
+    },
+    {
+      "english": "dance",
+      "japanese": {
+        "kanji": "踊る",
+        "furigana": "おどる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Dance.jpg"
+    },
+    {
+      "english": "jump",
+      "japanese": {
+        "kanji": "跳ぶ",
+        "furigana": "とぶ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Jump.jpg"
+    },
+    {
+      "english": "catch",
+      "japanese": {
+        "kanji": "捕まえる",
+        "furigana": "つかまえる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Catch.jpg"
+    },
+    {
+      "english": "swim",
+      "japanese": {
+        "kanji": "泳ぐ",
+        "furigana": "およぐ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Swim.jpg"
+    },
+    {
+      "english": "fly",
+      "japanese": {
+        "kanji": "飛ぶ",
+        "furigana": "とぶ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Fly.jpg"
+    },
+    {
+      "english": "sing",
+      "japanese": {
+        "kanji": "歌う",
+        "furigana": "うたう"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Sing.jpg"
+    },
+    {
+      "english": "cook",
+      "japanese": {
+        "kanji": "料理する",
+        "furigana": "りょうりする"
+      },
+      "image": "assets/images/categories/Jobs/Cook.jpg"
+    },
+    {
+      "english": "have",
+      "japanese": {
+        "kanji": "持つ",
+        "furigana": "もつ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Have.jpg"
+    },
+    {
+      "english": "go",
+      "japanese": {
+        "kanji": "行く",
+        "furigana": "いく"
+      },
+      "image": "assets/images/categories/Directions/Go.jpg"
+    },
+    {
+      "english": "turn",
+      "japanese": {
+        "kanji": "曲がる",
+        "furigana": "まがる"
+      },
+      "image": "assets/images/categories/Directions/Turn.jpg"
+    },
+    {
+      "english": "see",
+      "japanese": {
+        "kanji": "見る",
+        "furigana": "みる"
+      },
+      "image": "assets/images/categories/Directions/See.jpg"
+    },
+    {
+      "english": "look",
+      "japanese": {
+        "kanji": "見る",
+        "furigana": "みる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Look.jpg"
+    },
+    {
+      "english": "drink",
+      "japanese": {
+        "kanji": "飲む",
+        "furigana": "のむ"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Drink.jpg"
+    },
+    {
+      "english": "eat",
+      "japanese": {
+        "kanji": "食べる",
+        "furigana": "たべる"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Eat.jpg"
+    },
+    {
+      "english": "buy",
+      "japanese": {
+        "kanji": "買う",
+        "furigana": "かう"
+      },
+      "image": "assets/images/categories/Present Tense/5th Grade/Buy.jpg"
+    }
+  ]
+}

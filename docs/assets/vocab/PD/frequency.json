@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "title": "Frequency"
+  },
+  "items": [
+    {
+      "english": "always",
+      "japanese": {
+        "kanji": "いつも",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Frequency/Always.jpg"
+    },
+    {
+      "english": "never",
+      "japanese": {
+        "kanji": "全然",
+        "furigana": "ぜんぜん"
+      },
+      "image": "assets/images/categories/Frequency/Never.jpg"
+    },
+    {
+      "english": "sometimes",
+      "japanese": {
+        "kanji": "時々",
+        "furigana": "ときどき"
+      },
+      "image": "assets/images/categories/Frequency/Sometimes.jpg"
+    },
+    {
+      "english": "usually",
+      "japanese": {
+        "kanji": "たいてい",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Frequency/Usually.jpg"
+    }
+  ]
+}

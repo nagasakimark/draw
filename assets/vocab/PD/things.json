@@ -1,0 +1,548 @@
+{
+  "metadata": {
+    "title": "Things"
+  },
+  "items": [
+    {
+      "english": "album",
+      "japanese": {
+        "kanji": "アルバム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Album.jpg",
+      "bonus": true
+    },
+    {
+      "english": "bag",
+      "japanese": {
+        "kanji": "かばん",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Bag.jpg"
+    },
+    {
+      "english": "ball",
+      "japanese": {
+        "kanji": "ボール",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Ball.jpg",
+      "bonus": true
+    },
+    {
+      "english": "basket",
+      "japanese": {
+        "kanji": "かご",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Basket.jpg",
+      "bonus": true
+    },
+    {
+      "english": "bat",
+      "japanese": {
+        "kanji": "バット",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Bat.jpg"
+    },
+    {
+      "english": "bath",
+      "japanese": {
+        "kanji": "風呂",
+        "furigana": "ふろ"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Bath.jpg",
+      "bonus": true
+    },
+    {
+      "english": "bed",
+      "japanese": {
+        "kanji": "ベッド",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Bed.jpg"
+    },
+    {
+      "english": "book",
+      "japanese": {
+        "kanji": "本",
+        "furigana": "ほん"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Book.jpg",
+      "bonus": true
+    },
+    {
+      "english": "box",
+      "japanese": {
+        "kanji": "箱",
+        "furigana": "はこ"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Box.jpg",
+      "bonus": true
+    },
+    {
+      "english": "bucket",
+      "japanese": {
+        "kanji": "バケツ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Bucket.jpg",
+      "bonus": true
+    },
+    {
+      "english": "calendar",
+      "japanese": {
+        "kanji": "カレンダー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Calendar.jpg",
+      "bonus": true
+    },
+    {
+      "english": "camera",
+      "japanese": {
+        "kanji": "カメラ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Camera.jpg",
+      "bonus": true
+    },
+    {
+      "english": "card",
+      "japanese": {
+        "kanji": "カード",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Card.jpg",
+      "bonus": true
+    },
+    {
+      "english": "chair",
+      "japanese": {
+        "kanji": "椅子",
+        "furigana": "いす"
+      },
+      "image": "assets/images/categories/Things Around You/Chair.jpg"
+    },
+    {
+      "english": "clock",
+      "japanese": {
+        "kanji": "時計",
+        "furigana": "とけい"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Clock.jpg",
+      "bonus": true
+    },
+    {
+      "english": "comic book",
+      "japanese": {
+        "kanji": "漫画",
+        "furigana": "まんが"
+      },
+      "image": "assets/images/categories/Things Around You/Comic Book.jpg",
+      "original_image": "assets/images/categories/Things Around You/Comic book.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "computer",
+      "japanese": {
+        "kanji": "コンピューター",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Computer.jpg"
+    },
+    {
+      "english": "cup",
+      "japanese": {
+        "kanji": "カップ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Cup.jpg",
+      "bonus": true
+    },
+    {
+      "english": "desk",
+      "japanese": {
+        "kanji": "机",
+        "furigana": "つくえ"
+      },
+      "image": "assets/images/categories/Things Around You/Desk.jpg"
+    },
+    {
+      "english": "dictionary",
+      "japanese": {
+        "kanji": "辞書",
+        "furigana": "じしょ"
+      },
+      "image": "assets/images/categories/Things Around You/Dictionary.jpg"
+    },
+    {
+      "english": "dish",
+      "japanese": {
+        "kanji": "皿",
+        "furigana": "さら"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Dish.jpg",
+      "bonus": true
+    },
+    {
+      "english": "doll",
+      "japanese": {
+        "kanji": "人形",
+        "furigana": "にんぎょう"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Doll.jpg",
+      "bonus": true
+    },
+    {
+      "english": "door",
+      "japanese": {
+        "kanji": "ドア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Door.jpg",
+      "bonus": true
+    },
+    {
+      "english": "Eco-friendly bag",
+      "japanese": {
+        "kanji": "エコバッグ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Eco-friendly Bag.jpg",
+      "bonus": true
+    },
+    {
+      "english": "elevator",
+      "japanese": {
+        "kanji": "エレベーター",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Elevator.jpg",
+      "bonus": true
+    },
+    {
+      "english": "fan",
+      "japanese": {
+        "kanji": "扇子",
+        "furigana": "せんす"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Fan.jpg",
+      "bonus": true
+    },
+    {
+      "english": "fork",
+      "japanese": {
+        "kanji": "フォーク",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Fork.jpg",
+      "bonus": true
+    },
+    {
+      "english": "garbage",
+      "japanese": {
+        "kanji": "ゴミ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Garbage.jpg",
+      "bonus": true
+    },
+    {
+      "english": "gate",
+      "japanese": {
+        "kanji": "門",
+        "furigana": "もん"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Gate.jpg",
+      "bonus": true
+    },
+    {
+      "english": "glass",
+      "japanese": {
+        "kanji": "グラス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Glass.jpg"
+    },
+    {
+      "english": "glove",
+      "japanese": {
+        "kanji": "グローブ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Glove.jpg"
+    },
+    {
+      "english": "key",
+      "japanese": {
+        "kanji": "鍵",
+        "furigana": "かぎ"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Key.jpg",
+      "bonus": true
+    },
+    {
+      "english": "lamp",
+      "japanese": {
+        "kanji": "ランプ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Lamp.jpg",
+      "bonus": true
+    },
+    {
+      "english": "map",
+      "japanese": {
+        "kanji": "地図",
+        "furigana": "ちず"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Map.jpg",
+      "bonus": true
+    },
+    {
+      "english": "mug",
+      "japanese": {
+        "kanji": "マグカップ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Mug.jpg"
+    },
+    {
+      "english": "picture",
+      "japanese": {
+        "kanji": "絵",
+        "furigana": "え"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Picture.jpg",
+      "bonus": true
+    },
+    {
+      "english": "plastic bag",
+      "japanese": {
+        "kanji": "プラスチック袋",
+        "furigana": "ぷらすちっくぶくろ"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Plastic Bag.jpg",
+      "bonus": true
+    },
+    {
+      "english": "pot",
+      "japanese": {
+        "kanji": "鍋",
+        "furigana": "なべ"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Pot.jpg",
+      "bonus": true
+    },
+    {
+      "english": "present",
+      "japanese": {
+        "kanji": "プレゼント",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Present.jpg"
+    },
+    {
+      "english": "quilt",
+      "japanese": {
+        "kanji": "掛け布団",
+        "furigana": "かけぶとん"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Quilt.jpg",
+      "bonus": true
+    },
+    {
+      "english": "racket",
+      "japanese": {
+        "kanji": "ラケット",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Racket.jpg"
+    },
+    {
+      "english": "ring",
+      "japanese": {
+        "kanji": "指輪",
+        "furigana": "ゆびわ"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Ring.jpg",
+      "bonus": true
+    },
+    {
+      "english": "room",
+      "japanese": {
+        "kanji": "部屋",
+        "furigana": "へや"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Room.jpg",
+      "bonus": true
+    },
+    {
+      "english": "rug",
+      "japanese": {
+        "kanji": "敷物",
+        "furigana": "しきもの"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Rug.jpg",
+      "bonus": true
+    },
+    {
+      "english": "smartphone",
+      "japanese": {
+        "kanji": "スマートフォン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Smartphone.jpg"
+    },
+    {
+      "english": "soccer shoes",
+      "japanese": {
+        "kanji": "サッカーシューズ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Soccer Shoes.jpg",
+      "original_image": "assets/images/categories/Things Around You/Soccer shoes.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "sofa",
+      "japanese": {
+        "kanji": "ソファ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Sofa.jpg",
+      "bonus": true
+    },
+    {
+      "english": "spoon",
+      "japanese": {
+        "kanji": "スプーン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Spoon.jpg",
+      "bonus": true
+    },
+    {
+      "english": "sticker",
+      "japanese": {
+        "kanji": "シール",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Sticker.jpg"
+    },
+    {
+      "english": "table",
+      "japanese": {
+        "kanji": "テーブル",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Table.jpg",
+      "bonus": true
+    },
+    {
+      "english": "tablet",
+      "japanese": {
+        "kanji": "タブレット",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Tablet.jpg"
+    },
+    {
+      "english": "telephone",
+      "japanese": {
+        "kanji": "電話",
+        "furigana": "でんわ"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Telephone.jpg",
+      "bonus": true
+    },
+    {
+      "english": "textbook",
+      "japanese": {
+        "kanji": "教科書",
+        "furigana": "きょうかしょ"
+      },
+      "image": "assets/images/categories/Things Around You/Textbook.jpg"
+    },
+    {
+      "english": "ticket",
+      "japanese": {
+        "kanji": "チケット",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/Ticket.jpg"
+    },
+    {
+      "english": "treasure",
+      "japanese": {
+        "kanji": "宝物",
+        "furigana": "たからもの"
+      },
+      "image": "assets/images/categories/Things Around You/Treasure.jpg"
+    },
+    {
+      "english": "TV",
+      "japanese": {
+        "kanji": "テレビ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Things Around You/TV.jpg",
+      "original_image": "assets/images/categories/Things Around You/Tv.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "umbrella",
+      "japanese": {
+        "kanji": "傘",
+        "furigana": "かさ"
+      },
+      "image": "assets/images/categories/Things Around You/Umbrella.jpg"
+    },
+    {
+      "english": "wall",
+      "japanese": {
+        "kanji": "壁",
+        "furigana": "かべ"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Wall.jpg",
+      "bonus": true
+    },
+    {
+      "english": "watch",
+      "japanese": {
+        "kanji": "時計",
+        "furigana": "とけい"
+      },
+      "image": "assets/images/categories/Things Around You/Watch.jpg"
+    },
+    {
+      "english": "wheelchair",
+      "japanese": {
+        "kanji": "車椅子",
+        "furigana": "くるまいす"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Wheelchair.jpg",
+      "bonus": true
+    },
+    {
+      "english": "window",
+      "japanese": {
+        "kanji": "窓",
+        "furigana": "まど"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Window.jpg",
+      "bonus": true
+    },
+    {
+      "english": "yen",
+      "japanese": {
+        "kanji": "円",
+        "furigana": "えん"
+      },
+      "image": "assets/images/categories/Things Around You/Things Around You+/Yen.jpg",
+      "bonus": true
+    }
+  ]
+}

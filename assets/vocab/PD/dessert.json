@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "Dessert"
+  },
+  "items": [
+    {
+      "english": "cake",
+      "japanese": {
+        "kanji": "ケーキ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Cake.jpg"
+    },
+    {
+      "english": "candy",
+      "japanese": {
+        "kanji": "キャンディー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Dessert+/Candy.jpg",
+      "bonus": true
+    },
+    {
+      "english": "chocolate",
+      "japanese": {
+        "kanji": "チョコレート",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Chocolate.jpg"
+    },
+    {
+      "english": "cookie",
+      "japanese": {
+        "kanji": "クッキー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Dessert+/Cookie.jpg",
+      "bonus": true
+    },
+    {
+      "english": "cream puff",
+      "japanese": {
+        "kanji": "シュークリーム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Cream Puff.jpg",
+      "original_image": "assets/images/categories/Dessert/Cream puff.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "crepe",
+      "japanese": {
+        "kanji": "クレープ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Dessert+/Crepe.jpg",
+      "bonus": true
+    },
+    {
+      "english": "dessert",
+      "japanese": {
+        "kanji": "デザート",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Dessert.jpg"
+    },
+    {
+      "english": "donut",
+      "japanese": {
+        "kanji": "ドーナツ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Donut.jpg"
+    },
+    {
+      "english": "ice cream",
+      "japanese": {
+        "kanji": "アイスクリーム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Ice Cream.jpg",
+      "original_image": "assets/images/categories/Dessert/Ice cream.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "jelly",
+      "japanese": {
+        "kanji": "ゼリー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Dessert+/Jelly.jpg",
+      "bonus": true
+    },
+    {
+      "english": "parfait",
+      "japanese": {
+        "kanji": "パフェ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Parfait.jpg"
+    },
+    {
+      "english": "popcorn",
+      "japanese": {
+        "kanji": "ポップコーン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Popcorn.jpg"
+    },
+    {
+      "english": "potato chips",
+      "japanese": {
+        "kanji": "ポテトチップス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Potato Chips.jpg",
+      "original_image": "assets/images/categories/Dessert/Potato chips.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "pudding",
+      "japanese": {
+        "kanji": "プリン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Dessert/Puddin.jpg"
+    },
+    {
+      "english": "shaved ice",
+      "japanese": {
+        "kanji": "かき氷",
+        "furigana": "かきごおり"
+      },
+      "image": "assets/images/categories/Dessert/Shaved Ice.jpg",
+      "original_image": "assets/images/categories/Dessert/Shaved ice.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

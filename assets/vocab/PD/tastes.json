@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "title": "Tastes"
+  },
+  "items": [
+    {
+      "english": "bitter",
+      "japanese": {
+        "kanji": "苦い",
+        "furigana": "にがい"
+      },
+      "image": "assets/images/categories/Tastes/Bitter.jpg"
+    },
+    {
+      "english": "sweet",
+      "japanese": {
+        "kanji": "甘い",
+        "furigana": "あまい"
+      },
+      "image": "assets/images/categories/Tastes/Sweet.jpg"
+    },
+    {
+      "english": "salty",
+      "japanese": {
+        "kanji": "塩辛い",
+        "furigana": "しおからい"
+      },
+      "image": "assets/images/categories/Tastes/Salty.jpg"
+    },
+    {
+      "english": "sour",
+      "japanese": {
+        "kanji": "酸っぱい",
+        "furigana": "すっぱい"
+      },
+      "image": "assets/images/categories/Tastes/Sour.jpg"
+    },
+    {
+      "english": "spicy",
+      "japanese": {
+        "kanji": "辛い",
+        "furigana": "からい"
+      },
+      "image": "assets/images/categories/Tastes/Spicy.jpg"
+    },
+    {
+      "english": "delicious",
+      "japanese": {
+        "kanji": "美味しい",
+        "furigana": "おいしい"
+      },
+      "image": "assets/images/categories/Tastes/Delicious.jpg"
+    },
+    {
+      "english": "soft",
+      "japanese": {
+        "kanji": "柔らかい",
+        "furigana": "やわらかい"
+      },
+      "image": "assets/images/categories/Tastes/Soft.jpg"
+    },
+    {
+      "english": "hard",
+      "japanese": {
+        "kanji": "硬い",
+        "furigana": "かたい"
+      },
+      "image": "assets/images/categories/Tastes/Hard.jpg"
+    },
+    {
+      "english": "cold",
+      "japanese": {
+        "kanji": "冷たい",
+        "furigana": "つめたい"
+      },
+      "image": "assets/images/categories/Weather/Cold.jpg"
+    },
+    {
+      "english": "hot",
+      "japanese": {
+        "kanji": "熱い",
+        "furigana": "あつい"
+      },
+      "image": "assets/images/categories/Weather/Hot.jpg"
+    },
+    {
+      "english": "good",
+      "japanese": {
+        "kanji": "良い",
+        "furigana": "よい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Good.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Tastes/bonuswords/good.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "great",
+      "japanese": {
+        "kanji": "素晴らしい",
+        "furigana": "すばらしい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Great.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Tastes/bonuswords/great.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "bad",
+      "japanese": {
+        "kanji": "悪い",
+        "furigana": "わるい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Bad.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Tastes/bonuswords/bad.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

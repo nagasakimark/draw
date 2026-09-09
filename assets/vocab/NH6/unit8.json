@@ -1,0 +1,454 @@
+[
+  {
+    "english": "badminton",
+    "japanese": {
+      "kanji": "バドミントン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Badminton.jpg"
+  },
+  {
+    "english": "baseball",
+    "japanese": {
+      "kanji": "野球",
+      "furigana": "やきゅう"
+    },
+    "image": "assets/images/categories/Sports/Baseball.jpg"
+  },
+  {
+    "english": "basketball",
+    "japanese": {
+      "kanji": "バスケットボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Basketball.jpg"
+  },
+  {
+    "english": "cricket",
+    "japanese": {
+      "kanji": "クリケット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Cricket.jpg"
+  },
+  {
+    "english": "dancing",
+    "japanese": {
+      "kanji": "ダンス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Dancing.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Dancing.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "dodgeball",
+    "japanese": {
+      "kanji": "ドッジボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Dodgeball.jpg"
+  },
+  {
+    "english": "golf",
+    "japanese": {
+      "kanji": "ゴルフ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Golf.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Golf.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "gymnastics",
+    "japanese": {
+      "kanji": "体操",
+      "furigana": "たいそう"
+    },
+    "image": "assets/images/categories/Sports/Gymnastics.jpg"
+  },
+  {
+    "english": "judo",
+    "japanese": {
+      "kanji": "柔道",
+      "furigana": "じゅうどう"
+    },
+    "image": "assets/images/categories/Sports/Judo.jpg"
+  },
+  {
+    "english": "karate",
+    "japanese": {
+      "kanji": "空手",
+      "furigana": "からて"
+    },
+    "image": "assets/images/categories/Sports/Sports+/Karate.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Karate.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "kendo",
+    "japanese": {
+      "kanji": "剣道",
+      "furigana": "けんどう"
+    },
+    "image": "assets/images/categories/Sports/Kendo.jpg"
+  },
+  {
+    "english": "marathon",
+    "japanese": {
+      "kanji": "マラソン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Marathon.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Marathon.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "rugby",
+    "japanese": {
+      "kanji": "ラグビー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Rugby.jpg"
+  },
+  {
+    "english": "skateboarding",
+    "japanese": {
+      "kanji": "スケートボード",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Skateboarding.jpg"
+  },
+  {
+    "english": "skating",
+    "japanese": {
+      "kanji": "スケート",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Skating.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Skating.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "skiing",
+    "japanese": {
+      "kanji": "スキー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Skiing.jpg"
+  },
+  {
+    "english": "soccer",
+    "japanese": {
+      "kanji": "サッカー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Soccer.jpg"
+  },
+  {
+    "english": "softball",
+    "japanese": {
+      "kanji": "ソフトボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Softball.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Softball.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "sports",
+    "japanese": {
+      "kanji": "スポーツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports.jpg"
+  },
+  {
+    "english": "sumo",
+    "japanese": {
+      "kanji": "相撲",
+      "furigana": "すもう"
+    },
+    "image": "assets/images/categories/Sports/Sumo.jpg"
+  },
+  {
+    "english": "surfing",
+    "japanese": {
+      "kanji": "サーフィン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Surfing.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Surfing.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "swimming",
+    "japanese": {
+      "kanji": "水泳",
+      "furigana": "すいえい"
+    },
+    "image": "assets/images/categories/Sports/Swimming.jpg"
+  },
+  {
+    "english": "table tennis",
+    "japanese": {
+      "kanji": "卓球",
+      "furigana": "たっきゅう"
+    },
+    "image": "assets/images/categories/Sports/Table Tennis.jpg",
+    "original_image": "assets/images/categories/Sports/Table tennis.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "tennis",
+    "japanese": {
+      "kanji": "テニス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Tennis.jpg"
+  },
+  {
+    "english": "track and field",
+    "japanese": {
+      "kanji": "陸上競技",
+      "furigana": "りくじょうきょうぎ"
+    },
+    "image": "assets/images/categories/Sports/Track and Field.jpg",
+    "original_image": "assets/images/categories/Sports/Track and field.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "volleyball",
+    "japanese": {
+      "kanji": "バレーボール",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Volleyball.jpg"
+  },
+  {
+    "english": "wrestling",
+    "japanese": {
+      "kanji": "レスリング",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Wrestling.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Wrestling.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "jobs",
+    "japanese": {
+      "kanji": "仕事",
+      "furigana": "しごと"
+    },
+    "image": "assets/images/categories/Jobs/Jobs.jpg"
+  },
+  {
+    "english": "artist",
+    "japanese": {
+      "kanji": "芸術家",
+      "furigana": "げいじゅつか"
+    },
+    "image": "assets/images/categories/Jobs/Artist.jpg"
+  },
+  {
+    "english": "astronaut",
+    "japanese": {
+      "kanji": "宇宙飛行士",
+      "furigana": "うちゅうひこうし"
+    },
+    "image": "assets/images/categories/Jobs/Astronaut.jpg"
+  },
+  {
+    "english": "baker",
+    "japanese": {
+      "kanji": "パン屋さん",
+      "furigana": "ぱんやさん"
+    },
+    "image": "assets/images/categories/Jobs/Baker.jpg"
+  },
+  {
+    "english": "baseball player",
+    "japanese": {
+      "kanji": "野球選手",
+      "furigana": "やきゅうせんしゅ"
+    },
+    "image": "assets/images/categories/Jobs/Baseball player.jpg"
+  },
+  {
+    "english": "comedian",
+    "japanese": {
+      "kanji": "芸人",
+      "furigana": "げいにん"
+    },
+    "image": "assets/images/categories/Jobs/Comedian.jpg"
+  },
+  {
+    "english": "cook",
+    "japanese": {
+      "kanji": "料理する",
+      "furigana": "りょうりする"
+    },
+    "image": "assets/images/categories/Jobs/Cook.jpg"
+  },
+  {
+    "english": "doctor",
+    "japanese": {
+      "kanji": "医者",
+      "furigana": "いしゃ"
+    },
+    "image": "assets/images/categories/Jobs/Doctor.jpg"
+  },
+  {
+    "english": "farmer",
+    "japanese": {
+      "kanji": "農家",
+      "furigana": "のうか"
+    },
+    "image": "assets/images/categories/Jobs/Farmer.jpg"
+  },
+  {
+    "english": "fire fighter",
+    "japanese": {
+      "kanji": "消防士",
+      "furigana": "しょうぼうし"
+    },
+    "image": "assets/images/categories/Jobs/Fire fighter.jpg"
+  },
+  {
+    "english": "flight attendant",
+    "japanese": {
+      "kanji": "客室乗務員",
+      "furigana": "きゃくしつじょうむいん"
+    },
+    "image": "assets/images/categories/Jobs/Flight Attendant.jpg"
+  },
+  {
+    "english": "mountaineer",
+    "japanese": {
+      "kanji": "登山家",
+      "furigana": "とざんか"
+    },
+    "image": "assets/images/categories/Jobs/Mountaineer.jpg"
+  },
+  {
+    "english": "nurse",
+    "japanese": {
+      "kanji": "看護師",
+      "furigana": "かんごし"
+    },
+    "image": "assets/images/categories/Jobs/Nurse.jpg"
+  },
+  {
+    "english": "office worker",
+    "japanese": {
+      "kanji": "会社員",
+      "furigana": "かいしゃいん"
+    },
+    "image": "assets/images/categories/Jobs/Office Worker.jpg"
+  },
+  {
+    "english": "pilot",
+    "japanese": {
+      "kanji": "パイロット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Jobs/Pilot.jpg"
+  },
+  {
+    "english": "police officer",
+    "japanese": {
+      "kanji": "警察官",
+      "furigana": "けいさつかん"
+    },
+    "image": "assets/images/categories/Jobs/Police Officer.jpg"
+  },
+  {
+    "english": "programmer",
+    "japanese": {
+      "kanji": "プログラマー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Jobs/Programmer.jpg"
+  },
+  {
+    "english": "researcher",
+    "japanese": {
+      "kanji": "研究者",
+      "furigana": "けんきゅうしゃ"
+    },
+    "image": "assets/images/categories/Jobs/Researcher.jpg"
+  },
+  {
+    "english": "scientist",
+    "japanese": {
+      "kanji": "科学者",
+      "furigana": "かがくしゃ"
+    },
+    "image": "assets/images/categories/Jobs/Scientist.jpg"
+  },
+  {
+    "english": "singer",
+    "japanese": {
+      "kanji": "歌手",
+      "furigana": "かしゅ"
+    },
+    "image": "assets/images/categories/Jobs/Singer.jpg"
+  },
+  {
+    "english": "teacher",
+    "japanese": {
+      "kanji": "先生",
+      "furigana": "せんせい"
+    },
+    "image": "assets/images/categories/Jobs/Teacher.jpg"
+  },
+  {
+    "english": "vet",
+    "japanese": {
+      "kanji": "獣医",
+      "furigana": "じゅうい"
+    },
+    "image": "assets/images/categories/Jobs/Vet.jpg"
+  },
+  {
+    "english": "writer",
+    "japanese": {
+      "kanji": "作家",
+      "furigana": "さっか"
+    },
+    "image": "assets/images/categories/Jobs/Writer.jpg"
+  },
+  {
+    "english": "zookeeper",
+    "japanese": {
+      "kanji": "飼育員",
+      "furigana": "しいくいん"
+    },
+    "image": "assets/images/categories/Jobs/Zookeeper.jpg"
+  },
+  {
+    "english": "now",
+    "japanese": {
+      "kanji": "今",
+      "furigana": "いま"
+    },
+    "image": "assets/images/categories/Jobs/Now.jpg"
+  },
+  {
+    "english": "future",
+    "japanese": {
+      "kanji": "未来",
+      "furigana": "みらい"
+    },
+    "image": "assets/images/categories/Jobs/Future.jpg"
+  }
+]

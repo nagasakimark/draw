@@ -1,0 +1,170 @@
+[
+  {
+    "english": "zero",
+    "japanese": {
+      "kanji": "零",
+      "furigana": "れい"
+    },
+    "image": "assets/images/categories/Numbers/0.jpg"
+  },
+  {
+    "english": "one",
+    "japanese": {
+      "kanji": "一",
+      "furigana": "いち"
+    },
+    "image": "assets/images/categories/Numbers/1.jpg"
+  },
+  {
+    "english": "two",
+    "japanese": {
+      "kanji": "二",
+      "furigana": "に"
+    },
+    "image": "assets/images/categories/Numbers/2.jpg"
+  },
+  {
+    "english": "three",
+    "japanese": {
+      "kanji": "三",
+      "furigana": "さん"
+    },
+    "image": "assets/images/categories/Numbers/3.jpg"
+  },
+  {
+    "english": "four",
+    "japanese": {
+      "kanji": "四",
+      "furigana": "し / よん"
+    },
+    "image": "assets/images/categories/Numbers/4.jpg"
+  },
+  {
+    "english": "five",
+    "japanese": {
+      "kanji": "五",
+      "furigana": "ご"
+    },
+    "image": "assets/images/categories/Numbers/5.jpg"
+  },
+  {
+    "english": "six",
+    "japanese": {
+      "kanji": "六",
+      "furigana": "ろく"
+    },
+    "image": "assets/images/categories/Numbers/6.jpg"
+  },
+  {
+    "english": "seven",
+    "japanese": {
+      "kanji": "七",
+      "furigana": "しち / なな"
+    },
+    "image": "assets/images/categories/Numbers/7.jpg"
+  },
+  {
+    "english": "eight",
+    "japanese": {
+      "kanji": "八",
+      "furigana": "はち"
+    },
+    "image": "assets/images/categories/Numbers/8.jpg"
+  },
+  {
+    "english": "nine",
+    "japanese": {
+      "kanji": "九",
+      "furigana": "きゅう / く"
+    },
+    "image": "assets/images/categories/Numbers/9.jpg"
+  },
+  {
+    "english": "ten",
+    "japanese": {
+      "kanji": "十",
+      "furigana": "じゅう"
+    },
+    "image": "assets/images/categories/Numbers/10.jpg"
+  },
+  {
+    "english": "eleven",
+    "japanese": {
+      "kanji": "十一",
+      "furigana": "じゅういち"
+    },
+    "image": "assets/images/categories/Numbers/11.jpg"
+  },
+  {
+    "english": "twelve",
+    "japanese": {
+      "kanji": "十二",
+      "furigana": "じゅうに"
+    },
+    "image": "assets/images/categories/Numbers/12.jpg"
+  },
+  {
+    "english": "thirteen",
+    "japanese": {
+      "kanji": "十三",
+      "furigana": "じゅうさん"
+    },
+    "image": "assets/images/categories/Numbers/13.jpg"
+  },
+  {
+    "english": "fourteen",
+    "japanese": {
+      "kanji": "十四",
+      "furigana": "じゅうよん"
+    },
+    "image": "assets/images/categories/Numbers/14.jpg"
+  },
+  {
+    "english": "fifteen",
+    "japanese": {
+      "kanji": "十五",
+      "furigana": "じゅうご"
+    },
+    "image": "assets/images/categories/Numbers/15.jpg"
+  },
+  {
+    "english": "sixteen",
+    "japanese": {
+      "kanji": "十六",
+      "furigana": "じゅうろく"
+    },
+    "image": "assets/images/categories/Numbers/16.jpg"
+  },
+  {
+    "english": "seventeen",
+    "japanese": {
+      "kanji": "十七",
+      "furigana": "じゅうなな"
+    },
+    "image": "assets/images/categories/Numbers/17.jpg"
+  },
+  {
+    "english": "eighteen",
+    "japanese": {
+      "kanji": "十八",
+      "furigana": "じゅうはち"
+    },
+    "image": "assets/images/categories/Numbers/18.jpg"
+  },
+  {
+    "english": "nineteen",
+    "japanese": {
+      "kanji": "十九",
+      "furigana": "じゅうきゅう"
+    },
+    "image": "assets/images/categories/Numbers/19.jpg"
+  },
+  {
+    "english": "twenty",
+    "japanese": {
+      "kanji": "二十",
+      "furigana": "にじゅう"
+    },
+    "image": "assets/images/categories/Numbers/20.jpg"
+  }
+]

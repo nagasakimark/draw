@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "english": "Blue Whale",
+      "image": "assets/images/categories/Animals/Whale.jpg",
+      "habitat": "oceans",
+      "problem": "ship strikes and ocean noise pollution"
+    },
+    {
+      "english": "Sea Turtle",
+      "image": "assets/images/categories/Animals/Turtle.jpg",
+      "habitat": "oceans and beaches",
+      "problem": "plastic pollution and habitat loss"
+    },
+    {
+      "english": "Dolphin",
+      "image": "assets/images/categories/Animals/Dolphin.jpg",
+      "habitat": "oceans and seas",
+      "problem": "fishing nets and pollution"
+    },
+    {
+      "english": "Polar Bear",
+      "image": "assets/images/categories/Animals/PolarBear.jpg",
+      "habitat": "Arctic ice",
+      "problem": "climate change and melting ice"
+    },
+    {
+      "english": "Manatee",
+      "image": "assets/images/categories/Animals/Manatee.jpg",
+      "habitat": "warm coastal waters",
+      "problem": "boat collisions and habitat loss"
+    }
+  ]
+} 

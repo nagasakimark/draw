@@ -1,0 +1,66 @@
+[
+  {
+    "english": "happy",
+    "japanese": {
+      "kanji": "嬉しい",
+      "furigana": "うれしい"
+    },
+    "image": "assets/images/categories/Feelings/Happy.jpg"
+  },
+  {
+    "english": "sad",
+    "japanese": {
+      "kanji": "悲しい",
+      "furigana": "かなしい"
+    },
+    "image": "assets/images/categories/Feelings/Sad.jpg"
+  },
+  {
+    "english": "hungry",
+    "japanese": {
+      "kanji": "お腹空いた",
+      "furigana": "おなかすいた"
+    },
+    "image": "assets/images/categories/Feelings/Hungry.jpg"
+  },
+  {
+    "english": "excited",
+    "japanese": {
+      "kanji": "興奮した",
+      "furigana": "こうふんした"
+    },
+    "image": "assets/images/categories/LT1/Excited.jpg"
+  },
+  {
+    "english": "tired",
+    "japanese": {
+      "kanji": "疲れた",
+      "furigana": "つかれた"
+    },
+    "image": "assets/images/categories/Feelings/Tired.jpg"
+  },
+  {
+    "english": "sleepy",
+    "japanese": {
+      "kanji": "眠い",
+      "furigana": "ねむい"
+    },
+    "image": "assets/images/categories/Feelings/Sleepy.jpg"
+  },
+  {
+    "english": "angry",
+    "japanese": {
+      "kanji": "怒っている",
+      "furigana": "おこっている"
+    },
+    "image": "assets/images/categories/Feelings/Angry.jpg"
+  },
+  {
+    "english": "surprised",
+    "japanese": {
+      "kanji": "驚いた",
+      "furigana": "おどろいた"
+    },
+    "image": "assets/images/categories/LT1/Surprised.jpg"
+  }
+]

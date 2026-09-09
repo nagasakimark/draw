@@ -1,0 +1,182 @@
+[
+  {
+    "english": "I",
+    "japanese": {
+      "kanji": "私",
+      "furigana": "わたし"
+    },
+    "image": "assets/images/categories/People/I.jpg"
+  },
+  {
+    "english": "you",
+    "japanese": {
+      "kanji": "あなた",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/People/You.jpg",
+    "original_image": "assets/images/categories/People/you.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "she",
+    "japanese": {
+      "kanji": "彼女",
+      "furigana": "かのじょ"
+    },
+    "image": "assets/images/categories/People/She.jpg"
+  },
+  {
+    "english": "he",
+    "japanese": {
+      "kanji": "彼",
+      "furigana": "かれ"
+    },
+    "image": "assets/images/categories/People/He.jpg"
+  },
+  {
+    "english": "we",
+    "japanese": {
+      "kanji": "私たち",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/People/We.jpg",
+    "original_image": "assets/images/categories/People/we.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "man",
+    "japanese": {
+      "kanji": "男性",
+      "furigana": "だんせい"
+    },
+    "image": "assets/images/categories/People/Man.jpg"
+  },
+  {
+    "english": "woman",
+    "japanese": {
+      "kanji": "女性",
+      "furigana": "じょせい"
+    },
+    "image": "assets/images/categories/People/Woman.jpg"
+  },
+  {
+    "english": "boy",
+    "japanese": {
+      "kanji": "男の子",
+      "furigana": "おとこのこ"
+    },
+    "image": "assets/images/categories/People/Boy.jpg"
+  },
+  {
+    "english": "girl",
+    "japanese": {
+      "kanji": "女の子",
+      "furigana": "おんなのこ"
+    },
+    "image": "assets/images/categories/People/Girl.jpg"
+  },
+  {
+    "english": "children",
+    "japanese": {
+      "kanji": "子供",
+      "furigana": "こども"
+    },
+    "image": "assets/images/categories/People/Children.jpg"
+  },
+  {
+    "english": "classmates",
+    "japanese": {
+      "kanji": "クラスメイト",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/People/Classmates.jpg"
+  },
+  {
+    "english": "friends",
+    "japanese": {
+      "kanji": "友達",
+      "furigana": "ともだち"
+    },
+    "image": "assets/images/categories/People/Friends.jpg"
+  },
+  {
+    "english": "baby",
+    "japanese": {
+      "kanji": "赤ちゃん",
+      "furigana": "あかちゃん"
+    },
+    "image": "assets/images/categories/People/Baby.jpg"
+  },
+  {
+    "english": "active",
+    "japanese": {
+      "kanji": "活動的",
+      "furigana": "かつどうてき"
+    },
+    "image": "assets/images/categories/Personality/Active.jpg"
+  },
+  {
+    "english": "brave",
+    "japanese": {
+      "kanji": "勇敢",
+      "furigana": "ゆうかん"
+    },
+    "image": "assets/images/categories/Personality/Brave.jpg"
+  },
+  {
+    "english": "friendly",
+    "japanese": {
+      "kanji": "友好的",
+      "furigana": "ゆうこうてき"
+    },
+    "image": "assets/images/categories/Personality/Friendly.jpg"
+  },
+  {
+    "english": "funny",
+    "japanese": {
+      "kanji": "面白い",
+      "furigana": "おもしろい"
+    },
+    "image": "assets/images/categories/Personality/Funny.jpg"
+  },
+  {
+    "english": "kind",
+    "japanese": {
+      "kanji": "優しい",
+      "furigana": "やさしい"
+    },
+    "image": "assets/images/categories/Personality/Kind.jpg"
+  },
+  {
+    "english": "shy",
+    "japanese": {
+      "kanji": "内気",
+      "furigana": "うちき"
+    },
+    "image": "assets/images/categories/Personality/Shy.jpg"
+  },
+  {
+    "english": "smart",
+    "japanese": {
+      "kanji": "賢い",
+      "furigana": "かしこい"
+    },
+    "image": "assets/images/categories/Personality/Smart.jpg"
+  },
+  {
+    "english": "strong",
+    "japanese": {
+      "kanji": "強い",
+      "furigana": "つよい"
+    },
+    "image": "assets/images/categories/Personality/Strong.jpg"
+  },
+  {
+    "english": "gentle",
+    "japanese": {
+      "kanji": "穏やか",
+      "furigana": "おだやか"
+    },
+    "image": "assets/images/categories/Personality/Gentle.jpg"
+  }
+]

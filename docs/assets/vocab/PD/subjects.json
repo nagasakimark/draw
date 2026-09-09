@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "Subjects"
+  },
+  "items": [
+    {
+      "english": "arts and crafts",
+      "japanese": {
+        "kanji": "図工",
+        "furigana": "ずこう"
+      },
+      "image": "assets/images/categories/Subjects/Arts and Crafts.jpg",
+      "original_image": "assets/images/categories/Subjects/Arts and crafts.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "calligraphy",
+      "japanese": {
+        "kanji": "書道",
+        "furigana": "しょどう"
+      },
+      "image": "assets/images/categories/Subjects/Calligraphy.jpg"
+    },
+    {
+      "english": "English",
+      "japanese": {
+        "kanji": "英語",
+        "furigana": "えいご"
+      },
+      "image": "assets/images/categories/Subjects/English.jpg"
+    },
+    {
+      "english": "home economics",
+      "japanese": {
+        "kanji": "家庭科",
+        "furigana": "かていか"
+      },
+      "image": "assets/images/categories/Subjects/Home Economics.jpg",
+      "original_image": "assets/images/categories/Subjects/Home economics.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "homeroom",
+      "japanese": {
+        "kanji": "ホームルーム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Subjects/Homeroom.jpg"
+    },
+    {
+      "english": "Japanese",
+      "japanese": {
+        "kanji": "国語",
+        "furigana": "こくご"
+      },
+      "image": "assets/images/categories/Subjects/Japanese.jpg"
+    },
+    {
+      "english": "math",
+      "japanese": {
+        "kanji": "数学",
+        "furigana": "すうがく"
+      },
+      "image": "assets/images/categories/Subjects/Math.jpg"
+    },
+    {
+      "english": "moral education",
+      "japanese": {
+        "kanji": "道徳",
+        "furigana": "どうとく"
+      },
+      "image": "assets/images/categories/Subjects/Moral Education.jpg",
+      "original_image": "assets/images/categories/Subjects/Moral education.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "music",
+      "japanese": {
+        "kanji": "音楽",
+        "furigana": "おんがく"
+      },
+      "image": "assets/images/categories/Subjects/Music.jpg"
+    },
+    {
+      "english": "P.E.",
+      "japanese": {
+        "kanji": "体育",
+        "furigana": "たいいく"
+      },
+      "image": "assets/images/categories/Subjects/P.E.jpg"
+    },
+    {
+      "english": "science",
+      "japanese": {
+        "kanji": "理科",
+        "furigana": "りか"
+      },
+      "image": "assets/images/categories/Subjects/Science.jpg"
+    },
+    {
+      "english": "social studies",
+      "japanese": {
+        "kanji": "社会",
+        "furigana": "しゃかい"
+      },
+      "image": "assets/images/categories/Subjects/Social Studies.jpg",
+      "original_image": "assets/images/categories/Subjects/Social studies.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "subjects",
+      "japanese": {
+        "kanji": "教科",
+        "furigana": "きょうか"
+      },
+      "image": "assets/images/categories/Subjects/Subjects.jpg"
+    }
+  ]
+}

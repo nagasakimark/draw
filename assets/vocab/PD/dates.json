@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "title": "Dates"
+  },
+  "items": [
+    {
+      "english": "date",
+      "japanese": {
+        "kanji": "日付",
+        "furigana": "ひづけ"
+      },
+      "image": "assets/images/categories/Dates/Date.jpg"
+    },
+    {
+      "english": "first",
+      "japanese": {
+        "kanji": "一日",
+        "furigana": "ついたち"
+      },
+      "image": "assets/images/categories/Dates/First.jpg"
+    },
+    {
+      "english": "second",
+      "japanese": {
+        "kanji": "二日",
+        "furigana": "ふつか"
+      },
+      "image": "assets/images/categories/Dates/Second.jpg"
+    },
+    {
+      "english": "third",
+      "japanese": {
+        "kanji": "三日",
+        "furigana": "みっか"
+      },
+      "image": "assets/images/categories/Dates/Third.jpg"
+    },
+    {
+      "english": "fourth",
+      "japanese": {
+        "kanji": "四日",
+        "furigana": "よっか"
+      },
+      "image": "assets/images/categories/Dates/Fourth.jpg"
+    },
+    {
+      "english": "fifth",
+      "japanese": {
+        "kanji": "五日",
+        "furigana": "いつか"
+      },
+      "image": "assets/images/categories/Dates/Fifth.jpg"
+    },
+    {
+      "english": "sixth",
+      "japanese": {
+        "kanji": "六日",
+        "furigana": "むいか"
+      },
+      "image": "assets/images/categories/Dates/Sixth.jpg"
+    },
+    {
+      "english": "seventh",
+      "japanese": {
+        "kanji": "七日",
+        "furigana": "なのか"
+      },
+      "image": "assets/images/categories/Dates/Seventh.jpg"
+    },
+    {
+      "english": "eighth",
+      "japanese": {
+        "kanji": "八日",
+        "furigana": "ようか"
+      },
+      "image": "assets/images/categories/Dates/Eighth.jpg"
+    },
+    {
+      "english": "ninth",
+      "japanese": {
+        "kanji": "九日",
+        "furigana": "ここのか"
+      },
+      "image": "assets/images/categories/Dates/Ninth.jpg"
+    },
+    {
+      "english": "tenth",
+      "japanese": {
+        "kanji": "十日",
+        "furigana": "とおか"
+      },
+      "image": "assets/images/categories/Dates/Tenth.jpg"
+    },
+    {
+      "english": "eleventh",
+      "japanese": {
+        "kanji": "十一日",
+        "furigana": "じゅういちにち"
+      },
+      "image": "assets/images/categories/Dates/Eleventh.jpg"
+    },
+    {
+      "english": "twelfth",
+      "japanese": {
+        "kanji": "十二日",
+        "furigana": "じゅうににち"
+      },
+      "image": "assets/images/categories/Dates/Twelfth.jpg"
+    },
+    {
+      "english": "thirteenth",
+      "japanese": {
+        "kanji": "十三日",
+        "furigana": "じゅうさんにち"
+      },
+      "image": "assets/images/categories/Dates/Thirteenth.jpg"
+    },
+    {
+      "english": "fourteenth",
+      "japanese": {
+        "kanji": "十四日",
+        "furigana": "じゅうよっか"
+      },
+      "image": "assets/images/categories/Dates/Fourteenth.jpg"
+    },
+    {
+      "english": "fifteenth",
+      "japanese": {
+        "kanji": "十五日",
+        "furigana": "じゅうごにち"
+      },
+      "image": "assets/images/categories/Dates/Fifteenth.jpg"
+    },
+    {
+      "english": "sixteenth",
+      "japanese": {
+        "kanji": "十六日",
+        "furigana": "じゅうろくにち"
+      },
+      "image": "assets/images/categories/Dates/Sixteenth.jpg"
+    },
+    {
+      "english": "seventeenth",
+      "japanese": {
+        "kanji": "十七日",
+        "furigana": "じゅうしちにち"
+      },
+      "image": "assets/images/categories/Dates/Seventeenth.jpg"
+    },
+    {
+      "english": "eighteenth",
+      "japanese": {
+        "kanji": "十八日",
+        "furigana": "じゅうはちにち"
+      },
+      "image": "assets/images/categories/Dates/Eighteenth.jpg"
+    },
+    {
+      "english": "nineteenth",
+      "japanese": {
+        "kanji": "十九日",
+        "furigana": "じゅうくにち"
+      },
+      "image": "assets/images/categories/Dates/Nineteenth.jpg"
+    },
+    {
+      "english": "twentieth",
+      "japanese": {
+        "kanji": "二十日",
+        "furigana": "はつか"
+      },
+      "image": "assets/images/categories/Dates/Twentieth.jpg"
+    },
+    {
+      "english": "twenty-first",
+      "japanese": {
+        "kanji": "二十一日",
+        "furigana": "にじゅういちにち"
+      },
+      "image": "assets/images/categories/Dates/Twenty-first.jpg"
+    },
+    {
+      "english": "twenty-second",
+      "japanese": {
+        "kanji": "二十二日",
+        "furigana": "にじゅうににち"
+      },
+      "image": "assets/images/categories/Dates/Twenty-second.jpg"
+    },
+    {
+      "english": "twenty-third",
+      "japanese": {
+        "kanji": "二十三日",
+        "furigana": "にじゅうさんにち"
+      },
+      "image": "assets/images/categories/Dates/Twenty-third.jpg"
+    },
+    {
+      "english": "twenty-fourth",
+      "japanese": {
+        "kanji": "二十四日",
+        "furigana": "にじゅうよっか"
+      },
+      "image": "assets/images/categories/Dates/Twenty-fourth.jpg"
+    },
+    {
+      "english": "twenty-fifth",
+      "japanese": {
+        "kanji": "二十五日",
+        "furigana": "にじゅうごにち"
+      },
+      "image": "assets/images/categories/Dates/Twenty-fifth.jpg"
+    },
+    {
+      "english": "twenty-sixth",
+      "japanese": {
+        "kanji": "二十六日",
+        "furigana": "にじゅうろくにち"
+      },
+      "image": "assets/images/categories/Dates/Twenty-sixth.jpg"
+    },
+    {
+      "english": "twenty-seventh",
+      "japanese": {
+        "kanji": "二十七日",
+        "furigana": "にじゅうしちにち"
+      },
+      "image": "assets/images/categories/Dates/Twenty-seventh.jpg"
+    },
+    {
+      "english": "twenty-eighth",
+      "japanese": {
+        "kanji": "二十八日",
+        "furigana": "にじゅうはちにち"
+      },
+      "image": "assets/images/categories/Dates/Twenty-eighth.jpg"
+    },
+    {
+      "english": "twenty-ninth",
+      "japanese": {
+        "kanji": "二十九日",
+        "furigana": "にじゅうくにち"
+      },
+      "image": "assets/images/categories/Dates/Twenty-ninth.jpg"
+    },
+    {
+      "english": "thirtieth",
+      "japanese": {
+        "kanji": "三十日",
+        "furigana": "さんじゅうにち"
+      },
+      "image": "assets/images/categories/Dates/Thirtieth.jpg"
+    },
+    {
+      "english": "thirty-first",
+      "japanese": {
+        "kanji": "三十一日",
+        "furigana": "さんじゅういちにち"
+      },
+      "image": "assets/images/categories/Dates/Thirty-first.jpg"
+    }
+  ]
+}

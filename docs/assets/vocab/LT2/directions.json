@@ -1,0 +1,60 @@
+[
+  {
+    "english": "go",
+    "japanese": {
+      "kanji": "行く",
+      "furigana": "いく"
+    },
+    "image": "assets/images/categories/Directions/Go.jpg",
+    "original_image": "assets/images/categories/directions/go.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "straight",
+    "japanese": {
+      "kanji": "まっすぐ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Directions/Straight.jpg",
+    "original_image": "assets/images/categories/directions/straight.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "turn",
+    "japanese": {
+      "kanji": "曲がる",
+      "furigana": "まがる"
+    },
+    "image": "assets/images/categories/Directions/Turn.jpg",
+    "original_image": "assets/images/categories/directions/turn.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "left",
+    "japanese": {
+      "kanji": "左",
+      "furigana": "ひだり"
+    },
+    "image": "assets/images/categories/Directions/Left.jpg",
+    "original_image": "assets/images/categories/directions/left.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "right",
+    "japanese": {
+      "kanji": "右",
+      "furigana": "みぎ"
+    },
+    "image": "assets/images/categories/Directions/Right.jpg",
+    "original_image": "assets/images/categories/directions/right.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "step",
+    "japanese": {
+      "kanji": "歩調",
+      "furigana": "ほちょう"
+    },
+    "image": "assets/images/categories/LT2/Steps.jpg"
+  }
+]

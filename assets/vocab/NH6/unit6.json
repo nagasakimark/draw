@@ -1,0 +1,414 @@
+[
+  {
+    "english": "nature",
+    "japanese": {
+      "kanji": "自然",
+      "furigana": "しぜん"
+    },
+    "image": "assets/images/categories/Nature/Nature.jpg"
+  },
+  {
+    "english": "desert",
+    "japanese": {
+      "kanji": "砂漠",
+      "furigana": "さばく"
+    },
+    "image": "assets/images/categories/Nature/Desert.jpg"
+  },
+  {
+    "english": "forest",
+    "japanese": {
+      "kanji": "森",
+      "furigana": "もり"
+    },
+    "image": "assets/images/categories/Nature/Forest.jpg"
+  },
+  {
+    "english": "rain forest",
+    "japanese": {
+      "kanji": "熱帯雨林",
+      "furigana": "ねったいうりん"
+    },
+    "image": "assets/images/categories/Nature/Rainforest.jpg"
+  },
+  {
+    "english": "lake",
+    "japanese": {
+      "kanji": "湖",
+      "furigana": "みずうみ"
+    },
+    "image": "assets/images/categories/Nature/Lake.jpg"
+  },
+  {
+    "english": "mountain",
+    "japanese": {
+      "kanji": "山",
+      "furigana": "やま"
+    },
+    "image": "assets/images/categories/Nature/Mountain.jpg"
+  },
+  {
+    "english": "river",
+    "japanese": {
+      "kanji": "川",
+      "furigana": "かわ"
+    },
+    "image": "assets/images/categories/Nature/River.jpg"
+  },
+  {
+    "english": "savanna",
+    "japanese": {
+      "kanji": "サバンナ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Nature/Savanna.jpg"
+  },
+  {
+    "english": "sea",
+    "japanese": {
+      "kanji": "海",
+      "furigana": "うみ"
+    },
+    "image": "assets/images/categories/Nature/Sea.jpg"
+  },
+  {
+    "english": "sea animals",
+    "japanese": {
+      "kanji": "海の動物",
+      "furigana": "うみのどうぶつ"
+    },
+    "image": "assets/images/categories/Sea Animals/Sea Animals.jpg",
+    "original_image": "assets/images/categories/Sea Animals/Sea animals.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "whale",
+    "japanese": {
+      "kanji": "鯨",
+      "furigana": "くじら"
+    },
+    "image": "assets/images/categories/Sea Animals/Whale.jpg"
+  },
+  {
+    "english": "dolphin",
+    "japanese": {
+      "kanji": "イルカ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sea Animals/Dolphin.jpg"
+  },
+  {
+    "english": "penguin",
+    "japanese": {
+      "kanji": "ペンギン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sea Animals/Penguin.jpg"
+  },
+  {
+    "english": "sea turtle",
+    "japanese": {
+      "kanji": "海亀",
+      "furigana": "うみがめ"
+    },
+    "image": "assets/images/categories/Sea Animals/Sea Turtle.jpg",
+    "original_image": "assets/images/categories/Sea Animals/Sea turtle.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "fish",
+    "japanese": {
+      "kanji": "魚",
+      "furigana": "さかな"
+    },
+    "image": "assets/images/categories/Ingredients/Fish.jpg"
+  },
+  {
+    "english": "shark",
+    "japanese": {
+      "kanji": "サメ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sea Animals/Shark.jpg"
+  },
+  {
+    "english": "crab",
+    "japanese": {
+      "kanji": "蟹",
+      "furigana": "かに"
+    },
+    "image": "assets/images/categories/Ingredients/Ingredients+/Crab.jpg"
+  },
+  {
+    "english": "jellyfish",
+    "japanese": {
+      "kanji": "クラゲ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sea Animals/Jellyfish.jpg"
+  },
+  {
+    "english": "animals",
+    "japanese": {
+      "kanji": "動物",
+      "furigana": "どうぶつ"
+    },
+    "image": "assets/images/categories/Animals/Animals.jpg"
+  },
+  {
+    "english": "bear",
+    "japanese": {
+      "kanji": "熊",
+      "furigana": "くま"
+    },
+    "image": "assets/images/categories/Animals/Bear.jpg"
+  },
+  {
+    "english": "elephant",
+    "japanese": {
+      "kanji": "象",
+      "furigana": "ぞう"
+    },
+    "image": "assets/images/categories/Animals/Elephant.jpg"
+  },
+  {
+    "english": "tiger",
+    "japanese": {
+      "kanji": "虎",
+      "furigana": "とら"
+    },
+    "image": "assets/images/categories/Animals/Tiger.jpg"
+  },
+  {
+    "english": "lion",
+    "japanese": {
+      "kanji": "ライオン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Lion.jpg"
+  },
+  {
+    "english": "horse",
+    "japanese": {
+      "kanji": "馬",
+      "furigana": "うま"
+    },
+    "image": "assets/images/categories/Animals/Horse.jpg"
+  },
+  {
+    "english": "zebra",
+    "japanese": {
+      "kanji": "シマウマ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Zebra.jpg"
+  },
+  {
+    "english": "camel",
+    "japanese": {
+      "kanji": "ラクダ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Camel.jpg"
+  },
+  {
+    "english": "giraffe",
+    "japanese": {
+      "kanji": "キリン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Giraffe.jpg"
+  },
+  {
+    "english": "gorilla",
+    "japanese": {
+      "kanji": "ゴリラ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Gorilla.jpg"
+  },
+  {
+    "english": "monkey",
+    "japanese": {
+      "kanji": "猿",
+      "furigana": "さる"
+    },
+    "image": "assets/images/categories/Animals/Monkey.jpg"
+  },
+  {
+    "english": "orangutan",
+    "japanese": {
+      "kanji": "オランウータン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Orangutan.jpg"
+  },
+  {
+    "english": "panda",
+    "japanese": {
+      "kanji": "パンダ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Panda.jpg"
+  },
+  {
+    "english": "koala",
+    "japanese": {
+      "kanji": "コアラ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Koala.jpg"
+  },
+  {
+    "english": "dog",
+    "japanese": {
+      "kanji": "犬",
+      "furigana": "いぬ"
+    },
+    "image": "assets/images/categories/Animals/Dog.jpg"
+  },
+  {
+    "english": "cat",
+    "japanese": {
+      "kanji": "猫",
+      "furigana": "ねこ"
+    },
+    "image": "assets/images/categories/Animals/Cat.jpg"
+  },
+  {
+    "english": "fox",
+    "japanese": {
+      "kanji": "狐",
+      "furigana": "きつね"
+    },
+    "image": "assets/images/categories/Animals/Fox.jpg"
+  },
+  {
+    "english": "rabbit",
+    "japanese": {
+      "kanji": "兎",
+      "furigana": "うさぎ"
+    },
+    "image": "assets/images/categories/Animals/Rabbit.jpg"
+  },
+  {
+    "english": "mouse",
+    "japanese": {
+      "kanji": "鼠",
+      "furigana": "ねずみ"
+    },
+    "image": "assets/images/categories/Animals/Mouse.jpg"
+  },
+  {
+    "english": "crocodile",
+    "japanese": {
+      "kanji": "ワニ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Crocodile.jpg"
+  },
+  {
+    "english": "snake",
+    "japanese": {
+      "kanji": "蛇",
+      "furigana": "へび"
+    },
+    "image": "assets/images/categories/Animals/Snake.jpg"
+  },
+  {
+    "english": "frog",
+    "japanese": {
+      "kanji": "蛙",
+      "furigana": "かえる"
+    },
+    "image": "assets/images/categories/Animals/Frog.jpg"
+  },
+  {
+    "english": "bird",
+    "japanese": {
+      "kanji": "鳥",
+      "furigana": "とり"
+    },
+    "image": "assets/images/categories/Animals/Bird.jpg"
+  },
+  {
+    "english": "forest loss",
+    "japanese": {
+      "kanji": "森林破壊",
+      "furigana": "しんりんはかい"
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Forest Loss.jpg"
+  },
+  {
+    "english": "plant trees",
+    "japanese": {
+      "kanji": "植樹する",
+      "furigana": "しょくじゅする"
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Plant Trees.jpg"
+  },
+  {
+    "english": "global warming",
+    "japanese": {
+      "kanji": "地球温暖化",
+      "furigana": "ちきゅうおんだんか"
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Global Warming.jpg"
+  },
+  {
+    "english": "save energy",
+    "japanese": {
+      "kanji": "エネルギーを節約する",
+      "furigana": "えねるぎーをせつやくする"
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Save Energy.jpg"
+  },
+  {
+    "english": "plastic",
+    "japanese": {
+      "kanji": "プラスチック",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Plastic.jpg"
+  },
+  {
+    "english": "use eco-friendly bags",
+    "japanese": {
+      "kanji": "エコバッグを使う",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Use Eco-Friendly Bags.jpg"
+  },
+  {
+    "english": "refuse",
+    "japanese": {
+      "kanji": "拒否する",
+      "furigana": "きょひする"
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Refuse.jpg"
+  },
+  {
+    "english": "reduce",
+    "japanese": {
+      "kanji": "減らす",
+      "furigana": "へらす"
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Reduce.jpg"
+  },
+  {
+    "english": "reuse",
+    "japanese": {
+      "kanji": "再利用する",
+      "furigana": "さいりようする"
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Reuse.jpg"
+  },
+  {
+    "english": "recycle",
+    "japanese": {
+      "kanji": "リサイクルする",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Problems with living things & what we can do/Recycle.jpg"
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "title": "Past Tense"
+  },
+  "items": [
+    {
+      "english": "ate",
+      "japanese": {
+        "kanji": "食べた",
+        "furigana": "たべた"
+      },
+      "image": "assets/images/categories/Past Tense/Ate.jpg"
+    },
+    {
+      "english": "enjoyed",
+      "japanese": {
+        "kanji": "楽しんだ",
+        "furigana": "たのしんだ"
+      },
+      "image": "assets/images/categories/Past Tense/Enjoyed.jpg"
+    },
+    {
+      "english": "had",
+      "japanese": {
+        "kanji": "持った",
+        "furigana": "もった"
+      },
+      "image": "assets/images/categories/Past Tense/Had.jpg"
+    },
+    {
+      "english": "made",
+      "japanese": {
+        "kanji": "作った",
+        "furigana": "つくった"
+      },
+      "image": "assets/images/categories/Past Tense/Made.jpg"
+    },
+    {
+      "english": "played",
+      "japanese": {
+        "kanji": "遊んだ",
+        "furigana": "あそんだ"
+      },
+      "image": "assets/images/categories/Past Tense/Played.jpg"
+    },
+    {
+      "english": "saw",
+      "japanese": {
+        "kanji": "見た",
+        "furigana": "みた"
+      },
+      "image": "assets/images/categories/Past Tense/Saw.jpg"
+    },
+    {
+      "english": "watched",
+      "japanese": {
+        "kanji": "見た",
+        "furigana": "みた"
+      },
+      "image": "assets/images/categories/Past Tense/Watched.jpg"
+    },
+    {
+      "english": "went",
+      "japanese": {
+        "kanji": "行った",
+        "furigana": "いった"
+      },
+      "image": "assets/images/categories/Past Tense/Went.jpg"
+    }
+  ]
+}

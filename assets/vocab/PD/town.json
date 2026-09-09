@@ -1,0 +1,507 @@
+{
+  "metadata": {
+    "title": "Town"
+  },
+  "items": [
+    {
+      "english": "airplane",
+      "japanese": {
+        "kanji": "飛行機",
+        "furigana": "ひこうき"
+      },
+      "image": "assets/images/categories/Town/Town+/Airplane.jpg",
+      "bonus": true
+    },
+    {
+      "english": "airport",
+      "japanese": {
+        "kanji": "空港",
+        "furigana": "くうこう"
+      },
+      "image": "assets/images/categories/Town/Town+/Airport.jpg",
+      "bonus": true
+    },
+    {
+      "english": "amusement park",
+      "japanese": {
+        "kanji": "遊園地",
+        "furigana": "ゆうえんち"
+      },
+      "image": "assets/images/categories/Town/Amusement Park.jpg",
+      "original_image": "assets/images/categories/Town/Amusement park.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "aquarium",
+      "japanese": {
+        "kanji": "水族館",
+        "furigana": "すいぞくかん"
+      },
+      "image": "assets/images/categories/Town/Aquarium.jpg"
+    },
+    {
+      "english": "bank",
+      "japanese": {
+        "kanji": "銀行",
+        "furigana": "ぎんこう"
+      },
+      "image": "assets/images/categories/Town/Town+/Bank.jpg",
+      "bonus": true
+    },
+    {
+      "english": "bike",
+      "japanese": {
+        "kanji": "自転車",
+        "furigana": "じてんしゃ"
+      },
+      "image": "assets/images/categories/Town/Bike.jpg"
+    },
+    {
+      "english": "boat",
+      "japanese": {
+        "kanji": "ボート",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Town+/Boat.jpg",
+      "bonus": true
+    },
+    {
+      "english": "bookstore",
+      "japanese": {
+        "kanji": "本屋",
+        "furigana": "ほんや"
+      },
+      "image": "assets/images/categories/Town/Bookstore.jpg"
+    },
+    {
+      "english": "bridge",
+      "japanese": {
+        "kanji": "橋",
+        "furigana": "はし"
+      },
+      "image": "assets/images/categories/Town/Town+/Bridge.jpg",
+      "bonus": true
+    },
+    {
+      "english": "bus",
+      "japanese": {
+        "kanji": "バス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Bus.jpg"
+    },
+    {
+      "english": "bus stop",
+      "japanese": {
+        "kanji": "バス停",
+        "furigana": "ばすてい"
+      },
+      "image": "assets/images/categories/Town/Bus Stop.jpg",
+      "original_image": "assets/images/categories/Town/Bus stop.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "car",
+      "japanese": {
+        "kanji": "車",
+        "furigana": "くるま"
+      },
+      "image": "assets/images/categories/Town/Town+/Car.jpg",
+      "bonus": true
+    },
+    {
+      "english": "castle",
+      "japanese": {
+        "kanji": "城",
+        "furigana": "しろ"
+      },
+      "image": "assets/images/categories/Town/Castle.jpg"
+    },
+    {
+      "english": "church",
+      "japanese": {
+        "kanji": "教会",
+        "furigana": "きょうかい"
+      },
+      "image": "assets/images/categories/Town/Church.jpg"
+    },
+    {
+      "english": "city",
+      "japanese": {
+        "kanji": "都市",
+        "furigana": "とし"
+      },
+      "image": "assets/images/categories/Town/Town+/City.jpg",
+      "bonus": true
+    },
+    {
+      "english": "city hall",
+      "japanese": {
+        "kanji": "市役所",
+        "furigana": "しやくしょ"
+      },
+      "image": "assets/images/categories/Town/Town+/City Hall.jpg",
+      "bonus": true
+    },
+    {
+      "english": "convenience store",
+      "japanese": {
+        "kanji": "コンビニ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Convenience Store.jpg",
+      "original_image": "assets/images/categories/Town/Convenience store.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "dam",
+      "japanese": {
+        "kanji": "ダム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Town+/Dam.jpg",
+      "bonus": true
+    },
+    {
+      "english": "department store",
+      "japanese": {
+        "kanji": "デパート",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Town+/Department Store.jpg",
+      "bonus": true
+    },
+    {
+      "english": "elementary school",
+      "japanese": {
+        "kanji": "小学校",
+        "furigana": "しょうがっこう"
+      },
+      "image": "assets/images/categories/Town/Elementary School.jpg",
+      "original_image": "assets/images/categories/Town/Elementary school.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "factory",
+      "japanese": {
+        "kanji": "工場",
+        "furigana": "こうじょう"
+      },
+      "image": "assets/images/categories/Town/Town+/Factory.jpg",
+      "bonus": true
+    },
+    {
+      "english": "farm",
+      "japanese": {
+        "kanji": "農場",
+        "furigana": "のうじょう"
+      },
+      "image": "assets/images/categories/Town/Town+/Farm.jpg",
+      "bonus": true
+    },
+    {
+      "english": "fire station",
+      "japanese": {
+        "kanji": "消防署",
+        "furigana": "しょうぼうしょ"
+      },
+      "image": "assets/images/categories/Town/Fire Station.jpg",
+      "original_image": "assets/images/categories/Town/Fire station.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "flower shop",
+      "japanese": {
+        "kanji": "花屋",
+        "furigana": "はなや"
+      },
+      "image": "assets/images/categories/Town/Town+/Flower Shop.jpg",
+      "bonus": true
+    },
+    {
+      "english": "garden",
+      "japanese": {
+        "kanji": "庭",
+        "furigana": "にわ"
+      },
+      "image": "assets/images/categories/Town/Town+/Garden.jpg",
+      "bonus": true
+    },
+    {
+      "english": "gas station",
+      "japanese": {
+        "kanji": "ガソリンスタンド",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Town+/Gas Station.jpg",
+      "bonus": true
+    },
+    {
+      "english": "hospital",
+      "japanese": {
+        "kanji": "病院",
+        "furigana": "びょういん"
+      },
+      "image": "assets/images/categories/Town/Hospital.jpg"
+    },
+    {
+      "english": "hotel",
+      "japanese": {
+        "kanji": "ホテル",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Town+/Hotel.jpg",
+      "bonus": true
+    },
+    {
+      "english": "house",
+      "japanese": {
+        "kanji": "家",
+        "furigana": "いえ"
+      },
+      "image": "assets/images/categories/Town/House.jpg"
+    },
+    {
+      "english": "junior high school",
+      "japanese": {
+        "kanji": "中学校",
+        "furigana": "ちゅうがっこう"
+      },
+      "image": "assets/images/categories/Town/Junior High School.jpg",
+      "original_image": "assets/images/categories/Town/Junior high school.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "kindergarten",
+      "japanese": {
+        "kanji": "幼稚園",
+        "furigana": "ようちえん"
+      },
+      "image": "assets/images/categories/Town/Town+/Kindergarten.jpg",
+      "bonus": true
+    },
+    {
+      "english": "library",
+      "japanese": {
+        "kanji": "図書館",
+        "furigana": "としょかん"
+      },
+      "image": "assets/images/categories/Town/Library.jpg"
+    },
+    {
+      "english": "museum",
+      "japanese": {
+        "kanji": "博物館",
+        "furigana": "はくぶつかん"
+      },
+      "image": "assets/images/categories/Town/Museum.jpg"
+    },
+    {
+      "english": "park",
+      "japanese": {
+        "kanji": "公園",
+        "furigana": "こうえん"
+      },
+      "image": "assets/images/categories/Town/Park.jpg"
+    },
+    {
+      "english": "police station",
+      "japanese": {
+        "kanji": "警察署",
+        "furigana": "けいさつしょ"
+      },
+      "image": "assets/images/categories/Town/Police Station.jpg",
+      "original_image": "assets/images/categories/Town/Police station.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "post office",
+      "japanese": {
+        "kanji": "郵便局",
+        "furigana": "ゆうびんきょく"
+      },
+      "image": "assets/images/categories/Town/Post Office.jpg",
+      "original_image": "assets/images/categories/Town/Post office.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "restaurant",
+      "japanese": {
+        "kanji": "レストラン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Restaurant.jpg"
+    },
+    {
+      "english": "ship",
+      "japanese": {
+        "kanji": "船",
+        "furigana": "ふね"
+      },
+      "image": "assets/images/categories/Town/Town+/Ship.jpg",
+      "bonus": true
+    },
+    {
+      "english": "shop",
+      "japanese": {
+        "kanji": "店",
+        "furigana": "みせ"
+      },
+      "image": "assets/images/categories/Town/Town+/Shop.jpg",
+      "bonus": true
+    },
+    {
+      "english": "shopping mall",
+      "japanese": {
+        "kanji": "ショッピングモール",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Town+/Shopping Mall.jpg",
+      "bonus": true
+    },
+    {
+      "english": "shrine",
+      "japanese": {
+        "kanji": "神社",
+        "furigana": "じんじゃ"
+      },
+      "image": "assets/images/categories/Town/Shrine.jpg"
+    },
+    {
+      "english": "stadium",
+      "japanese": {
+        "kanji": "スタジアム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Stadium.jpg"
+    },
+    {
+      "english": "station",
+      "japanese": {
+        "kanji": "駅",
+        "furigana": "えき"
+      },
+      "image": "assets/images/categories/Town/Station.jpg"
+    },
+    {
+      "english": "street",
+      "japanese": {
+        "kanji": "道",
+        "furigana": "みち"
+      },
+      "image": "assets/images/categories/Town/Town+/Street.jpg",
+      "bonus": true
+    },
+    {
+      "english": "subway",
+      "japanese": {
+        "kanji": "地下鉄",
+        "furigana": "ちかてつ"
+      },
+      "image": "assets/images/categories/Town/Town+/Subway.jpg",
+      "bonus": true
+    },
+    {
+      "english": "supermarket",
+      "japanese": {
+        "kanji": "スーパー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Supermarket.jpg"
+    },
+    {
+      "english": "taxi",
+      "japanese": {
+        "kanji": "タクシー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Taxi.jpg"
+    },
+    {
+      "english": "temple",
+      "japanese": {
+        "kanji": "お寺",
+        "furigana": "おてら"
+      },
+      "image": "assets/images/categories/Town/Temple.jpg"
+    },
+    {
+      "english": "theater",
+      "japanese": {
+        "kanji": "劇場",
+        "furigana": "げきじょう"
+      },
+      "image": "assets/images/categories/Town/Town+/Theater.jpg",
+      "bonus": true
+    },
+    {
+      "english": "town",
+      "japanese": {
+        "kanji": "町",
+        "furigana": "まち"
+      },
+      "image": "assets/images/categories/Town/Town.jpg"
+    },
+    {
+      "english": "tower",
+      "japanese": {
+        "kanji": "塔",
+        "furigana": "とう"
+      },
+      "image": "assets/images/categories/Town/Town+/Tower.jpg",
+      "bonus": true
+    },
+    {
+      "english": "train",
+      "japanese": {
+        "kanji": "電車",
+        "furigana": "でんしゃ"
+      },
+      "image": "assets/images/categories/Town/Train.jpg"
+    },
+    {
+      "english": "truck",
+      "japanese": {
+        "kanji": "トラック",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Town+/Truck.jpg",
+      "bonus": true
+    },
+    {
+      "english": "unicycle",
+      "japanese": {
+        "kanji": "一輪車",
+        "furigana": "いちりんしゃ"
+      },
+      "image": "assets/images/categories/Town/Town+/Unicycle.jpg",
+      "bonus": true
+    },
+    {
+      "english": "van",
+      "japanese": {
+        "kanji": "バン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Town+/Van.jpg",
+      "bonus": true
+    },
+    {
+      "english": "yacht",
+      "japanese": {
+        "kanji": "ヨット",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Town/Town+/Yacht.jpg",
+      "bonus": true
+    },
+    {
+      "english": "zoo",
+      "japanese": {
+        "kanji": "動物園",
+        "furigana": "どうぶつえん"
+      },
+      "image": "assets/images/categories/Town/Zoo.jpg"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+[
+  {
+    "english": "animals",
+    "japanese": {
+      "kanji": "動物",
+      "furigana": "どうぶつ"
+    },
+    "image": "assets/images/categories/Animals/Animals.jpg"
+  },
+  {
+    "english": "cat",
+    "japanese": {
+      "kanji": "猫",
+      "furigana": "ねこ"
+    },
+    "image": "assets/images/categories/Animals/Cat.jpg"
+  },
+  {
+    "english": "dog",
+    "japanese": {
+      "kanji": "犬",
+      "furigana": "いぬ"
+    },
+    "image": "assets/images/categories/Animals/Dog.jpg"
+  },
+  {
+    "english": "elephant",
+    "japanese": {
+      "kanji": "象",
+      "furigana": "ぞう"
+    },
+    "image": "assets/images/categories/Animals/Elephant.jpg"
+  },
+  {
+    "english": "gorilla",
+    "japanese": {
+      "kanji": "ゴリラ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Gorilla.jpg"
+  },
+  {
+    "english": "horse",
+    "japanese": {
+      "kanji": "馬",
+      "furigana": "うま"
+    },
+    "image": "assets/images/categories/Animals/Horse.jpg"
+  },
+  {
+    "english": "monkey",
+    "japanese": {
+      "kanji": "猿",
+      "furigana": "さる"
+    },
+    "image": "assets/images/categories/Animals/Monkey.jpg"
+  },
+  {
+    "english": "moth",
+    "japanese": {
+      "kanji": "蛾",
+      "furigana": "が"
+    },
+    "image": "assets/images/categories/LT1/Moth.jpg"
+  },
+  {
+    "english": "owl",
+    "japanese": {
+      "kanji": "梟",
+      "furigana": "ふくろう"
+    },
+    "image": "assets/images/categories/LT1/Owl.jpg"
+  },
+  {
+    "english": "panda",
+    "japanese": {
+      "kanji": "パンダ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Animals/Panda.jpg"
+  },
+  {
+    "english": "seahorse",
+    "japanese": {
+      "kanji": "タツノオトシゴ",
+      "furigana": "たつのおとしご"
+    },
+    "image": "assets/images/categories/LT1/Sea Horse.jpg"
+  },
+  {
+    "english": "spider",
+    "japanese": {
+      "kanji": "蜘蛛",
+      "furigana": "くも"
+    },
+    "image": "assets/images/categories/Bugs/Spider.jpg"
+  },
+  {
+    "english": "tiger",
+    "japanese": {
+      "kanji": "虎",
+      "furigana": "とら"
+    },
+    "image": "assets/images/categories/Animals/Tiger.jpg"
+  },
+  {
+    "english": "sea",
+    "japanese": {
+      "kanji": "海",
+      "furigana": "うみ"
+    },
+    "image": "assets/images/categories/Nature/Sea.jpg"
+  },
+  {
+    "english": "nest",
+    "japanese": {
+      "kanji": "巣",
+      "furigana": "す"
+    },
+    "image": "assets/images/Categories/LT1//Nest.jpg"
+  },
+  {
+    "english": "tree",
+    "japanese": {
+      "kanji": "木",
+      "furigana": "き"
+    },
+    "image": "assets/images/categories/Nature/Nature+/Tree.jpg",
+    "bonus": true
+  },
+  {
+    "english": "footprints",
+    "japanese": {
+      "kanji": "足跡",
+      "furigana": "あしあと"
+    },
+    "image": "assets/images/Categories/LT1//Footprints.jpg"
+  }
+]

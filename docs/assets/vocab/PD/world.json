@@ -1,0 +1,455 @@
+{
+  "metadata": {
+    "title": "World"
+  },
+  "items": [
+    {
+      "english": "world",
+      "japanese": {
+        "kanji": "世界",
+        "furigana": "せかい"
+      },
+      "image": "assets/images/categories/World/World.jpg"
+    },
+    {
+      "english": "country",
+      "japanese": {
+        "kanji": "国",
+        "furigana": "くに"
+      },
+      "image": "assets/images/categories/World/Country.jpg"
+    },
+    {
+      "english": "continent",
+      "japanese": {
+        "kanji": "大陸",
+        "furigana": "たいりく"
+      },
+      "image": "assets/images/categories/World/Continent.jpg"
+    },
+    {
+      "english": "culture",
+      "japanese": {
+        "kanji": "文化",
+        "furigana": "ぶんか"
+      },
+      "image": "assets/images/categories/World/Culture.jpg"
+    },
+    {
+      "english": "north",
+      "japanese": {
+        "kanji": "北",
+        "furigana": "きた"
+      },
+      "image": "assets/images/categories/World/North.jpg"
+    },
+    {
+      "english": "east",
+      "japanese": {
+        "kanji": "東",
+        "furigana": "ひがし"
+      },
+      "image": "assets/images/categories/World/East.jpg"
+    },
+    {
+      "english": "south",
+      "japanese": {
+        "kanji": "南",
+        "furigana": "みなみ"
+      },
+      "image": "assets/images/categories/World/South.jpg"
+    },
+    {
+      "english": "west",
+      "japanese": {
+        "kanji": "西",
+        "furigana": "にし"
+      },
+      "image": "assets/images/categories/World/West.jpg"
+    },
+    {
+      "english": "North America",
+      "japanese": {
+        "kanji": "北アメリカ",
+        "furigana": "きたあめりか"
+      },
+      "image": "assets/images/categories/World/North America.jpg"
+    },
+    {
+      "english": "South America",
+      "japanese": {
+        "kanji": "南アメリカ",
+        "furigana": "みなみあめりか"
+      },
+      "image": "assets/images/categories/World/South America.jpg"
+    },
+    {
+      "english": "Asia",
+      "japanese": {
+        "kanji": "アジア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Asia.jpg"
+    },
+    {
+      "english": "Europe",
+      "japanese": {
+        "kanji": "ヨーロッパ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Europe.jpg"
+    },
+    {
+      "english": "Africa",
+      "japanese": {
+        "kanji": "アフリカ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Africa.jpg"
+    },
+    {
+      "english": "Oceania",
+      "japanese": {
+        "kanji": "オセアニア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Oceania.jpg"
+    },
+    {
+      "english": "Antarctica",
+      "japanese": {
+        "kanji": "南極",
+        "furigana": "なんきょく"
+      },
+      "image": "assets/images/categories/World/Antarctica.jpg"
+    },
+    {
+      "english": "The U.K.",
+      "japanese": {
+        "kanji": "イギリス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/The UK.jpg"
+    },
+    {
+      "english": "France",
+      "japanese": {
+        "kanji": "フランス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/France.jpg"
+    },
+    {
+      "english": "Egypt",
+      "japanese": {
+        "kanji": "エジプト",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Egypt.jpg"
+    },
+    {
+      "english": "China",
+      "japanese": {
+        "kanji": "中国",
+        "furigana": "ちゅうごく"
+      },
+      "image": "assets/images/categories/World/China.jpg"
+    },
+    {
+      "english": "Australia",
+      "japanese": {
+        "kanji": "オーストラリア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Australia.jpg"
+    },
+    {
+      "english": "Japan",
+      "japanese": {
+        "kanji": "日本",
+        "furigana": "にほん"
+      },
+      "image": "assets/images/categories/World/Japan.jpg"
+    },
+    {
+      "english": "America",
+      "japanese": {
+        "kanji": "アメリカ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/America.jpg"
+    },
+    {
+      "english": "Brazil",
+      "japanese": {
+        "kanji": "ブラジル",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Brazil.jpg"
+    },
+    {
+      "english": "Canada",
+      "japanese": {
+        "kanji": "カナダ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Canada.jpg"
+    },
+    {
+      "english": "Mexico",
+      "japanese": {
+        "kanji": "メキシコ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Mexico.jpg"
+    },
+    {
+      "english": "Guatemala",
+      "japanese": {
+        "kanji": "グアテマラ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Guatemala.jpg"
+    },
+    {
+      "english": "Peru",
+      "japanese": {
+        "kanji": "ペルー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Peru.jpg"
+    },
+    {
+      "english": "Chile",
+      "japanese": {
+        "kanji": "チリ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Chile.jpg"
+    },
+    {
+      "english": "Argentina",
+      "japanese": {
+        "kanji": "アルゼンチン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Argentina.jpg"
+    },
+    {
+      "english": "New Zealand",
+      "japanese": {
+        "kanji": "ニュージーランド",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/New Zealand.jpg"
+    },
+    {
+      "english": "Korea",
+      "japanese": {
+        "kanji": "韓国",
+        "furigana": "かんこく"
+      },
+      "image": "assets/images/categories/World/Korea.jpg"
+    },
+    {
+      "english": "The Philippines",
+      "japanese": {
+        "kanji": "フィリピン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/The Philippines.jpg"
+    },
+    {
+      "english": "Indonesia",
+      "japanese": {
+        "kanji": "インドネシア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Indonesia.jpg"
+    },
+    {
+      "english": "Vietnam",
+      "japanese": {
+        "kanji": "ベトナム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Vietnam.jpg"
+    },
+    {
+      "english": "Singapore",
+      "japanese": {
+        "kanji": "シンガポール",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Singapore.jpg"
+    },
+    {
+      "english": "Thailand",
+      "japanese": {
+        "kanji": "タイ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Thailand.jpg"
+    },
+    {
+      "english": "India",
+      "japanese": {
+        "kanji": "インド",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/India.jpg"
+    },
+    {
+      "english": "Nepal",
+      "japanese": {
+        "kanji": "ネパール",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Nepal.jpg"
+    },
+    {
+      "english": "Mongolia",
+      "japanese": {
+        "kanji": "モンゴル",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Mongolia.jpg"
+    },
+    {
+      "english": "Russia",
+      "japanese": {
+        "kanji": "ロシア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Russia.jpg"
+    },
+    {
+      "english": "Iran",
+      "japanese": {
+        "kanji": "イラン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Iran.jpg"
+    },
+    {
+      "english": "Saudi Arabia",
+      "japanese": {
+        "kanji": "サウジアラビア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Saudi Arabia.jpg"
+    },
+    {
+      "english": "Turkey",
+      "japanese": {
+        "kanji": "トルコ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Turkey.jpg"
+    },
+    {
+      "english": "Kenya",
+      "japanese": {
+        "kanji": "ケニア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Kenya.jpg"
+    },
+    {
+      "english": "South Africa",
+      "japanese": {
+        "kanji": "南アフリカ",
+        "furigana": "みなみあふりか"
+      },
+      "image": "assets/images/categories/World/South Africa.jpg"
+    },
+    {
+      "english": "Ghana",
+      "japanese": {
+        "kanji": "ガーナ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Ghana.jpg"
+    },
+    {
+      "english": "Morocco",
+      "japanese": {
+        "kanji": "モロッコ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Morocco.jpg"
+    },
+    {
+      "english": "Italy",
+      "japanese": {
+        "kanji": "イタリア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Italy.jpg"
+    },
+    {
+      "english": "Spain",
+      "japanese": {
+        "kanji": "スペイン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Spain.jpg"
+    },
+    {
+      "english": "Slovenia",
+      "japanese": {
+        "kanji": "スロベニア",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Slovenia.jpg"
+    },
+    {
+      "english": "Germany",
+      "japanese": {
+        "kanji": "ドイツ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Germany.jpg"
+    },
+    {
+      "english": "Switzerland",
+      "japanese": {
+        "kanji": "スイス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Switzerland.jpg"
+    },
+    {
+      "english": "The Netherlands",
+      "japanese": {
+        "kanji": "オランダ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/The Netherlands.jpg"
+    },
+    {
+      "english": "Norway",
+      "japanese": {
+        "kanji": "ノルウェー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Norway.jpg"
+    },
+    {
+      "english": "Sweden",
+      "japanese": {
+        "kanji": "スウェーデン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Sweden.jpg"
+    },
+    {
+      "english": "Finland",
+      "japanese": {
+        "kanji": "フィンランド",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/World/Finland.jpg"
+    }
+  ]
+}

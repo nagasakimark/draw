@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "title": "Present Tense (6th Grade)"
+  },
+  "items": [
+    {
+      "english": "speak",
+      "japanese": {
+        "kanji": "話す",
+        "furigana": "はなす"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Speak.jpg"
+    },
+    {
+      "english": "live",
+      "japanese": {
+        "kanji": "住む",
+        "furigana": "すむ"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Live.jpg"
+    },
+    {
+      "english": "make",
+      "japanese": {
+        "kanji": "作る",
+        "furigana": "つくる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Make.jpg"
+    },
+    {
+      "english": "wear",
+      "japanese": {
+        "kanji": "着る",
+        "furigana": "きる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Wear.jpg"
+    },
+    {
+      "english": "talk",
+      "japanese": {
+        "kanji": "話す",
+        "furigana": "はなす"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Talk.jpg"
+    },
+    {
+      "english": "watch",
+      "japanese": {
+        "kanji": "見る",
+        "furigana": "みる"
+      },
+      "image": "assets/images/categories/Things Around You/Watch.jpg"
+    },
+    {
+      "english": "read",
+      "japanese": {
+        "kanji": "読む",
+        "furigana": "よむ"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Read.jpg"
+    },
+    {
+      "english": "help",
+      "japanese": {
+        "kanji": "助ける",
+        "furigana": "たすける"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Help.jpg"
+    },
+    {
+      "english": "practice",
+      "japanese": {
+        "kanji": "練習する",
+        "furigana": "れんしゅうする"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Practice.jpg"
+    },
+    {
+      "english": "clean",
+      "japanese": {
+        "kanji": "掃除する",
+        "furigana": "そうじする"
+      },
+      "image": "assets/images/categories/State/State+/Clean.jpg",
+      "bonus": true
+    },
+    {
+      "english": "enjoy",
+      "japanese": {
+        "kanji": "楽しむ",
+        "furigana": "たのしむ"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Enjoy.jpg"
+    },
+    {
+      "english": "visit",
+      "japanese": {
+        "kanji": "訪れる",
+        "furigana": "おとずれる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Visit.jpg"
+    },
+    {
+      "english": "ride",
+      "japanese": {
+        "kanji": "乗る",
+        "furigana": "のる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Ride.jpg"
+    },
+    {
+      "english": "come",
+      "japanese": {
+        "kanji": "来る",
+        "furigana": "くる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Come.jpg"
+    },
+    {
+      "english": "get",
+      "japanese": {
+        "kanji": "得る",
+        "furigana": "える"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Get.jpg"
+    },
+    {
+      "english": "save",
+      "japanese": {
+        "kanji": "節約する",
+        "furigana": "せつやくする"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Save.jpg"
+    },
+    {
+      "english": "stop",
+      "japanese": {
+        "kanji": "止まる",
+        "furigana": "とまる"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Stop.jpg"
+    },
+    {
+      "english": "study",
+      "japanese": {
+        "kanji": "勉強する",
+        "furigana": "べんきょうする"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Study.jpg"
+    },
+    {
+      "english": "join",
+      "japanese": {
+        "kanji": "参加する",
+        "furigana": "さんかする"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Join.jpg"
+    },
+    {
+      "english": "work",
+      "japanese": {
+        "kanji": "働く",
+        "furigana": "はたらく"
+      },
+      "image": "assets/images/categories/Present Tense/6th Grade/Work.jpg"
+    }
+  ]
+}

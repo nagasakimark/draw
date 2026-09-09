@@ -1,0 +1,98 @@
+[
+  {
+    "english": "America",
+    "japanese": {
+      "kanji": "アメリカ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/America.jpg"
+  },
+  {
+    "english": "Canada",
+    "japanese": {
+      "kanji": "カナダ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Canada.jpg"
+  },
+  {
+    "english": "England",
+    "japanese": {
+      "kanji": "イギリス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/The UK.jpg"
+  },
+  {
+    "english": "Australia",
+    "japanese": {
+      "kanji": "オーストラリア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Australia.jpg"
+  },
+  {
+    "english": "China",
+    "japanese": {
+      "kanji": "中国",
+      "furigana": "ちゅうごく"
+    },
+    "image": "assets/images/categories/World/China.jpg"
+  },
+  {
+    "english": "Finland",
+    "japanese": {
+      "kanji": "フィンランド",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Finland.jpg"
+  },
+  {
+    "english": "Germany",
+    "japanese": {
+      "kanji": "ドイツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Germany.jpg"
+  },
+  {
+    "english": "France",
+    "japanese": {
+      "kanji": "フランス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/France.jpg"
+  },
+  {
+    "english": "India",
+    "japanese": {
+      "kanji": "インド",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/India.jpg"
+  },
+  {
+    "english": "Japan",
+    "japanese": {
+      "kanji": "日本",
+      "furigana": "にほん"
+    },
+    "image": "assets/images/categories/World/Japan.jpg"
+  },
+  {
+    "english": "Kenya",
+    "japanese": {
+      "kanji": "ケニア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Kenya.jpg"
+  },
+  {
+    "english": "Korea",
+    "japanese": {
+      "kanji": "韓国",
+      "furigana": "かんこく"
+    },
+    "image": "assets/images/categories/World/Korea.jpg"
+  }
+]

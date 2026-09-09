@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "title": "Shapes"
+  },
+  "items": [
+    {
+      "english": "circle",
+      "japanese": {
+        "kanji": "丸",
+        "furigana": "まる"
+      },
+      "image": "assets/images/categories/Shapes/Circle.jpg"
+    },
+    {
+      "english": "cross",
+      "japanese": {
+        "kanji": "十字",
+        "furigana": "じゅうじ"
+      },
+      "image": "assets/images/categories/Shapes/Cross.jpg"
+    },
+    {
+      "english": "cube",
+      "japanese": {
+        "kanji": "立方体",
+        "furigana": "りっぽうたい"
+      },
+      "image": "assets/images/categories/Shapes/Shapes+Cube.jpg",
+      "bonus": true
+    },
+    {
+      "english": "diamond",
+      "japanese": {
+        "kanji": "菱形",
+        "furigana": "ひしがた"
+      },
+      "image": "assets/images/categories/Shapes/Diamond.jpg"
+    },
+    {
+      "english": "heart",
+      "japanese": {
+        "kanji": "ハート",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Shapes/Heart.jpg"
+    },
+    {
+      "english": "line",
+      "japanese": {
+        "kanji": "線",
+        "furigana": "せん"
+      },
+      "image": "assets/images/categories/Shapes/Line.jpg"
+    },
+    {
+      "english": "moon",
+      "japanese": {
+        "kanji": "三日月",
+        "furigana": "みかづき"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Moon.jpg"
+    },
+    {
+      "english": "oval",
+      "japanese": {
+        "kanji": "楕円形",
+        "furigana": "だえんけい"
+      },
+      "image": "assets/images/categories/Shapes/Oval.jpg"
+    },
+    {
+      "english": "rectangle",
+      "japanese": {
+        "kanji": "長方形",
+        "furigana": "ちょうほうけい"
+      },
+      "image": "assets/images/categories/Shapes/Rectangle.jpg"
+    },
+    {
+      "english": "shapes",
+      "japanese": {
+        "kanji": "形",
+        "furigana": "かたち"
+      },
+      "image": "assets/images/categories/Shapes/Shapes.jpg"
+    },
+    {
+      "english": "square",
+      "japanese": {
+        "kanji": "四角",
+        "furigana": "しかく"
+      },
+      "image": "assets/images/categories/Shapes/Square.jpg"
+    },
+    {
+      "english": "star",
+      "japanese": {
+        "kanji": "星形",
+        "furigana": "ほしがた"
+      },
+      "image": "assets/images/categories/Shapes/Star.jpg"
+    },
+    {
+      "english": "triangle",
+      "japanese": {
+        "kanji": "三角",
+        "furigana": "さんかく"
+      },
+      "image": "assets/images/categories/Instruments/Triangle.jpg"
+    }
+  ]
+}

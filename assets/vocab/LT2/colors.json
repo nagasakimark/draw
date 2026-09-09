@@ -1,0 +1,108 @@
+[
+  {
+    "english": "red",
+    "japanese": {
+      "kanji": "赤",
+      "furigana": "あか"
+    },
+    "image": "assets/images/categories/Colors/Red.jpg"
+  },
+  {
+    "english": "blue",
+    "japanese": {
+      "kanji": "青",
+      "furigana": "あお"
+    },
+    "image": "assets/images/categories/Colors/Blue.jpg"
+  },
+  {
+    "english": "green",
+    "japanese": {
+      "kanji": "緑",
+      "furigana": "みどり"
+    },
+    "image": "assets/images/categories/Colors/Green.jpg"
+  },
+  {
+    "english": "yellow",
+    "japanese": {
+      "kanji": "黄色",
+      "furigana": "きいろ"
+    },
+    "image": "assets/images/categories/Colors/Yellow.jpg"
+  },
+  {
+    "english": "orange",
+    "japanese": {
+      "kanji": "オレンジ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Colors/Orange.jpg"
+  },
+  {
+    "english": "brown",
+    "japanese": {
+      "kanji": "茶色",
+      "furigana": "ちゃいろ"
+    },
+    "image": "assets/images/categories/Colors/Brown.jpg"
+  },
+  {
+    "english": "purple",
+    "japanese": {
+      "kanji": "紫",
+      "furigana": "むらさき"
+    },
+    "image": "assets/images/categories/Colors/Purple.jpg"
+  },
+  {
+    "english": "pink",
+    "japanese": {
+      "kanji": "桃色",
+      "furigana": "ももいろ"
+    },
+    "image": "assets/images/categories/Colors/Pink.jpg"
+  },
+  {
+    "english": "black",
+    "japanese": {
+      "kanji": "黒",
+      "furigana": "くろ"
+    },
+    "image": "assets/images/categories/Colors/Black.jpg"
+  },
+  {
+    "english": "white",
+    "japanese": {
+      "kanji": "白",
+      "furigana": "しろ"
+    },
+    "image": "assets/images/categories/Colors/White.jpg"
+  },
+  {
+    "english": "gray",
+    "japanese": {
+      "kanji": "灰色",
+      "furigana": "はいいろ"
+    },
+    "image": "assets/images/categories/Colors/Gray.jpg"
+  },
+  {
+    "english": "silver",
+    "japanese": {
+      "kanji": "銀",
+      "furigana": "ぎん"
+    },
+    "image": "assets/images/categories/Colors/Silver.jpg",
+    "bonus": true
+  },
+  {
+    "english": "gold",
+    "japanese": {
+      "kanji": "金",
+      "furigana": "きん"
+    },
+    "image": "assets/images/categories/Colors/Gold.jpg",
+    "bonus": true
+  }
+]

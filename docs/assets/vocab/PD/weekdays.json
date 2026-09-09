@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "title": "Weekdays"
+  },
+  "items": [
+    {
+      "english": "days",
+      "japanese": {
+        "kanji": "曜日",
+        "furigana": "ようび"
+      },
+      "image": "assets/images/categories/Days of the Week/Days.jpg"
+    },
+    {
+      "english": "Friday",
+      "japanese": {
+        "kanji": "金曜日",
+        "furigana": "きんようび"
+      },
+      "image": "assets/images/categories/Days of the Week/Friday.jpg"
+    },
+    {
+      "english": "Monday",
+      "japanese": {
+        "kanji": "月曜日",
+        "furigana": "げつようび"
+      },
+      "image": "assets/images/categories/Days of the Week/Monday.jpg"
+    },
+    {
+      "english": "one week",
+      "japanese": {
+        "kanji": "一週間",
+        "furigana": "いっしゅうかん"
+      },
+      "image": "assets/images/categories/Days of the Week/One Week.jpg",
+      "original_image": "assets/images/categories/Days of the Week/One week.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "Saturday",
+      "japanese": {
+        "kanji": "土曜日",
+        "furigana": "どようび"
+      },
+      "image": "assets/images/categories/Days of the Week/Saturday.jpg"
+    },
+    {
+      "english": "Sunday",
+      "japanese": {
+        "kanji": "日曜日",
+        "furigana": "にちようび"
+      },
+      "image": "assets/images/categories/Days of the Week/Sunday.jpg"
+    },
+    {
+      "english": "Thursday",
+      "japanese": {
+        "kanji": "木曜日",
+        "furigana": "もくようび"
+      },
+      "image": "assets/images/categories/Days of the Week/Thursday.jpg"
+    },
+    {
+      "english": "Tuesday",
+      "japanese": {
+        "kanji": "火曜日",
+        "furigana": "かようび"
+      },
+      "image": "assets/images/categories/Days of the Week/Tuesday.jpg"
+    },
+    {
+      "english": "Wednesday",
+      "japanese": {
+        "kanji": "水曜日",
+        "furigana": "すいようび"
+      },
+      "image": "assets/images/categories/Days of the Week/Wednesday.jpg"
+    }
+  ]
+}

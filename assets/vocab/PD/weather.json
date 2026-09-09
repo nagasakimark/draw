@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "title": "Weather"
+  },
+  "items": [
+    {
+      "english": "cloudy",
+      "japanese": {
+        "kanji": "曇り",
+        "furigana": "くもり"
+      },
+      "image": "assets/images/categories/Weather/Cloudy.jpg"
+    },
+    {
+      "english": "cold",
+      "japanese": {
+        "kanji": "寒い",
+        "furigana": "さむい"
+      },
+      "image": "assets/images/categories/Weather/Cold.jpg"
+    },
+    {
+      "english": "hot",
+      "japanese": {
+        "kanji": "暑い",
+        "furigana": "あつい"
+      },
+      "image": "assets/images/categories/Weather/Hot.jpg"
+    },
+    {
+      "english": "humid",
+      "japanese": {
+        "kanji": "蒸し暑い",
+        "furigana": "むしあつい"
+      },
+      "image": "assets/images/categories/Weather/Humid.jpg"
+    },
+    {
+      "english": "rainy",
+      "japanese": {
+        "kanji": "雨",
+        "furigana": "あめ"
+      },
+      "image": "assets/images/categories/Weather/Rainy.jpg"
+    },
+    {
+      "english": "snowy",
+      "japanese": {
+        "kanji": "雪",
+        "furigana": "ゆき"
+      },
+      "image": "assets/images/categories/Weather/Snowy.jpg"
+    },
+    {
+      "english": "sunny",
+      "japanese": {
+        "kanji": "晴れ",
+        "furigana": "はれ"
+      },
+      "image": "assets/images/categories/Weather/Sunny.jpg"
+    },
+    {
+      "english": "warm",
+      "japanese": {
+        "kanji": "暖かい",
+        "furigana": "あたたかい"
+      },
+      "image": "assets/images/categories/Weather/Warm.jpg"
+    },
+    {
+      "english": "weather",
+      "japanese": {
+        "kanji": "天気",
+        "furigana": "てんき"
+      },
+      "image": "assets/images/categories/Weather/Weather.jpg"
+    },
+    {
+      "english": "windy",
+      "japanese": {
+        "kanji": "風が強い",
+        "furigana": "かぜがつよい"
+      },
+      "image": "assets/images/categories/Weather/Windy.jpg"
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "metadata": {
+    "title": "Nature"
+  },
+  "items": [
+    {
+      "english": "aurora",
+      "japanese": {
+        "kanji": "オーロラ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Nature/Nature+/Aurora.jpg",
+      "bonus": true
+    },
+    {
+      "english": "beach",
+      "japanese": {
+        "kanji": "海岸",
+        "furigana": "かいがん"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Beach.jpg",
+      "bonus": true
+    },
+    {
+      "english": "cloud",
+      "japanese": {
+        "kanji": "雲",
+        "furigana": "くも"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Cloud.jpg",
+      "bonus": true
+    },
+    {
+      "english": "desert",
+      "japanese": {
+        "kanji": "砂漠",
+        "furigana": "さばく"
+      },
+      "image": "assets/images/categories/Nature/Desert.jpg"
+    },
+    {
+      "english": "fire",
+      "japanese": {
+        "kanji": "火",
+        "furigana": "ひ"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Fire.jpg",
+      "bonus": true
+    },
+    {
+      "english": "flower",
+      "japanese": {
+        "kanji": "花",
+        "furigana": "はな"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Flower.jpg",
+      "bonus": true
+    },
+    {
+      "english": "forest",
+      "japanese": {
+        "kanji": "森",
+        "furigana": "もり"
+      },
+      "image": "assets/images/categories/Nature/Forest.jpg"
+    },
+    {
+      "english": "hot spring",
+      "japanese": {
+        "kanji": "温泉",
+        "furigana": "おんせん"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Hot Spring.jpg",
+      "bonus": true
+    },
+    {
+      "english": "ice",
+      "japanese": {
+        "kanji": "氷",
+        "furigana": "こおり"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Ice.jpg",
+      "bonus": true
+    },
+    {
+      "english": "island",
+      "japanese": {
+        "kanji": "島",
+        "furigana": "しま"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Island.jpg",
+      "bonus": true
+    },
+    {
+      "english": "lake",
+      "japanese": {
+        "kanji": "湖",
+        "furigana": "みずうみ"
+      },
+      "image": "assets/images/categories/Nature/Lake.jpg"
+    },
+    {
+      "english": "moon",
+      "japanese": {
+        "kanji": "月",
+        "furigana": "つき"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Moon.jpg",
+      "bonus": true
+    },
+    {
+      "english": "mountain",
+      "japanese": {
+        "kanji": "山",
+        "furigana": "やま"
+      },
+      "image": "assets/images/categories/Nature/Mountain.jpg"
+    },
+    {
+      "english": "nature",
+      "japanese": {
+        "kanji": "自然",
+        "furigana": "しぜん"
+      },
+      "image": "assets/images/categories/Nature/Nature.jpg"
+    },
+    {
+      "english": "ocean",
+      "japanese": {
+        "kanji": "海",
+        "furigana": "うみ"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Ocean.jpg",
+      "bonus": true
+    },
+    {
+      "english": "plant",
+      "japanese": {
+        "kanji": "植物",
+        "furigana": "しょくぶつ"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Plant.jpg",
+      "bonus": true
+    },
+    {
+      "english": "pond",
+      "japanese": {
+        "kanji": "池",
+        "furigana": "いけ"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Pond.jpg",
+      "bonus": true
+    },
+    {
+      "english": "rain",
+      "japanese": {
+        "kanji": "雨",
+        "furigana": "あめ"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Rain.jpg",
+      "bonus": true
+    },
+    {
+      "english": "rain forest",
+      "japanese": {
+        "kanji": "熱帯雨林",
+        "furigana": "ねったいうりん"
+      },
+      "image": "assets/images/categories/Nature/Rainforest.jpg"
+    },
+    {
+      "english": "rainbow",
+      "japanese": {
+        "kanji": "虹",
+        "furigana": "にじ"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Rainbow.jpg",
+      "bonus": true
+    },
+    {
+      "english": "river",
+      "japanese": {
+        "kanji": "川",
+        "furigana": "かわ"
+      },
+      "image": "assets/images/categories/Nature/River.jpg"
+    },
+    {
+      "english": "rock",
+      "japanese": {
+        "kanji": "岩",
+        "furigana": "いわ"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Rock.jpg",
+      "bonus": true
+    },
+    {
+      "english": "rose",
+      "japanese": {
+        "kanji": "バラ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Nature/Nature+/Rose.jpg",
+      "bonus": true
+    },
+    {
+      "english": "savanna",
+      "japanese": {
+        "kanji": "サバンナ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Nature/Savanna.jpg"
+    },
+    {
+      "english": "sea",
+      "japanese": {
+        "kanji": "海",
+        "furigana": "うみ"
+      },
+      "image": "assets/images/categories/Nature/Sea.jpg"
+    },
+    {
+      "english": "sky",
+      "japanese": {
+        "kanji": "空",
+        "furigana": "そら"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Sky.jpg",
+      "bonus": true
+    },
+    {
+      "english": "snow",
+      "japanese": {
+        "kanji": "雪",
+        "furigana": "ゆき"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Snow.jpg",
+      "bonus": true
+    },
+    {
+      "english": "space",
+      "japanese": {
+        "kanji": "宇宙",
+        "furigana": "うちゅう"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Space.jpg",
+      "bonus": true
+    },
+    {
+      "english": "star",
+      "japanese": {
+        "kanji": "星",
+        "furigana": "ほし"
+      },
+      "image": "assets/images/categories/Shapes/Star.jpg",
+      "bonus": true
+    },
+    {
+      "english": "sun",
+      "japanese": {
+        "kanji": "太陽",
+        "furigana": "たいよう"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Sun.jpg",
+      "bonus": true
+    },
+    {
+      "english": "thunder",
+      "japanese": {
+        "kanji": "雷",
+        "furigana": "かみなり"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Thunder.jpg",
+      "bonus": true
+    },
+    {
+      "english": "tree",
+      "japanese": {
+        "kanji": "木",
+        "furigana": "き"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Tree.jpg",
+      "bonus": true
+    },
+    {
+      "english": "waterfall",
+      "japanese": {
+        "kanji": "滝",
+        "furigana": "たき"
+      },
+      "image": "assets/images/categories/Nature/Nature+/Waterfall.jpg",
+      "bonus": true
+    }
+  ]
+}

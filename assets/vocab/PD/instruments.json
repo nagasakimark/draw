@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "title": "Instruments"
+  },
+  "items": [
+    {
+      "english": "recorder",
+      "japanese": {
+        "kanji": "リコーダー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Instruments/Recorder.jpg"
+    },
+    {
+      "english": "harmonica",
+      "japanese": {
+        "kanji": "ハーモニカ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Instruments/Harmonica.jpg"
+    },
+    {
+      "english": "triangle",
+      "japanese": {
+        "kanji": "トライアングル",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Instruments/Triangle.jpg"
+    },
+    {
+      "english": "piano",
+      "japanese": {
+        "kanji": "ピアノ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Instruments/Piano.jpg"
+    },
+    {
+      "english": "guitar",
+      "japanese": {
+        "kanji": "ギター",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Instruments/Guitar.jpg"
+    },
+    {
+      "english": "violin",
+      "japanese": {
+        "kanji": "バイオリン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Instruments/Violin.jpg"
+    },
+    {
+      "english": "drum",
+      "japanese": {
+        "kanji": "ドラム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Instruments/Drum.jpg"
+    },
+    {
+      "english": "xylophone",
+      "japanese": {
+        "kanji": "木琴",
+        "furigana": "もっきん"
+      },
+      "image": "assets/images/categories/Instruments/Xylophone.jpg"
+    },
+    {
+      "english": "keyboard harmonica",
+      "japanese": {
+        "kanji": "鍵盤ハーモニカ",
+        "furigana": "けんばんはーもにか"
+      },
+      "image": "assets/images/categories/Instruments/Keyboard Harmonica.jpg"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "title": "Personalities"
+  },
+  "items": [
+    {
+      "english": "active",
+      "japanese": {
+        "kanji": "活動的",
+        "furigana": "かつどうてき"
+      },
+      "image": "assets/images/categories/Personality/Active.jpg"
+    },
+    {
+      "english": "brave",
+      "japanese": {
+        "kanji": "勇敢",
+        "furigana": "ゆうかん"
+      },
+      "image": "assets/images/categories/Personality/Brave.jpg"
+    },
+    {
+      "english": "friendly",
+      "japanese": {
+        "kanji": "友好的",
+        "furigana": "ゆうこうてき"
+      },
+      "image": "assets/images/categories/Personality/Friendly.jpg"
+    },
+    {
+      "english": "funny",
+      "japanese": {
+        "kanji": "面白い",
+        "furigana": "おもしろい"
+      },
+      "image": "assets/images/categories/Personality/Funny.jpg"
+    },
+    {
+      "english": "gentle",
+      "japanese": {
+        "kanji": "穏やか",
+        "furigana": "おだやか"
+      },
+      "image": "assets/images/categories/Personality/Gentle.jpg"
+    },
+    {
+      "english": "kind",
+      "japanese": {
+        "kanji": "優しい",
+        "furigana": "やさしい"
+      },
+      "image": "assets/images/categories/Personality/Kind.jpg"
+    },
+    {
+      "english": "shy",
+      "japanese": {
+        "kanji": "内気",
+        "furigana": "うちき"
+      },
+      "image": "assets/images/categories/Personality/Shy.jpg"
+    },
+    {
+      "english": "smart",
+      "japanese": {
+        "kanji": "賢い",
+        "furigana": "かしこい"
+      },
+      "image": "assets/images/categories/Personality/Smart.jpg"
+    },
+    {
+      "english": "strong",
+      "japanese": {
+        "kanji": "強い",
+        "furigana": "つよい"
+      },
+      "image": "assets/images/categories/Personality/Strong.jpg"
+    }
+  ]
+}

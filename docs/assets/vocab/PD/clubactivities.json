@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "title": "Club Activities"
+  },
+  "items": [
+    {
+      "english": "club activities",
+      "japanese": {
+        "kanji": "部活動",
+        "furigana": "ぶかつどう"
+      },
+      "image": "assets/images/categories/Club Activities/Club Activities.jpg"
+    },
+    {
+      "english": "art club",
+      "japanese": {
+        "kanji": "美術部",
+        "furigana": "びじゅつぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Art Club.jpg"
+    },
+    {
+      "english": "badminton team",
+      "japanese": {
+        "kanji": "バドミントン部",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Club Activities/Badminton Team.jpg"
+    },
+    {
+      "english": "baseball team",
+      "japanese": {
+        "kanji": "野球部",
+        "furigana": "やきゅうぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Baseball Team.jpg"
+    },
+    {
+      "english": "basketball team",
+      "japanese": {
+        "kanji": "バスケットボール部",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Club Activities/Basketball Team.jpg"
+    },
+    {
+      "english": "brass band",
+      "japanese": {
+        "kanji": "吹奏楽部",
+        "furigana": "すいそうがくぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Brass Band.jpg"
+    },
+    {
+      "english": "broadcasting club",
+      "japanese": {
+        "kanji": "放送部",
+        "furigana": "ほうそうぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Broadcasting Club.jpg"
+    },
+    {
+      "english": "chorus",
+      "japanese": {
+        "kanji": "合唱部",
+        "furigana": "がっしょうぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Chorus.jpg"
+    },
+    {
+      "english": "computer club",
+      "japanese": {
+        "kanji": "コンピュータ部",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Club Activities/Club Activities+/Computer Club.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Club Activities/bonuswords/computerclub.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "cooking club",
+      "japanese": {
+        "kanji": "料理部",
+        "furigana": "りょうりぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Cooking Club.jpg"
+    },
+    {
+      "english": "dance team",
+      "japanese": {
+        "kanji": "ダンス部",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Club Activities/Dance Team.jpg"
+    },
+    {
+      "english": "drama club",
+      "japanese": {
+        "kanji": "演劇部",
+        "furigana": "えんげきぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Drama Club.jpg"
+    },
+    {
+      "english": "English club",
+      "japanese": {
+        "kanji": "英語部",
+        "furigana": "えいごぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Club Activities+/English Club.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Club Activities/bonuswords/englishclub.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "gymnastics team",
+      "japanese": {
+        "kanji": "体操部",
+        "furigana": "たいそうぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Club Activities+/Gymnastics Team.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Club Activities/bonuswords/gymnasticsteam.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "newspaper club",
+      "japanese": {
+        "kanji": "新聞部",
+        "furigana": "しんぶんぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Newspaper Club.jpg"
+    },
+    {
+      "english": "photography club",
+      "japanese": {
+        "kanji": "写真部",
+        "furigana": "しゃしんぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Photography Club.jpg"
+    },
+    {
+      "english": "science club",
+      "japanese": {
+        "kanji": "科学部",
+        "furigana": "かがくぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Club Activities+/Science Club.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Club Activities/bonuswords/scienceclub.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "soccer team",
+      "japanese": {
+        "kanji": "サッカー部",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Club Activities/Soccer Team.jpg"
+    },
+    {
+      "english": "softball team",
+      "japanese": {
+        "kanji": "ソフトボール部",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Club Activities/Softball Team.jpg"
+    },
+    {
+      "english": "table tennis team",
+      "japanese": {
+        "kanji": "卓球部",
+        "furigana": "たっきゅうぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Table Tennis Team.jpg"
+    },
+    {
+      "english": "tennis team",
+      "japanese": {
+        "kanji": "テニス部",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Club Activities/Tennis Team.jpg"
+    },
+    {
+      "english": "track and field team",
+      "japanese": {
+        "kanji": "陸上部",
+        "furigana": "りくじょうぶ"
+      },
+      "image": "assets/images/categories/Club Activities/Track and Field Team.jpg"
+    },
+    {
+      "english": "volleyball team",
+      "japanese": {
+        "kanji": "バレーボール部",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Club Activities/Volleyball Team.jpg"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "english": "shapes",
+    "japanese": {
+      "kanji": "形",
+      "furigana": "かたち"
+    },
+    "image": "assets/images/categories/Shapes/Shapes.jpg"
+  },
+  {
+    "english": "circle",
+    "japanese": {
+      "kanji": "丸",
+      "furigana": "まる"
+    },
+    "image": "assets/images/categories/Shapes/Circle.jpg"
+  },
+  {
+    "english": "square",
+    "japanese": {
+      "kanji": "四角",
+      "furigana": "しかく"
+    },
+    "image": "assets/images/categories/Shapes/Square.jpg"
+  },
+  {
+    "english": "triangle",
+    "japanese": {
+      "kanji": "三角",
+      "furigana": "さんかく"
+    },
+    "image": "assets/images/categories/Shapes/Triangle.jpg"
+  },
+  {
+    "english": "rectangle",
+    "japanese": {
+      "kanji": "長方形",
+      "furigana": "ちょうほうけい"
+    },
+    "image": "assets/images/categories/Shapes/Rectangle.jpg"
+  },
+  {
+    "english": "star",
+    "japanese": {
+      "kanji": "星形",
+      "furigana": "ほしがた"
+    },
+    "image": "assets/images/categories/Shapes/Star.jpg"
+  },
+  {
+    "english": "heart",
+    "japanese": {
+      "kanji": "ハート",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Shapes/Heart.jpg"
+  },
+  {
+    "english": "diamond",
+    "japanese": {
+      "kanji": "菱形",
+      "furigana": "ひしがた"
+    },
+    "image": "assets/images/categories/Shapes/Diamond.jpg"
+  },
+  {
+    "english": "moon",
+    "japanese": {
+      "kanji": "三日月",
+      "furigana": "みかづき"
+    },
+    "image": "assets/images/categories/Shapes/Moon.jpg"
+  },
+  {
+    "english": "line",
+    "japanese": {
+      "kanji": "線",
+      "furigana": "せん"
+    },
+    "image": "assets/images/categories/Shapes/Line.jpg"
+  }
+]

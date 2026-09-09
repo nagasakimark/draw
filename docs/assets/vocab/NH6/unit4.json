@@ -1,0 +1,475 @@
+[
+  {
+    "english": "world",
+    "japanese": {
+      "kanji": "世界",
+      "furigana": "せかい"
+    },
+    "image": "assets/images/categories/World/World.jpg"
+  },
+  {
+    "english": "country",
+    "japanese": {
+      "kanji": "国",
+      "furigana": "くに"
+    },
+    "image": "assets/images/categories/World/Country.jpg"
+  },
+  {
+    "english": "culture",
+    "japanese": {
+      "kanji": "文化",
+      "furigana": "ぶんか"
+    },
+    "image": "assets/images/categories/World/Culture.jpg"
+  },
+  {
+    "english": "north",
+    "japanese": {
+      "kanji": "北",
+      "furigana": "きた"
+    },
+    "image": "assets/images/categories/World/North.jpg"
+  },
+  {
+    "english": "east",
+    "japanese": {
+      "kanji": "東",
+      "furigana": "ひがし"
+    },
+    "image": "assets/images/categories/World/East.jpg"
+  },
+  {
+    "english": "south",
+    "japanese": {
+      "kanji": "南",
+      "furigana": "みなみ"
+    },
+    "image": "assets/images/categories/World/South.jpg"
+  },
+  {
+    "english": "west",
+    "japanese": {
+      "kanji": "西",
+      "furigana": "にし"
+    },
+    "image": "assets/images/categories/World/West.jpg"
+  },
+  {
+    "english": "North America",
+    "japanese": {
+      "kanji": "北アメリカ",
+      "furigana": "きたあめりか"
+    },
+    "image": "assets/images/categories/World/North America.jpg"
+  },
+  {
+    "english": "South America",
+    "japanese": {
+      "kanji": "南アメリカ",
+      "furigana": "みなみあめりか"
+    },
+    "image": "assets/images/categories/World/South America.jpg"
+  },
+  {
+    "english": "Asia",
+    "japanese": {
+      "kanji": "アジア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Asia.jpg"
+  },
+  {
+    "english": "Europe",
+    "japanese": {
+      "kanji": "ヨーロッパ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Europe.jpg"
+  },
+  {
+    "english": "Africa",
+    "japanese": {
+      "kanji": "アフリカ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Africa.jpg"
+  },
+  {
+    "english": "Oceania",
+    "japanese": {
+      "kanji": "オセアニア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Oceania.jpg"
+  },
+  {
+    "english": "The U.K.",
+    "japanese": {
+      "kanji": "イギリス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/The UK.jpg"
+  },
+  {
+    "english": "France",
+    "japanese": {
+      "kanji": "フランス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/France.jpg"
+  },
+  {
+    "english": "Egypt",
+    "japanese": {
+      "kanji": "エジプト",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Egypt.jpg"
+  },
+  {
+    "english": "China",
+    "japanese": {
+      "kanji": "中国",
+      "furigana": "ちゅうごく"
+    },
+    "image": "assets/images/categories/World/China.jpg"
+  },
+  {
+    "english": "Australia",
+    "japanese": {
+      "kanji": "オーストラリア",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Australia.jpg"
+  },
+  {
+    "english": "Japan",
+    "japanese": {
+      "kanji": "日本",
+      "furigana": "にほん"
+    },
+    "image": "assets/images/categories/World/Japan.jpg"
+  },
+  {
+    "english": "America",
+    "japanese": {
+      "kanji": "アメリカ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/America.jpg"
+  },
+  {
+    "english": "Brazil",
+    "japanese": {
+      "kanji": "ブラジル",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/World/Brazil.jpg"
+  },
+  {
+    "english": "speak",
+    "japanese": {
+      "kanji": "話す",
+      "furigana": "はなす"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Speak.jpg"
+  },
+  {
+    "english": "live",
+    "japanese": {
+      "kanji": "住む",
+      "furigana": "すむ"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Live.jpg"
+  },
+  {
+    "english": "make",
+    "japanese": {
+      "kanji": "作る",
+      "furigana": "つくる"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Make.jpg"
+  },
+  {
+    "english": "wear",
+    "japanese": {
+      "kanji": "着る",
+      "furigana": "きる"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Wear.jpg"
+  },
+  {
+    "english": "talk",
+    "japanese": {
+      "kanji": "話す",
+      "furigana": "はなす"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Talk.jpg"
+  },
+  {
+    "english": "watch",
+    "japanese": {
+      "kanji": "時計",
+      "furigana": "とけい"
+    },
+    "image": "assets/images/categories/Things Around You/Watch.jpg"
+  },
+  {
+    "english": "read",
+    "japanese": {
+      "kanji": "読む",
+      "furigana": "よむ"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Read.jpg"
+  },
+  {
+    "english": "help",
+    "japanese": {
+      "kanji": "助ける",
+      "furigana": "たすける"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Help.jpg"
+  },
+  {
+    "english": "practice",
+    "japanese": {
+      "kanji": "練習する",
+      "furigana": "れんしゅうする"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Practice.jpg"
+  },
+  {
+    "english": "clean",
+    "japanese": {
+      "kanji": "掃除する",
+      "furigana": "そうじする"
+    },
+    "image": "assets/images/categories/State/State+/Clean.jpg",
+    "bonus": true
+  },
+  {
+    "english": "enjoy",
+    "japanese": {
+      "kanji": "楽しむ",
+      "furigana": "たのしむ"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Enjoy.jpg"
+  },
+  {
+    "english": "visit",
+    "japanese": {
+      "kanji": "訪れる",
+      "furigana": "おとずれる"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Visit.jpg"
+  },
+  {
+    "english": "ride",
+    "japanese": {
+      "kanji": "乗る",
+      "furigana": "のる"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Ride.jpg"
+  },
+  {
+    "english": "come",
+    "japanese": {
+      "kanji": "来る",
+      "furigana": "くる"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Come.jpg"
+  },
+  {
+    "english": "get",
+    "japanese": {
+      "kanji": "得る",
+      "furigana": "える"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Get.jpg"
+  },
+  {
+    "english": "save",
+    "japanese": {
+      "kanji": "節約する",
+      "furigana": "せつやくする"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Save.jpg"
+  },
+  {
+    "english": "stop",
+    "japanese": {
+      "kanji": "止まる",
+      "furigana": "とまる"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Stop.jpg"
+  },
+  {
+    "english": "study",
+    "japanese": {
+      "kanji": "勉強する",
+      "furigana": "べんきょうする"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Study.jpg"
+  },
+  {
+    "english": "join",
+    "japanese": {
+      "kanji": "参加する",
+      "furigana": "さんかする"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Join.jpg"
+  },
+  {
+    "english": "work",
+    "japanese": {
+      "kanji": "働く",
+      "furigana": "はたらく"
+    },
+    "image": "assets/images/categories/Present Tense/6th Grade/Work.jpg"
+  },
+  {
+    "english": "good",
+    "japanese": {
+      "kanji": "良い",
+      "furigana": "よい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Good.jpg"
+  },
+  {
+    "english": "great",
+    "japanese": {
+      "kanji": "素晴らしい",
+      "furigana": "すばらしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Great.jpg"
+  },
+  {
+    "english": "bad",
+    "japanese": {
+      "kanji": "悪い",
+      "furigana": "わるい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Bad.jpg"
+  },
+  {
+    "english": "nice",
+    "japanese": {
+      "kanji": "素敵な",
+      "furigana": "すてきな"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Nice.jpg"
+  },
+  {
+    "english": "amazing",
+    "japanese": {
+      "kanji": "驚くべき",
+      "furigana": "おどろくべき"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Amazing.jpg"
+  },
+  {
+    "english": "fantastic",
+    "japanese": {
+      "kanji": "素晴らしい",
+      "furigana": "すばらしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Fantastic.jpg"
+  },
+  {
+    "english": "wonderful",
+    "japanese": {
+      "kanji": "素晴らしい",
+      "furigana": "すばらしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Wonderful.jpg"
+  },
+  {
+    "english": "beautiful",
+    "japanese": {
+      "kanji": "美しい",
+      "furigana": "うつくしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Beautiful.jpg"
+  },
+  {
+    "english": "cool",
+    "japanese": {
+      "kanji": "かっこいい",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Cool.jpg"
+  },
+  {
+    "english": "cute",
+    "japanese": {
+      "kanji": "かわいい",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Cute.jpg"
+  },
+  {
+    "english": "favorite",
+    "japanese": {
+      "kanji": "お気に入り",
+      "furigana": "おきにいり"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Favorite.jpg"
+  },
+  {
+    "english": "interesting",
+    "japanese": {
+      "kanji": "面白い",
+      "furigana": "おもしろい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Interesting.jpg"
+  },
+  {
+    "english": "exciting",
+    "japanese": {
+      "kanji": "わくわくする",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Exciting.jpg"
+  },
+  {
+    "english": "famous",
+    "japanese": {
+      "kanji": "有名な",
+      "furigana": "ゆうめいな"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Famous.jpg"
+  },
+  {
+    "english": "popular",
+    "japanese": {
+      "kanji": "人気のある",
+      "furigana": "にんきのある"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Popular.jpg"
+  },
+  {
+    "english": "colorful",
+    "japanese": {
+      "kanji": "カラフル",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Colorful.jpg"
+  },
+  {
+    "english": "international",
+    "japanese": {
+      "kanji": "国際的な",
+      "furigana": "こくさいてきな"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/International.jpg"
+  },
+  {
+    "english": "fun",
+    "japanese": {
+      "kanji": "楽しい",
+      "furigana": "たのしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Fun.jpg"
+  }
+]

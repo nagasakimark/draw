@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "title": "Food"
+  },
+  "items": [
+    {
+      "english": "food",
+      "japanese": {
+        "kanji": "食べ物",
+        "furigana": "たべもの"
+      },
+      "image": "assets/images/categories/Food/Food.jpg"
+    },
+    {
+      "english": "rice",
+      "japanese": {
+        "kanji": "ご飯",
+        "furigana": "ごはん"
+      },
+      "image": "assets/images/categories/Food/Rice.jpg"
+    },
+    {
+      "english": "rice ball",
+      "japanese": {
+        "kanji": "おにぎり",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Rice Ball.jpg",
+      "original_image": "assets/images/categories/Food/Rice ball.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "curry and rice",
+      "japanese": {
+        "kanji": "カレーライス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Curry and Rice.jpg",
+      "original_image": "assets/images/categories/Food/Curry and rice.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "grilled eel",
+      "japanese": {
+        "kanji": "うなぎ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Grilled Eel.jpg",
+      "original_image": "assets/images/categories/Food/Grilled eel.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "grilled fish",
+      "japanese": {
+        "kanji": "焼き魚",
+        "furigana": "やきざかな"
+      },
+      "image": "assets/images/categories/Food/Grilled Fish.jpg",
+      "original_image": "assets/images/categories/Food/Grilled fish.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "bread",
+      "japanese": {
+        "kanji": "パン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Bread.jpg"
+    },
+    {
+      "english": "sandwich",
+      "japanese": {
+        "kanji": "サンドイッチ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Sandwich.jpg"
+    },
+    {
+      "english": "pancake",
+      "japanese": {
+        "kanji": "パンケーキ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Pancake.jpg"
+    },
+    {
+      "english": "pizza",
+      "japanese": {
+        "kanji": "ピザ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Pizza.jpg"
+    },
+    {
+      "english": "hamburger",
+      "japanese": {
+        "kanji": "ハンバーガー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Hamburger.jpg"
+    },
+    {
+      "english": "hot dog",
+      "japanese": {
+        "kanji": "ホットドッグ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Hot Dog.jpg",
+      "original_image": "assets/images/categories/Food/Hot dog.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "french fries",
+      "japanese": {
+        "kanji": "フライドポテト",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/French Fries.jpg",
+      "original_image": "assets/images/categories/Food/French fries.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "fried chicken",
+      "japanese": {
+        "kanji": "唐揚げ",
+        "furigana": "からあげ"
+      },
+      "image": "assets/images/categories/Food/Fried Chicken.jpg",
+      "original_image": "assets/images/categories/Food/Fried chicken.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "sausage",
+      "japanese": {
+        "kanji": "ソーセージ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Sausage.jpg"
+    },
+    {
+      "english": "steak",
+      "japanese": {
+        "kanji": "ステーキ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Steak.jpg"
+    },
+    {
+      "english": "omelet",
+      "japanese": {
+        "kanji": "オムレツ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Omelet.jpg"
+    },
+    {
+      "english": "spaghetti",
+      "japanese": {
+        "kanji": "スパゲッティ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Spaghetti.jpg"
+    },
+    {
+      "english": "pie",
+      "japanese": {
+        "kanji": "パイ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Pie.jpg"
+    },
+    {
+      "english": "salad",
+      "japanese": {
+        "kanji": "サラダ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Salad.jpg"
+    },
+    {
+      "english": "soup",
+      "japanese": {
+        "kanji": "スープ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Soup.jpg"
+    },
+    {
+      "english": "fried noodles",
+      "japanese": {
+        "kanji": "焼きそば",
+        "furigana": "やきそば"
+      },
+      "image": "assets/images/categories/Food/Fried Noodles.jpg",
+      "original_image": "assets/images/categories/Food/Fried noodles.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "ramen",
+      "japanese": {
+        "kanji": "ラーメン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Ramen.jpg"
+    },
+    {
+      "english": "soba",
+      "japanese": {
+        "kanji": "そば",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Soba.jpg"
+    },
+    {
+      "english": "beef bowl",
+      "japanese": {
+        "kanji": "牛丼",
+        "furigana": "ぎゅうどん"
+      },
+      "image": "assets/images/categories/Food/Beef Bowl.jpg",
+      "original_image": "assets/images/categories/Food/Beef bowl.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "sushi",
+      "japanese": {
+        "kanji": "寿司",
+        "furigana": "すし"
+      },
+      "image": "assets/images/categories/Food/Sushi.jpg"
+    },
+    {
+      "english": "tempura",
+      "japanese": {
+        "kanji": "天ぷら",
+        "furigana": "てんぷら"
+      },
+      "image": "assets/images/categories/Food/Tempura.jpg"
+    },
+    {
+      "english": "cereal",
+      "japanese": {
+        "kanji": "シリアル",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Food+/Cereal.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Cereal.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "cheese fondue",
+      "japanese": {
+        "kanji": "チーズフォンデュ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Food+/Cheese Fondue.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Cheese Fondue.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "fried egg",
+      "japanese": {
+        "kanji": "目玉焼き",
+        "furigana": "めだまやき"
+      },
+      "image": "assets/images/categories/Food/Food+/Fried Egg.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Fried Egg.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "gyoza",
+      "japanese": {
+        "kanji": "餃子",
+        "furigana": "ぎょうざ"
+      },
+      "image": "assets/images/categories/Food/Food+/Gyoza.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Gyoza.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "jam",
+      "japanese": {
+        "kanji": "ジャム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Food+/Jam.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Jam.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "miso soup",
+      "japanese": {
+        "kanji": "味噌汁",
+        "furigana": "みそしる"
+      },
+      "image": "assets/images/categories/Food/Food+/Miso Soup.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Miso Soup.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "okonomiyaki",
+      "japanese": {
+        "kanji": "お好み焼き",
+        "furigana": "おこのみやき"
+      },
+      "image": "assets/images/categories/Food/Food+/Okonomiyaki.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Okonomiyaki.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "toast",
+      "japanese": {
+        "kanji": "トースト",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Food+/Toast.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Toast.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "tuna bowl",
+      "japanese": {
+        "kanji": "鉄火丼",
+        "furigana": "てっかどん"
+      },
+      "image": "assets/images/categories/Food/Food+/Tuna bowl.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Tuna bowl.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "yogurt",
+      "japanese": {
+        "kanji": "ヨーグルト",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Food/Food+/Yogurt.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Food/Yogurt.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

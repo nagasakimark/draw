@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "title": "Drinks"
+  },
+  "items": [
+    {
+      "english": "barley tea",
+      "japanese": {
+        "kanji": "麦茶",
+        "furigana": "むぎちゃ"
+      },
+      "image": "assets/images/categories/Drinks/Drinks+/Barley Tea.jpg",
+      "bonus": true
+    },
+    {
+      "english": "coffee",
+      "japanese": {
+        "kanji": "コーヒー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Drinks/Coffee.jpg"
+    },
+    {
+      "english": "cola",
+      "japanese": {
+        "kanji": "コーラ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Drinks/Drinks+/Cola.jpg",
+      "bonus": true
+    },
+    {
+      "english": "drinks",
+      "japanese": {
+        "kanji": "飲み物",
+        "furigana": "のみもの"
+      },
+      "image": "assets/images/categories/Drinks/Drinks.jpg"
+    },
+    {
+      "english": "green tea",
+      "japanese": {
+        "kanji": "緑茶",
+        "furigana": "りょくちゃ"
+      },
+      "image": "assets/images/categories/Drinks/Green Tea.jpg",
+      "original_image": "assets/images/categories/Drinks/Green tea.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "juice",
+      "japanese": {
+        "kanji": "ジュース",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Drinks/Juice.jpg"
+    },
+    {
+      "english": "milk",
+      "japanese": {
+        "kanji": "牛乳",
+        "furigana": "ぎゅうにゅう"
+      },
+      "image": "assets/images/categories/Drinks/Milk.jpg"
+    },
+    {
+      "english": "mineral water",
+      "japanese": {
+        "kanji": "ミネラルウォーター",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Drinks/Mineral Water.jpg",
+      "original_image": "assets/images/categories/Drinks/Mineral water.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "oolong",
+      "japanese": {
+        "kanji": "ウーロン茶",
+        "furigana": "うーろんちゃ"
+      },
+      "image": "assets/images/categories/Drinks/Drinks+/Oolong.jpg",
+      "bonus": true
+    },
+    {
+      "english": "soda",
+      "japanese": {
+        "kanji": "ソーダ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Drinks/Soda.jpg"
+    },
+    {
+      "english": "tea",
+      "japanese": {
+        "kanji": "お茶",
+        "furigana": "おちゃ"
+      },
+      "image": "assets/images/categories/Drinks/Tea.jpg"
+    },
+    {
+      "english": "water",
+      "japanese": {
+        "kanji": "水",
+        "furigana": "みず"
+      },
+      "image": "assets/images/categories/Present Tense/Present Tense+/Water.jpg",
+      "bonus": true
+    }
+  ]
+}

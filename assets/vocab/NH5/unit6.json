@@ -1,0 +1,539 @@
+[
+  {
+    "english": "food",
+    "japanese": {
+      "kanji": "食べ物",
+      "furigana": "たべもの"
+    },
+    "image": "assets/images/categories/Food/Food.jpg"
+  },
+  {
+    "english": "rice",
+    "japanese": {
+      "kanji": "ご飯",
+      "furigana": "ごはん"
+    },
+    "image": "assets/images/categories/Food/Rice.jpg"
+  },
+  {
+    "english": "rice ball",
+    "japanese": {
+      "kanji": "おにぎり",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Rice Ball.jpg",
+    "original_image": "assets/images/categories/Food/Rice ball.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "curry and rice",
+    "japanese": {
+      "kanji": "カレーライス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Curry and Rice.jpg",
+    "original_image": "assets/images/categories/Food/Curry and rice.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "grilled eel",
+    "japanese": {
+      "kanji": "うなぎ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Grilled Eel.jpg",
+    "original_image": "assets/images/categories/Food/Grilled eel.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "grilled fish",
+    "japanese": {
+      "kanji": "焼き魚",
+      "furigana": "やきざかな"
+    },
+    "image": "assets/images/categories/Food/Grilled Fish.jpg",
+    "original_image": "assets/images/categories/Food/Grilled fish.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "bread",
+    "japanese": {
+      "kanji": "パン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Bread.jpg"
+  },
+  {
+    "english": "sandwich",
+    "japanese": {
+      "kanji": "サンドイッチ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Sandwich.jpg"
+  },
+  {
+    "english": "pancake",
+    "japanese": {
+      "kanji": "パンケーキ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Pancake.jpg"
+  },
+  {
+    "english": "pizza",
+    "japanese": {
+      "kanji": "ピザ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Pizza.jpg"
+  },
+  {
+    "english": "hamburger",
+    "japanese": {
+      "kanji": "ハンバーガー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Hamburger.jpg"
+  },
+  {
+    "english": "hot dog",
+    "japanese": {
+      "kanji": "ホットドッグ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Hot Dog.jpg",
+    "original_image": "assets/images/categories/Food/Hot dog.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "french fries",
+    "japanese": {
+      "kanji": "フライドポテト",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/French Fries.jpg",
+    "original_image": "assets/images/categories/Food/French fries.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "fried chicken",
+    "japanese": {
+      "kanji": "唐揚げ",
+      "furigana": "からあげ"
+    },
+    "image": "assets/images/categories/Food/Fried Chicken.jpg",
+    "original_image": "assets/images/categories/Food/Fried chicken.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "sausage",
+    "japanese": {
+      "kanji": "ソーセージ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Sausage.jpg"
+  },
+  {
+    "english": "steak",
+    "japanese": {
+      "kanji": "ステーキ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Steak.jpg"
+  },
+  {
+    "english": "omelet",
+    "japanese": {
+      "kanji": "オムレツ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Omelet.jpg"
+  },
+  {
+    "english": "spaghetti",
+    "japanese": {
+      "kanji": "スパゲッティ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Spaghetti.jpg"
+  },
+  {
+    "english": "pie",
+    "japanese": {
+      "kanji": "パイ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Pie.jpg"
+  },
+  {
+    "english": "salad",
+    "japanese": {
+      "kanji": "サラダ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Salad.jpg"
+  },
+  {
+    "english": "soup",
+    "japanese": {
+      "kanji": "スープ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Soup.jpg"
+  },
+  {
+    "english": "fried noodles",
+    "japanese": {
+      "kanji": "焼きそば",
+      "furigana": "やきそば"
+    },
+    "image": "assets/images/categories/Food/Fried Noodles.jpg",
+    "original_image": "assets/images/categories/Food/Fried noodles.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "ramen",
+    "japanese": {
+      "kanji": "ラーメン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Ramen.jpg"
+  },
+  {
+    "english": "soba",
+    "japanese": {
+      "kanji": "そば",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Food/Soba.jpg"
+  },
+  {
+    "english": "beef bowl",
+    "japanese": {
+      "kanji": "牛丼",
+      "furigana": "ぎゅうどん"
+    },
+    "image": "assets/images/categories/Food/Beef Bowl.jpg",
+    "original_image": "assets/images/categories/Food/Beef bowl.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "sushi",
+    "japanese": {
+      "kanji": "寿司",
+      "furigana": "すし"
+    },
+    "image": "assets/images/categories/Food/Sushi.jpg"
+  },
+  {
+    "english": "tempura",
+    "japanese": {
+      "kanji": "天ぷら",
+      "furigana": "てんぷら"
+    },
+    "image": "assets/images/categories/Food/Tempura.jpg"
+  },
+  {
+    "english": "coffee",
+    "japanese": {
+      "kanji": "コーヒー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Drinks/Coffee.jpg"
+  },
+  {
+    "english": "tea",
+    "japanese": {
+      "kanji": "お茶",
+      "furigana": "おちゃ"
+    },
+    "image": "assets/images/categories/Drinks/Tea.jpg"
+  },
+  {
+    "english": "green tea",
+    "japanese": {
+      "kanji": "緑茶",
+      "furigana": "りょくちゃ"
+    },
+    "image": "assets/images/categories/Drinks/Green Tea.jpg",
+    "original_image": "assets/images/categories/Drinks/Green tea.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "juice",
+    "japanese": {
+      "kanji": "ジュース",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Drinks/Juice.jpg"
+  },
+  {
+    "english": "soda",
+    "japanese": {
+      "kanji": "ソーダ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Drinks/Soda.jpg"
+  },
+  {
+    "english": "milk",
+    "japanese": {
+      "kanji": "牛乳",
+      "furigana": "ぎゅうにゅう"
+    },
+    "image": "assets/images/categories/Drinks/Milk.jpg"
+  },
+  {
+    "english": "water",
+    "japanese": {
+      "kanji": "水をやる",
+      "furigana": "みずをやる"
+    },
+    "image": "assets/images/categories/Drinks/Water.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Present Tense/bonuswords/water.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "mineral water",
+    "japanese": {
+      "kanji": "ミネラルウォーター",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Drinks/Mineral Water.jpg",
+    "original_image": "assets/images/categories/Drinks/Mineral water.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "one",
+    "japanese": {
+      "kanji": "一",
+      "furigana": "いち"
+    },
+    "image": "assets/images/categories/Numbers/1.jpg"
+  },
+  {
+    "english": "two",
+    "japanese": {
+      "kanji": "二",
+      "furigana": "に"
+    },
+    "image": "assets/images/categories/Numbers/2.jpg"
+  },
+  {
+    "english": "three",
+    "japanese": {
+      "kanji": "三",
+      "furigana": "さん"
+    },
+    "image": "assets/images/categories/Numbers/3.jpg"
+  },
+  {
+    "english": "four",
+    "japanese": {
+      "kanji": "四",
+      "furigana": "し / よん"
+    },
+    "image": "assets/images/categories/Numbers/4.jpg"
+  },
+  {
+    "english": "five",
+    "japanese": {
+      "kanji": "五",
+      "furigana": "ご"
+    },
+    "image": "assets/images/categories/Numbers/5.jpg"
+  },
+  {
+    "english": "six",
+    "japanese": {
+      "kanji": "六",
+      "furigana": "ろく"
+    },
+    "image": "assets/images/categories/Numbers/6.jpg"
+  },
+  {
+    "english": "seven",
+    "japanese": {
+      "kanji": "七",
+      "furigana": "しち / なな"
+    },
+    "image": "assets/images/categories/Numbers/7.jpg"
+  },
+  {
+    "english": "eight",
+    "japanese": {
+      "kanji": "八",
+      "furigana": "はち"
+    },
+    "image": "assets/images/categories/Numbers/8.jpg"
+  },
+  {
+    "english": "nine",
+    "japanese": {
+      "kanji": "九",
+      "furigana": "きゅう / く"
+    },
+    "image": "assets/images/categories/Numbers/9.jpg"
+  },
+  {
+    "english": "ten",
+    "japanese": {
+      "kanji": "十",
+      "furigana": "じゅう"
+    },
+    "image": "assets/images/categories/Numbers/10.jpg"
+  },
+  {
+    "english": "eleven",
+    "japanese": {
+      "kanji": "十一",
+      "furigana": "じゅういち"
+    },
+    "image": "assets/images/categories/Numbers/11.jpg"
+  },
+  {
+    "english": "twelve",
+    "japanese": {
+      "kanji": "十二",
+      "furigana": "じゅうに"
+    },
+    "image": "assets/images/categories/Numbers/12.jpg"
+  },
+  {
+    "english": "thirteen",
+    "japanese": {
+      "kanji": "十三",
+      "furigana": "じゅうさん"
+    },
+    "image": "assets/images/categories/Numbers/13.jpg"
+  },
+  {
+    "english": "fourteen",
+    "japanese": {
+      "kanji": "十四",
+      "furigana": "じゅうよん"
+    },
+    "image": "assets/images/categories/Numbers/14.jpg"
+  },
+  {
+    "english": "fifteen",
+    "japanese": {
+      "kanji": "十五",
+      "furigana": "じゅうご"
+    },
+    "image": "assets/images/categories/Numbers/15.jpg"
+  },
+  {
+    "english": "sixteen",
+    "japanese": {
+      "kanji": "十六",
+      "furigana": "じゅうろく"
+    },
+    "image": "assets/images/categories/Numbers/16.jpg"
+  },
+  {
+    "english": "seventeen",
+    "japanese": {
+      "kanji": "十七",
+      "furigana": "じゅうなな"
+    },
+    "image": "assets/images/categories/Numbers/17.jpg"
+  },
+  {
+    "english": "eighteen",
+    "japanese": {
+      "kanji": "十八",
+      "furigana": "じゅうはち"
+    },
+    "image": "assets/images/categories/Numbers/18.jpg"
+  },
+  {
+    "english": "nineteen",
+    "japanese": {
+      "kanji": "十九",
+      "furigana": "じゅうきゅう"
+    },
+    "image": "assets/images/categories/Numbers/19.jpg"
+  },
+  {
+    "english": "twenty",
+    "japanese": {
+      "kanji": "二十",
+      "furigana": "にじゅう"
+    },
+    "image": "assets/images/categories/Numbers/20.jpg"
+  },
+  {
+    "english": "thirty",
+    "japanese": {
+      "kanji": "三十",
+      "furigana": "さんじゅう"
+    },
+    "image": "assets/images/categories/Numbers/30.jpg"
+  },
+  {
+    "english": "forty",
+    "japanese": {
+      "kanji": "四十",
+      "furigana": "よんじゅう"
+    },
+    "image": "assets/images/categories/Numbers/40.jpg"
+  },
+  {
+    "english": "fifty",
+    "japanese": {
+      "kanji": "五十",
+      "furigana": "ごじゅう"
+    },
+    "image": "assets/images/categories/Numbers/50.jpg"
+  },
+  {
+    "english": "sixty",
+    "japanese": {
+      "kanji": "六十",
+      "furigana": "ろくじゅう"
+    },
+    "image": "assets/images/categories/Numbers/60.jpg"
+  },
+  {
+    "english": "seventy",
+    "japanese": {
+      "kanji": "七十",
+      "furigana": "ななじゅう"
+    },
+    "image": "assets/images/categories/Numbers/70.jpg"
+  },
+  {
+    "english": "eighty",
+    "japanese": {
+      "kanji": "八十",
+      "furigana": "はちじゅう"
+    },
+    "image": "assets/images/categories/Numbers/80.jpg"
+  },
+  {
+    "english": "ninety",
+    "japanese": {
+      "kanji": "九十",
+      "furigana": "きゅうじゅう"
+    },
+    "image": "assets/images/categories/Numbers/90.jpg"
+  },
+  {
+    "english": "one hundred",
+    "japanese": {
+      "kanji": "百",
+      "furigana": "ひゃく"
+    },
+    "image": "assets/images/categories/Numbers/100.jpg"
+  },
+  {
+    "english": "zero",
+    "japanese": {
+      "kanji": "零",
+      "furigana": "れい"
+    },
+    "image": "assets/images/categories/Numbers/0.jpg"
+  }
+]

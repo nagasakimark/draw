@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "title": "School"
+  },
+  "items": [
+    {
+      "english": "classroom",
+      "japanese": {
+        "kanji": "教室",
+        "furigana": "きょうしつ"
+      },
+      "image": "assets/images/categories/School/Classroom.jpg"
+    },
+    {
+      "english": "computer room",
+      "japanese": {
+        "kanji": "コンピュータ室",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/School/Computer Room.jpg",
+      "original_image": "assets/images/categories/School/Computer room.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "entrance",
+      "japanese": {
+        "kanji": "玄関",
+        "furigana": "げんかん"
+      },
+      "image": "assets/images/categories/School/Entrance.jpg"
+    },
+    {
+      "english": "gym",
+      "japanese": {
+        "kanji": "体育館",
+        "furigana": "たいいくかん"
+      },
+      "image": "assets/images/categories/School/Gym.jpg"
+    },
+    {
+      "english": "library",
+      "japanese": {
+        "kanji": "図書館",
+        "furigana": "としょかん"
+      },
+      "image": "assets/images/categories/Town/Library.jpg"
+    },
+    {
+      "english": "music room",
+      "japanese": {
+        "kanji": "音楽室",
+        "furigana": "おんがくしつ"
+      },
+      "image": "assets/images/categories/School/Music Room.jpg",
+      "original_image": "assets/images/categories/School/Music room.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "nurse's office",
+      "japanese": {
+        "kanji": "保健室",
+        "furigana": "ほけんしつ"
+      },
+      "image": "assets/images/categories/School/School Nurse_s Office.jpg"
+    },
+    {
+      "english": "playground",
+      "japanese": {
+        "kanji": "運動場",
+        "furigana": "うんどうじょう"
+      },
+      "image": "assets/images/categories/School/Playground.jpg"
+    },
+    {
+      "english": "principal's office",
+      "japanese": {
+        "kanji": "校長室",
+        "furigana": "こうちょうしつ"
+      },
+      "image": "assets/images/categories/School/School Principal_s Office.jpg"
+    },
+    {
+      "english": "restroom",
+      "japanese": {
+        "kanji": "トイレ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/School/Restroom.jpg"
+    },
+    {
+      "english": "school",
+      "japanese": {
+        "kanji": "学校",
+        "furigana": "がっこう"
+      },
+      "image": "assets/images/categories/School/School.jpg"
+    },
+    {
+      "english": "swimming pool",
+      "japanese": {
+        "kanji": "プール",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/School/Swimming Pool.jpg",
+      "original_image": "assets/images/categories/School/Swimming pool.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "teacher's office",
+      "japanese": {
+        "kanji": "職員室",
+        "furigana": "しょくいんしつ"
+      },
+      "image": "assets/images/categories/School/Teachers_ Office.jpg"
+    }
+  ]
+}

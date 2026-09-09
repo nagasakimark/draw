@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "title": "Body"
+  },
+  "items": [
+    {
+      "english": "arm",
+      "japanese": {
+        "kanji": "腕",
+        "furigana": "うで"
+      },
+      "image": "assets/images/categories/Body/Arm.jpg"
+    },
+    {
+      "english": "body",
+      "japanese": {
+        "kanji": "体",
+        "furigana": "からだ"
+      },
+      "image": "assets/images/categories/Body/Body.jpg"
+    },
+    {
+      "english": "ear",
+      "japanese": {
+        "kanji": "耳",
+        "furigana": "みみ"
+      },
+      "image": "assets/images/categories/Body/Ear.jpg"
+    },
+    {
+      "english": "elbow",
+      "japanese": {
+        "kanji": "肘",
+        "furigana": "ひじ"
+      },
+      "image": "assets/images/categories/Body/Body+/Elbow.jpg",
+      "bonus": true
+    },
+    {
+      "english": "eye",
+      "japanese": {
+        "kanji": "目",
+        "furigana": "め"
+      },
+      "image": "assets/images/categories/Body/Eye.jpg"
+    },
+    {
+      "english": "face",
+      "japanese": {
+        "kanji": "顔",
+        "furigana": "かお"
+      },
+      "image": "assets/images/categories/Body/Face.jpg"
+    },
+    {
+      "english": "hair",
+      "japanese": {
+        "kanji": "髪",
+        "furigana": "かみ"
+      },
+      "image": "assets/images/categories/Body/Hair.jpg"
+    },
+    {
+      "english": "hand",
+      "japanese": {
+        "kanji": "手",
+        "furigana": "て"
+      },
+      "image": "assets/images/categories/Body/Hand.jpg"
+    },
+    {
+      "english": "head",
+      "japanese": {
+        "kanji": "頭",
+        "furigana": "あたま"
+      },
+      "image": "assets/images/categories/Body/Head.jpg"
+    },
+    {
+      "english": "knee",
+      "japanese": {
+        "kanji": "膝",
+        "furigana": "ひざ"
+      },
+      "image": "assets/images/categories/Body/Knee.jpg"
+    },
+    {
+      "english": "leg",
+      "japanese": {
+        "kanji": "脚",
+        "furigana": "あし"
+      },
+      "image": "assets/images/categories/Body/Leg.jpg"
+    },
+    {
+      "english": "mouth",
+      "japanese": {
+        "kanji": "口",
+        "furigana": "くち"
+      },
+      "image": "assets/images/categories/Body/Mouth.jpg"
+    },
+    {
+      "english": "nail",
+      "japanese": {
+        "kanji": "爪",
+        "furigana": "つめ"
+      },
+      "image": "assets/images/categories/Body/Body+/nail.jpg",
+      "bonus": true
+    },
+    {
+      "english": "neck",
+      "japanese": {
+        "kanji": "首",
+        "furigana": "くび"
+      },
+      "image": "assets/images/categories/Body/Neck.jpg"
+    },
+    {
+      "english": "nose",
+      "japanese": {
+        "kanji": "鼻",
+        "furigana": "はな"
+      },
+      "image": "assets/images/categories/Body/Nose.jpg"
+    },
+    {
+      "english": "shoulder",
+      "japanese": {
+        "kanji": "肩",
+        "furigana": "かた"
+      },
+      "image": "assets/images/categories/Body/Shoulder.jpg"
+    },
+    {
+      "english": "teeth",
+      "japanese": {
+        "kanji": "歯",
+        "furigana": "は"
+      },
+      "image": "assets/images/categories/Body/Teeth.jpg"
+    },
+    {
+      "english": "thumb",
+      "japanese": {
+        "kanji": "親指",
+        "furigana": "おやゆび"
+      },
+      "image": "assets/images/categories/Body/Body+/Thumb.jpg",
+      "bonus": true
+    },
+    {
+      "english": "toe",
+      "japanese": {
+        "kanji": "足の指",
+        "furigana": "あしのゆび"
+      },
+      "image": "assets/images/categories/Body/toe.jpg"
+    },
+    {
+      "english": "tongue",
+      "japanese": {
+        "kanji": "舌",
+        "furigana": "した"
+      },
+      "image": "assets/images/categories/Body/Body+/Tongue.jpg",
+      "bonus": true
+    }
+  ]
+}

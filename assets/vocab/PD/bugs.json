@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "title": "Bugs"
+  },
+  "items": [
+    {
+      "english": "ant",
+      "japanese": {
+        "kanji": "蟻",
+        "furigana": "あり"
+      },
+      "image": "assets/images/categories/Bugs/Ant.jpg"
+    },
+    {
+      "english": "beetle",
+      "japanese": {
+        "kanji": "甲虫",
+        "furigana": "こうちゅう"
+      },
+      "image": "assets/images/categories/Bugs/Beetle.jpg"
+    },
+    {
+      "english": "bugs",
+      "japanese": {
+        "kanji": "虫",
+        "furigana": "むし"
+      },
+      "image": "assets/images/categories/Bugs/Bugs.jpg"
+    },
+    {
+      "english": "butterfly",
+      "japanese": {
+        "kanji": "蝶",
+        "furigana": "ちょう"
+      },
+      "image": "assets/images/categories/Bugs/Butterfly.jpg"
+    },
+    {
+      "english": "cicada",
+      "japanese": {
+        "kanji": "蝉",
+        "furigana": "せみ"
+      },
+      "image": "assets/images/categories/Bugs/Bugs+/Cicada.jpg",
+      "bonus": true
+    },
+    {
+      "english": "dragonfly",
+      "japanese": {
+        "kanji": "トンボ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Bugs/Dragonfly.jpg"
+    },
+    {
+      "english": "earthworm",
+      "japanese": {
+        "kanji": "ミミズ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Bugs/Bugs+/Earthworm.jpg",
+      "bonus": true
+    },
+    {
+      "english": "firefly",
+      "japanese": {
+        "kanji": "蛍",
+        "furigana": "ほたる"
+      },
+      "image": "assets/images/categories/Bugs/Bugs+/Firefly.jpg",
+      "bonus": true
+    },
+    {
+      "english": "grasshopper",
+      "japanese": {
+        "kanji": "バッタ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Bugs/Grasshopper.jpg"
+    },
+    {
+      "english": "ladybug",
+      "japanese": {
+        "kanji": "てんとう虫",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Bugs/Bugs+/Ladybug.jpg",
+      "bonus": true
+    },
+    {
+      "english": "mantis",
+      "japanese": {
+        "kanji": "カマキリ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Bugs/Mantis.jpg"
+    },
+    {
+      "english": "mosquito",
+      "japanese": {
+        "kanji": "蚊",
+        "furigana": "か"
+      },
+      "image": "assets/images/categories/Bugs/Bugs+/Mosquito.jpg",
+      "bonus": true
+    },
+    {
+      "english": "spider",
+      "japanese": {
+        "kanji": "蜘蛛",
+        "furigana": "くも"
+      },
+      "image": "assets/images/categories/Bugs/Spider.jpg"
+    },
+    {
+      "english": "stag beetle",
+      "japanese": {
+        "kanji": "クワガタ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Bugs/Stag Beetle.jpg",
+      "original_image": "assets/images/categories/Bugs/Stag beetle.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

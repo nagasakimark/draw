@@ -1,0 +1,429 @@
+[
+  {
+    "english": "jobs",
+    "japanese": {
+      "kanji": "仕事",
+      "furigana": "しごと"
+    },
+    "image": "assets/images/categories/Jobs/Jobs.jpg"
+  },
+  {
+    "english": "artist",
+    "japanese": {
+      "kanji": "芸術家",
+      "furigana": "げいじゅつか"
+    },
+    "image": "assets/images/categories/Jobs/Artist.jpg"
+  },
+  {
+    "english": "astronaut",
+    "japanese": {
+      "kanji": "宇宙飛行士",
+      "furigana": "うちゅうひこうし"
+    },
+    "image": "assets/images/categories/Jobs/Astronaut.jpg"
+  },
+  {
+    "english": "baker",
+    "japanese": {
+      "kanji": "パン屋さん",
+      "furigana": "ぱんやさん"
+    },
+    "image": "assets/images/categories/Jobs/Baker.jpg"
+  },
+  {
+    "english": "baseball player",
+    "japanese": {
+      "kanji": "野球選手",
+      "furigana": "やきゅうせんしゅ"
+    },
+    "image": "assets/images/categories/Jobs/Baseball player.jpg"
+  },
+  {
+    "english": "comedian",
+    "japanese": {
+      "kanji": "芸人",
+      "furigana": "げいにん"
+    },
+    "image": "assets/images/categories/Jobs/Comedian.jpg"
+  },
+  {
+    "english": "cook",
+    "japanese": {
+      "kanji": "料理する",
+      "furigana": "りょうりする"
+    },
+    "image": "assets/images/categories/Jobs/Cook.jpg"
+  },
+  {
+    "english": "doctor",
+    "japanese": {
+      "kanji": "医者",
+      "furigana": "いしゃ"
+    },
+    "image": "assets/images/categories/Jobs/Doctor.jpg"
+  },
+  {
+    "english": "farmer",
+    "japanese": {
+      "kanji": "農家",
+      "furigana": "のうか"
+    },
+    "image": "assets/images/categories/Jobs/Farmer.jpg"
+  },
+  {
+    "english": "fire fighter",
+    "japanese": {
+      "kanji": "消防士",
+      "furigana": "しょうぼうし"
+    },
+    "image": "assets/images/categories/Jobs/Fire fighter.jpg"
+  },
+  {
+    "english": "flight attendant",
+    "japanese": {
+      "kanji": "客室乗務員",
+      "furigana": "きゃくしつじょうむいん"
+    },
+    "image": "assets/images/categories/Jobs/Flight Attendant.jpg"
+  },
+  {
+    "english": "mountaineer",
+    "japanese": {
+      "kanji": "登山家",
+      "furigana": "とざんか"
+    },
+    "image": "assets/images/categories/Jobs/Mountaineer.jpg"
+  },
+  {
+    "english": "nurse",
+    "japanese": {
+      "kanji": "看護師",
+      "furigana": "かんごし"
+    },
+    "image": "assets/images/categories/Jobs/Nurse.jpg"
+  },
+  {
+    "english": "office worker",
+    "japanese": {
+      "kanji": "会社員",
+      "furigana": "かいしゃいん"
+    },
+    "image": "assets/images/categories/Jobs/Office Worker.jpg"
+  },
+  {
+    "english": "pilot",
+    "japanese": {
+      "kanji": "パイロット",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Jobs/Pilot.jpg"
+  },
+  {
+    "english": "police officer",
+    "japanese": {
+      "kanji": "警察官",
+      "furigana": "けいさつかん"
+    },
+    "image": "assets/images/categories/Jobs/Police Officer.jpg"
+  },
+  {
+    "english": "programmer",
+    "japanese": {
+      "kanji": "プログラマー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Jobs/Programmer.jpg"
+  },
+  {
+    "english": "researcher",
+    "japanese": {
+      "kanji": "研究者",
+      "furigana": "けんきゅうしゃ"
+    },
+    "image": "assets/images/categories/Jobs/Researcher.jpg"
+  },
+  {
+    "english": "scientist",
+    "japanese": {
+      "kanji": "科学者",
+      "furigana": "かがくしゃ"
+    },
+    "image": "assets/images/categories/Jobs/Scientist.jpg"
+  },
+  {
+    "english": "singer",
+    "japanese": {
+      "kanji": "歌手",
+      "furigana": "かしゅ"
+    },
+    "image": "assets/images/categories/Jobs/Singer.jpg"
+  },
+  {
+    "english": "teacher",
+    "japanese": {
+      "kanji": "先生",
+      "furigana": "せんせい"
+    },
+    "image": "assets/images/categories/Jobs/Teacher.jpg"
+  },
+  {
+    "english": "vet",
+    "japanese": {
+      "kanji": "獣医",
+      "furigana": "じゅうい"
+    },
+    "image": "assets/images/categories/Jobs/Vet.jpg"
+  },
+  {
+    "english": "writer",
+    "japanese": {
+      "kanji": "作家",
+      "furigana": "さっか"
+    },
+    "image": "assets/images/categories/Jobs/Writer.jpg"
+  },
+  {
+    "english": "zookeeper",
+    "japanese": {
+      "kanji": "飼育員",
+      "furigana": "しいくいん"
+    },
+    "image": "assets/images/categories/Jobs/Zookeeper.jpg"
+  },
+  {
+    "english": "now",
+    "japanese": {
+      "kanji": "今",
+      "furigana": "いま"
+    },
+    "image": "assets/images/categories/Jobs/Now.jpg"
+  },
+  {
+    "english": "future",
+    "japanese": {
+      "kanji": "未来",
+      "furigana": "みらい"
+    },
+    "image": "assets/images/categories/Jobs/Future.jpg"
+  },
+  {
+    "english": "active",
+    "japanese": {
+      "kanji": "活動的",
+      "furigana": "かつどうてき"
+    },
+    "image": "assets/images/categories/Personality/Active.jpg"
+  },
+  {
+    "english": "brave",
+    "japanese": {
+      "kanji": "勇敢",
+      "furigana": "ゆうかん"
+    },
+    "image": "assets/images/categories/Personality/Brave.jpg"
+  },
+  {
+    "english": "friendly",
+    "japanese": {
+      "kanji": "友好的",
+      "furigana": "ゆうこうてき"
+    },
+    "image": "assets/images/categories/Personality/Friendly.jpg"
+  },
+  {
+    "english": "funny",
+    "japanese": {
+      "kanji": "面白い",
+      "furigana": "おもしろい"
+    },
+    "image": "assets/images/categories/Personality/Funny.jpg"
+  },
+  {
+    "english": "kind",
+    "japanese": {
+      "kanji": "優しい",
+      "furigana": "やさしい"
+    },
+    "image": "assets/images/categories/Personality/Kind.jpg"
+  },
+  {
+    "english": "shy",
+    "japanese": {
+      "kanji": "内気",
+      "furigana": "うちき"
+    },
+    "image": "assets/images/categories/Personality/Shy.jpg"
+  },
+  {
+    "english": "smart",
+    "japanese": {
+      "kanji": "賢い",
+      "furigana": "かしこい"
+    },
+    "image": "assets/images/categories/Personality/Smart.jpg"
+  },
+  {
+    "english": "strong",
+    "japanese": {
+      "kanji": "強い",
+      "furigana": "つよい"
+    },
+    "image": "assets/images/categories/Personality/Strong.jpg"
+  },
+  {
+    "english": "gentle",
+    "japanese": {
+      "kanji": "穏やか",
+      "furigana": "おだやか"
+    },
+    "image": "assets/images/categories/Personality/Gentle.jpg"
+  },
+  {
+    "english": "camping",
+    "japanese": {
+      "kanji": "キャンプ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Camping.jpg"
+  },
+  {
+    "english": "dancing",
+    "japanese": {
+      "kanji": "ダンス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Sports+/Dancing.jpg",
+    "bonus": true,
+    "original_image": "assets/images/categories/Sports/Dancing.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "fishing",
+    "japanese": {
+      "kanji": "釣り",
+      "furigana": "つり"
+    },
+    "image": "assets/images/categories/Activities/Fishing.jpg"
+  },
+  {
+    "english": "hiking",
+    "japanese": {
+      "kanji": "ハイキング",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Hiking.jpg"
+  },
+  {
+    "english": "shopping",
+    "japanese": {
+      "kanji": "買い物",
+      "furigana": "かいもの"
+    },
+    "image": "assets/images/categories/Activities/Shopping.jpg"
+  },
+  {
+    "english": "reading",
+    "japanese": {
+      "kanji": "読書",
+      "furigana": "どくしょ"
+    },
+    "image": "assets/images/categories/Activities/Reading.jpg"
+  },
+  {
+    "english": "drawing",
+    "japanese": {
+      "kanji": "絵を描く",
+      "furigana": "えをかく"
+    },
+    "image": "assets/images/categories/Activities/Drawing.jpg"
+  },
+  {
+    "english": "jogging",
+    "japanese": {
+      "kanji": "ジョギング",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Jogging.jpg"
+  },
+  {
+    "english": "skateboarding",
+    "japanese": {
+      "kanji": "スケートボード",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Sports/Skateboarding.jpg"
+  },
+  {
+    "english": "swinging",
+    "japanese": {
+      "kanji": "ブランコ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Swinging.jpg"
+  },
+  {
+    "english": "playing the piano",
+    "japanese": {
+      "kanji": "ピアノを弾く",
+      "furigana": "ぴあのをひく"
+    },
+    "image": "assets/images/categories/Activities/Playing The Piano.jpg"
+  },
+  {
+    "english": "playing video games",
+    "japanese": {
+      "kanji": "テレビゲームをする",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Playing Video Games.jpg"
+  },
+  {
+    "english": "seeing movies",
+    "japanese": {
+      "kanji": "映画を見る",
+      "furigana": "えいがをみる"
+    },
+    "image": "assets/images/categories/Activities/Seeing Movies.jpg"
+  },
+  {
+    "english": "cards",
+    "japanese": {
+      "kanji": "トランプ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Cards.jpg"
+  },
+  {
+    "english": "jump rope",
+    "japanese": {
+      "kanji": "縄跳び",
+      "furigana": "なわとび"
+    },
+    "image": "assets/images/categories/Activities/Jump Rope.jpg"
+  },
+  {
+    "english": "tag",
+    "japanese": {
+      "kanji": "鬼ごっこ",
+      "furigana": "おにごっこ"
+    },
+    "image": "assets/images/categories/Activities/Tag.jpg"
+  },
+  {
+    "english": "hide-and-seek",
+    "japanese": {
+      "kanji": "かくれんぼ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Hide-and-seek.jpg"
+  },
+  {
+    "english": "rock-paper-scissors",
+    "japanese": {
+      "kanji": "じゃんけん",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Activities/Rock-Paper-Scissors.jpg"
+  }
+]

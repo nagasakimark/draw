@@ -1,0 +1,82 @@
+[
+  {
+    "english": "wash my face",
+    "japanese": {
+      "kanji": "顔を洗う",
+      "furigana": "かおをあらう"
+    },
+    "image": "assets/images/categories/LT2/Wash my face.jpg"
+  },
+  {
+    "english": "brush my teeth",
+    "japanese": {
+      "kanji": "歯を磨く",
+      "furigana": "はをみがく"
+    },
+    "image": "assets/images/categories/LT2/Brush my teeth.jpg"
+  },
+  {
+    "english": "put away my futon",
+    "japanese": {
+      "kanji": "布団を片付ける",
+      "furigana": "ふとんをかたづける"
+    },
+    "image": "assets/images/categories/LT2/Put away my futon.jpg"
+  },
+  {
+    "english": "check my schoolbag",
+    "japanese": {
+      "kanji": "かばんを確認する",
+      "furigana": "かばんをかくにんする"
+    },
+    "image": "assets/images/categories/LT2/Check my schoolbag.jpg"
+  },
+  {
+    "english": "leave my house",
+    "japanese": {
+      "kanji": "家を出る",
+      "furigana": "いえをでる"
+    },
+    "image": "assets/images/categories/LT2/Leave my home.jpg"
+  },
+  {
+    "english": "take out the garbage",
+    "japanese": {
+      "kanji": "ゴミを出す",
+      "furigana": "ごみをだす"
+    },
+    "image": "assets/images/categories/LT2/Take out the garbage.jpg"
+  },
+  {
+    "english": "go to school",
+    "japanese": {
+      "kanji": "学校へ行く",
+      "furigana": "がっこうへいく"
+    },
+    "image": "assets/images/categories/LT2/Go to school.jpg"
+  },
+  {
+    "english": "go home",
+    "japanese": {
+      "kanji": "家へ帰る",
+      "furigana": "いえへかえる"
+    },
+    "image": "assets/images/categories/LT2/Go home.jpg"
+  },
+  {
+    "english": "do my homework",
+    "japanese": {
+      "kanji": "宿題をする",
+      "furigana": "しゅくだいをする"
+    },
+    "image": "assets/images/categories/LT2/Do my homework.jpg"
+  },
+  {
+    "english": "finish my dinner",
+    "japanese": {
+      "kanji": "夕食を終える",
+      "furigana": "ゆうしょくをおえる"
+    },
+    "image": "assets/images/categories/LT2/Finish my dinner.jpg"
+  }
+]

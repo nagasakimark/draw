@@ -1,0 +1,138 @@
+[
+  {
+    "english": "wake up time",
+    "japanese": {
+      "kanji": "起床時間",
+      "furigana": "きしょうじかん"
+    },
+    "image": "assets/images/categories/LT2/Wake up time.jpg"
+  },
+  {
+    "english": "breakfast time",
+    "japanese": {
+      "kanji": "朝食時間",
+      "furigana": "ちょうしょくじかん"
+    },
+    "image": "assets/images/categories/LT2/Breakfast time.jpg"
+  },
+  {
+    "english": "class time",
+    "japanese": {
+      "kanji": "授業時間",
+      "furigana": "じゅぎょうじかん"
+    },
+    "image": "assets/images/categories/LT2/Class time.jpg"
+  },
+  {
+    "english": "lunch time",
+    "japanese": {
+      "kanji": "昼食時間",
+      "furigana": "ちゅうしょくじかん"
+    },
+    "image": "assets/images/categories/LT2/Lunch time.jpg"
+  },
+  {
+    "english": "snack time",
+    "japanese": {
+      "kanji": "おやつ時間",
+      "furigana": "おやつじかん"
+    },
+    "image": "assets/images/categories/LT2/Snack time.jpg"
+  },
+  {
+    "english": "study time",
+    "japanese": {
+      "kanji": "勉強時間",
+      "furigana": "べんきょうじかん"
+    },
+    "image": "assets/images/categories/LT2/Study time.jpg"
+  },
+  {
+    "english": "dinner time",
+    "japanese": {
+      "kanji": "夕食時間",
+      "furigana": "ゆうしょくじかん"
+    },
+    "image": "assets/images/categories/LT2/Dinner time.jpg"
+  },
+  {
+    "english": "bath time",
+    "japanese": {
+      "kanji": "お風呂時間",
+      "furigana": "おふろじかん"
+    },
+    "image": "assets/images/categories/LT2/Bath time.jpg"
+  },
+  {
+    "english": "bedtime",
+    "japanese": {
+      "kanji": "就寝時間",
+      "furigana": "しゅうしんじかん"
+    },
+    "image": "assets/images/categories/LT2/Bed time.jpg"
+  },
+  {
+    "english": "dream time",
+    "japanese": {
+      "kanji": "夢の時間",
+      "furigana": "ゆめのじかん"
+    },
+    "image": "assets/images/categories/LT2/Dream time.jpg"
+  },
+  {
+    "english": "What time is it?",
+    "japanese": {
+      "kanji": "何時ですか？",
+      "furigana": "なんじですか？"
+    },
+    "image": "assets/images/categories/LT2/Time.jpg"
+  },
+  {
+    "english": "A.M.",
+    "japanese": {
+      "kanji": "午前",
+      "furigana": "ごぜん"
+    },
+    "image": "assets/images/categories/LT2/AM.jpg"
+  },
+  {
+    "english": "P.M.",
+    "japanese": {
+      "kanji": "午後",
+      "furigana": "ごご"
+    },
+    "image": "assets/images/categories/LT2/PM.jpg"
+  },
+  {
+    "english": "twelve o'clock",
+    "japanese": {
+      "kanji": "12:00",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/1200.jpg"
+  },
+  {
+    "english": "twelve thirty",
+    "japanese": {
+      "kanji": "12:30",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/1230.jpg"
+  },
+  {
+    "english": "one o'clock",
+    "japanese": {
+      "kanji": "01:00",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/0100.jpg"
+  },
+  {
+    "english": "one thirty",
+    "japanese": {
+      "kanji": "01:30",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/LT2/0130.jpg"
+  }
+]

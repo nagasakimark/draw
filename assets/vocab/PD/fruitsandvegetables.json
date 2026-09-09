@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "title": "Fruits and Vegetables"
+  },
+  "items": [
+    {
+      "english": "fruit",
+      "japanese": {
+        "kanji": "果物",
+        "furigana": "くだもの"
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Fruit.jpg"
+    },
+    {
+      "english": "vegetables",
+      "japanese": {
+        "kanji": "野菜",
+        "furigana": "やさい"
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Vegetables.jpg"
+    },
+    {
+      "english": "apple",
+      "japanese": {
+        "kanji": "りんご",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Apple.jpg"
+    },
+    {
+      "english": "banana",
+      "japanese": {
+        "kanji": "バナナ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Banana.jpg"
+    },
+    {
+      "english": "bean",
+      "japanese": {
+        "kanji": "豆",
+        "furigana": "まめ"
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Bean.jpg"
+    },
+    {
+      "english": "broccoli",
+      "japanese": {
+        "kanji": "ブロッコリー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Broccoli.jpg"
+    },
+    {
+      "english": "cabbage",
+      "japanese": {
+        "kanji": "キャベツ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Cabbage.jpg"
+    },
+    {
+      "english": "carrot",
+      "japanese": {
+        "kanji": "にんじん",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Carrot.jpg"
+    },
+    {
+      "english": "cherry",
+      "japanese": {
+        "kanji": "さくらんぼ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Cherry.jpg"
+    },
+    {
+      "english": "corn",
+      "japanese": {
+        "kanji": "とうもろこし",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Corn.jpg"
+    },
+    {
+      "english": "cucumber",
+      "japanese": {
+        "kanji": "きゅうり",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Cucumber.jpg"
+    },
+    {
+      "english": "eggplant",
+      "japanese": {
+        "kanji": "なす",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Eggplant.jpg"
+    },
+    {
+      "english": "grapes",
+      "japanese": {
+        "kanji": "ぶどう",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Grapes.jpg"
+    },
+    {
+      "english": "green pepper",
+      "japanese": {
+        "kanji": "ピーマン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/GreenPepper.jpg"
+    },
+    {
+      "english": "kiwi fruit",
+      "japanese": {
+        "kanji": "キウイ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/KiwiFruit.jpg"
+    },
+    {
+      "english": "lemon",
+      "japanese": {
+        "kanji": "レモン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Lemon.jpg"
+    },
+    {
+      "english": "lettuce",
+      "japanese": {
+        "kanji": "レタス",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Lettuce.jpg"
+    },
+    {
+      "english": "melon",
+      "japanese": {
+        "kanji": "メロン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Melon.jpg"
+    },
+    {
+      "english": "mushroom",
+      "japanese": {
+        "kanji": "きのこ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Mushroom.jpg"
+    },
+    {
+      "english": "nut",
+      "japanese": {
+        "kanji": "ナッツ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Nut.jpg"
+    },
+    {
+      "english": "onion",
+      "japanese": {
+        "kanji": "玉ねぎ",
+        "furigana": "たまねぎ"
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Onion.jpg"
+    },
+    {
+      "english": "orange",
+      "japanese": {
+        "kanji": "オレンジ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Orange.jpg"
+    },
+    {
+      "english": "peach",
+      "japanese": {
+        "kanji": "桃",
+        "furigana": "もも"
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Peach.jpg"
+    },
+    {
+      "english": "pineapple",
+      "japanese": {
+        "kanji": "パイナップル",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Pineapple.jpg"
+    },
+    {
+      "english": "potato",
+      "japanese": {
+        "kanji": "じゃがいも",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Potato.jpg"
+    },
+    {
+      "english": "spinach",
+      "japanese": {
+        "kanji": "ほうれん草",
+        "furigana": "ほうれんそう"
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Spinach.jpg"
+    },
+    {
+      "english": "strawberry",
+      "japanese": {
+        "kanji": "いちご",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Strawberry.jpg"
+    },
+    {
+      "english": "tomato",
+      "japanese": {
+        "kanji": "トマト",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Tomato.jpg"
+    },
+    {
+      "english": "watermelon",
+      "japanese": {
+        "kanji": "スイカ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/Watermelon.jpg"
+    },
+    {
+      "english": "celery",
+      "japanese": {
+        "kanji": "セロリ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/FruitAndVegetables+/Celery.jpg",
+      "bonus": true
+    },
+    {
+      "english": "mango",
+      "japanese": {
+        "kanji": "マンゴー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/FruitAndVegetables+/Mango.jpg",
+      "bonus": true
+    },
+    {
+      "english": "olive",
+      "japanese": {
+        "kanji": "オリーブ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/FruitAndVegetables+/Olive.jpg",
+      "bonus": true
+    },
+    {
+      "english": "pear",
+      "japanese": {
+        "kanji": "梨",
+        "furigana": "なし"
+      },
+      "image": "assets/images/categories/FruitAndVegetables/FruitAndVegetables+/Pear.jpg",
+      "bonus": true
+    },
+    {
+      "english": "persimmon",
+      "japanese": {
+        "kanji": "柿",
+        "furigana": "かき"
+      },
+      "image": "assets/images/categories/FruitAndVegetables/FruitAndVegetables+/Persimmon.jpg",
+      "bonus": true
+    },
+    {
+      "english": "pumpkin",
+      "japanese": {
+        "kanji": "かぼちゃ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/FruitAndVegetables/FruitAndVegetables+/Pumpkin.jpg",
+      "bonus": true
+    },
+    {
+      "english": "radish",
+      "japanese": {
+        "kanji": "大根",
+        "furigana": "だいこん"
+      },
+      "image": "assets/images/categories/FruitAndVegetables/FruitAndVegetables+/Radish.jpg",
+      "bonus": true
+    }
+  ]
+}

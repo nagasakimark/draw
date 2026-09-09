@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "title": "Seasons"
+  },
+  "items": [
+    {
+      "english": "fall",
+      "japanese": {
+        "kanji": "秋",
+        "furigana": "あき"
+      },
+      "image": "assets/images/categories/Seasons/Fall.jpg"
+    },
+    {
+      "english": "seasons",
+      "japanese": {
+        "kanji": "季節",
+        "furigana": "きせつ"
+      },
+      "image": "assets/images/categories/Seasons/Seasons.jpg"
+    },
+    {
+      "english": "spring",
+      "japanese": {
+        "kanji": "春",
+        "furigana": "はる"
+      },
+      "image": "assets/images/categories/Seasons/Spring.jpg"
+    },
+    {
+      "english": "summer",
+      "japanese": {
+        "kanji": "夏",
+        "furigana": "なつ"
+      },
+      "image": "assets/images/categories/Seasons/Summer.jpg"
+    },
+    {
+      "english": "winter",
+      "japanese": {
+        "kanji": "冬",
+        "furigana": "ふゆ"
+      },
+      "image": "assets/images/categories/Seasons/Winter.jpg"
+    }
+  ]
+}

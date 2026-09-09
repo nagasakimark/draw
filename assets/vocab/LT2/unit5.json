@@ -1,0 +1,99 @@
+[
+  {
+    "english": "pencil",
+    "japanese": {
+      "kanji": "鉛筆",
+      "furigana": "えんぴつ"
+    },
+    "image": "assets/images/categories/Stationery/Pencil.jpg"
+  },
+  {
+    "english": "eraser",
+    "japanese": {
+      "kanji": "消しゴム",
+      "furigana": "けしごむ"
+    },
+    "image": "assets/images/categories/Stationery/Eraser.jpg"
+  },
+  {
+    "english": "pencil case",
+    "japanese": {
+      "kanji": "筆箱",
+      "furigana": "ふでばこ"
+    },
+    "image": "assets/images/categories/Stationery/Pencil case.jpg"
+  },
+  {
+    "english": "ruler",
+    "japanese": {
+      "kanji": "もの刺し",
+      "furigana": "ものざし"
+    },
+    "image": "assets/images/categories/Stationery/Ruler.jpg"
+  },
+  {
+    "english": "glue stick",
+    "japanese": {
+      "kanji": "のり",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Glue.jpg"
+  },
+  {
+    "english": "pen",
+    "japanese": {
+      "kanji": "ペン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Pen.jpg"
+  },
+  {
+    "english": "notebook",
+    "japanese": {
+      "kanji": "ノート",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Notebook.jpg"
+  },
+  {
+    "english": "calendar",
+    "japanese": {
+      "kanji": "カレンダー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Things Around You/Things Around You+/Calendar.jpg",
+    "bonus": true
+  },
+  {
+    "english": "stapler",
+    "japanese": {
+      "kanji": "ホッチキス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Stapler.jpg"
+  },
+  {
+    "english": "pencil sharpener",
+    "japanese": {
+      "kanji": "鉛筆削り",
+      "furigana": "えんぴつけずり"
+    },
+    "image": "assets/images/categories/Stationery/Pencil sharpener.jpg"
+  },
+  {
+    "english": "marker",
+    "japanese": {
+      "kanji": "マーカー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Stationery/Marker.jpg"
+  },
+  {
+    "english": "magnet",
+    "japanese": {
+      "kanji": "磁石",
+      "furigana": "じしゃく"
+    },
+    "image": "assets/images/categories/LT2/Magnet.jpg"
+  }
+]

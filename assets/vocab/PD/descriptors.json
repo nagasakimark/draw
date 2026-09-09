@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "title": "Descriptors"
+  },
+  "items": [
+    {
+      "english": "big",
+      "japanese": {
+        "kanji": "大きい",
+        "furigana": "おおきい"
+      },
+      "image": "assets/images/categories/State/Big.jpg"
+    },
+    {
+      "english": "cheap",
+      "japanese": {
+        "kanji": "安い",
+        "furigana": "やすい"
+      },
+      "image": "assets/images/categories/State/State+/Cheap.jpg",
+      "bonus": true
+    },
+    {
+      "english": "clean",
+      "japanese": {
+        "kanji": "きれい",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/State/State+/Clean.jpg",
+      "bonus": true
+    },
+    {
+      "english": "closed",
+      "japanese": {
+        "kanji": "閉まっている",
+        "furigana": "しまっている"
+      },
+      "image": "assets/images/categories/State/State+/Closed.jpg",
+      "bonus": true
+    },
+    {
+      "english": "different",
+      "japanese": {
+        "kanji": "違う",
+        "furigana": "ちがう"
+      },
+      "image": "assets/images/categories/State/State+/Different.jpg",
+      "bonus": true
+    },
+    {
+      "english": "difficult",
+      "japanese": {
+        "kanji": "難しい",
+        "furigana": "むずかしい"
+      },
+      "image": "assets/images/categories/State/State+/Difficult.jpg",
+      "bonus": true
+    },
+    {
+      "english": "dirty",
+      "japanese": {
+        "kanji": "汚い",
+        "furigana": "きたない"
+      },
+      "image": "assets/images/categories/State/State+/Dirty.jpg",
+      "bonus": true
+    },
+    {
+      "english": "easy",
+      "japanese": {
+        "kanji": "簡単",
+        "furigana": "かんたん"
+      },
+      "image": "assets/images/categories/State/State+/Easy.jpg",
+      "bonus": true
+    },
+    {
+      "english": "expensive",
+      "japanese": {
+        "kanji": "高い",
+        "furigana": "たかい"
+      },
+      "image": "assets/images/categories/State/State+/Expensive.jpg",
+      "bonus": true
+    },
+    {
+      "english": "fast",
+      "japanese": {
+        "kanji": "速い",
+        "furigana": "はやい"
+      },
+      "image": "assets/images/categories/State/Fast.jpg"
+    },
+    {
+      "english": "hard",
+      "japanese": {
+        "kanji": "硬い",
+        "furigana": "かたい"
+      },
+      "image": "assets/images/categories/Tastes/Hard.jpg",
+      "bonus": true
+    },
+    {
+      "english": "heavy",
+      "japanese": {
+        "kanji": "重い",
+        "furigana": "おもい"
+      },
+      "image": "assets/images/categories/State/State+/Heavy.jpg",
+      "bonus": true
+    },
+    {
+      "english": "high",
+      "japanese": {
+        "kanji": "高い",
+        "furigana": "たかい"
+      },
+      "image": "assets/images/categories/State/High.jpg"
+    },
+    {
+      "english": "inside",
+      "japanese": {
+        "kanji": "内側",
+        "furigana": "うちがわ"
+      },
+      "image": "assets/images/categories/State/State+/Inside.jpg",
+      "bonus": true
+    },
+    {
+      "english": "light",
+      "japanese": {
+        "kanji": "軽い",
+        "furigana": "かるい"
+      },
+      "image": "assets/images/categories/State/State+/Light.jpg",
+      "bonus": true
+    },
+    {
+      "english": "long",
+      "japanese": {
+        "kanji": "長い",
+        "furigana": "ながい"
+      },
+      "image": "assets/images/categories/State/Long.jpg"
+    },
+    {
+      "english": "low",
+      "japanese": {
+        "kanji": "低い",
+        "furigana": "ひくい"
+      },
+      "image": "assets/images/categories/State/Low.jpg"
+    },
+    {
+      "english": "new",
+      "japanese": {
+        "kanji": "新しい",
+        "furigana": "あたらしい"
+      },
+      "image": "assets/images/categories/State/New.jpg"
+    },
+    {
+      "english": "old",
+      "japanese": {
+        "kanji": "古い",
+        "furigana": "ふるい"
+      },
+      "image": "assets/images/categories/State/State+/Old.jpg"
+    },
+    {
+      "english": "old",
+      "japanese": {
+        "kanji": "年老いた",
+        "furigana": "としおいた"
+      },
+      "image": "assets/images/categories/State/State+/Old.jpg"
+    },
+    {
+      "english": "open",
+      "japanese": {
+        "kanji": "開いている",
+        "furigana": "あいている"
+      },
+      "image": "assets/images/categories/State/State+/Open.jpg",
+      "bonus": true
+    },
+    {
+      "english": "outside",
+      "japanese": {
+        "kanji": "外側",
+        "furigana": "そとがわ"
+      },
+      "image": "assets/images/categories/State/State+/Outside.jpg",
+      "bonus": true
+    },
+    {
+      "english": "same",
+      "japanese": {
+        "kanji": "同じ",
+        "furigana": "おなじ"
+      },
+      "image": "assets/images/categories/State/State+/Same.jpg",
+      "bonus": true
+    },
+    {
+      "english": "short",
+      "japanese": {
+        "kanji": "短い",
+        "furigana": "みじかい"
+      },
+      "image": "assets/images/categories/State/Short.jpg"
+    },
+    {
+      "english": "short",
+      "japanese": {
+        "kanji": "背が低い",
+        "furigana": "せがひくい"
+      },
+      "image": "assets/images/categories/State/State+/Short.jpg"
+    },
+    {
+      "english": "slow",
+      "japanese": {
+        "kanji": "遅い",
+        "furigana": "おそい"
+      },
+      "image": "assets/images/categories/State/Slow.jpg"
+    },
+    {
+      "english": "small",
+      "japanese": {
+        "kanji": "小さい",
+        "furigana": "ちいさい"
+      },
+      "image": "assets/images/categories/State/Small.jpg"
+    },
+    {
+      "english": "soft",
+      "japanese": {
+        "kanji": "柔らかい",
+        "furigana": "やわらかい"
+      },
+      "image": "assets/images/categories/Tastes/Soft.jpg",
+      "bonus": true
+    },
+    {
+      "english": "tall",
+      "japanese": {
+        "kanji": "背が高い",
+        "furigana": "せがたかい"
+      },
+      "image": "assets/images/categories/State/State+/Tall.jpg",
+      "bonus": true
+    },
+    {
+      "english": "young",
+      "japanese": {
+        "kanji": "若い",
+        "furigana": "わかい"
+      },
+      "image": "assets/images/categories/State/State+/Young.jpg",
+      "bonus": true
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+  "metadata": {
+    "title": "Jobs"
+  },
+  "items": [
+    {
+      "english": "jobs",
+      "japanese": {
+        "kanji": "仕事",
+        "furigana": "しごと"
+      },
+      "image": "assets/images/categories/Jobs/Jobs.jpg"
+    },
+    {
+      "english": "artist",
+      "japanese": {
+        "kanji": "芸術家",
+        "furigana": "げいじゅつか"
+      },
+      "image": "assets/images/categories/Jobs/Artist.jpg"
+    },
+    {
+      "english": "astronaut",
+      "japanese": {
+        "kanji": "宇宙飛行士",
+        "furigana": "うちゅうひこうし"
+      },
+      "image": "assets/images/categories/Jobs/Astronaut.jpg"
+    },
+    {
+      "english": "baker",
+      "japanese": {
+        "kanji": "パン屋さん",
+        "furigana": "ぱんやさん"
+      },
+      "image": "assets/images/categories/Jobs/Baker.jpg"
+    },
+    {
+      "english": "baseball player",
+      "japanese": {
+        "kanji": "野球選手",
+        "furigana": "やきゅうせんしゅ"
+      },
+      "image": "assets/images/categories/Jobs/Baseball player.jpg"
+    },
+    {
+      "english": "comedian",
+      "japanese": {
+        "kanji": "芸人",
+        "furigana": "げいにん"
+      },
+      "image": "assets/images/categories/Jobs/Comedian.jpg"
+    },
+    {
+      "english": "cook",
+      "japanese": {
+        "kanji": "料理人",
+        "furigana": "りょうりにん"
+      },
+      "image": "assets/images/categories/Jobs/Cook.jpg"
+    },
+    {
+      "english": "doctor",
+      "japanese": {
+        "kanji": "医者",
+        "furigana": "いしゃ"
+      },
+      "image": "assets/images/categories/Jobs/Doctor.jpg"
+    },
+    {
+      "english": "farmer",
+      "japanese": {
+        "kanji": "農家",
+        "furigana": "のうか"
+      },
+      "image": "assets/images/categories/Jobs/Farmer.jpg"
+    },
+    {
+      "english": "fire fighter",
+      "japanese": {
+        "kanji": "消防士",
+        "furigana": "しょうぼうし"
+      },
+      "image": "assets/images/categories/Jobs/Fire fighter.jpg"
+    },
+    {
+      "english": "flight attendant",
+      "japanese": {
+        "kanji": "客室乗務員",
+        "furigana": "きゃくしつじょうむいん"
+      },
+      "image": "assets/images/categories/Jobs/Flight Attendant.jpg"
+    },
+    {
+      "english": "mountaineer",
+      "japanese": {
+        "kanji": "登山家",
+        "furigana": "とざんか"
+      },
+      "image": "assets/images/categories/Jobs/Mountaineer.jpg"
+    },
+    {
+      "english": "nurse",
+      "japanese": {
+        "kanji": "看護師",
+        "furigana": "かんごし"
+      },
+      "image": "assets/images/categories/Jobs/Nurse.jpg"
+    },
+    {
+      "english": "office worker",
+      "japanese": {
+        "kanji": "会社員",
+        "furigana": "かいしゃいん"
+      },
+      "image": "assets/images/categories/Jobs/Office Worker.jpg"
+    },
+    {
+      "english": "pilot",
+      "japanese": {
+        "kanji": "パイロット",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Jobs/Pilot.jpg"
+    },
+    {
+      "english": "police officer",
+      "japanese": {
+        "kanji": "警察官",
+        "furigana": "けいさつかん"
+      },
+      "image": "assets/images/categories/Jobs/Police Officer.jpg"
+    },
+    {
+      "english": "programmer",
+      "japanese": {
+        "kanji": "プログラマー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Jobs/Programmer.jpg"
+    },
+    {
+      "english": "researcher",
+      "japanese": {
+        "kanji": "研究者",
+        "furigana": "けんきゅうしゃ"
+      },
+      "image": "assets/images/categories/Jobs/Researcher.jpg"
+    },
+    {
+      "english": "scientist",
+      "japanese": {
+        "kanji": "科学者",
+        "furigana": "かがくしゃ"
+      },
+      "image": "assets/images/categories/Jobs/Scientist.jpg"
+    },
+    {
+      "english": "singer",
+      "japanese": {
+        "kanji": "歌手",
+        "furigana": "かしゅ"
+      },
+      "image": "assets/images/categories/Jobs/Singer.jpg"
+    },
+    {
+      "english": "teacher",
+      "japanese": {
+        "kanji": "先生",
+        "furigana": "せんせい"
+      },
+      "image": "assets/images/categories/Jobs/Teacher.jpg"
+    },
+    {
+      "english": "vet",
+      "japanese": {
+        "kanji": "獣医",
+        "furigana": "じゅうい"
+      },
+      "image": "assets/images/categories/Jobs/Vet.jpg"
+    },
+    {
+      "english": "writer",
+      "japanese": {
+        "kanji": "作家",
+        "furigana": "さっか"
+      },
+      "image": "assets/images/categories/Jobs/Writer.jpg"
+    },
+    {
+      "english": "zookeeper",
+      "japanese": {
+        "kanji": "飼育員",
+        "furigana": "しいくいん"
+      },
+      "image": "assets/images/categories/Jobs/Zookeeper.jpg"
+    },
+    {
+      "english": "now",
+      "japanese": {
+        "kanji": "今",
+        "furigana": "いま"
+      },
+      "image": "assets/images/categories/Jobs/Now.jpg"
+    },
+    {
+      "english": "future",
+      "japanese": {
+        "kanji": "未来",
+        "furigana": "みらい"
+      },
+      "image": "assets/images/categories/Jobs/Future.jpg"
+    },
+    {
+      "english": "cartoonist",
+      "japanese": {
+        "kanji": "漫画家",
+        "furigana": "まんがか"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Cartoonist.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/cartoonist.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "dentist",
+      "japanese": {
+        "kanji": "歯医者",
+        "furigana": "はいしゃ"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Dentist.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/dentist.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "designer",
+      "japanese": {
+        "kanji": "デザイナー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Designer.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/designer.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "figure skater",
+      "japanese": {
+        "kanji": "フィギュアスケーター",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Figure Skater.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/figureskater.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "florist",
+      "japanese": {
+        "kanji": "花屋さん",
+        "furigana": "はなやさん"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Florist.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/florist.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "game programmer",
+      "japanese": {
+        "kanji": "ゲームプログラマー",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Game Programmer.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/gameprogrammer.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "idol",
+      "japanese": {
+        "kanji": "アイドル",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Idol.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/idol.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "kindergarten teacher",
+      "japanese": {
+        "kanji": "幼稚園の先生",
+        "furigana": "ようちえんのせんせい"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Kindergarten Teacher.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/kindergartenteacher.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "king",
+      "japanese": {
+        "kanji": "王",
+        "furigana": "おう"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/King.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/king.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "lawyer",
+      "japanese": {
+        "kanji": "弁護士",
+        "furigana": "べんごし"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Lawyer.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/lawyer.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "musician",
+      "japanese": {
+        "kanji": "音楽家",
+        "furigana": "おんがくか"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Musician.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/musician.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "nursery school teacher",
+      "japanese": {
+        "kanji": "保育士",
+        "furigana": "ほいくし"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Nursery School Teacher.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/nurseryschoolteacher.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "patissier",
+      "japanese": {
+        "kanji": "パティシエ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Patissier.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/patissier.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "pharmacist",
+      "japanese": {
+        "kanji": "薬剤師",
+        "furigana": "やくざいし"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Pharmacist.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/pharmacist.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "president",
+      "japanese": {
+        "kanji": "社長",
+        "furigana": "しゃちょう"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/President.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/president.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "queen",
+      "japanese": {
+        "kanji": "女王",
+        "furigana": "じょおう"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Queen.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/queen.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "reporter",
+      "japanese": {
+        "kanji": "記者",
+        "furigana": "きしゃ"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Reporter.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/reporter.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "soccer player",
+      "japanese": {
+        "kanji": "サッカー選手",
+        "furigana": "さっかーせんしゅ"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Soccer Player.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/soccerplayer.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "voice actor",
+      "japanese": {
+        "kanji": "声優",
+        "furigana": "せいゆう"
+      },
+      "image": "assets/images/categories/Jobs/Jobs+/Voice Actor.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Jobs/bonuswords/voiceactor.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

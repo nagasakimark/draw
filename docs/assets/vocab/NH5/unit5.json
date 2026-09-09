@@ -1,0 +1,506 @@
+[
+  {
+    "english": "go",
+    "japanese": {
+      "kanji": "行く",
+      "furigana": "いく"
+    },
+    "image": "assets/images/categories/Directions/Go.jpg"
+  },
+  {
+    "english": "straight",
+    "japanese": {
+      "kanji": "まっすぐ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Directions/Straight.jpg"
+  },
+  {
+    "english": "turn",
+    "japanese": {
+      "kanji": "曲がる",
+      "furigana": "まがる"
+    },
+    "image": "assets/images/categories/Directions/Turn.jpg"
+  },
+  {
+    "english": "right",
+    "japanese": {
+      "kanji": "右",
+      "furigana": "みぎ"
+    },
+    "image": "assets/images/categories/Directions/Right.jpg"
+  },
+  {
+    "english": "left",
+    "japanese": {
+      "kanji": "左",
+      "furigana": "ひだり"
+    },
+    "image": "assets/images/categories/Directions/Left.jpg"
+  },
+  {
+    "english": "see",
+    "japanese": {
+      "kanji": "見る",
+      "furigana": "みる"
+    },
+    "image": "assets/images/categories/Directions/See.jpg"
+  },
+  {
+    "english": "up",
+    "japanese": {
+      "kanji": "上",
+      "furigana": "うえ"
+    },
+    "image": "assets/images/categories/Directions/Up.jpg"
+  },
+  {
+    "english": "down",
+    "japanese": {
+      "kanji": "下",
+      "furigana": "した"
+    },
+    "image": "assets/images/categories/Directions/Down.jpg"
+  },
+  {
+    "english": "block",
+    "japanese": {
+      "kanji": "区画",
+      "furigana": "くかく"
+    },
+    "image": "assets/images/categories/Directions/Block.jpg"
+  },
+  {
+    "english": "corner",
+    "japanese": {
+      "kanji": "角",
+      "furigana": "かど"
+    },
+    "image": "assets/images/categories/Directions/Corner.jpg"
+  },
+  {
+    "english": "by",
+    "japanese": {
+      "kanji": "そば",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Location Words/By.jpg"
+  },
+  {
+    "english": "in",
+    "japanese": {
+      "kanji": "中",
+      "furigana": "なか"
+    },
+    "image": "assets/images/categories/Location Words/In.jpg"
+  },
+  {
+    "english": "on",
+    "japanese": {
+      "kanji": "上",
+      "furigana": "うえ"
+    },
+    "image": "assets/images/categories/Location Words/On.jpg"
+  },
+  {
+    "english": "under",
+    "japanese": {
+      "kanji": "下",
+      "furigana": "した"
+    },
+    "image": "assets/images/categories/Location Words/Under.jpg"
+  },
+  {
+    "english": "town",
+    "japanese": {
+      "kanji": "町",
+      "furigana": "まち"
+    },
+    "image": "assets/images/categories/Town/Town.jpg"
+  },
+  {
+    "english": "house",
+    "japanese": {
+      "kanji": "家",
+      "furigana": "いえ"
+    },
+    "image": "assets/images/categories/Town/House.jpg"
+  },
+  {
+    "english": "park",
+    "japanese": {
+      "kanji": "公園",
+      "furigana": "こうえん"
+    },
+    "image": "assets/images/categories/Town/Park.jpg"
+  },
+  {
+    "english": "library",
+    "japanese": {
+      "kanji": "図書館",
+      "furigana": "としょかん"
+    },
+    "image": "assets/images/categories/Town/Library.jpg"
+  },
+  {
+    "english": "museum",
+    "japanese": {
+      "kanji": "博物館",
+      "furigana": "はくぶつかん"
+    },
+    "image": "assets/images/categories/Town/Museum.jpg"
+  },
+  {
+    "english": "hospital",
+    "japanese": {
+      "kanji": "病院",
+      "furigana": "びょういん"
+    },
+    "image": "assets/images/categories/Town/Hospital.jpg"
+  },
+  {
+    "english": "bus stop",
+    "japanese": {
+      "kanji": "バス停",
+      "furigana": "ばすてい"
+    },
+    "image": "assets/images/categories/Town/Bus Stop.jpg",
+    "original_image": "assets/images/categories/Town/Bus stop.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "station",
+    "japanese": {
+      "kanji": "駅",
+      "furigana": "えき"
+    },
+    "image": "assets/images/categories/Town/Station.jpg"
+  },
+  {
+    "english": "police station",
+    "japanese": {
+      "kanji": "警察署",
+      "furigana": "けいさつしょ"
+    },
+    "image": "assets/images/categories/Town/Police Station.jpg",
+    "original_image": "assets/images/categories/Town/Police station.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "fire station",
+    "japanese": {
+      "kanji": "消防署",
+      "furigana": "しょうぼうしょ"
+    },
+    "image": "assets/images/categories/Town/Fire Station.jpg",
+    "original_image": "assets/images/categories/Town/Fire station.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "post office",
+    "japanese": {
+      "kanji": "郵便局",
+      "furigana": "ゆうびんきょく"
+    },
+    "image": "assets/images/categories/Town/Post Office.jpg",
+    "original_image": "assets/images/categories/Town/Post office.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "bookstore",
+    "japanese": {
+      "kanji": "本屋",
+      "furigana": "ほんや"
+    },
+    "image": "assets/images/categories/Town/Bookstore.jpg"
+  },
+  {
+    "english": "restaurant",
+    "japanese": {
+      "kanji": "レストラン",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Town/Restaurant.jpg"
+  },
+  {
+    "english": "supermarket",
+    "japanese": {
+      "kanji": "スーパー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Town/Supermarket.jpg"
+  },
+  {
+    "english": "castle",
+    "japanese": {
+      "kanji": "城",
+      "furigana": "しろ"
+    },
+    "image": "assets/images/categories/Town/Castle.jpg"
+  },
+  {
+    "english": "shrine",
+    "japanese": {
+      "kanji": "神社",
+      "furigana": "じんじゃ"
+    },
+    "image": "assets/images/categories/Town/Shrine.jpg"
+  },
+  {
+    "english": "temple",
+    "japanese": {
+      "kanji": "お寺",
+      "furigana": "おてら"
+    },
+    "image": "assets/images/categories/Town/Temple.jpg"
+  },
+  {
+    "english": "church",
+    "japanese": {
+      "kanji": "教会",
+      "furigana": "きょうかい"
+    },
+    "image": "assets/images/categories/Town/Church.jpg"
+  },
+  {
+    "english": "aquarium",
+    "japanese": {
+      "kanji": "水族館",
+      "furigana": "すいぞくかん"
+    },
+    "image": "assets/images/categories/Town/Aquarium.jpg"
+  },
+  {
+    "english": "stadium",
+    "japanese": {
+      "kanji": "スタジアム",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Town/Stadium.jpg"
+  },
+  {
+    "english": "zoo",
+    "japanese": {
+      "kanji": "動物園",
+      "furigana": "どうぶつえん"
+    },
+    "image": "assets/images/categories/Town/Zoo.jpg"
+  },
+  {
+    "english": "amusement park",
+    "japanese": {
+      "kanji": "遊園地",
+      "furigana": "ゆうえんち"
+    },
+    "image": "assets/images/categories/Town/Amusement Park.jpg",
+    "original_image": "assets/images/categories/Town/Amusement park.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "convenience store",
+    "japanese": {
+      "kanji": "コンビニ",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Town/Convenience Store.jpg",
+    "original_image": "assets/images/categories/Town/Convenience store.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "elementary school",
+    "japanese": {
+      "kanji": "小学校",
+      "furigana": "しょうがっこう"
+    },
+    "image": "assets/images/categories/Town/Elementary School.jpg",
+    "original_image": "assets/images/categories/Town/Elementary school.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "junior high school",
+    "japanese": {
+      "kanji": "中学校",
+      "furigana": "ちゅうがっこう"
+    },
+    "image": "assets/images/categories/Town/Junior High School.jpg",
+    "original_image": "assets/images/categories/Town/Junior high school.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "bus",
+    "japanese": {
+      "kanji": "バス",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Town/Bus.jpg"
+  },
+  {
+    "english": "taxi",
+    "japanese": {
+      "kanji": "タクシー",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Town/Taxi.jpg"
+  },
+  {
+    "english": "bike",
+    "japanese": {
+      "kanji": "自転車",
+      "furigana": "じてんしゃ"
+    },
+    "image": "assets/images/categories/Town/Bike.jpg"
+  },
+  {
+    "english": "train",
+    "japanese": {
+      "kanji": "電車",
+      "furigana": "でんしゃ"
+    },
+    "image": "assets/images/categories/Town/Train.jpg"
+  },
+  {
+    "english": "good",
+    "japanese": {
+      "kanji": "良い",
+      "furigana": "よい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Good.jpg"
+  },
+  {
+    "english": "great",
+    "japanese": {
+      "kanji": "素晴らしい",
+      "furigana": "すばらしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Great.jpg"
+  },
+  {
+    "english": "bad",
+    "japanese": {
+      "kanji": "悪い",
+      "furigana": "わるい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Bad.jpg"
+  },
+  {
+    "english": "nice",
+    "japanese": {
+      "kanji": "素敵な",
+      "furigana": "すてきな"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Nice.jpg"
+  },
+  {
+    "english": "amazing",
+    "japanese": {
+      "kanji": "驚くべき",
+      "furigana": "おどろくべき"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Amazing.jpg"
+  },
+  {
+    "english": "fantastic",
+    "japanese": {
+      "kanji": "素晴らしい",
+      "furigana": "すばらしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Fantastic.jpg"
+  },
+  {
+    "english": "wonderful",
+    "japanese": {
+      "kanji": "素晴らしい",
+      "furigana": "すばらしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Wonderful.jpg"
+  },
+  {
+    "english": "beautiful",
+    "japanese": {
+      "kanji": "美しい",
+      "furigana": "うつくしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Beautiful.jpg"
+  },
+  {
+    "english": "cool",
+    "japanese": {
+      "kanji": "かっこいい",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Cool.jpg"
+  },
+  {
+    "english": "cute",
+    "japanese": {
+      "kanji": "かわいい",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Cute.jpg"
+  },
+  {
+    "english": "favorite",
+    "japanese": {
+      "kanji": "お気に入り",
+      "furigana": "おきにいり"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Favorite.jpg"
+  },
+  {
+    "english": "interesting",
+    "japanese": {
+      "kanji": "面白い",
+      "furigana": "おもしろい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Interesting.jpg"
+  },
+  {
+    "english": "exciting",
+    "japanese": {
+      "kanji": "わくわくする",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Exciting.jpg"
+  },
+  {
+    "english": "famous",
+    "japanese": {
+      "kanji": "有名な",
+      "furigana": "ゆうめいな"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Famous.jpg"
+  },
+  {
+    "english": "popular",
+    "japanese": {
+      "kanji": "人気のある",
+      "furigana": "にんきのある"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Popular.jpg"
+  },
+  {
+    "english": "colorful",
+    "japanese": {
+      "kanji": "カラフル",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Colorful.jpg"
+  },
+  {
+    "english": "international",
+    "japanese": {
+      "kanji": "国際的な",
+      "furigana": "こくさいてきな"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/International.jpg"
+  },
+  {
+    "english": "fun",
+    "japanese": {
+      "kanji": "楽しい",
+      "furigana": "たのしい"
+    },
+    "image": "assets/images/categories/Thoughts & Appearances/Fun.jpg"
+  }
+]

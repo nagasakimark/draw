@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "title": "Daily Life"
+  },
+  "items": [
+    {
+      "english": "morning",
+      "japanese": {
+        "kanji": "朝",
+        "furigana": "あさ"
+      },
+      "image": "assets/images/categories/Daily Life/Morning.jpg"
+    },
+    {
+      "english": "afternoon",
+      "japanese": {
+        "kanji": "昼",
+        "furigana": "ひる"
+      },
+      "image": "assets/images/categories/Daily Life/Afternoon.jpg"
+    },
+    {
+      "english": "evening",
+      "japanese": {
+        "kanji": "夕方",
+        "furigana": "ゆうがた"
+      },
+      "image": "assets/images/categories/Daily Life/Evening.jpg"
+    },
+    {
+      "english": "night",
+      "japanese": {
+        "kanji": "夜",
+        "furigana": "よる"
+      },
+      "image": "assets/images/categories/Daily Life/Night.jpg"
+    },
+    {
+      "english": "get up",
+      "japanese": {
+        "kanji": "起きる",
+        "furigana": "おきる"
+      },
+      "image": "assets/images/categories/Daily Life/Get Up.jpg"
+    },
+    {
+      "english": "comb my hair",
+      "japanese": {
+        "kanji": "髪をとかす",
+        "furigana": "かみをとかす"
+      },
+      "image": "assets/images/categories/Daily Life/Comb My Hair.jpg"
+    },
+    {
+      "english": "take out the garbage",
+      "japanese": {
+        "kanji": "ゴミを出す",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Daily Life/Take Out The Garbage.jpg"
+    },
+    {
+      "english": "get the newspaper",
+      "japanese": {
+        "kanji": "新聞を取る",
+        "furigana": "しんぶんをとる"
+      },
+      "image": "assets/images/categories/Daily Life/Get The Newspaper.jpg"
+    },
+    {
+      "english": "have breakfast",
+      "japanese": {
+        "kanji": "朝ご飯を食べる",
+        "furigana": "あさごはんをたべる"
+      },
+      "image": "assets/images/categories/Daily Life/Have Breakfast.jpg"
+    },
+    {
+      "english": "brush my teeth",
+      "japanese": {
+        "kanji": "歯を磨く",
+        "furigana": "はをみがく"
+      },
+      "image": "assets/images/categories/Daily Life/Brush My Teeth.jpg"
+    },
+    {
+      "english": "go to school",
+      "japanese": {
+        "kanji": "学校へ行く",
+        "furigana": "がっこうへいく"
+      },
+      "image": "assets/images/categories/Daily Life/Go To School.jpg"
+    },
+    {
+      "english": "study English",
+      "japanese": {
+        "kanji": "英語を勉強する",
+        "furigana": "えいごをべんきょうする"
+      },
+      "image": "assets/images/categories/Daily Life/Study English.jpg"
+    },
+    {
+      "english": "have lunch",
+      "japanese": {
+        "kanji": "昼ご飯を食べる",
+        "furigana": "ひるごはんをたべる"
+      },
+      "image": "assets/images/categories/Daily Life/Have Lunch.jpg"
+    },
+    {
+      "english": "go home",
+      "japanese": {
+        "kanji": "家に帰る",
+        "furigana": "いえにかえる"
+      },
+      "image": "assets/images/categories/Daily Life/Go Home.jpg"
+    },
+    {
+      "english": "play soccer",
+      "japanese": {
+        "kanji": "サッカーをする",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Daily Life/Play Soccer.jpg"
+    },
+    {
+      "english": "walk my dog",
+      "japanese": {
+        "kanji": "犬の散歩をする",
+        "furigana": "いぬのさんぽをする"
+      },
+      "image": "assets/images/categories/Daily Life/Walk My Dog.jpg"
+    },
+    {
+      "english": "do my homework",
+      "japanese": {
+        "kanji": "宿題をする",
+        "furigana": "しゅくだいをする"
+      },
+      "image": "assets/images/categories/Daily Life/Do My Homework.jpg"
+    },
+    {
+      "english": "have dinner",
+      "japanese": {
+        "kanji": "夕ご飯を食べる",
+        "furigana": "ゆうごはんをたべる"
+      },
+      "image": "assets/images/categories/Daily Life/Have Dinner.jpg"
+    },
+    {
+      "english": "wash the dishes",
+      "japanese": {
+        "kanji": "皿を洗う",
+        "furigana": "さらをあらう"
+      },
+      "image": "assets/images/categories/Daily Life/Wash The Dishes.jpg"
+    },
+    {
+      "english": "watch TV",
+      "japanese": {
+        "kanji": "テレビを見る",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Daily Life/Watch TV.jpg"
+    },
+    {
+      "english": "take a bath",
+      "japanese": {
+        "kanji": "お風呂に入る",
+        "furigana": "おふろにはいる"
+      },
+      "image": "assets/images/categories/Daily Life/Take A Bath.jpg"
+    },
+    {
+      "english": "go to bed",
+      "japanese": {
+        "kanji": "寝る",
+        "furigana": "ねる"
+      },
+      "image": "assets/images/categories/Daily Life/Go To Bed.jpg"
+    },
+    {
+      "english": "clean my room",
+      "japanese": {
+        "kanji": "部屋を掃除する",
+        "furigana": "へやをそうじする"
+      },
+      "image": "assets/images/categories/Daily Life/Daily Life+/Clean My Room.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Daily Life/bonuswords/cleanmyroom.jpg",
+      "original_image_kept": true
+    },
+    {
+      "english": "play with my friends",
+      "japanese": {
+        "kanji": "友達と遊ぶ",
+        "furigana": "ともだちとあそぶ"
+      },
+      "image": "assets/images/categories/Daily Life/Daily Life+/Play With My Friends.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Daily Life/bonuswords/playwithmyfriends.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

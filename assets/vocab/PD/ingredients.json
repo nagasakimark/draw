@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "title": "Ingredients"
+  },
+  "items": [
+    {
+      "english": "meat",
+      "japanese": {
+        "kanji": "肉",
+        "furigana": "にく"
+      },
+      "image": "assets/images/categories/Ingredients/Meat.jpg"
+    },
+    {
+      "english": "beef",
+      "japanese": {
+        "kanji": "牛肉",
+        "furigana": "ぎゅうにく"
+      },
+      "image": "assets/images/categories/Ingredients/Beef.jpg"
+    },
+    {
+      "english": "chicken",
+      "japanese": {
+        "kanji": "鶏肉",
+        "furigana": "とりにく"
+      },
+      "image": "assets/images/categories/Animals/Animals+/Chicken.jpg"
+    },
+    {
+      "english": "pork",
+      "japanese": {
+        "kanji": "豚肉",
+        "furigana": "ぶたにく"
+      },
+      "image": "assets/images/categories/Ingredients/Pork.jpg"
+    },
+    {
+      "english": "bacon",
+      "japanese": {
+        "kanji": "ベーコン",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Bacon.jpg"
+    },
+    {
+      "english": "ham",
+      "japanese": {
+        "kanji": "ハム",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Ham.jpg"
+    },
+    {
+      "english": "cheese",
+      "japanese": {
+        "kanji": "チーズ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Cheese.jpg"
+    },
+    {
+      "english": "egg",
+      "japanese": {
+        "kanji": "卵",
+        "furigana": "たまご"
+      },
+      "image": "assets/images/categories/Ingredients/Egg.jpg"
+    },
+    {
+      "english": "fish",
+      "japanese": {
+        "kanji": "魚",
+        "furigana": "さかな"
+      },
+      "image": "assets/images/categories/Ingredients/Fish.jpg"
+    },
+    {
+      "english": "salmon",
+      "japanese": {
+        "kanji": "鮭",
+        "furigana": "さけ"
+      },
+      "image": "assets/images/categories/Ingredients/Salmon.jpg"
+    },
+    {
+      "english": "octopus",
+      "japanese": {
+        "kanji": "タコ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Octopus.jpg"
+    },
+    {
+      "english": "crab",
+      "japanese": {
+        "kanji": "カニ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Crab.jpg",
+      "bonus": true
+    },
+    {
+      "english": "shellfish",
+      "japanese": {
+        "kanji": "貝",
+        "furigana": "かい"
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Shellfish.jpg",
+      "bonus": true
+    },
+    {
+      "english": "shrimp",
+      "japanese": {
+        "kanji": "エビ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Shrimp.jpg",
+      "bonus": true
+    },
+    {
+      "english": "squid",
+      "japanese": {
+        "kanji": "イカ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Squid.jpg",
+      "bonus": true
+    },
+    {
+      "english": "tuna",
+      "japanese": {
+        "kanji": "マグロ",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Tuna.jpg",
+      "bonus": true
+    },
+    {
+      "english": "salt",
+      "japanese": {
+        "kanji": "塩",
+        "furigana": "しお"
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Salt.jpg",
+      "bonus": true
+    },
+    {
+      "english": "sugar",
+      "japanese": {
+        "kanji": "砂糖",
+        "furigana": "さとう"
+      },
+      "image": "assets/images/categories/Ingredients/Ingredients+/Sugar.jpg",
+      "bonus": true
+    }
+  ]
+}

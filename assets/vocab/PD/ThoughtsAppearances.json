@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "title": "Thoughts & Appearances"
+  },
+  "items": [
+    {
+      "english": "good",
+      "japanese": {
+        "kanji": "良い",
+        "furigana": "よい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Good.jpg"
+    },
+    {
+      "english": "great",
+      "japanese": {
+        "kanji": "素晴らしい",
+        "furigana": "すばらしい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Great.jpg"
+    },
+    {
+      "english": "bad",
+      "japanese": {
+        "kanji": "悪い",
+        "furigana": "わるい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Bad.jpg"
+    },
+    {
+      "english": "nice",
+      "japanese": {
+        "kanji": "素敵な",
+        "furigana": "すてきな"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Nice.jpg"
+    },
+    {
+      "english": "amazing",
+      "japanese": {
+        "kanji": "驚くべき",
+        "furigana": "おどろくべき"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Amazing.jpg"
+    },
+    {
+      "english": "fantastic",
+      "japanese": {
+        "kanji": "素晴らしい",
+        "furigana": "すばらしい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Fantastic.jpg"
+    },
+    {
+      "english": "wonderful",
+      "japanese": {
+        "kanji": "素晴らしい",
+        "furigana": "すばらしい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Wonderful.jpg"
+    },
+    {
+      "english": "beautiful",
+      "japanese": {
+        "kanji": "美しい",
+        "furigana": "うつくしい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Beautiful.jpg"
+    },
+    {
+      "english": "cool",
+      "japanese": {
+        "kanji": "かっこいい",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Cool.jpg"
+    },
+    {
+      "english": "cute",
+      "japanese": {
+        "kanji": "かわいい",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Cute.jpg"
+    },
+    {
+      "english": "favorite",
+      "japanese": {
+        "kanji": "お気に入り",
+        "furigana": "おきにいり"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Favorite.jpg"
+    },
+    {
+      "english": "interesting",
+      "japanese": {
+        "kanji": "面白い",
+        "furigana": "おもしろい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Interesting.jpg"
+    },
+    {
+      "english": "exciting",
+      "japanese": {
+        "kanji": "わくわくする",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Exciting.jpg"
+    },
+    {
+      "english": "famous",
+      "japanese": {
+        "kanji": "有名な",
+        "furigana": "ゆうめいな"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Famous.jpg"
+    },
+    {
+      "english": "popular",
+      "japanese": {
+        "kanji": "人気のある",
+        "furigana": "にんきのある"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Popular.jpg"
+    },
+    {
+      "english": "colorful",
+      "japanese": {
+        "kanji": "カラフル",
+        "furigana": ""
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Colorful.jpg"
+    },
+    {
+      "english": "international",
+      "japanese": {
+        "kanji": "国際的な",
+        "furigana": "こくさいてきな"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/International.jpg"
+    },
+    {
+      "english": "fun",
+      "japanese": {
+        "kanji": "楽しい",
+        "furigana": "たのしい"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Fun.jpg"
+    },
+    {
+      "english": "special",
+      "japanese": {
+        "kanji": "特別な",
+        "furigana": "とくべつな"
+      },
+      "image": "assets/images/categories/Thoughts & Appearances/Thoughts & Appearances+/Special.jpg",
+      "bonus": true,
+      "original_image": "assets/images/categories/Thoughts & Appearances/bonuswords/special.jpg",
+      "original_image_kept": true
+    }
+  ]
+}

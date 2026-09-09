@@ -1,0 +1,214 @@
+[
+  {
+    "english": "ate",
+    "japanese": {
+      "kanji": "食べた",
+      "furigana": "たべた"
+    },
+    "image": "assets/images/categories/Past Tense/Ate.jpg"
+  },
+  {
+    "english": "went",
+    "japanese": {
+      "kanji": "行った",
+      "furigana": "いった"
+    },
+    "image": "assets/images/categories/Past Tense/Went.jpg"
+  },
+  {
+    "english": "saw",
+    "japanese": {
+      "kanji": "見た",
+      "furigana": "みた"
+    },
+    "image": "assets/images/categories/Past Tense/Saw.jpg"
+  },
+  {
+    "english": "had",
+    "japanese": {
+      "kanji": "持った",
+      "furigana": "もった"
+    },
+    "image": "assets/images/categories/Past Tense/Had.jpg"
+  },
+  {
+    "english": "made",
+    "japanese": {
+      "kanji": "作った",
+      "furigana": "つくった"
+    },
+    "image": "assets/images/categories/Past Tense/Made.jpg"
+  },
+  {
+    "english": "enjoyed",
+    "japanese": {
+      "kanji": "楽しんだ",
+      "furigana": "たのしんだ"
+    },
+    "image": "assets/images/categories/Past Tense/Enjoyed.jpg"
+  },
+  {
+    "english": "played",
+    "japanese": {
+      "kanji": "遊んだ",
+      "furigana": "あそんだ"
+    },
+    "image": "assets/images/categories/Past Tense/Played.jpg"
+  },
+  {
+    "english": "watched",
+    "japanese": {
+      "kanji": "見た",
+      "furigana": "みた"
+    },
+    "image": "assets/images/categories/Past Tense/Watched.jpg"
+  },
+  {
+    "english": "school events",
+    "japanese": {
+      "kanji": "学校行事",
+      "furigana": "がっこうぎょうじ"
+    },
+    "image": "assets/images/categories/School Events/School Events.jpg",
+    "original_image": "assets/images/categories/School Events/School events.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "field trip",
+    "japanese": {
+      "kanji": "遠足",
+      "furigana": "えんそく"
+    },
+    "image": "assets/images/categories/School Events/Field Trip.jpg",
+    "original_image": "assets/images/categories/School Events/Field trip.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "school trip",
+    "japanese": {
+      "kanji": "修学旅行",
+      "furigana": "しゅうがくりょこう"
+    },
+    "image": "assets/images/categories/School Events/School Trip.jpg",
+    "original_image": "assets/images/categories/School Events/School trip.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "chorus contest",
+    "japanese": {
+      "kanji": "合唱コンクール",
+      "furigana": "がっしょうこんくーる"
+    },
+    "image": "assets/images/categories/School Events/Chorus Contest.jpg",
+    "original_image": "assets/images/categories/School Events/Chorus contest.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "volunteer day",
+    "japanese": {
+      "kanji": "ボランティアの日",
+      "furigana": ""
+    },
+    "image": "assets/images/categories/School Events/Volunteer Day.jpg",
+    "original_image": "assets/images/categories/School Events/Volunteer day.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "drama festival",
+    "japanese": {
+      "kanji": "演劇祭",
+      "furigana": "えんげきさい"
+    },
+    "image": "assets/images/categories/School Events/Drama Festival.jpg",
+    "original_image": "assets/images/categories/School Events/Drama festival.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "music festival",
+    "japanese": {
+      "kanji": "音楽祭",
+      "furigana": "おんがくさい"
+    },
+    "image": "assets/images/categories/School Events/Music Festival.jpg",
+    "original_image": "assets/images/categories/School Events/Music festival.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "school festival",
+    "japanese": {
+      "kanji": "文化祭",
+      "furigana": "ぶんかさい"
+    },
+    "image": "assets/images/categories/School Events/School Festival.jpg",
+    "original_image": "assets/images/categories/School Events/School festival.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "sports day",
+    "japanese": {
+      "kanji": "運動会",
+      "furigana": "うんどうかい"
+    },
+    "image": "assets/images/categories/School Events/Sports Day.jpg",
+    "original_image": "assets/images/categories/School Events/Sports day.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "evacuation drill",
+    "japanese": {
+      "kanji": "避難訓練",
+      "furigana": "ひなんくんれん"
+    },
+    "image": "assets/images/categories/School Events/Evacuation Drill.jpg",
+    "original_image": "assets/images/categories/School Events/Evacuation drill.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "swimming meet",
+    "japanese": {
+      "kanji": "水泳大会",
+      "furigana": "すいえいたいかい"
+    },
+    "image": "assets/images/categories/School Events/Swimming Meet.jpg",
+    "original_image": "assets/images/categories/School Events/Swimming meet.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "summer vacation",
+    "japanese": {
+      "kanji": "夏休み",
+      "furigana": "なつやすみ"
+    },
+    "image": "assets/images/categories/School Events/Summer Vacation.jpg",
+    "original_image": "assets/images/categories/School Events/Summer vacation.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "entrance ceremony",
+    "japanese": {
+      "kanji": "入学式",
+      "furigana": "にゅうがくしき"
+    },
+    "image": "assets/images/categories/School Events/Entrance Ceremony.jpg",
+    "original_image": "assets/images/categories/School Events/Entrance ceremony.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "graduation ceremony",
+    "japanese": {
+      "kanji": "卒業式",
+      "furigana": "そつぎょうしき"
+    },
+    "image": "assets/images/categories/School Events/Graduation Ceremony.jpg",
+    "original_image": "assets/images/categories/School Events/Graduation ceremony.jpg",
+    "original_image_kept": true
+  },
+  {
+    "english": "memory",
+    "japanese": {
+      "kanji": "思い出",
+      "furigana": "おもいで"
+    },
+    "image": "assets/images/categories/School Events/Memory.jpg"
+  }
+]

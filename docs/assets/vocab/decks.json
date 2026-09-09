@@ -1,0 +1,437 @@
+{
+  "Let's Try 1": {
+    "image": "assets/images/textbooks/LT1.jpg",
+    "decks": {
+      "All Units": {
+        "path": "assets/vocab/LT1/allLT1.json",
+        "image": "assets/images/categories/LT1/All.jpg"
+      },
+      "Unit 1 - Hello!": {
+        "path": "assets/vocab/LT1/unit1.json",
+        "image": "assets/images/categories/Subjects/English.jpg"
+      },
+      "Unit 2 - How are you?": {
+        "path": "assets/vocab/LT1/unit2.json",
+        "image": "assets/images/categories/Thoughts & Appearances/Great.jpg"
+      },
+      "Unit 3 - How many?": {
+        "path": "assets/vocab/LT1/unit3.json",
+        "image": "assets/images/categories/Numbers/Numbers.jpg"
+      },
+      "Unit 4 - I like blue.": {
+        "path": "assets/vocab/LT1/unit4.json",
+        "image": "assets/images/categories/Colors/Blue.jpg"
+      },
+      "Unit 5 - What do you like?": {
+        "path": "assets/vocab/LT1/unit5.json",
+        "image": "assets/images/categories/Personality/Active.jpg"
+      },
+      "Unit 6 - ALPHABET": {
+        "path": "assets/vocab/LT1/unit6.json",
+        "image": "assets/images/categories/LT1/A.jpg"
+      },
+      "Unit 7 - This is for you.": {
+        "path": "assets/vocab/LT1/unit7.json",
+        "image": "assets/images/categories/jobs/Zookeeper.jpg"
+      },
+      "Unit 8 - What's this?": {
+        "path": "assets/vocab/LT1/unit8.json",
+        "image": "assets/images/categories/Animals/Animals.jpg"
+      },
+      "Unit 9 - Who are you?": {
+        "path": "assets/vocab/LT1/unit9.json",
+        "image": "assets/images/categories/Thoughts & Appearances/Favorite.jpg"
+      }
+    }
+  },
+  "Let's Try 2": {
+    "image": "assets/images/textbooks/LT2.jpg",
+    "decks": {
+      "All Units": {
+        "path": "assets/vocab/LT2/allLT2.json",
+        "image": "assets/images/categories/LT1/All.jpg"
+      },
+      "Colors": {
+        "path": "assets/vocab/LT2/colors.json",
+        "image": "assets/images/categories/Colors/Colors.jpg"
+      },
+      "Directions": {
+        "path": "assets/vocab/LT2/directions.json",
+        "image": "assets/images/categories/Directions/Go.jpg"
+      },
+      "Unit 1 - Hello, world!": {
+        "path": "assets/vocab/LT2/unit1.json",
+        "image": "assets/images/categories/World/World.jpg"
+      },
+      "Unit 2 - Let's play cards.": {
+        "path": "assets/vocab/LT2/unit2.json",
+        "image": "assets/images/categories/Activities/Cards.jpg"
+      },
+      "Unit 3 - I like Mondays.": {
+        "path": "assets/vocab/LT2/unit3.json",
+        "image": "assets/images/categories/Days of the Week/Monday.jpg"
+      },
+      "Unit 4 - What time is it?": {
+        "path": "assets/vocab/LT2/unit4.json",
+        "image": "assets/images/categories/LT2/Time.jpg"
+      },
+      "Unit 5 - Do you have a pen?": {
+        "path": "assets/vocab/LT2/unit5.json",
+        "image": "assets/images/categories/Stationery/Pen.jpg"
+      },
+      "Unit 6 - Alphabet": {
+        "path": "assets/vocab/LT2/unit6.json",
+        "image": "assets/images/categories/LT1/A.jpg"
+      },
+      "Unit 7 - What do you want?": {
+        "path": "assets/vocab/LT2/unit7.json",
+        "image": "assets/images/categories/FruitAndVegetables/Fruit.jpg"
+      },
+      "Unit 8 - This is my favorite place.": {
+        "path": "assets/vocab/LT2/unit8.json",
+        "image": "assets/images/categories/School/School.jpg"
+      },
+      "Unit 9 - This is my day.": {
+        "path": "assets/vocab/LT2/unit9.json",
+        "image": "assets/images/categories/Daily Life/Get Up.jpg"
+      }
+    }
+  },
+  "New Horizon 5": {
+    "image": "/assets/images/textbooks/NH5.jpg",
+    "decks": {
+      "The Alphabet": {
+        "path": "assets/vocab/NH5/alphabet.json",
+        "image": "assets/images/categories/LT1/A.jpg"
+      },
+      "Unit 1 - Hello, friends!": {
+        "path": "assets/vocab/NH5/unit1.json",
+        "image": "assets/images/categories/Subjects/English.jpg"
+      },
+      "Unit 2 - Happy Birthday": {
+        "path": "assets/vocab/NH5/unit2.json",
+        "image": "assets/images/categories/Dates/Date.jpg"
+      },
+      "Unit 3 - Can you play dodgeball?": {
+        "path": "assets/vocab/NH5/unit3.json",
+        "image": "assets/images/categories/Sports/Dodgeball.jpg"
+      },
+      "Unit 4 - Who is this?": {
+        "path": "assets/vocab/NH5/unit4.json",
+        "image": "assets/images/categories/People/He.jpg"
+      },
+      "Unit 5 - Let's go to the zoo.": {
+        "path": "assets/vocab/NH5/unit5.json",
+        "image": "assets/images/categories/Town/Zoo.jpg"
+      },
+      "Unit 6 - At a restaurant.": {
+        "path": "assets/vocab/NH5/unit6.json",
+        "image": "assets/images/categories/Food/Food.jpg"
+      },
+      "Unit 7 - Welcome to Japan!": {
+        "path": "assets/vocab/NH5/unit7.json",
+        "image": "assets/images/categories/World/Japan.jpg"
+      },
+      "Unit 8 - Who is your hero?": {
+        "path": "assets/vocab/NH5/unit8.json",
+        "image": "assets/images/categories/Jobs/Jobs.jpg"
+      }
+    }
+  },
+  "New Horizon 6": {
+    "image": "/assets/images/textbooks/NH6.jpg",
+    "decks": {
+      "The Alphabet": {
+        "path": "assets/vocab/NH5/alphabet.json",
+        "image": "assets/images/categories/LT1/A.jpg"
+      },
+      "Unit 1 - This is me!": {
+        "path": "assets/vocab/NH6/unit1.json",
+        "image": "assets/images/categories/Personality/Active.jpg"
+      },
+      "Unit 2 - My Daily Schedule": {
+        "path": "assets/vocab/NH6/unit2.json",
+        "image": "assets/images/categories/Daily%20Life/Brush%20My%20Teeth.jpg"
+      },
+      "Unit 3 - My Weekend": {
+        "path": "assets/vocab/NH6/unit3.json",
+        "image": "assets/images/categories/Past%20Tense/Played.jpg"
+      },
+      "Unit 4 - Let's see the world.": {
+        "path": "assets/vocab/NH6/unit4.json",
+        "image": "assets/images/categories/World/World.jpg"
+      },
+      "Unit 5 - Where is it from?": {
+        "path": "assets/vocab/NH6/unit5.json",
+        "image": "assets/images/categories/Thoughts%20&%20Appearances/International.jpg"
+      },
+      "Unit 6 - Save the animals.": {
+        "path": "assets/vocab/NH6/unit6.json",
+        "image": "assets/images/categories/Sea%20Animals/Sea%20Animals.jpg"
+      },
+      "Unit 7 - My Best Memory": {
+        "path": "assets/vocab/NH6/unit7.json",
+        "image": "assets/images/categories/School%20Events/School%20Events.jpg"
+      },
+      "Unit 8 - Mr Future, My Dream": {
+        "path": "assets/vocab/NH6/unit8.json",
+        "image": "assets/images/categories/Jobs/Teacher.jpg"
+      }
+    }
+  },
+  "My Picture Dictionary": {
+    "image": "/assets/images/textbooks/PD.jpg",
+    "decks": {
+      "Sports": {
+        "path": "assets/vocab/PD/sports.json",
+        "image": "/assets/images/categories/Sports/Sports.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Sports/ files. Bonus images in Sports+ folder."
+      },
+      "Dessert": {
+        "path": "assets/vocab/PD/dessert.json",
+        "image": "/assets/images/categories/Dessert/Dessert.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Dessert/ files. Bonus images in Dessert+ folder."
+      },
+      "Daily Life": {
+        "path": "assets/vocab/PD/DailyLife.json",
+        "image": "/assets/images/categories/Daily Life/Afternoon.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Daily Life/ files. Bonus images in Daily Life+ folder."
+      },
+      "World": {
+        "path": "assets/vocab/PD/world.json",
+        "image": "/assets/images/categories/World/World.jpg",
+        "notes": "World folder missing - placeholder images needed"
+      },
+      "Location Words": {
+        "path": "assets/vocab/PD/LocationWords.json",
+        "image": "/assets/images/categories/Location Words/By.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Location Words/ files"
+      },
+      "all": {
+        "path": "assets/vocab/PD/all.json",
+        "image": "assets/images/categories/LT1/All.jpg",
+        "notes": "This contains all pictures - ensure proper categories for each"
+      },
+      "Animals": {
+        "path": "assets/vocab/PD/animals.json",
+        "image": "/assets/images/categories/Animals/Animals.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Animals/ files. Bonus images in Animals+ folder."
+      },
+      "Tastes": {
+        "path": "assets/vocab/PD/tastes.json",
+        "image": "/assets/images/categories/Tastes/Bitter.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Tastes/ files. Bonus images in Tastes+ folder."
+      },
+      "School": {
+        "path": "assets/vocab/PD/school.json",
+        "image": "/assets/images/categories/School/School.jpg",
+        "notes": "Images should be updated to use assets/images/categories/School/ files"
+      },
+      "School Events": {
+        "path": "assets/vocab/PD/SchoolEvents.json",
+        "image": "/assets/images/categories/School Events/School Events.jpg",
+        "notes": "Images should be updated to use assets/images/categories/School Events/ files. Bonus images in School Events+ folder."
+      },
+      "Family": {
+        "path": "assets/vocab/PD/family.json",
+        "image": "/assets/images/categories/Family/Family.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Family/ files"
+      },
+      "Shapes": {
+        "path": "assets/vocab/PD/shapes.json",
+        "image": "/assets/images/categories/Shapes/Shapes.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Shapes/ files"
+      },
+      "Personalities": {
+        "path": "assets/vocab/PD/personalities.json",
+        "image": "/assets/images/categories/Personality/Active.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Personality/ files"
+      },
+      "Thoughts & Appearances": {
+        "path": "assets/vocab/PD/ThoughtsAppearances.json",
+        "image": "/assets/images/categories/Thoughts & Appearances/Amazing.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Thoughts & Appearances/ files. Some bonus images in + subfolder."
+      },
+      "Numbers": {
+        "path": "assets/vocab/PD/numbers.json",
+        "image": "/assets/images/categories/Numbers/Numbers.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Numbers/ files"
+      },
+      "Stationery": {
+        "path": "assets/vocab/PD/Stationery.json",
+        "image": "/assets/images/categories/Stationery/Stationery.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Stationery/ files"
+      },
+      "Subjects": {
+        "path": "assets/vocab/PD/subjects.json",
+        "image": "/assets/images/categories/Subjects/Subjects.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Subjects/ files"
+      },
+      "Dates": {
+        "path": "assets/vocab/PD/dates.json",
+        "image": "/assets/images/categories/Dates/Date.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Dates/ files"
+      },
+      "Months": {
+        "path": "assets/vocab/PD/months.json",
+        "image": "/assets/images/categories/Months/Months.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Months/ files"
+      },
+      "Fruits and Vegetables": {
+        "path": "assets/vocab/PD/fruitsandvegetables.json",
+        "image": "/assets/images/categories/FruitAndVegetables/Apple.jpg",
+        "notes": "Images should be updated to use assets/images/categories/FruitAndVegetables/ files. Bonus images in Fruit & Veg + subfolder."
+      },
+      "Instruments": {
+        "path": "assets/vocab/PD/instruments.json",
+        "image": "/assets/images/categories/Instruments/Castanets.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Musical Instruments/ files"
+      },
+      "Feelings": {
+        "path": "assets/vocab/PD/feelings.json",
+        "image": "/assets/images/categories/Feelings/Angry.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Feelings/ files"
+      },
+      "Descriptors": {
+        "path": "assets/vocab/PD/descriptors.json",
+        "image": "/assets/images/categories/State/Big.jpg",
+        "notes": "Images should be updated to use assets/images/categories/State/ files. Bonus images in State+ subfolder."
+      },
+      "Town": {
+        "path": "assets/vocab/PD/town.json",
+        "image": "/assets/images/categories/Town/Town.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Town/ files. Bonus images in Town+ subfolder."
+      },
+      "Jobs": {
+        "path": "assets/vocab/PD/jobs.json",
+        "image": "/assets/images/categories/Jobs/Jobs.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Jobs/ files. Bonus images in Jobs+ subfolder."
+      },
+      "Nature": {
+        "path": "assets/vocab/PD/nature.json",
+        "image": "/assets/images/categories/Nature/Nature.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Nature/ files. Bonus images in Nature+ subfolder."
+      },
+      "Colors": {
+        "path": "assets/vocab/PD/colors.json",
+        "image": "/assets/images/categories/Colors/Colors.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Colors/ files"
+      },
+      "Bugs": {
+        "path": "assets/vocab/PD/bugs.json",
+        "image": "/assets/images/categories/Bugs/Bugs.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Bugs/ files. Bonus images in Bugs+ subfolder."
+      },
+      "Clothes": {
+        "path": "assets/vocab/PD/clothes.json",
+        "image": "/assets/images/categories/Clothes/Clothes.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Clothes/ files. Bonus images in Clothes+ subfolder."
+      },
+      "Present Tense (5th Grade)": {
+        "path": "assets/vocab/PD/PresentTense_5thGrade.json",
+        "image": "/assets/images/categories/Present Tense/5th Grade/Buy.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Present Tense/5th Grade/ files"
+      },
+      "Present Tense (6th Grade)": {
+        "path": "assets/vocab/PD/PresentTense_6thGrade.json",
+        "image": "/assets/images/categories/Present Tense/6th Grade/Clean.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Present Tense/6th Grade/ files"
+      },
+      "Present Tense": {
+        "path": "assets/vocab/PD/PresentTense.json",
+        "image": "/assets/images/categories/Present Tense/5th Grade/Dance.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Present Tense/ files. Bonus images in Present Tense+ subfolder."
+      },
+      "Club Activities": {
+        "path": "assets/vocab/PD/ClubActivities.json",
+        "image": "/assets/images/categories/Club Activities/Club Activities.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Club Activities/ files. Bonus images in Club Activities+ subfolder."
+      },
+      "Directions": {
+        "path": "assets/vocab/PD/directions.json",
+        "image": "/assets/images/categories/Directions/Block.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Directions/ files"
+      },
+      "Activities": {
+        "path": "assets/vocab/PD/activities.json",
+        "image": "/assets/images/categories/Activities/Camping.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Activities/ files. Bonus images in Activities+ subfolder."
+      },
+      "Meals": {
+        "path": "assets/vocab/PD/meals.json",
+        "image": "/assets/images/categories/Meals/Meals.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Meals/ files. Bonus images in Meals+ subfolder."
+      },
+      "Ingredients": {
+        "path": "assets/vocab/PD/ingredients.json",
+        "image": "/assets/images/categories/Ingredients/Bacon.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Meat/ and Meat/Ingredients+ folders"
+      },
+      "Food": {
+        "path": "assets/vocab/PD/food.json",
+        "image": "/assets/images/categories/Food/Food.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Food/ files. Bonus images in Food+ subfolder."
+      },
+      "Drinks": {
+        "path": "assets/vocab/PD/drinks.json",
+        "image": "/assets/images/categories/Drinks/Drinks.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Drinks/ files. Bonus images in Drinks+ subfolder."
+      },
+      "Frequency": {
+        "path": "assets/vocab/PD/frequency.json",
+        "image": "/assets/images/categories/Frequency/Always.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Frequency/ files"
+      },
+      "Sea Animals": {
+        "path": "assets/vocab/PD/SeaAnimals.json",
+        "image": "/assets/images/categories/Sea Animals/Sea Animals.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Sea Animals/ files. Bonus images in Sea Animals+ subfolder."
+      },
+      "Seasons": {
+        "path": "assets/vocab/PD/seasons.json",
+        "image": "/assets/images/categories/Seasons/Seasons.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Seasons/ files"
+      },
+      "Annual Events": {
+        "path": "assets/vocab/PD/AnnualEvents.json",
+        "image": "/assets/images/categories/Annual Events/Birthday.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Annual Events/ files. Bonus images in Annual Events+ subfolder."
+      },
+      "Days of the Week": {
+        "path": "assets/vocab/PD/DaysOfTheWeek.json",
+        "image": "/assets/images/categories/Days of the Week/Days.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Days of the Week/ files"
+      },
+      "Problems with Living Things": {
+        "path": "assets/vocab/PD/ProblemsWithLivingThings.json",
+        "image": "/assets/images/categories/Problems with living things & what we can do/Forest Loss.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Problems with living things & what we can do/ files. Bonus images in + subfolder."
+      },
+      "People": {
+        "path": "assets/vocab/PD/people.json",
+        "image": "/assets/images/categories/People/Baby.jpg",
+        "notes": "Images should be updated to use assets/images/categories/People/ files"
+      },
+      "Past Tense": {
+        "path": "assets/vocab/PD/PastTense.json",
+        "image": "/assets/images/categories/Past Tense/Ate.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Past Tense/ files"
+      },
+      "Weather": {
+        "path": "assets/vocab/PD/weather.json",
+        "image": "/assets/images/categories/Weather/Weather.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Weather/ files"
+      },
+      "Things": {
+        "path": "assets/vocab/PD/things.json",
+        "image": "/assets/images/categories/Things Around You/Bag.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Things Around You/ files. Bonus images in Things Around You+ subfolder."
+      },
+      "Body": {
+        "path": "assets/vocab/PD/body.json/",
+        "image": "/assets/images/categories/Body/Body.jpg",
+        "notes": "Images should be updated to use assets/images/categories/Body/ files"
+      }
+    }
+  }
+}
