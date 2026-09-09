@@ -3,162 +3,40 @@
     ".read": false,
     ".write": false,
     "rooms": {
-      ".read": false,
-      ".write": false,
       "$roomId": {
         ".read": "auth != null && $roomId.matches(/^[A-Z0-9]{6,12}$/)",
         ".write": "auth != null && $roomId.matches(/^[A-Z0-9]{6,12}$/) && (
           (!data.exists() && newData.exists() && newData.child('ownerId').val() == auth.uid && newData.child('code').val() == $roomId) ||
-          (data.exists() && newData.exists() && newData.child('ownerId').val() == data.child('ownerId').val() && newData.child('code').val() == $roomId && newData.child('createdAt').val() == data.child('createdAt').val()) ||
+          (data.exists() && newData.exists() && newData.child('code').val() == $roomId) ||
           (data.exists() && !newData.exists())
         )",
         ".validate": "newData.hasChildren(['code', 'ownerId', 'createdAt', 'expiresAt', 'phase', 'settings', 'players'])",
-
         "code": {
           ".validate": "newData.isString() && newData.val() == $roomId"
         },
         "ownerId": {
-          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 128 && (!data.exists() || newData.val() == data.val())"
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 128"
         },
         "createdAt": {
-          ".validate": "newData.isNumber() && (!data.exists() || newData.val() == data.val())"
+          ".validate": "newData.isNumber()"
         },
         "expiresAt": {
-          ".validate": "newData.isNumber() && (!data.exists() ? (newData.val() > now - 86400000 && newData.val() < now + 604800000) : newData.val() == data.val())"
+          ".validate": "newData.isNumber()"
         },
         "phase": {
-          ".validate": "newData.isString() && (newData.val() == 'lobby' || newData.val() == 'choosing' || newData.val() == 'drawing' || newData.val() == 'gameOver')"
-        },
-        "round": {
-          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 50"
-        },
-        "drawerId": {
-          ".validate": "newData.isString() || newData.val() == null"
-        },
-        "hint": {
-          ".validate": "newData.isString() && newData.val().length <= 120"
-        },
-        "turnEndsAt": {
-          ".validate": "newData.isNumber() || newData.val() == null"
-        },
-        "lastEvent": {
-          ".validate": "newData.isString() && newData.val().length <= 40"
+          ".validate": "newData.isString()"
         },
         "settings": {
-          ".validate": "newData.hasChildren(['rounds', 'drawingTime', 'maxPlayers', 'deckId', 'deckName'])",
-          "rounds": {
-            ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 12"
-          },
-          "drawingTime": {
-            ".validate": "newData.isNumber() && newData.val() >= 30 && newData.val() <= 180"
-          },
-          "maxPlayers": {
-            ".validate": "newData.isNumber() && newData.val() >= 2 && newData.val() <= 60"
-          },
-          "wordsPerTurn": {
-            ".validate": "newData.isNumber() && newData.val() >= 2 && newData.val() <= 4"
-          },
-          "textbookId": {
-            ".validate": "newData.isString() && newData.val().length <= 80"
-          },
-          "textbookName": {
-            ".validate": "newData.isString() && newData.val().length <= 80"
-          },
-          "deckId": {
-            ".validate": "newData.isString() && newData.val().length <= 80"
-          },
-          "deckName": {
-            ".validate": "newData.isString() && newData.val().length <= 80"
-          }
+          ".validate": "newData.hasChildren(['rounds', 'drawingTime', 'maxPlayers', 'deckId', 'deckName'])"
         },
         "players": {
           "$playerId": {
-            ".validate": "newData.hasChildren(['name', 'score', 'connected'])",
-            "name": {
-              ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 30"
-            },
-            "score": {
-              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100000"
-            },
-            "connected": {
-              ".validate": "newData.isBoolean()"
-            },
-            "guessed": {
-              ".validate": "newData.isBoolean()"
-            },
-            "lastSeen": {
-              ".validate": "newData.isNumber()"
-            },
-            "leftAt": {
-              ".validate": "newData.isNumber()"
-            },
-            "lastAction": {
-              ".validate": "newData.isNumber()"
-            }
-          }
-        },
-        "board": {
-          "revision": {
-            ".validate": "newData.isNumber() && newData.val() >= 0"
-          },
-          "strokes": {
-            "$strokeId": {
-              ".validate": "newData.hasChildren(['type', 'authorId'])",
-              "type": {
-                ".validate": "newData.val() == 'stroke' || newData.val() == 'fill'"
-              },
-              "authorId": {
-                ".validate": "newData.isString() && newData.val().length <= 128"
-              },
-              "color": {
-                ".validate": "newData.isString() && newData.val().length <= 20"
-              },
-              "width": {
-                ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 64"
-              },
-              "x": {
-                ".validate": "newData.isNumber()"
-              },
-              "y": {
-                ".validate": "newData.isNumber()"
-              }
-            }
+            ".validate": "newData.hasChildren(['name', 'score', 'connected'])"
           }
         },
         "chat": {
           "$chatId": {
-            ".validate": "newData.hasChildren(['text', 'createdAt']) && newData.child('text').isString() && newData.child('text').val().length > 0 && newData.child('text').val().length <= 120",
-            "kind": {
-              ".validate": "newData.val() == 'chat' || newData.val() == 'correct' || newData.val() == 'incorrect' || newData.val() == 'system'"
-            },
-            "authorId": {
-              ".validate": "newData.isString() && newData.val().length <= 128"
-            },
-            "authorName": {
-              ".validate": "newData.isString() && newData.val().length <= 40"
-            },
-            "createdAt": {
-              ".validate": "newData.isNumber()"
-            }
-          }
-        },
-        "choice": {
-          "expiresAt": {
-            ".validate": "newData.isNumber()"
-          },
-          "options": {
-            "$optId": {
-              ".validate": "newData.hasChildren(['english']) && newData.child('english').isString() && newData.child('english').val().length <= 80"
-            }
-          }
-        },
-        "currentWord": {
-          ".validate": "newData.hasChildren(['english', 'normalized']) || newData.val() == null",
-          "english": {
-            ".validate": "newData.isString() && newData.val().length <= 80"
-          },
-          "normalized": {
-            ".validate": "newData.isString() && newData.val().length <= 80"
+            ".validate": "newData.hasChildren(['text', 'createdAt']) && newData.child('text').isString() && newData.child('text').val().length <= 120"
           }
         }
       }

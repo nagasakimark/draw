@@ -96,8 +96,10 @@ async function boot() {
   validateFirebaseConfig();
   const app = initializeApp(firebaseConfig);
   state.auth = getAuth(app);
-  state.db = getDatabase(app);
+  // Sign in before opening the database connection so RTDB gets the auth token.
   state.playerId = await ensureAnonymousAuth();
+  state.db = getDatabase(app);
+
   state.catalog = await loadCatalog();
 
   hydrateName();
@@ -397,6 +399,13 @@ async function createRoom() {
   }
 
   try {
+    const uid = state.auth.currentUser?.uid;
+    if (!uid) {
+      setNotice("認証に失敗しました。ページを再読み込みしてください。", true, "create");
+      return;
+    }
+    state.playerId = uid;
+
     const now = Date.now();
     let roomCode = null;
 
@@ -420,7 +429,7 @@ async function createRoom() {
 
       const room = {
         code: candidate,
-        ownerId: state.playerId,
+        ownerId: uid,
         createdAt: now,
         expiresAt: now + ROOM_TTL_MS,
         phase: "lobby",
@@ -437,14 +446,13 @@ async function createRoom() {
           deckName: deck.name
         },
         players: {
-          [state.playerId]: makePlayerRecord(name)
+          [uid]: makePlayerRecord(name)
         },
-        playerOrder: [state.playerId],
+        playerOrder: [uid],
         board: {
           revision: 0,
           strokes: {}
         },
-        chat: {},
         choice: {
           expiresAt: 0
         }
