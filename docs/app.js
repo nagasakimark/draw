@@ -81,7 +81,10 @@ const state = {
   advancing: false,
   tool: "pencil",
   color: "#000000",
-  brushSize: 8
+  brushSize: 8,
+  boardCache: null,
+  boardCacheRevision: null,
+  previewFrame: null
 };
 
 const ctx = els.board.getContext("2d");
@@ -813,6 +816,28 @@ function redrawBoard(board) {
   for (const stroke of strokes) {
     applyBoardAction(stroke);
   }
+  cacheCommittedBoard(board?.revision ?? 0);
+}
+
+function cacheCommittedBoard(revision) {
+  if (!state.boardCache) {
+    state.boardCache = document.createElement("canvas");
+  }
+  if (state.boardCache.width !== els.board.width || state.boardCache.height !== els.board.height) {
+    state.boardCache.width = els.board.width;
+    state.boardCache.height = els.board.height;
+  }
+  state.boardCache.getContext("2d").drawImage(els.board, 0, 0);
+  state.boardCacheRevision = revision;
+}
+
+function restoreCommittedBoard() {
+  if (!state.boardCache || state.boardCacheRevision == null) {
+    redrawBoard(state.roomData?.board || { strokes: {} });
+    return;
+  }
+  ctx.clearRect(0, 0, els.board.width, els.board.height);
+  ctx.drawImage(state.boardCache, 0, 0);
 }
 
 async function startGame() {
@@ -1043,8 +1068,12 @@ function onPointerMove(event) {
     return;
   }
   const point = getCanvasPoint(event);
+  const previous = state.activeStroke[state.activeStroke.length - 1];
   state.activeStroke.push(point);
-  previewLocalStroke();
+  // Draw only the newest segment. Never rebuild fills on every move.
+  if (previous) {
+    drawStrokeSegment(previous, point, getActiveDrawColor(), state.brushSize);
+  }
 }
 
 async function onPointerUp(event) {
@@ -1053,7 +1082,12 @@ async function onPointerUp(event) {
   }
   state.isDrawing = false;
   if (canDraw()) {
-    state.activeStroke.push(getCanvasPoint(event));
+    const point = getCanvasPoint(event);
+    const previous = state.activeStroke[state.activeStroke.length - 1];
+    state.activeStroke.push(point);
+    if (previous) {
+      drawStrokeSegment(previous, point, getActiveDrawColor(), state.brushSize);
+    }
     await commitStroke();
   }
   state.activeStroke = [];
@@ -1063,14 +1097,15 @@ function getActiveDrawColor() {
   return state.tool === "rubber" ? "#ffffff" : state.color;
 }
 
-function previewLocalStroke() {
-  redrawBoard(state.roomData?.board || { strokes: {} });
-  drawStroke({
-    type: "stroke",
-    color: getActiveDrawColor(),
-    width: state.brushSize,
-    points: state.activeStroke
-  });
+function drawStrokeSegment(from, to, color, width) {
+  ctx.strokeStyle = color || "#000000";
+  ctx.lineWidth = width || 8;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  ctx.beginPath();
+  ctx.moveTo(from[0], from[1]);
+  ctx.lineTo(to[0], to[1]);
+  ctx.stroke();
 }
 
 async function commitStroke() {
@@ -1191,40 +1226,70 @@ function floodFill(startX, startY, fillColorHex) {
   const height = els.board.height;
   const imageData = ctx.getImageData(0, 0, width, height);
   const data = imageData.data;
-  const x = Math.max(0, Math.min(width - 1, Math.round(startX)));
-  const y = Math.max(0, Math.min(height - 1, Math.round(startY)));
+  const x0 = Math.max(0, Math.min(width - 1, Math.round(startX)));
+  const y0 = Math.max(0, Math.min(height - 1, Math.round(startY)));
   const fill = hexToRgba(fillColorHex);
-  const startIndex = (y * width + x) * 4;
-  const target = [data[startIndex], data[startIndex + 1], data[startIndex + 2], data[startIndex + 3]];
+  const startIndex = (y0 * width + x0) * 4;
+  const tr = data[startIndex];
+  const tg = data[startIndex + 1];
+  const tb = data[startIndex + 2];
+  const ta = data[startIndex + 3];
 
-  if (colorsMatch(target, fill)) {
+  if (tr === fill[0] && tg === fill[1] && tb === fill[2] && ta === fill[3]) {
     return;
   }
 
-  const stack = [[x, y]];
-  while (stack.length > 0) {
-    const [cx, cy] = stack.pop();
-    const index = (cy * width + cx) * 4;
-    if (!colorsMatch([data[index], data[index + 1], data[index + 2], data[index + 3]], target)) {
-      continue;
-    }
+  const match = (index) =>
+    data[index] === tr && data[index + 1] === tg && data[index + 2] === tb && data[index + 3] === ta;
 
+  const paint = (index) => {
     data[index] = fill[0];
     data[index + 1] = fill[1];
     data[index + 2] = fill[2];
     data[index + 3] = 255;
+  };
 
-    if (cx > 0) {
-      stack.push([cx - 1, cy]);
+  // Scanline fill — much faster than per-pixel stack for large areas.
+  const stack = [[x0, y0]];
+  while (stack.length > 0) {
+    let [x, y] = stack.pop();
+    let index = (y * width + x) * 4;
+    while (x > 0 && match(index - 4)) {
+      x -= 1;
+      index -= 4;
     }
-    if (cx < width - 1) {
-      stack.push([cx + 1, cy]);
-    }
-    if (cy > 0) {
-      stack.push([cx, cy - 1]);
-    }
-    if (cy < height - 1) {
-      stack.push([cx, cy + 1]);
+
+    let spanUp = false;
+    let spanDown = false;
+    while (x < width && match(index)) {
+      paint(index);
+
+      if (y > 0) {
+        const up = index - width * 4;
+        if (match(up)) {
+          if (!spanUp) {
+            stack.push([x, y - 1]);
+            spanUp = true;
+          }
+        } else {
+          spanUp = false;
+        }
+      }
+
+      if (y < height - 1) {
+        const down = index + width * 4;
+        if (match(down)) {
+          if (!spanDown) {
+            stack.push([x, y + 1]);
+            spanDown = true;
+          }
+        } else {
+          spanDown = false;
+        }
+      }
+
+      x += 1;
+      index += 4;
     }
   }
 
