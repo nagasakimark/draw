@@ -115,11 +115,36 @@ async function boot() {
 }
 
 async function ensureAnonymousAuth() {
+  await state.auth.authStateReady();
   if (state.auth.currentUser?.uid) {
     return state.auth.currentUser.uid;
   }
-  const result = await signInAnonymously(state.auth);
-  return result.user.uid;
+  try {
+    const result = await signInAnonymously(state.auth);
+    await state.auth.authStateReady();
+    return result.user.uid;
+  } catch (error) {
+    const code = error?.code || "";
+    if (code === "auth/unauthorized-domain") {
+      throw new Error(
+        "このサイトのドメインが Firebase で許可されていません。Firebase Console → Authentication → Settings → Authorized domains に nagasakimark.github.io を追加してください。"
+      );
+    }
+    if (code === "auth/operation-not-allowed") {
+      throw new Error(
+        "Anonymous ログインが無効です。Firebase Console → Authentication → Sign-in method で Anonymous を有効にしてください。"
+      );
+    }
+    throw new Error(`ログインに失敗しました: ${error.message || code || error}`);
+  }
+}
+
+function explainFirebaseError(error, fallback) {
+  const message = String(error?.message || error || "");
+  if (message.includes("PERMISSION_DENIED") || error?.code === "PERMISSION_DENIED") {
+    return "Firebase の権限エラーです。① Anonymous 認証を有効化 ② Authorized domains に nagasakimark.github.io を追加 ③ Realtime Database の Rules に firebase.rules.json を Publish してください。";
+  }
+  return fallback || message;
 }
 
 function validateFirebaseConfig() {
@@ -341,80 +366,85 @@ async function createRoom() {
     return;
   }
 
-  const now = Date.now();
-  let roomCode = null;
+  try {
+    const now = Date.now();
+    let roomCode = null;
 
-  for (let attempt = 0; attempt < ROOM_CREATE_ATTEMPTS; attempt += 1) {
-    const candidate = makeRoomCode();
-    const roomRef = ref(state.db, `rooms/${candidate}`);
-    const existing = await get(roomRef);
-    if (existing.exists()) {
-      const old = existing.val();
-      if (isRoomExpired(old) || !hasConnectedPlayers(old)) {
-        try {
-          await remove(roomRef);
-        } catch (error) {
-          console.warn("Failed to clear stale room", candidate, error);
+    for (let attempt = 0; attempt < ROOM_CREATE_ATTEMPTS; attempt += 1) {
+      const candidate = makeRoomCode();
+      const roomRef = ref(state.db, `rooms/${candidate}`);
+      const existing = await get(roomRef);
+      if (existing.exists()) {
+        const old = existing.val();
+        if (isRoomExpired(old) || !hasConnectedPlayers(old)) {
+          try {
+            await remove(roomRef);
+          } catch (error) {
+            console.warn("Failed to clear stale room", candidate, error);
+            continue;
+          }
+        } else {
           continue;
         }
-      } else {
-        continue;
+      }
+
+      const room = {
+        code: candidate,
+        ownerId: state.playerId,
+        createdAt: now,
+        expiresAt: now + ROOM_TTL_MS,
+        phase: "lobby",
+        round: 0,
+        drawerId: "",
+        settings: {
+          rounds: clampNumber(els.roundsInput.value, 1, 12, 4),
+          drawingTime: clampNumber(els.drawingTimeInput.value, 30, 180, 90),
+          maxPlayers: clampNumber(els.maxPlayersInput.value, 2, 60, 20),
+          wordsPerTurn: WORDS_PER_TURN,
+          textbookId: textbook.id,
+          textbookName: textbook.name,
+          deckId: deck.id,
+          deckName: deck.name
+        },
+        players: {
+          [state.playerId]: makePlayerRecord(name)
+        },
+        playerOrder: [state.playerId],
+        board: {
+          revision: 0,
+          strokes: {}
+        },
+        chat: {},
+        choice: {
+          expiresAt: 0
+        }
+      };
+
+      const tx = await runTransaction(roomRef, (current) => {
+        if (current) {
+          return;
+        }
+        return room;
+      });
+
+      if (tx.committed) {
+        roomCode = candidate;
+        break;
       }
     }
 
-    const room = {
-      code: candidate,
-      ownerId: state.playerId,
-      createdAt: now,
-      expiresAt: now + ROOM_TTL_MS,
-      phase: "lobby",
-      round: 0,
-      drawerId: "",
-      settings: {
-        rounds: clampNumber(els.roundsInput.value, 1, 12, 4),
-        drawingTime: clampNumber(els.drawingTimeInput.value, 30, 180, 90),
-        maxPlayers: clampNumber(els.maxPlayersInput.value, 2, 60, 20),
-        wordsPerTurn: WORDS_PER_TURN,
-        textbookId: textbook.id,
-        textbookName: textbook.name,
-        deckId: deck.id,
-        deckName: deck.name
-      },
-      players: {
-        [state.playerId]: makePlayerRecord(name)
-      },
-      playerOrder: [state.playerId],
-      board: {
-        revision: 0,
-        strokes: {}
-      },
-      chat: {},
-      choice: {
-        expiresAt: 0
-      }
-    };
-
-    const tx = await runTransaction(roomRef, (current) => {
-      if (current) {
-        return;
-      }
-      return room;
-    });
-
-    if (tx.committed) {
-      roomCode = candidate;
-      break;
+    if (!roomCode) {
+      setNotice("部屋をつくれませんでした。もう一度ためしてください。", true, "create");
+      return;
     }
-  }
 
-  if (!roomCode) {
-    setNotice("部屋をつくれませんでした。もう一度ためしてください。", true, "create");
-    return;
+    await attachPresence(roomCode);
+    updateHash(roomCode);
+    await subscribeToRoom(roomCode);
+  } catch (error) {
+    console.error(error);
+    setNotice(explainFirebaseError(error, "部屋をつくれませんでした。"), true, "create");
   }
-
-  await attachPresence(roomCode);
-  updateHash(roomCode);
-  await subscribeToRoom(roomCode);
 }
 
 async function joinRoom(roomCodeRaw) {
@@ -433,50 +463,55 @@ async function joinRoom(roomCodeRaw) {
     return;
   }
 
-  const roomRef = ref(state.db, `rooms/${roomCode}`);
-  const snapshot = await get(roomRef);
-  if (!snapshot.exists()) {
-    setNotice(`部屋 ${roomCode} は見つかりません。`, true, "join");
-    return;
-  }
-
-  const room = snapshot.val();
-  if (isRoomExpired(room)) {
-    try {
-      await remove(roomRef);
-    } catch (error) {
-      console.warn("Failed to remove expired room", error);
+  try {
+    const roomRef = ref(state.db, `rooms/${roomCode}`);
+    const snapshot = await get(roomRef);
+    if (!snapshot.exists()) {
+      setNotice(`部屋 ${roomCode} は見つかりません。`, true, "join");
+      return;
     }
-    setNotice("この部屋の期限がきれました。新しい部屋をつくってください。", true, "join");
-    return;
-  }
 
-  if (!hasConnectedPlayers(room) && room.ownerId !== state.playerId) {
-    try {
-      await remove(roomRef);
-    } catch (error) {
-      console.warn("Failed to remove empty room", error);
+    const room = snapshot.val();
+    if (isRoomExpired(room)) {
+      try {
+        await remove(roomRef);
+      } catch (error) {
+        console.warn("Failed to remove expired room", error);
+      }
+      setNotice("この部屋の期限がきれました。新しい部屋をつくってください。", true, "join");
+      return;
     }
-    setNotice("この部屋にはもう誰もいません。新しい部屋をつくってください。", true, "join");
-    return;
-  }
 
-  const players = room.players || {};
-  const connectedCount = getConnectedPlayers(room).length;
-  if (!players[state.playerId] && connectedCount >= (room.settings?.maxPlayers || 20)) {
-    setNotice("この部屋は満員です。", true, "join");
-    return;
-  }
+    if (!hasConnectedPlayers(room) && room.ownerId !== state.playerId) {
+      try {
+        await remove(roomRef);
+      } catch (error) {
+        console.warn("Failed to remove empty room", error);
+      }
+      setNotice("この部屋にはもう誰もいません。新しい部屋をつくってください。", true, "join");
+      return;
+    }
 
-  const updates = {};
-  updates[`rooms/${roomCode}/players/${state.playerId}`] = makePlayerRecord(name, players[state.playerId]?.score || 0);
-  if (!toList(room.playerOrder).includes(state.playerId)) {
-    updates[`rooms/${roomCode}/playerOrder`] = [...toList(room.playerOrder), state.playerId];
+    const players = room.players || {};
+    const connectedCount = getConnectedPlayers(room).length;
+    if (!players[state.playerId] && connectedCount >= (room.settings?.maxPlayers || 20)) {
+      setNotice("この部屋は満員です。", true, "join");
+      return;
+    }
+
+    const updates = {};
+    updates[`rooms/${roomCode}/players/${state.playerId}`] = makePlayerRecord(name, players[state.playerId]?.score || 0);
+    if (!toList(room.playerOrder).includes(state.playerId)) {
+      updates[`rooms/${roomCode}/playerOrder`] = [...toList(room.playerOrder), state.playerId];
+    }
+    await update(ref(state.db), updates);
+    await attachPresence(roomCode);
+    updateHash(roomCode);
+    await subscribeToRoom(roomCode);
+  } catch (error) {
+    console.error(error);
+    setNotice(explainFirebaseError(error, "部屋にはいれませんでした。"), true, "join");
   }
-  await update(ref(state.db), updates);
-  await attachPresence(roomCode);
-  updateHash(roomCode);
-  await subscribeToRoom(roomCode);
 }
 
 async function subscribeToRoom(roomCode) {
