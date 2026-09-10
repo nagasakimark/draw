@@ -817,8 +817,11 @@ function renderGameOver(room) {
   els.gameOverLastWord.textContent = lastWord?.english
     ? `さいごのことば: ${lastWord.english}`
     : "";
-  els.gameOverActions.hidden = !isOwner;
+  els.gameOverActions.hidden = false;
   els.gameOverWaiting.hidden = isOwner;
+  els.playAgainButton.hidden = !isOwner;
+  els.changeDeckButton.hidden = !isOwner;
+  els.quitGameButton.hidden = false;
 
   const ranked = getPlayersArray(room).sort((a, b) => (b.score || 0) - (a.score || 0));
   els.leaderboardList.replaceChildren(
