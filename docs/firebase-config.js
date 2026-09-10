@@ -7,3 +7,7 @@ export const firebaseConfig = {
   messagingSenderId: "612328402353",
   appId: "1:612328402353:web:a2aa68e00fb19fc275e190"
 };
+
+// Optional TURN for strict school Wi-Fi. Leave as STUN-only by default.
+// Example: [{ urls: "stun:stun.l.google.com:19302" }, { urls: "turn:YOUR_TURN_HOST:3478", username: "...", credential: "..." }]
+export const iceServers = [{ urls: "stun:stun.l.google.com:19302" }];

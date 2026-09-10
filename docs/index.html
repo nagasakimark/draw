@@ -35,6 +35,12 @@
               <button id="show-create-button" type="button" class="btn-play btn-create">部屋をつくる</button>
               <button id="show-join-button" type="button" class="btn-play btn-join">部屋にはいる</button>
             </div>
+
+            <div class="home-qr-block">
+              <p class="field-label">みんなでひらく</p>
+              <canvas id="home-site-qr" class="qr-canvas" width="180" height="180" aria-label="サイトのQRコード"></canvas>
+              <p class="qr-caption">このQRをスキャンすると、ゲームのトップページがひらきます</p>
+            </div>
           </section>
 
           <section id="home-create" class="home-create-layout" hidden>
@@ -100,6 +106,7 @@
         <div class="topbar-title">
           <span class="room-code-label">部屋コード:</span>
           <div id="room-title" class="room-code-display">----</div>
+          <button id="show-room-qr-button" type="button" class="qr-invite-button" hidden>QRで招待</button>
         </div>
         <div class="topbar-box topbar-timer">
           <img class="topbar-icon" src="./resources/clock.svg" alt="">
@@ -127,6 +134,31 @@
             <div class="choice-modal">
               <h3>単語を選んでください</h3>
               <div id="word-choice-grid" class="card-grid word-grid"></div>
+            </div>
+          </div>
+
+          <div id="game-over-panel" class="choice-overlay" hidden>
+            <div class="choice-modal game-over-modal">
+              <p class="home-kicker">けっかはっぴょう</p>
+              <h3>リーダーボード</h3>
+              <p id="game-over-last-word" class="game-over-last-word"></p>
+              <ol id="leaderboard-list" class="leaderboard-list"></ol>
+              <p id="game-over-waiting" class="home-lead" hidden>ホストがはじめるのを待っています</p>
+              <div id="game-over-actions" class="entry-actions entry-actions-stack game-over-actions" hidden>
+                <button id="play-again-button" type="button" class="btn-play btn-create">もういちど</button>
+                <button id="change-deck-button" type="button" class="btn-play btn-join">ことばを変える</button>
+                <button id="quit-game-button" type="button" class="btn-play btn-back">やめる</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="change-deck-panel" class="choice-overlay" hidden>
+            <div class="choice-modal">
+              <h3>カテゴリーを選ぼう</h3>
+              <div id="change-deck-grid" class="card-grid word-grid"></div>
+              <div class="entry-actions">
+                <button id="cancel-change-deck-button" type="button" class="btn-play btn-back">もどる</button>
+              </div>
             </div>
           </div>
 
@@ -236,6 +268,32 @@
     </section>
   </div>
 
+  <div id="room-qr-modal" class="choice-overlay app-modal" hidden>
+    <div class="choice-modal qr-modal">
+      <h3>QRで招待</h3>
+      <p class="home-lead">スキャンすると、この部屋にはいれます</p>
+      <canvas id="room-join-qr" class="qr-canvas" width="220" height="220" aria-label="部屋のQRコード"></canvas>
+      <p id="room-qr-link" class="qr-caption"></p>
+      <button id="close-room-qr-button" type="button" class="btn-play btn-back">とじる</button>
+    </div>
+  </div>
+
+  <div id="name-gate-modal" class="choice-overlay app-modal" hidden>
+    <div class="choice-modal">
+      <h3>なまえをいれてね</h3>
+      <p class="home-lead">部屋にはいるまえに、なまえをかいてください</p>
+      <p id="name-gate-error" class="notice notice-error" hidden></p>
+      <label class="field-block">
+        <span class="field-label">あなたの なまえ</span>
+        <input id="name-gate-input" type="text" maxlength="30" placeholder="例：たろう">
+      </label>
+      <div class="entry-actions entry-actions-stack">
+        <button id="name-gate-join-button" type="button" class="btn-play btn-join">はいる！</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
   <script type="module" src="./app.js"></script>
 </body>
 </html>

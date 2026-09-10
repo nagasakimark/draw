@@ -4,14 +4,17 @@ import {
   getDatabase,
   ref,
   get,
+  set,
   update,
   remove,
   push,
   onValue,
+  onChildAdded,
   runTransaction,
   onDisconnect
 } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
-import { firebaseConfig } from "./firebase-config.js";
+import { firebaseConfig, iceServers } from "./firebase-config.js";
+import { createWebRtcDraw } from "./webrtc-draw.js";
 
 const PICTURE_DICTIONARY_NAME = "My Picture Dictionary";
 const WORDS_PER_TURN = 3;
@@ -58,7 +61,28 @@ const els = {
   board: document.getElementById("board"),
   toolbox: document.getElementById("toolbox"),
   clearBoardButton: document.getElementById("clear-board-button"),
-  undoButton: document.getElementById("undo-button")
+  undoButton: document.getElementById("undo-button"),
+  homeSiteQr: document.getElementById("home-site-qr"),
+  showRoomQrButton: document.getElementById("show-room-qr-button"),
+  roomQrModal: document.getElementById("room-qr-modal"),
+  roomJoinQr: document.getElementById("room-join-qr"),
+  roomQrLink: document.getElementById("room-qr-link"),
+  closeRoomQrButton: document.getElementById("close-room-qr-button"),
+  nameGateModal: document.getElementById("name-gate-modal"),
+  nameGateInput: document.getElementById("name-gate-input"),
+  nameGateError: document.getElementById("name-gate-error"),
+  nameGateJoinButton: document.getElementById("name-gate-join-button"),
+  gameOverPanel: document.getElementById("game-over-panel"),
+  gameOverLastWord: document.getElementById("game-over-last-word"),
+  leaderboardList: document.getElementById("leaderboard-list"),
+  gameOverWaiting: document.getElementById("game-over-waiting"),
+  gameOverActions: document.getElementById("game-over-actions"),
+  playAgainButton: document.getElementById("play-again-button"),
+  changeDeckButton: document.getElementById("change-deck-button"),
+  quitGameButton: document.getElementById("quit-game-button"),
+  changeDeckPanel: document.getElementById("change-deck-panel"),
+  changeDeckGrid: document.getElementById("change-deck-grid"),
+  cancelChangeDeckButton: document.getElementById("cancel-change-deck-button")
 };
 
 const state = {
@@ -83,7 +107,10 @@ const state = {
   color: "#000000",
   brushSize: 8,
   boardCache: null,
-  boardCacheRevision: null
+  boardCacheRevision: null,
+  webrtc: null,
+  pendingJoinCode: null,
+  webrtcApplyingRemote: false
 };
 
 const ctx = els.board.getContext("2d");
@@ -107,13 +134,19 @@ async function boot() {
   hydrateName();
   renderCategories();
   bindEvents();
+  renderHomeSiteQr();
   showHomeView("entry");
 
   const hashRoom = readRoomCodeFromHash();
   if (hashRoom) {
     els.joinRoomInput.value = hashRoom;
-    showHomeView("join");
-    await joinRoom(hashRoom);
+    const savedName = localStorage.getItem("classroom-scribble-name") || "";
+    if (savedName.trim()) {
+      els.playerName.value = savedName.trim();
+      await joinRoom(hashRoom);
+    } else {
+      openNameGate(hashRoom);
+    }
   }
   updateRoomMode();
 }
@@ -281,6 +314,27 @@ function bindEvents() {
   });
   els.clearBoardButton.addEventListener("click", clearBoard);
   els.undoButton.addEventListener("click", undoLastStroke);
+  els.showRoomQrButton.addEventListener("click", showRoomQrModal);
+  els.closeRoomQrButton.addEventListener("click", () => {
+    els.roomQrModal.hidden = true;
+  });
+  els.roomQrModal.addEventListener("click", (event) => {
+    if (event.target === els.roomQrModal) {
+      els.roomQrModal.hidden = true;
+    }
+  });
+  els.nameGateJoinButton.addEventListener("click", submitNameGate);
+  els.nameGateInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      submitNameGate();
+    }
+  });
+  els.playAgainButton.addEventListener("click", playAgain);
+  els.changeDeckButton.addEventListener("click", openChangeDeckPanel);
+  els.quitGameButton.addEventListener("click", leaveRoom);
+  els.cancelChangeDeckButton.addEventListener("click", () => {
+    els.changeDeckPanel.hidden = true;
+  });
 
   document.querySelectorAll(".color-button").forEach((button) => {
     button.addEventListener("click", () => {
@@ -317,7 +371,12 @@ function bindEvents() {
   window.addEventListener("hashchange", async () => {
     const targetRoom = readRoomCodeFromHash();
     if (targetRoom && targetRoom !== state.roomCode) {
-      showHomeView("join");
+      const savedName = (localStorage.getItem("classroom-scribble-name") || els.playerName.value || "").trim();
+      if (!savedName) {
+        openNameGate(targetRoom);
+        return;
+      }
+      els.playerName.value = savedName;
       await joinRoom(targetRoom);
     }
   });
@@ -732,13 +791,47 @@ function renderRoom() {
 
   renderChat(room);
   renderWordChoices(room);
+  renderGameOver(room);
   renderBoard(room.board);
   startOrRefreshTimer();
 
+  els.showRoomQrButton.hidden = !isOwner;
   if (me && me.name !== els.playerName.value.trim()) {
     els.playerName.value = me.name;
   }
   updateRoomMode();
+  ensureWebRtcSession();
+}
+
+function renderGameOver(room) {
+  const isGameOver = room.phase === "gameOver";
+  els.gameOverPanel.hidden = !isGameOver;
+  if (!isGameOver) {
+    els.changeDeckPanel.hidden = true;
+    els.leaderboardList.replaceChildren();
+    return;
+  }
+
+  const isOwner = room.ownerId === state.playerId;
+  const lastWord = room.lastWord || room.currentWord;
+  els.gameOverLastWord.textContent = lastWord?.english
+    ? `さいごのことば: ${lastWord.english}`
+    : "";
+  els.gameOverActions.hidden = !isOwner;
+  els.gameOverWaiting.hidden = isOwner;
+
+  const ranked = getPlayersArray(room).sort((a, b) => (b.score || 0) - (a.score || 0));
+  els.leaderboardList.replaceChildren(
+    ...ranked.map((player, index) => {
+      const row = document.createElement("li");
+      if (index === 0) {
+        row.classList.add("rank-1");
+      }
+      const crown = index === 0 ? `<span class="leaderboard-crown" aria-hidden="true">👑</span>` : `<span>${index + 1}</span>`;
+      row.innerHTML = `${crown}<span>${escapeHtml(player.name)}</span><strong>${player.score || 0}点</strong>`;
+      return row;
+    })
+  );
 }
 
 function renderWordChoices(room) {
@@ -802,6 +895,11 @@ function renderBoard(board) {
   if (revision === state.renderedBoardRevision) {
     return;
   }
+  // While WebRTC is live, peers already see strokes; still apply RTDB checkpoints
+  // when not mid-stroke so late join / reconnect stay consistent.
+  if (state.webrtc?.isLive() && state.isDrawing) {
+    return;
+  }
   state.renderedBoardRevision = revision;
   redrawBoard(board);
 }
@@ -837,6 +935,83 @@ async function startGame() {
   await advanceToNextTurn("start");
 }
 
+async function resetMatchScoresAndBoard(extraUpdates = {}) {
+  if (!state.roomCode || state.roomData?.ownerId !== state.playerId) {
+    return;
+  }
+  const roomRef = ref(state.db, `rooms/${state.roomCode}`);
+  await runTransaction(roomRef, (room) => {
+    if (!room || room.ownerId !== state.playerId) {
+      return room;
+    }
+    for (const playerId of Object.keys(room.players || {})) {
+      room.players[playerId].score = 0;
+      room.players[playerId].guessed = false;
+    }
+    room.round = 0;
+    room.drawerId = "";
+    room.phase = "lobby";
+    room.choice = { expiresAt: 0 };
+    room.currentWord = null;
+    room.hint = "";
+    room.turnEndsAt = null;
+    room.board = { revision: (room.board?.revision || 0) + 1, strokes: {} };
+    room.chat = {};
+    Object.assign(room, extraUpdates);
+    return room;
+  });
+}
+
+async function playAgain() {
+  if (!state.roomCode || state.roomData?.ownerId !== state.playerId) {
+    return;
+  }
+  els.changeDeckPanel.hidden = true;
+  await resetMatchScoresAndBoard();
+  await advanceToNextTurn("start");
+}
+
+function openChangeDeckPanel() {
+  if (!state.roomCode || state.roomData?.ownerId !== state.playerId) {
+    return;
+  }
+  const textbook = state.catalog?.textbooks?.[0];
+  if (!textbook) {
+    return;
+  }
+  els.changeDeckPanel.hidden = false;
+  els.changeDeckGrid.replaceChildren(
+    ...textbook.decks.map((deck) =>
+      buildCard(
+        deck.name,
+        deck.image,
+        `${deck.words.length} 語`,
+        deck.id === (state.roomData.settings?.deckId || state.selectedDeckId),
+        () => changeDeckAndRestart(deck)
+      )
+    )
+  );
+}
+
+async function changeDeckAndRestart(deck) {
+  if (!state.roomCode || state.roomData?.ownerId !== state.playerId || !deck) {
+    return;
+  }
+  state.selectedDeckId = deck.id;
+  els.changeDeckPanel.hidden = true;
+  const textbook = state.catalog.textbooks[0];
+  await resetMatchScoresAndBoard({
+    settings: {
+      ...(state.roomData.settings || {}),
+      deckId: deck.id,
+      deckName: deck.name,
+      textbookId: textbook?.id || "",
+      textbookName: textbook?.name || PICTURE_DICTIONARY_NAME
+    }
+  });
+  await advanceToNextTurn("start");
+}
+
 async function advanceToNextTurn(reason) {
   const roomRef = ref(state.db, `rooms/${state.roomCode}`);
   const preparedOptions = pickRandomWords(getRoomDeckWords(state.roomData), WORDS_PER_TURN).map(slimWord);
@@ -867,6 +1042,9 @@ async function advanceToNextTurn(reason) {
       room.phase = "gameOver";
       room.drawerId = "";
       room.choice = { expiresAt: 0 };
+      if (room.currentWord) {
+        room.lastWord = room.currentWord;
+      }
       room.currentWord = null;
       room.hint = "";
       room.turnEndsAt = null;
@@ -1044,6 +1222,9 @@ function onPointerDown(event) {
 
   if (state.tool === "fill") {
     const point = getCanvasPoint(event);
+    floodFill(point[0], point[1], state.color);
+    cacheCommittedBoard(state.boardCacheRevision ?? state.renderedBoardRevision ?? 0);
+    sendDrawLive({ t: "fill", c: state.color, x: point[0], y: point[1] });
     commitFill(point[0], point[1]);
     return;
   }
@@ -1062,7 +1243,18 @@ function onPointerMove(event) {
   state.activeStroke.push(point);
   // Draw only the newest segment. Never rebuild fills on every move.
   if (previous) {
-    drawStrokeSegment(previous, point, getActiveDrawColor(), state.brushSize);
+    const color = getActiveDrawColor();
+    const width = state.brushSize;
+    drawStrokeSegment(previous, point, color, width);
+    sendDrawLive({
+      t: "seg",
+      c: color,
+      w: width,
+      x1: previous[0],
+      y1: previous[1],
+      x2: point[0],
+      y2: point[1]
+    });
   }
 }
 
@@ -1076,7 +1268,18 @@ async function onPointerUp(event) {
     const previous = state.activeStroke[state.activeStroke.length - 1];
     state.activeStroke.push(point);
     if (previous) {
-      drawStrokeSegment(previous, point, getActiveDrawColor(), state.brushSize);
+      const color = getActiveDrawColor();
+      const width = state.brushSize;
+      drawStrokeSegment(previous, point, color, width);
+      sendDrawLive({
+        t: "seg",
+        c: color,
+        w: width,
+        x1: previous[0],
+        y1: previous[1],
+        x2: point[0],
+        y2: point[1]
+      });
     }
     await commitStroke();
   }
@@ -1153,6 +1356,10 @@ async function clearBoard() {
   if (!canDraw() || !state.roomCode) {
     return;
   }
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, els.board.width, els.board.height);
+  cacheCommittedBoard((state.boardCacheRevision || 0) + 1);
+  sendDrawLive({ t: "clear" });
   const roomRef = ref(state.db, `rooms/${state.roomCode}`);
   await runTransaction(roomRef, (room) => {
     if (!room || room.drawerId !== state.playerId) {
@@ -1167,6 +1374,7 @@ async function undoLastStroke() {
   if (!canDraw() || !state.roomCode) {
     return;
   }
+  sendDrawLive({ t: "undo" });
   const roomRef = ref(state.db, `rooms/${state.roomCode}`);
   await runTransaction(roomRef, (room) => {
     if (!room || room.drawerId !== state.playerId) {
@@ -1301,6 +1509,7 @@ function hexToRgba(hex) {
 
 async function leaveRoom() {
   const roomCode = state.roomCode;
+  await stopWebRtcSession();
   if (roomCode && state.playerId) {
     await cancelDisconnectHandlers();
     try {
@@ -1329,6 +1538,7 @@ async function leaveRoom() {
 }
 
 function clearRoomState(message) {
+  stopWebRtcSession();
   if (state.roomUnsubscribe) {
     state.roomUnsubscribe();
     state.roomUnsubscribe = null;
@@ -1340,6 +1550,10 @@ function clearRoomState(message) {
   state.roomDisconnect = null;
   els.leaveRoomButton.hidden = true;
   els.wordChoicePanel.hidden = true;
+  els.gameOverPanel.hidden = true;
+  els.changeDeckPanel.hidden = true;
+  els.roomQrModal.hidden = true;
+  els.showRoomQrButton.hidden = true;
   els.toolbox.hidden = true;
   els.roomTitle.textContent = "----";
   els.playersList.replaceChildren();
@@ -1691,6 +1905,176 @@ function updateRoomMode() {
   document.body.classList.toggle("in-room", inRoom);
   els.homeScreen.hidden = inRoom;
   els.gameScreen.hidden = !inRoom;
+}
+
+function siteUrl() {
+  return `${location.origin}${location.pathname}`;
+}
+
+function roomJoinUrl(roomCode) {
+  return `${siteUrl()}#${roomCode}`;
+}
+
+function renderQr(canvas, text) {
+  if (!canvas || typeof QRCode === "undefined") {
+    return;
+  }
+  QRCode.toCanvas(
+    canvas,
+    text,
+    {
+      width: canvas.width || 180,
+      margin: 1,
+      color: {
+        dark: "#1b2430",
+        light: "#ffffff"
+      }
+    },
+    (error) => {
+      if (error) {
+        console.warn("QR render failed", error);
+      }
+    }
+  );
+}
+
+function renderHomeSiteQr() {
+  renderQr(els.homeSiteQr, siteUrl());
+}
+
+function showRoomQrModal() {
+  if (!state.roomCode) {
+    return;
+  }
+  const link = roomJoinUrl(state.roomCode);
+  els.roomQrLink.textContent = link;
+  renderQr(els.roomJoinQr, link);
+  els.roomQrModal.hidden = false;
+}
+
+function openNameGate(roomCode) {
+  state.pendingJoinCode = roomCode.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  els.joinRoomInput.value = state.pendingJoinCode;
+  els.nameGateError.hidden = true;
+  els.nameGateInput.value = els.playerName.value || "";
+  els.nameGateModal.hidden = false;
+  els.nameGateInput.focus();
+}
+
+async function submitNameGate() {
+  const name = els.nameGateInput.value.trim();
+  if (!name) {
+    els.nameGateError.hidden = false;
+    els.nameGateError.textContent = "なまえをいれてね";
+    return;
+  }
+  els.playerName.value = name;
+  persistName();
+  const code = state.pendingJoinCode;
+  els.nameGateModal.hidden = true;
+  state.pendingJoinCode = null;
+  if (code) {
+    await joinRoom(code);
+  }
+}
+
+function sendDrawLive(msg) {
+  if (!state.webrtc) {
+    return false;
+  }
+  return state.webrtc.send(msg);
+}
+
+function handleWebRtcDrawMessage(msg) {
+  if (!msg || state.webrtcApplyingRemote) {
+    return;
+  }
+  // Ignore echo while we are the active drawer painting locally.
+  if (canDraw() && (msg.t === "seg" || msg.t === "fill")) {
+    return;
+  }
+  state.webrtcApplyingRemote = true;
+  try {
+    if (msg.t === "seg") {
+      drawStrokeSegment([msg.x1, msg.y1], [msg.x2, msg.y2], msg.c, msg.w);
+      return;
+    }
+    if (msg.t === "fill") {
+      floodFill(msg.x, msg.y, msg.c || "#000000");
+      cacheCommittedBoard(state.boardCacheRevision ?? 0);
+      return;
+    }
+    if (msg.t === "clear") {
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, els.board.width, els.board.height);
+      cacheCommittedBoard((state.boardCacheRevision || 0) + 1);
+      return;
+    }
+    if (msg.t === "undo") {
+      const board = state.roomData?.board;
+      if (!board?.strokes) {
+        return;
+      }
+      const keys = Object.keys(board.strokes).sort((a, b) => a.localeCompare(b));
+      if (keys.length === 0) {
+        return;
+      }
+      const clone = {
+        revision: (board.revision || 0) + 1,
+        strokes: { ...board.strokes }
+      };
+      delete clone.strokes[keys[keys.length - 1]];
+      state.renderedBoardRevision = null;
+      redrawBoard(clone);
+      return;
+    }
+    if (msg.t === "sync" && msg.board) {
+      state.renderedBoardRevision = null;
+      redrawBoard(msg.board);
+      state.renderedBoardRevision = msg.board.revision ?? state.renderedBoardRevision;
+    }
+  } finally {
+    state.webrtcApplyingRemote = false;
+  }
+}
+
+function ensureWebRtcSession() {
+  if (!state.roomCode || !state.playerId || !state.db) {
+    return;
+  }
+  if (state.webrtc && state.webrtc.roomCode === state.roomCode) {
+    return;
+  }
+  stopWebRtcSession();
+  const roomCode = state.roomCode;
+  const session = createWebRtcDraw({
+    db: state.db,
+    ref,
+    set,
+    remove,
+    push,
+    onValue,
+    onChildAdded,
+    roomCode,
+    playerId: state.playerId,
+    getIsHost: () => state.roomData?.ownerId === state.playerId,
+    getPlayerName: () => readPlayerName() || "Player",
+    iceServers,
+    onDrawMessage: handleWebRtcDrawMessage,
+    getSyncPayload: () => state.roomData?.board || { revision: 0, strokes: {} }
+  });
+  session.roomCode = roomCode;
+  state.webrtc = session;
+  session.start().catch((error) => console.warn("WebRTC start failed", error));
+}
+
+function stopWebRtcSession() {
+  if (!state.webrtc) {
+    return Promise.resolve();
+  }
+  const session = state.webrtc;
+  state.webrtc = null;
+  return session.stop().catch((error) => console.warn("WebRTC stop failed", error));
 }
 
 function escapeHtml(value) {

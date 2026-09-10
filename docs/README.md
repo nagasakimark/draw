@@ -56,3 +56,6 @@ firebase deploy --only database
 - The app loads Picture Dictionary assets from `docs/assets/` (vendored for GitHub Pages).
 - GitHub Pages should use the **`/docs`** folder so the site is served at `https://nagasakimark.github.io/draw/`.
 - Add `nagasakimark.github.io` under Firebase Authentication → Authorized domains.
+- Live drawing uses **WebRTC data channels** (host-star relay) so pen moves stay smooth without writing every point to Firebase. RTDB still stores room state, scores, chat, signaling, and board checkpoints.
+- School Wi‑Fi that blocks peer-to-peer UDP may need a TURN server. Set optional `iceServers` in `docs/firebase-config.js` (see `firebase-config.example.js`). Without TURN, the app falls back to RTDB stroke-end sync.
+- After changing `firebase.rules.json`, publish rules to the **asia-southeast1** Realtime Database used by the app.

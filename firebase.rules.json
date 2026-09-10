@@ -39,6 +39,20 @@
           "$chatId": {
             ".validate": "newData.hasChildren(['text', 'createdAt']) && newData.child('text').isString() && newData.child('text').val().length <= 120"
           }
+        },
+        "webrtc": {
+          "peers": {
+            "$uid": {
+              ".validate": "!newData.exists() || (newData.hasChildren(['name', 'joinedAt']) && newData.child('name').isString() && newData.child('joinedAt').isNumber())"
+            }
+          },
+          "signals": {
+            "$toUid": {
+              "$signalId": {
+                ".validate": "!newData.exists() || (newData.hasChildren(['type', 'ts', 'from']) && newData.child('from').isString() && newData.child('type').isString() && newData.child('ts').isNumber())"
+              }
+            }
+          }
         }
       }
     }
