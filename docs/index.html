@@ -35,13 +35,16 @@
               <button id="show-create-button" type="button" class="btn-play btn-create">部屋をつくる</button>
               <button id="show-join-button" type="button" class="btn-play btn-join">部屋にはいる</button>
             </div>
-
-            <div class="home-qr-block">
-              <p class="field-label">みんなでひらく</p>
-              <canvas id="home-site-qr" class="qr-canvas" width="180" height="180" aria-label="サイトのQRコード"></canvas>
-              <p class="qr-caption">このQRをスキャンすると、ゲームのトップページがひらきます</p>
-            </div>
           </section>
+
+          <aside id="home-qr-card" class="home-card home-qr-card">
+            <p class="home-kicker">みんなでひらく</p>
+            <h2 class="home-title home-title-sm">サイトQR</h2>
+            <button id="home-site-qr-button" type="button" class="qr-thumb-button" title="おおきくひらく">
+              <img id="home-site-qr" class="qr-image" width="160" height="160" alt="サイトのQRコード">
+            </button>
+            <p class="qr-caption">タッチするとおおきくひらきます。スキャンでトップページへ</p>
+          </aside>
 
           <section id="home-create" class="home-create-layout" hidden>
             <div class="home-card home-settings-card">
@@ -272,9 +275,21 @@
     <div class="choice-modal qr-modal">
       <h3>QRで招待</h3>
       <p class="home-lead">スキャンすると、この部屋にはいれます</p>
-      <canvas id="room-join-qr" class="qr-canvas" width="220" height="220" aria-label="部屋のQRコード"></canvas>
+      <button id="room-join-qr-button" type="button" class="qr-thumb-button" title="おおきくひらく">
+        <img id="room-join-qr" class="qr-image" width="200" height="200" alt="部屋のQRコード">
+      </button>
       <p id="room-qr-link" class="qr-caption"></p>
+      <p class="qr-caption">タッチするとおおきくひらきます</p>
       <button id="close-room-qr-button" type="button" class="btn-play btn-back">とじる</button>
+    </div>
+  </div>
+
+  <div id="qr-enlarge-modal" class="choice-overlay app-modal" hidden>
+    <div class="choice-modal qr-enlarge-modal">
+      <h3 id="qr-enlarge-title">QRコード</h3>
+      <img id="qr-enlarge-image" class="qr-image-large" width="360" height="360" alt="おおきなQRコード">
+      <p id="qr-enlarge-caption" class="qr-caption"></p>
+      <button id="close-qr-enlarge-button" type="button" class="btn-play btn-back">とじる</button>
     </div>
   </div>
 
@@ -293,7 +308,7 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
   <script type="module" src="./app.js"></script>
 </body>
 </html>

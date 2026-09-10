@@ -114,6 +114,7 @@ input:focus {
 .home-card[hidden],
 #home-entry[hidden],
 #home-join[hidden],
+#home-qr-card[hidden],
 .toolbox[hidden],
 .choice-overlay[hidden],
 [hidden] {
@@ -158,6 +159,9 @@ input:focus {
   width: min(90rem, 96vw);
   display: flex;
   justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  flex-wrap: wrap;
   animation: panel-rise 0.55s ease-out 0.12s both;
   flex: 1 1 auto;
   min-height: 0;
@@ -837,13 +841,60 @@ input:focus {
   text-align: center;
 }
 
+.home-qr-card {
+  width: min(17rem, 92vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.55rem;
+  align-self: center;
+}
+
+.qr-thumb-button {
+  display: inline-flex;
+  padding: 0.4rem;
+  border-radius: 16px;
+  background: #fff;
+  cursor: zoom-in;
+}
+
+.qr-thumb-button:hover,
+.qr-thumb-button:focus-visible {
+  outline: 3px solid rgba(78, 195, 255, 0.65);
+}
+
+.qr-image,
 .qr-canvas {
-  width: min(180px, 70vw);
+  width: min(160px, 56vw);
   height: auto;
+  aspect-ratio: 1;
   background: #fff;
   border: 3px solid var(--panel-border);
   border-radius: 14px;
-  padding: 0.45rem;
+  padding: 0.35rem;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.qr-image-large {
+  width: min(360px, 78vw);
+  height: auto;
+  aspect-ratio: 1;
+  background: #fff;
+  border: 3px solid var(--panel-border);
+  border-radius: 18px;
+  padding: 0.6rem;
+  display: block;
+  margin: 0.75rem auto;
+  image-rendering: pixelated;
+}
+
+.qr-modal,
+.qr-enlarge-modal {
+  width: min(28rem, 92%);
+  text-align: center;
 }
 
 .qr-caption {

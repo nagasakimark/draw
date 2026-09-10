@@ -63,11 +63,19 @@ const els = {
   clearBoardButton: document.getElementById("clear-board-button"),
   undoButton: document.getElementById("undo-button"),
   homeSiteQr: document.getElementById("home-site-qr"),
+  homeQrCard: document.getElementById("home-qr-card"),
+  homeSiteQrButton: document.getElementById("home-site-qr-button"),
   showRoomQrButton: document.getElementById("show-room-qr-button"),
   roomQrModal: document.getElementById("room-qr-modal"),
   roomJoinQr: document.getElementById("room-join-qr"),
+  roomJoinQrButton: document.getElementById("room-join-qr-button"),
   roomQrLink: document.getElementById("room-qr-link"),
   closeRoomQrButton: document.getElementById("close-room-qr-button"),
+  qrEnlargeModal: document.getElementById("qr-enlarge-modal"),
+  qrEnlargeTitle: document.getElementById("qr-enlarge-title"),
+  qrEnlargeImage: document.getElementById("qr-enlarge-image"),
+  qrEnlargeCaption: document.getElementById("qr-enlarge-caption"),
+  closeQrEnlargeButton: document.getElementById("close-qr-enlarge-button"),
   nameGateModal: document.getElementById("name-gate-modal"),
   nameGateInput: document.getElementById("name-gate-input"),
   nameGateError: document.getElementById("name-gate-error"),
@@ -323,6 +331,29 @@ function bindEvents() {
       els.roomQrModal.hidden = true;
     }
   });
+  els.homeSiteQrButton?.addEventListener("click", () => {
+    openQrEnlarge({
+      title: "みんなでひらく",
+      text: siteUrl(),
+      caption: "このQRをスキャンすると、ゲームのトップページがひらきます"
+    });
+  });
+  els.roomJoinQrButton?.addEventListener("click", () => {
+    if (!state.roomCode) {
+      return;
+    }
+    openQrEnlarge({
+      title: "QRで招待",
+      text: roomJoinUrl(state.roomCode),
+      caption: "スキャンすると、この部屋にはいれます"
+    });
+  });
+  els.closeQrEnlargeButton?.addEventListener("click", closeQrEnlarge);
+  els.qrEnlargeModal?.addEventListener("click", (event) => {
+    if (event.target === els.qrEnlargeModal) {
+      closeQrEnlarge();
+    }
+  });
   els.nameGateJoinButton.addEventListener("click", submitNameGate);
   els.nameGateInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
@@ -386,6 +417,9 @@ function showHomeView(view) {
   els.homeEntry.hidden = view !== "entry";
   els.homeCreate.hidden = view !== "create";
   els.homeJoin.hidden = view !== "join";
+  if (els.homeQrCard) {
+    els.homeQrCard.hidden = view !== "entry";
+  }
   clearNotices();
 }
 
@@ -1918,31 +1952,31 @@ function roomJoinUrl(roomCode) {
   return `${siteUrl()}#${roomCode}`;
 }
 
-function renderQr(canvas, text) {
-  if (!canvas || typeof QRCode === "undefined") {
+function renderQr(imageEl, text, sizePx = 180) {
+  if (!imageEl || !text) {
     return;
   }
-  QRCode.toCanvas(
-    canvas,
-    text,
-    {
-      width: canvas.width || 180,
-      margin: 1,
-      color: {
-        dark: "#1b2430",
-        light: "#ffffff"
-      }
-    },
-    (error) => {
-      if (error) {
-        console.warn("QR render failed", error);
-      }
-    }
-  );
+  if (typeof qrcode !== "function") {
+    console.warn("QR library missing");
+    imageEl.removeAttribute("src");
+    imageEl.alt = "QRを表示できません";
+    return;
+  }
+  try {
+    const qr = qrcode(0, "M");
+    qr.addData(text);
+    qr.make();
+    const modules = qr.getModuleCount();
+    const cell = Math.max(2, Math.floor(sizePx / modules));
+    imageEl.src = qr.createDataURL(cell, 2);
+    imageEl.alt = text;
+  } catch (error) {
+    console.warn("QR render failed", error);
+  }
 }
 
 function renderHomeSiteQr() {
-  renderQr(els.homeSiteQr, siteUrl());
+  renderQr(els.homeSiteQr, siteUrl(), 160);
 }
 
 function showRoomQrModal() {
@@ -1951,8 +1985,19 @@ function showRoomQrModal() {
   }
   const link = roomJoinUrl(state.roomCode);
   els.roomQrLink.textContent = link;
-  renderQr(els.roomJoinQr, link);
+  renderQr(els.roomJoinQr, link, 200);
   els.roomQrModal.hidden = false;
+}
+
+function openQrEnlarge({ title, text, caption }) {
+  els.qrEnlargeTitle.textContent = title || "QRコード";
+  els.qrEnlargeCaption.textContent = caption || text || "";
+  renderQr(els.qrEnlargeImage, text, 360);
+  els.qrEnlargeModal.hidden = false;
+}
+
+function closeQrEnlarge() {
+  els.qrEnlargeModal.hidden = true;
 }
 
 function openNameGate(roomCode) {
