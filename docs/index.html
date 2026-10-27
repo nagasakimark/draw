@@ -26,6 +26,11 @@
             <p class="home-lead">なまえをかいて、部屋をつくるか はいろう</p>
             <p id="home-error" class="notice notice-error" hidden></p>
 
+            <div id="launch-summary" class="launch-summary" hidden>
+              <p class="launch-summary-title">先生の せってい</p>
+              <div id="launch-chips" class="chip-row"></div>
+            </div>
+
             <label class="field-block">
               <span class="field-label">あなたの なまえ</span>
               <input id="player-name" type="text" maxlength="30" placeholder="例：たろう">
@@ -34,49 +39,73 @@
             <div class="entry-actions entry-actions-stack">
               <button id="show-create-button" type="button" class="btn-play btn-create">部屋をつくる</button>
               <button id="show-join-button" type="button" class="btn-play btn-join">部屋にはいる</button>
+              <button id="resume-host-button" type="button" class="btn-play btn-resume" hidden>まえの部屋にもどる</button>
             </div>
+            <button id="show-teacher-button" type="button" class="link-button">先生用：ゲームのQRをつくる</button>
           </section>
 
           <aside id="home-qr-card" class="home-card home-qr-card">
             <p class="home-kicker">みんなでひらく</p>
-            <h2 class="home-title home-title-sm">サイトQR</h2>
+            <h2 class="home-title home-title-sm">このゲームのQR</h2>
             <button id="home-site-qr-button" type="button" class="qr-thumb-button" title="おおきくひらく">
               <img id="home-site-qr" class="qr-image" width="160" height="160" alt="サイトのQRコード">
             </button>
-            <p class="qr-caption">タッチするとおおきくひらきます。スキャンでトップページへ</p>
+            <p id="home-qr-caption" class="qr-caption">タッチするとおおきくひらきます</p>
           </aside>
 
           <section id="home-create" class="home-create-layout" hidden>
             <div class="home-card home-settings-card">
-              <p class="home-kicker">せってい</p>
-              <h2 class="home-title home-title-sm">部屋の設定</h2>
+              <p class="home-kicker" id="settings-kicker">せってい</p>
+              <h2 class="home-title home-title-sm" id="settings-title">部屋の設定</h2>
               <p id="create-error" class="notice notice-error" hidden></p>
 
               <div class="settings-stack">
                 <label>
                   <span class="field-label">ラウンド数</span>
-                  <input id="rounds-input" type="number" min="1" max="12" value="4">
+                  <input id="rounds-input" type="number" min="1" max="10" value="3">
                 </label>
                 <label>
                   <span class="field-label">かく時間（秒）</span>
-                  <input id="drawing-time-input" type="number" min="30" max="180" value="90">
+                  <input id="drawing-time-input" type="number" min="30" max="180" value="80">
                 </label>
                 <label>
                   <span class="field-label">さいだい人数</span>
-                  <input id="max-players-input" type="number" min="2" max="60" value="20">
+                  <input id="max-players-input" type="number" min="2" max="10" value="6">
+                </label>
+                <label class="check-row">
+                  <input id="jp-hint-input" type="checkbox">
+                  <span>かんたんモード：ヒントに 日本語もだす</span>
                 </label>
               </div>
 
               <div class="entry-actions entry-actions-stack">
-                <button id="create-room-button" type="button" class="btn-play btn-create">この設定でつくる</button>
+                <button id="create-room-button" type="button" class="btn-play btn-create">この設定で部屋をつくる</button>
+                <button id="make-qr-button" type="button" class="btn-play btn-join">この設定のQRをつくる</button>
                 <button id="back-from-create-button" type="button" class="btn-play btn-back">もどる</button>
               </div>
             </div>
 
             <div class="home-card home-category-card">
               <p class="home-kicker">ピクチャー辞書</p>
-              <h2 class="home-title home-title-sm">カテゴリーを選ぼう</h2>
+              <h2 class="home-title home-title-sm">カテゴリーを選ぼう（いくつでも）</h2>
+              <p id="deck-summary" class="deck-summary"></p>
               <div id="deck-grid" class="card-grid"></div>
+            </div>
+          </section>
+
+          <section id="home-launch" class="home-card home-card-narrow home-entry-card" hidden>
+            <p class="home-kicker">先生用</p>
+            <h2 class="home-title home-title-sm">みんなに QR をみせよう</h2>
+            <p class="home-lead">スキャンすると、この設定のまま ゲームがひらきます</p>
+            <div id="launch-result-chips" class="chip-row"></div>
+            <button id="launch-qr-button" type="button" class="qr-thumb-button" title="おおきくひらく">
+              <img id="launch-qr" class="qr-image" width="220" height="220" alt="ゲームのQRコード">
+            </button>
+            <p id="launch-link" class="qr-caption qr-link"></p>
+            <div class="entry-actions entry-actions-stack">
+              <button id="copy-launch-button" type="button" class="btn-play btn-join">リンクをコピー</button>
+              <button id="play-launch-button" type="button" class="btn-play btn-create">この設定であそぶ</button>
+              <button id="back-from-launch-button" type="button" class="btn-play btn-back">もどる</button>
             </div>
           </section>
 
@@ -88,7 +117,7 @@
 
             <label class="field-block">
               <span class="field-label">部屋コード</span>
-              <input id="join-room-input" type="text" maxlength="8" placeholder="例：AB12CD" class="code-input">
+              <input id="join-room-input" type="text" maxlength="6" placeholder="例：AB12CD" class="code-input" autocomplete="off">
             </label>
 
             <div class="entry-actions entry-actions-stack">
@@ -110,6 +139,7 @@
           <span class="room-code-label">部屋コード:</span>
           <div id="room-title" class="room-code-display">----</div>
           <button id="show-room-qr-button" type="button" class="qr-invite-button" hidden>QRで招待</button>
+          <span id="link-status" class="link-status" hidden role="status"></span>
         </div>
         <div class="topbar-box topbar-timer">
           <img class="topbar-icon" src="./resources/clock.svg" alt="">
@@ -129,7 +159,7 @@
 
         <section class="board-column">
           <div class="word-strip">
-            <div class="hint-box">ヒント: <span id="word-hint-label">-</span></div>
+            <div class="hint-box">ヒント: <span id="word-hint-label" class="hint-letters">-</span> <span id="jp-hint-label" class="jp-hint" hidden></span></div>
             <div class="hint-box" id="drawer-word-badge" hidden>あなたの単語: <span id="drawer-word-label"></span></div>
           </div>
 
@@ -140,6 +170,16 @@
             </div>
           </div>
 
+          <div id="reveal-panel" class="choice-overlay reveal-overlay" hidden>
+            <div class="choice-modal reveal-modal">
+              <p id="reveal-kicker" class="home-kicker">こたえ</p>
+              <img id="reveal-image" class="reveal-image" alt="">
+              <h3 id="reveal-word" class="reveal-word"></h3>
+              <p id="reveal-jp" class="reveal-jp"></p>
+              <ul id="reveal-gains" class="reveal-gains"></ul>
+              <p class="reveal-next">つぎまで <span id="reveal-timer">-</span></p>
+            </div>
+          </div>
           <div id="game-over-panel" class="choice-overlay" hidden>
             <div class="choice-modal game-over-modal">
               <p class="home-kicker">けっかはっぴょう</p>
@@ -147,20 +187,11 @@
               <p id="game-over-last-word" class="game-over-last-word"></p>
               <ol id="leaderboard-list" class="leaderboard-list"></ol>
               <p id="game-over-waiting" class="home-lead" hidden>ホストがはじめるのを待っています</p>
+              <p class="review-title">きょうの ことば</p>
+              <div id="review-grid" class="review-grid"></div>
               <div id="game-over-actions" class="entry-actions entry-actions-stack game-over-actions" hidden>
                 <button id="play-again-button" type="button" class="btn-play btn-create">もういちど</button>
-                <button id="change-deck-button" type="button" class="btn-play btn-join">ことばを変える</button>
                 <button id="quit-game-button" type="button" class="btn-play btn-back">やめる</button>
-              </div>
-            </div>
-          </div>
-
-          <div id="change-deck-panel" class="choice-overlay" hidden>
-            <div class="choice-modal">
-              <h3>カテゴリーを選ぼう</h3>
-              <div id="change-deck-grid" class="card-grid word-grid"></div>
-              <div class="entry-actions">
-                <button id="cancel-change-deck-button" type="button" class="btn-play btn-back">もどる</button>
               </div>
             </div>
           </div>

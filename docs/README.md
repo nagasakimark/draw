@@ -1,61 +1,31 @@
-# Classroom Scribble Pages App
+# Tomachi Draw: hosting and Firebase
 
-This `docs/` folder is a static GitHub Pages version of the project.
+`docs/` is the static GitHub Pages site (source: branch, folder `/docs`, served at `https://nagasakimark.github.io/draw/`).
 
-## Host on GitHub Pages
+## Firebase setup
 
-1. Push this repository to GitHub.
-2. In the repository settings, enable GitHub Pages.
-3. Set the source to `Deploy from a branch`.
-4. Choose your branch and the `/docs` folder.
+`docs/firebase-config.js` is public. Security comes from anonymous Auth plus the database rules.
 
-## Firebase setup (required before launch)
+1. **Authentication → Sign-in method:** enable **Anonymous**. Add `nagasakimark.github.io` to *Authorized domains*.
+2. **Realtime Database → Rules:** publish the contents of `firebase.rules.json` (or `firebase deploy --only database`).
 
-Your `docs/firebase-config.js` will be public on GitHub Pages. **Security comes from Auth + RTDB rules**, not from hiding the config.
+### Data model
 
-### 1. Enable Anonymous Authentication
-
-1. Open [Firebase Console](https://console.firebase.google.com/) → your project.
-2. **Authentication** → **Sign-in method**.
-3. Enable **Anonymous**.
-
-### 2. Publish Realtime Database rules
-
-Copy the contents of `firebase.rules.json` into:
-
-**Realtime Database → Rules → Publish**
-
-Or with Firebase CLI:
-
-```bash
-firebase deploy --only database
+```
+rooms/{CODE}/meta            hostUid, createdAt, expiresAt, hb, closed, config
+rooms/{CODE}/signal/{sid}    offer, answer, offerSeq, answerSeq, state, updatedAt
 ```
 
-(make sure `firebase.json` points at `firebase.rules.json`)
+`{sid}` is `<firebase uid>-<tab id>`. A player can read and write only their own signal node; the host can read every signal in its room and writes answers. Only the host can change or delete `meta`. No game state, chat or drawing is ever written to Firebase.
 
-### 3. What the rules do
+The rules have not been exercised against the live database from the development sandbox, so after publishing, try one real game (host plus two other devices) before class.
 
-- Block reading/writing anything outside `/rooms/{ROOM_CODE}`
-- Block listing all rooms (knowing the code is required)
-- Require signed-in users (anonymous auth)
-- Allow **creating** a room only when that code does **not** already exist
-- Prevent changing `ownerId` / `createdAt` after create
-- Validate settings, chat length, phases, etc.
-- Allow deleting a room (so the app can clean up)
+## Network notes
 
-### 4. Room cleanup (built into the app)
+- Drawing, chat and game state use WebRTC data channels. Rooms are 3–5 students, so the host is the only hub.
+- School Wi-Fi that blocks peer-to-peer UDP needs a TURN server. Set `iceServers` in `docs/firebase-config.js` (see `firebase-config.example.js`). There is no database fallback: without a working path, the player sees a reconnecting message.
+- If the host leaves for good, the game ends. Host migration is not implemented.
 
-- Rooms expire after **3 hours** (`expiresAt`)
-- If the last player leaves, the room is deleted
-- If the last player closes the tab, `onDisconnect` deletes the room
-- Creating/joining refuses or clears expired/empty rooms instead of reusing stale data
-- Room codes are **8 characters** and created with a transaction so existing rooms are not overwritten
+## Local development
 
-## Notes
-
-- The app loads Picture Dictionary assets from `docs/assets/` (vendored for GitHub Pages).
-- GitHub Pages should use the **`/docs`** folder so the site is served at `https://nagasakimark.github.io/draw/`.
-- Add `nagasakimark.github.io` under Firebase Authentication → Authorized domains.
-- Live drawing uses **WebRTC data channels** (host-star relay) so pen moves stay smooth without writing every point to Firebase. RTDB still stores room state, scores, chat, signaling, and board checkpoints.
-- School Wi‑Fi that blocks peer-to-peer UDP may need a TURN server. Set optional `iceServers` in `docs/firebase-config.js` (see `firebase-config.example.js`). Without TURN, the app falls back to RTDB stroke-end sync.
-- After changing `firebase.rules.json`, publish rules to the **asia-southeast1** Realtime Database used by the app.
+`?local=1` swaps Firebase for a `localStorage` signaling adapter (`docs/js/local-signal.js`).

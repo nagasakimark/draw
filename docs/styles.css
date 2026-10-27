@@ -1016,3 +1016,255 @@ input:focus {
     height: auto;
   }
 }
+
+/* ---------- teacher launch link, chips, settings ---------- */
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: #eef2ff;
+  border: 2px solid #b5c2ff;
+  color: #2a4498;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.chip.chip-accent {
+  background: #fff6c2;
+  border-color: var(--sunny-dark);
+  color: #6b4b00;
+}
+
+.launch-summary {
+  background: #f7f9ff;
+  border: 2px dashed #9eb0ef;
+  border-radius: 14px;
+  padding: 0.55rem 0.7rem;
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+}
+
+.launch-summary[hidden] {
+  display: none !important;
+}
+
+.launch-summary-title {
+  margin: 0;
+  font-weight: 800;
+  color: #2a4498;
+  font-size: 0.9rem;
+}
+
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0.35rem;
+  color: #2a4498;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-resume {
+  background: var(--sunny);
+  border-color: var(--sunny-dark);
+  color: #4a3500;
+  box-shadow: 0 5px 0 var(--sunny-dark);
+  font-size: 1rem;
+  min-height: 2.8rem;
+}
+
+label.check-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  color: #2a4498;
+}
+
+label.check-row input {
+  flex: 0 0 auto;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+}
+
+.deck-summary {
+  margin: 0 0 0.5rem;
+  font-weight: 800;
+  color: #2a4498;
+}
+
+.qr-link {
+  word-break: break-all;
+  user-select: all;
+  font-size: 0.8rem;
+}
+
+/* ---------- in-game: hint, connection pill, chat kinds ---------- */
+
+.hint-letters {
+  white-space: pre;
+  letter-spacing: 0.08em;
+  font-size: 1.25em;
+  font-variant-numeric: tabular-nums;
+}
+
+.jp-hint {
+  margin-left: 0.6rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: #fff6c2;
+  border: 2px solid var(--sunny-dark);
+}
+
+.link-status {
+  margin-left: 0.5rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #fff6c2;
+  border: 2px solid var(--sunny-dark);
+  color: #6b4b00;
+  font-weight: 800;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.link-status[hidden] {
+  display: none !important;
+}
+
+.player-row.offline {
+  opacity: 0.5;
+}
+
+.chat-row.close {
+  background: #fff9e0;
+  border-color: #f0d36b;
+  color: #8a6300;
+  font-weight: 700;
+}
+
+.chat-row.closeNote {
+  background: #fff9e0;
+  border-color: #f0d36b;
+  color: #8a6300;
+}
+
+.chat-row.team {
+  background: #f1eaff;
+  border-color: #c5b3f0;
+  color: #43268a;
+}
+
+/* ---------- answer reveal and word review ---------- */
+
+.reveal-overlay {
+  background: rgba(20, 31, 72, 0.18);
+}
+
+.reveal-modal {
+  width: min(22rem, 90%);
+  text-align: center;
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+}
+
+.reveal-image {
+  width: min(13rem, 70%);
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 3px solid #9eb0ef;
+  background: #fff;
+}
+
+.reveal-word {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #2a4498;
+}
+
+.reveal-jp {
+  margin: 0;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.reveal-gains {
+  list-style: none;
+  margin: 0.25rem 0;
+  padding: 0;
+  display: grid;
+  gap: 0.2rem;
+  font-weight: 800;
+}
+
+.reveal-gains .gain {
+  color: #0f7a3a;
+}
+
+.reveal-next {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.review-title {
+  margin: 0.25rem 0;
+  font-weight: 800;
+  color: #2a4498;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+  max-height: 11rem;
+  overflow: auto;
+}
+
+.review-item {
+  display: grid;
+  justify-items: center;
+  gap: 0.1rem;
+  padding: 0.3rem;
+  border: 2px solid #c5cef8;
+  border-radius: 12px;
+  background: #f7f9ff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  line-height: 1.15;
+}
+
+.review-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.review-item small {
+  color: var(--muted);
+  font-weight: 700;
+}

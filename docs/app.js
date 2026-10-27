@@ -1,327 +1,255 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-import { getAuth, onAuthStateChanged, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
-import {
-  getDatabase,
-  ref,
-  get,
-  set,
-  update,
-  remove,
-  push,
-  onValue,
-  onChildAdded,
-  runTransaction,
-  onDisconnect
-} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
 import { firebaseConfig, iceServers } from "./firebase-config.js";
-import { createWebRtcDraw } from "./webrtc-draw.js";
+import { explainFirebaseError } from "./js/firebase-signal.js";
+import { Board } from "./js/board.js";
+import { GameHost, PHASE } from "./js/engine.js";
+import { HostHub, ClientLink } from "./js/p2p.js";
+import { loadCatalog, buildPool, ALL_DECK_ID } from "./js/words.js";
+import {
+  DEFAULT_CONFIG,
+  LIMITS,
+  clamp,
+  cleanRoomCode,
+  encodeLaunchHash,
+  encodeRoomHash,
+  isRoomCode,
+  makeRoomCode,
+  normalizeConfig,
+  parseHash
+} from "./js/config.js";
 
-const PICTURE_DICTIONARY_NAME = "My Picture Dictionary";
-const WORDS_PER_TURN = 3;
-const ROOM_CODE_LENGTH = 8;
 const ROOM_TTL_MS = 3 * 60 * 60 * 1000;
-const ROOM_CREATE_ATTEMPTS = 8;
+const HEARTBEAT_MS = 20000;
+const NAME_KEY = "classroom-scribble-name";
+const HOST_SESSION_KEY = "draw.hostSession";
+const TEACHER_KEY = "draw.teacher";
+const MIN_POOL = 3;
 
+const $ = (id) => document.getElementById(id);
 const els = {
-  homeEntry: document.getElementById("home-entry"),
-  homeCreate: document.getElementById("home-create"),
-  homeJoin: document.getElementById("home-join"),
-  homeError: document.getElementById("home-error"),
-  createError: document.getElementById("create-error"),
-  joinError: document.getElementById("join-error"),
-  showCreateButton: document.getElementById("show-create-button"),
-  showJoinButton: document.getElementById("show-join-button"),
-  backFromCreateButton: document.getElementById("back-from-create-button"),
-  backFromJoinButton: document.getElementById("back-from-join-button"),
-  playerName: document.getElementById("player-name"),
-  deckGrid: document.getElementById("deck-grid"),
-  roundsInput: document.getElementById("rounds-input"),
-  drawingTimeInput: document.getElementById("drawing-time-input"),
-  maxPlayersInput: document.getElementById("max-players-input"),
-  createRoomButton: document.getElementById("create-room-button"),
-  joinRoomInput: document.getElementById("join-room-input"),
-  joinRoomButton: document.getElementById("join-room-button"),
-  leaveRoomButton: document.getElementById("leave-room-button"),
-  homeScreen: document.getElementById("home-screen"),
-  gameScreen: document.getElementById("game-screen"),
-  roomTitle: document.getElementById("room-title"),
-  roundLabel: document.getElementById("round-label"),
-  timerLabel: document.getElementById("timer-label"),
-  phaseLabel: document.getElementById("phase-label"),
-  wordHintLabel: document.getElementById("word-hint-label"),
-  drawerWordBadge: document.getElementById("drawer-word-badge"),
-  drawerWordLabel: document.getElementById("drawer-word-label"),
-  wordChoicePanel: document.getElementById("word-choice-panel"),
-  wordChoiceGrid: document.getElementById("word-choice-grid"),
-  playersList: document.getElementById("players-list"),
-  startGameButton: document.getElementById("start-game-button"),
-  chatLog: document.getElementById("chat-log"),
-  chatInput: document.getElementById("chat-input"),
-  sendChatButton: document.getElementById("send-chat-button"),
-  board: document.getElementById("board"),
-  toolbox: document.getElementById("toolbox"),
-  clearBoardButton: document.getElementById("clear-board-button"),
-  undoButton: document.getElementById("undo-button"),
-  homeSiteQr: document.getElementById("home-site-qr"),
-  homeQrCard: document.getElementById("home-qr-card"),
-  homeSiteQrButton: document.getElementById("home-site-qr-button"),
-  showRoomQrButton: document.getElementById("show-room-qr-button"),
-  roomQrModal: document.getElementById("room-qr-modal"),
-  roomJoinQr: document.getElementById("room-join-qr"),
-  roomJoinQrButton: document.getElementById("room-join-qr-button"),
-  roomQrLink: document.getElementById("room-qr-link"),
-  closeRoomQrButton: document.getElementById("close-room-qr-button"),
-  qrEnlargeModal: document.getElementById("qr-enlarge-modal"),
-  qrEnlargeTitle: document.getElementById("qr-enlarge-title"),
-  qrEnlargeImage: document.getElementById("qr-enlarge-image"),
-  qrEnlargeCaption: document.getElementById("qr-enlarge-caption"),
-  closeQrEnlargeButton: document.getElementById("close-qr-enlarge-button"),
-  nameGateModal: document.getElementById("name-gate-modal"),
-  nameGateInput: document.getElementById("name-gate-input"),
-  nameGateError: document.getElementById("name-gate-error"),
-  nameGateJoinButton: document.getElementById("name-gate-join-button"),
-  gameOverPanel: document.getElementById("game-over-panel"),
-  gameOverLastWord: document.getElementById("game-over-last-word"),
-  leaderboardList: document.getElementById("leaderboard-list"),
-  gameOverWaiting: document.getElementById("game-over-waiting"),
-  gameOverActions: document.getElementById("game-over-actions"),
-  playAgainButton: document.getElementById("play-again-button"),
-  changeDeckButton: document.getElementById("change-deck-button"),
-  quitGameButton: document.getElementById("quit-game-button"),
-  changeDeckPanel: document.getElementById("change-deck-panel"),
-  changeDeckGrid: document.getElementById("change-deck-grid"),
-  cancelChangeDeckButton: document.getElementById("cancel-change-deck-button")
+  homeScreen: $("home-screen"),
+  gameScreen: $("game-screen"),
+  homeEntry: $("home-entry"),
+  homeCreate: $("home-create"),
+  homeJoin: $("home-join"),
+  homeLaunch: $("home-launch"),
+  homeError: $("home-error"),
+  createError: $("create-error"),
+  joinError: $("join-error"),
+  launchSummary: $("launch-summary"),
+  launchChips: $("launch-chips"),
+  showCreateButton: $("show-create-button"),
+  showJoinButton: $("show-join-button"),
+  showTeacherButton: $("show-teacher-button"),
+  resumeHostButton: $("resume-host-button"),
+  backFromCreateButton: $("back-from-create-button"),
+  backFromJoinButton: $("back-from-join-button"),
+  backFromLaunchButton: $("back-from-launch-button"),
+  playerName: $("player-name"),
+  settingsKicker: $("settings-kicker"),
+  settingsTitle: $("settings-title"),
+  deckGrid: $("deck-grid"),
+  deckSummary: $("deck-summary"),
+  roundsInput: $("rounds-input"),
+  drawingTimeInput: $("drawing-time-input"),
+  maxPlayersInput: $("max-players-input"),
+  jpHintInput: $("jp-hint-input"),
+  createRoomButton: $("create-room-button"),
+  makeQrButton: $("make-qr-button"),
+  joinRoomInput: $("join-room-input"),
+  joinRoomButton: $("join-room-button"),
+  launchResultChips: $("launch-result-chips"),
+  launchQr: $("launch-qr"),
+  launchQrButton: $("launch-qr-button"),
+  launchLink: $("launch-link"),
+  copyLaunchButton: $("copy-launch-button"),
+  playLaunchButton: $("play-launch-button"),
+  leaveRoomButton: $("leave-room-button"),
+  roomTitle: $("room-title"),
+  roundLabel: $("round-label"),
+  timerLabel: $("timer-label"),
+  phaseLabel: $("phase-label"),
+  linkStatus: $("link-status"),
+  wordHintLabel: $("word-hint-label"),
+  jpHintLabel: $("jp-hint-label"),
+  drawerWordBadge: $("drawer-word-badge"),
+  drawerWordLabel: $("drawer-word-label"),
+  wordChoicePanel: $("word-choice-panel"),
+  wordChoiceGrid: $("word-choice-grid"),
+  revealPanel: $("reveal-panel"),
+  revealKicker: $("reveal-kicker"),
+  revealImage: $("reveal-image"),
+  revealWord: $("reveal-word"),
+  revealJp: $("reveal-jp"),
+  revealGains: $("reveal-gains"),
+  revealTimer: $("reveal-timer"),
+  playersList: $("players-list"),
+  startGameButton: $("start-game-button"),
+  chatLog: $("chat-log"),
+  chatInput: $("chat-input"),
+  sendChatButton: $("send-chat-button"),
+  board: $("board"),
+  toolbox: $("toolbox"),
+  clearBoardButton: $("clear-board-button"),
+  undoButton: $("undo-button"),
+  homeSiteQr: $("home-site-qr"),
+  homeQrCard: $("home-qr-card"),
+  homeSiteQrButton: $("home-site-qr-button"),
+  homeQrCaption: $("home-qr-caption"),
+  showRoomQrButton: $("show-room-qr-button"),
+  roomQrModal: $("room-qr-modal"),
+  roomJoinQr: $("room-join-qr"),
+  roomJoinQrButton: $("room-join-qr-button"),
+  roomQrLink: $("room-qr-link"),
+  closeRoomQrButton: $("close-room-qr-button"),
+  qrEnlargeModal: $("qr-enlarge-modal"),
+  qrEnlargeTitle: $("qr-enlarge-title"),
+  qrEnlargeImage: $("qr-enlarge-image"),
+  qrEnlargeCaption: $("qr-enlarge-caption"),
+  closeQrEnlargeButton: $("close-qr-enlarge-button"),
+  nameGateModal: $("name-gate-modal"),
+  nameGateInput: $("name-gate-input"),
+  nameGateError: $("name-gate-error"),
+  nameGateJoinButton: $("name-gate-join-button"),
+  gameOverPanel: $("game-over-panel"),
+  gameOverLastWord: $("game-over-last-word"),
+  leaderboardList: $("leaderboard-list"),
+  reviewGrid: $("review-grid"),
+  gameOverWaiting: $("game-over-waiting"),
+  gameOverActions: $("game-over-actions"),
+  playAgainButton: $("play-again-button"),
+  quitGameButton: $("quit-game-button")
 };
 
 const state = {
-  db: null,
-  auth: null,
+  signaling: null,
   catalog: null,
-  selectedTextbookId: null,
-  selectedDeckId: null,
-  roomCode: null,
-  roomData: null,
-  roomUnsubscribe: null,
-  presenceReady: false,
-  playerDisconnect: null,
-  roomDisconnect: null,
-  playerId: null,
-  isDrawing: false,
-  activeStroke: [],
-  renderedBoardRevision: null,
-  timerIntervalId: null,
-  advancing: false,
+  board: new Board(els.board),
+
+  role: null, // "host" | "client" | null
+  code: null,
+  engine: null,
+  hub: null,
+  link: null,
+  timers: { tick: null, heartbeat: null, persist: null, ui: null },
+
+  view: null,
+  deadlineAt: 0,
+  chat: [],
+  renderKeys: {},
+
+  launchConfig: null,
+  selectedDeckIds: new Set(),
+  setupMode: "create",
+  launchUrl: "",
+  pendingLaunchConfig: null,
+  busy: false,
+  pendingJoinCode: null,
+
+  stroke: null,
   tool: "pencil",
   color: "#000000",
-  brushSize: 8,
-  boardCache: null,
-  boardCacheRevision: null,
-  webrtc: null,
-  pendingJoinCode: null,
-  webrtcApplyingRemote: false
+  brushSize: 8
 };
-
-const ctx = els.board.getContext("2d");
 
 boot().catch((error) => {
   console.error(error);
   showHomeView("entry");
-  setNotice(`起動に失敗しました: ${error.message}`, true);
+  setNotice(error.message || String(error), true, "entry");
 });
 
+/* ================================================================== */
+/* Boot                                                                 */
+/* ================================================================== */
+
 async function boot() {
-  validateFirebaseConfig();
-  const app = initializeApp(firebaseConfig);
-  state.auth = getAuth(app);
-  // Sign in before opening the database connection so RTDB gets the auth token.
-  state.playerId = await ensureAnonymousAuth();
-  state.db = getDatabase(app);
-
-  state.catalog = await loadCatalog();
-
-  hydrateName();
-  renderCategories();
   bindEvents();
-  renderHomeSiteQr();
   showHomeView("entry");
 
-  const hashRoom = readRoomCodeFromHash();
-  if (hashRoom) {
-    els.joinRoomInput.value = hashRoom;
-    const savedName = localStorage.getItem("classroom-scribble-name") || "";
-    if (savedName.trim()) {
-      els.playerName.value = savedName.trim();
-      await joinRoom(hashRoom);
-    } else {
-      openNameGate(hashRoom);
-    }
+  const useLocal = new URLSearchParams(location.search).get("local") === "1";
+  const [signaling, catalog] = await Promise.all([
+    useLocal
+      ? import("./js/local-signal.js").then((m) => m.createLocalSignaling())
+      : import("./js/firebase-signal.js").then((m) => m.createFirebaseSignaling(firebaseConfig)),
+    loadCatalog(readJsonFile).then((result) => {
+      if (result.skipped.length > 0) {
+        console.warn("Skipped decks:", result.skipped);
+      }
+      return result;
+    })
+  ]);
+  state.signaling = signaling;
+  state.catalog = catalog;
+
+  els.playerName.value = localStorage.getItem(NAME_KEY) || "";
+  restoreTeacherSettings();
+  renderDeckGrid();
+
+  const parsed = parseHash(location.hash);
+  if (parsed.config) {
+    applyLaunchConfig(parsed.config);
+  }
+  renderHomeQr();
+  offerHostResume(parsed.room);
+
+  if (parsed.room) {
+    await openRoomFromLink(parsed.room);
   }
   updateRoomMode();
 }
 
-async function ensureAnonymousAuth() {
-  try {
-    await state.auth.authStateReady();
-
-    if (!state.auth.currentUser) {
-      await signInAnonymously(state.auth);
-    }
-
-    const user = await waitForSignedInUser();
-    // Ensure the RTDB client has a fresh ID token before any read/write.
-    await user.getIdToken(true);
-    return user.uid;
-  } catch (error) {
-    const code = error?.code || "";
-    if (code === "auth/unauthorized-domain") {
-      throw new Error(
-        "このサイトのドメインが Firebase で許可されていません。Firebase Console → Authentication → Settings → Authorized domains に nagasakimark.github.io を追加してください。"
-      );
-    }
-    if (code === "auth/operation-not-allowed") {
-      throw new Error(
-        "Anonymous ログインが無効です。Firebase Console → Authentication → Sign-in method で Anonymous を有効にしてください。"
-      );
-    }
-    throw new Error(`ログインに失敗しました: ${error.message || code || error}`);
+async function readJsonFile(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Could not load ${url}`);
   }
+  const text = await response.text();
+  if (!text.trim()) {
+    throw new Error(`File was empty: ${url}`);
+  }
+  return JSON.parse(text);
 }
 
-function waitForSignedInUser() {
-  if (state.auth.currentUser) {
-    return Promise.resolve(state.auth.currentUser);
-  }
-  return new Promise((resolve, reject) => {
-    const timer = window.setTimeout(() => {
-      unsubscribe();
-      reject(new Error("認証がタイムアウトしました。ページを再読み込みしてください。"));
-    }, 10000);
-    const unsubscribe = onAuthStateChanged(
-      state.auth,
-      (user) => {
-        if (user) {
-          window.clearTimeout(timer);
-          unsubscribe();
-          resolve(user);
-        }
-      },
-      (error) => {
-        window.clearTimeout(timer);
-        unsubscribe();
-        reject(error);
-      }
-    );
-  });
-}
-
-function explainFirebaseError(error, fallback) {
-  const message = String(error?.message || error || "");
-  if (message.includes("PERMISSION_DENIED") || error?.code === "PERMISSION_DENIED") {
-    return "Firebase の権限エラーです。Realtime Database → いまアプリが使う DB（asia-southeast1）を選び、firebase.rules.json を Publish し直してください。App Check を強制している場合は一時的にオフにしてください。";
-  }
-  return fallback || message;
-}
-
-function validateFirebaseConfig() {
-  if (!firebaseConfig.databaseURL || firebaseConfig.databaseURL.includes("REPLACE_ME")) {
-    throw new Error("docs/firebase-config.js に Firebase の設定を入れてください。");
-  }
-}
-
-async function loadCatalog() {
-  const manifest = await readJsonFile("./assets/vocab/decks.json");
-  const skippedDecks = [];
-  const book = manifest[PICTURE_DICTIONARY_NAME];
-  if (!book) {
-    throw new Error(`Could not find "${PICTURE_DICTIONARY_NAME}" in decks.json.`);
-  }
-
-  const name = PICTURE_DICTIONARY_NAME;
-  const textbookId = slug(name);
-  const decks = (
-    await Promise.all(
-      Object.entries(book.decks).map(async ([deckName, deckMeta]) => {
-        const normalizedDeckPath = normalizeDeckPath(deckMeta.path);
-        if (!normalizedDeckPath) {
-          skippedDecks.push(`${name} / ${deckName}`);
-          return null;
-        }
-
-        try {
-          const rawDeck = await readJsonFile("./" + normalizedDeckPath);
-          const items = Array.isArray(rawDeck) ? rawDeck : rawDeck.items || [];
-          return {
-            id: slug(deckName),
-            name: deckName,
-            image: toStaticAssetUrl(deckMeta.image),
-            words: items
-              .filter((item) => item.english)
-              .map((item) => ({
-                english: item.english.trim(),
-                japanese: item.japanese || { kanji: "", furigana: "" },
-                image: toStaticAssetUrl(item.image),
-                normalized: normalizeWord(item.english)
-              }))
-          };
-        } catch (error) {
-          console.warn(`Skipping deck ${name} / ${deckName}:`, error);
-          skippedDecks.push(`${name} / ${deckName}`);
-          return null;
-        }
-      })
-    )
-  )
-    .filter((deck) => deck && deck.words.length > 0)
-    .sort((a, b) => a.name.localeCompare(b.name));
-
-  if (skippedDecks.length > 0) {
-    console.warn("Skipped decks with broken paths:", skippedDecks);
-  }
-
-  return {
-    textbooks: [
-      {
-        id: textbookId,
-        name,
-        image: toStaticAssetUrl(book.image),
-        decks
-      }
-    ]
-  };
-}
+/* ================================================================== */
+/* Home screen                                                          */
+/* ================================================================== */
 
 function bindEvents() {
   els.playerName.addEventListener("change", persistName);
-  els.showCreateButton.addEventListener("click", () => {
-    if (!readPlayerName()) {
-      setNotice("先になまえを入力してください。", true, "entry");
-      return;
-    }
-    persistName();
-    showHomeView("create");
-  });
+  els.showCreateButton.addEventListener("click", onShowCreate);
   els.showJoinButton.addEventListener("click", () => {
-    if (!readPlayerName()) {
-      setNotice("先になまえを入力してください。", true, "entry");
+    if (!requireName("entry")) {
       return;
     }
-    persistName();
     showHomeView("join");
   });
+  els.showTeacherButton.addEventListener("click", () => openSettings("teacher"));
+  els.resumeHostButton.addEventListener("click", resumeHostFromButton);
   els.backFromCreateButton.addEventListener("click", () => showHomeView("entry"));
   els.backFromJoinButton.addEventListener("click", () => showHomeView("entry"));
-  els.createRoomButton.addEventListener("click", createRoom);
-  els.joinRoomButton.addEventListener("click", () => joinRoom(els.joinRoomInput.value.trim()));
+  els.backFromLaunchButton.addEventListener("click", () => showHomeView("create"));
+  els.createRoomButton.addEventListener("click", () => createRoom(readSettings()));
+  els.makeQrButton.addEventListener("click", makeLaunchQr);
+  els.playLaunchButton.addEventListener("click", playLaunchedConfig);
+  els.copyLaunchButton.addEventListener("click", copyLaunchLink);
+  els.joinRoomButton.addEventListener("click", () => joinRoom(els.joinRoomInput.value));
+  els.joinRoomInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      joinRoom(els.joinRoomInput.value);
+    }
+  });
   els.leaveRoomButton.addEventListener("click", leaveRoom);
-  els.startGameButton.addEventListener("click", startGame);
+  els.quitGameButton.addEventListener("click", leaveRoom);
+  els.startGameButton.addEventListener("click", () => sendIntent({ t: "start" }));
+  els.playAgainButton.addEventListener("click", () => sendIntent({ t: "again" }));
   els.sendChatButton.addEventListener("click", submitChat);
   els.chatInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       submitChat();
     }
   });
-  els.clearBoardButton.addEventListener("click", clearBoard);
-  els.undoButton.addEventListener("click", undoLastStroke);
+  els.clearBoardButton.addEventListener("click", () => drawerOp({ t: "clear" }));
+  els.undoButton.addEventListener("click", () => drawerOp({ t: "undo" }));
+
   els.showRoomQrButton.addEventListener("click", showRoomQrModal);
   els.closeRoomQrButton.addEventListener("click", () => {
     els.roomQrModal.hidden = true;
@@ -334,19 +262,17 @@ function bindEvents() {
   els.homeSiteQrButton?.addEventListener("click", () => {
     openQrEnlarge({
       title: "みんなでひらく",
-      text: siteUrl(),
-      caption: "このQRをスキャンすると、ゲームのトップページがひらきます"
+      text: currentLaunchUrl(),
+      caption: "このQRをスキャンすると、ゲームがひらきます"
     });
   });
+  els.launchQrButton.addEventListener("click", () => {
+    openQrEnlarge({ title: "スキャンしてね", text: state.launchUrl, caption: "このQRをスキャンすると、この設定でゲームがひらきます" });
+  });
   els.roomJoinQrButton?.addEventListener("click", () => {
-    if (!state.roomCode) {
-      return;
+    if (state.code) {
+      openQrEnlarge({ title: "QRで招待", text: roomJoinUrl(state.code), caption: "スキャンすると、この部屋にはいれます" });
     }
-    openQrEnlarge({
-      title: "QRで招待",
-      text: roomJoinUrl(state.roomCode),
-      caption: "スキャンすると、この部屋にはいれます"
-    });
   });
   els.closeQrEnlargeButton?.addEventListener("click", closeQrEnlarge);
   els.qrEnlargeModal?.addEventListener("click", (event) => {
@@ -360,23 +286,16 @@ function bindEvents() {
       submitNameGate();
     }
   });
-  els.playAgainButton.addEventListener("click", playAgain);
-  els.changeDeckButton.addEventListener("click", openChangeDeckPanel);
-  els.quitGameButton.addEventListener("click", leaveRoom);
-  els.cancelChangeDeckButton.addEventListener("click", () => {
-    els.changeDeckPanel.hidden = true;
-  });
 
   document.querySelectorAll(".color-button").forEach((button) => {
     button.addEventListener("click", () => {
       setActiveColor(button.dataset.color);
       if (state.tool === "rubber") {
-        document.getElementById("tool-type-pencil").checked = true;
+        $("tool-type-pencil").checked = true;
         state.tool = "pencil";
       }
     });
   });
-
   document.querySelectorAll('input[name="tool-type"]').forEach((input) => {
     input.addEventListener("change", () => {
       if (input.checked) {
@@ -384,7 +303,6 @@ function bindEvents() {
       }
     });
   });
-
   document.querySelectorAll('input[name="line-width"]').forEach((input) => {
     input.addEventListener("change", () => {
       if (input.checked) {
@@ -392,23 +310,18 @@ function bindEvents() {
       }
     });
   });
-
   setActiveColor(state.color);
 
+  els.board.style.touchAction = "none";
   els.board.addEventListener("pointerdown", onPointerDown);
   els.board.addEventListener("pointermove", onPointerMove);
   els.board.addEventListener("pointerup", onPointerUp);
-  els.board.addEventListener("pointerleave", onPointerUp);
+  els.board.addEventListener("pointercancel", onPointerUp);
+
   window.addEventListener("hashchange", async () => {
-    const targetRoom = readRoomCodeFromHash();
-    if (targetRoom && targetRoom !== state.roomCode) {
-      const savedName = (localStorage.getItem("classroom-scribble-name") || els.playerName.value || "").trim();
-      if (!savedName) {
-        openNameGate(targetRoom);
-        return;
-      }
-      els.playerName.value = savedName;
-      await joinRoom(targetRoom);
+    const { room } = parseHash(location.hash);
+    if (room && room !== state.code) {
+      await openRoomFromLink(room);
     }
   });
 }
@@ -417,1315 +330,45 @@ function showHomeView(view) {
   els.homeEntry.hidden = view !== "entry";
   els.homeCreate.hidden = view !== "create";
   els.homeJoin.hidden = view !== "join";
-  if (els.homeQrCard) {
-    els.homeQrCard.hidden = view !== "entry";
-  }
+  els.homeLaunch.hidden = view !== "launch";
+  els.homeQrCard.hidden = view !== "entry";
   clearNotices();
 }
 
-function setActiveColor(color) {
-  state.color = color;
-  document.querySelectorAll(".color-button").forEach((button) => {
-    button.classList.toggle("selected", button.dataset.color.toLowerCase() === color.toLowerCase());
-  });
+function readPlayerName() {
+  return els.playerName.value.trim();
 }
 
-function renderCategories() {
-  const textbook = state.catalog.textbooks[0];
-  if (!textbook) {
-    els.deckGrid.replaceChildren();
-    return;
-  }
-
-  state.selectedTextbookId = textbook.id;
-  if (!state.selectedDeckId && textbook.decks.length > 0) {
-    state.selectedDeckId = textbook.decks[0].id;
-  }
-
-  els.deckGrid.replaceChildren(
-    ...textbook.decks.map((deck) =>
-      buildCard(
-        deck.name,
-        deck.image,
-        `${deck.words.length} 語`,
-        deck.id === state.selectedDeckId,
-        () => {
-          state.selectedDeckId = deck.id;
-          renderCategories();
-        }
-      )
-    )
-  );
-}
-
-function buildCard(title, image, subtitle, isSelected, onClick) {
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "card";
-  if (isSelected) {
-    button.classList.add("selected");
-  }
-  button.innerHTML = `
-    <img src="${image}" alt="${escapeHtml(title)}">
-    <div class="card-copy">
-      <div class="card-title">${escapeHtml(title)}</div>
-      <div class="card-subtitle">${escapeHtml(subtitle)}</div>
-    </div>
-  `;
-  button.addEventListener("click", onClick);
-  return button;
-}
-
-async function createRoom() {
-  const name = readPlayerName();
-  const deck = getSelectedDeck();
-  const textbook = getSelectedTextbook();
-  if (!name) {
-    setNotice("先になまえを入力してください。", true, "create");
-    return;
-  }
-  if (!deck || !textbook) {
-    setNotice("カテゴリーを選んでください。", true, "create");
-    return;
-  }
-  if (!state.playerId) {
-    setNotice("認証に失敗しました。ページを再読み込みしてください。", true, "create");
-    return;
-  }
-
+function persistName() {
   try {
-    const uid = state.auth.currentUser?.uid;
-    if (!uid) {
-      setNotice("認証に失敗しました。ページを再読み込みしてください。", true, "create");
-      return;
-    }
-    state.playerId = uid;
-
-    const now = Date.now();
-    let roomCode = null;
-
-    for (let attempt = 0; attempt < ROOM_CREATE_ATTEMPTS; attempt += 1) {
-      const candidate = makeRoomCode();
-      const roomRef = ref(state.db, `rooms/${candidate}`);
-      const existing = await get(roomRef);
-      if (existing.exists()) {
-        const old = existing.val();
-        if (isRoomExpired(old) || !hasConnectedPlayers(old)) {
-          try {
-            await remove(roomRef);
-          } catch (error) {
-            console.warn("Failed to clear stale room", candidate, error);
-            continue;
-          }
-        } else {
-          continue;
-        }
-      }
-
-      const room = {
-        code: candidate,
-        ownerId: uid,
-        createdAt: now,
-        expiresAt: now + ROOM_TTL_MS,
-        phase: "lobby",
-        round: 0,
-        drawerId: "",
-        settings: {
-          rounds: clampNumber(els.roundsInput.value, 1, 12, 4),
-          drawingTime: clampNumber(els.drawingTimeInput.value, 30, 180, 90),
-          maxPlayers: clampNumber(els.maxPlayersInput.value, 2, 60, 20),
-          wordsPerTurn: WORDS_PER_TURN,
-          textbookId: textbook.id,
-          textbookName: textbook.name,
-          deckId: deck.id,
-          deckName: deck.name
-        },
-        players: {
-          [uid]: makePlayerRecord(name)
-        },
-        playerOrder: [uid],
-        board: {
-          revision: 0,
-          strokes: {}
-        },
-        choice: {
-          expiresAt: 0
-        }
-      };
-
-      const tx = await runTransaction(roomRef, (current) => {
-        if (current) {
-          return;
-        }
-        return room;
-      });
-
-      if (tx.committed) {
-        roomCode = candidate;
-        break;
-      }
-    }
-
-    if (!roomCode) {
-      setNotice("部屋をつくれませんでした。もう一度ためしてください。", true, "create");
-      return;
-    }
-
-    await attachPresence(roomCode);
-    updateHash(roomCode);
-    await subscribeToRoom(roomCode);
-  } catch (error) {
-    console.error(error);
-    setNotice(explainFirebaseError(error, "部屋をつくれませんでした。"), true, "create");
+    localStorage.setItem(NAME_KEY, readPlayerName());
+  } catch {
+    /* private mode */
   }
 }
 
-async function joinRoom(roomCodeRaw) {
-  const roomCode = roomCodeRaw.toUpperCase().replace(/[^A-Z0-9]/g, "");
-  const name = readPlayerName();
-  if (!name) {
-    setNotice("先になまえを入力してください。", true, "join");
+function requireName(view) {
+  if (!readPlayerName()) {
+    setNotice("先になまえを入力してください。", true, view);
+    return false;
+  }
+  persistName();
+  return true;
+}
+
+function onShowCreate() {
+  if (!requireName("entry")) {
     return;
   }
-  if (!roomCode || roomCode.length < 6) {
-    setNotice("部屋コードを入力してください。", true, "join");
+  if (state.launchConfig) {
+    createRoom(state.launchConfig);
     return;
   }
-  if (!state.playerId) {
-    setNotice("認証に失敗しました。ページを再読み込みしてください。", true, "join");
-    return;
-  }
-
-  try {
-    const roomRef = ref(state.db, `rooms/${roomCode}`);
-    const snapshot = await get(roomRef);
-    if (!snapshot.exists()) {
-      setNotice(`部屋 ${roomCode} は見つかりません。`, true, "join");
-      return;
-    }
-
-    const room = snapshot.val();
-    if (isRoomExpired(room)) {
-      try {
-        await remove(roomRef);
-      } catch (error) {
-        console.warn("Failed to remove expired room", error);
-      }
-      setNotice("この部屋の期限がきれました。新しい部屋をつくってください。", true, "join");
-      return;
-    }
-
-    if (!hasConnectedPlayers(room) && room.ownerId !== state.playerId) {
-      try {
-        await remove(roomRef);
-      } catch (error) {
-        console.warn("Failed to remove empty room", error);
-      }
-      setNotice("この部屋にはもう誰もいません。新しい部屋をつくってください。", true, "join");
-      return;
-    }
-
-    const players = room.players || {};
-    const connectedCount = getConnectedPlayers(room).length;
-    if (!players[state.playerId] && connectedCount >= (room.settings?.maxPlayers || 20)) {
-      setNotice("この部屋は満員です。", true, "join");
-      return;
-    }
-
-    const updates = {};
-    updates[`rooms/${roomCode}/players/${state.playerId}`] = makePlayerRecord(name, players[state.playerId]?.score || 0);
-    if (!toList(room.playerOrder).includes(state.playerId)) {
-      updates[`rooms/${roomCode}/playerOrder`] = [...toList(room.playerOrder), state.playerId];
-    }
-    await update(ref(state.db), updates);
-    await attachPresence(roomCode);
-    updateHash(roomCode);
-    await subscribeToRoom(roomCode);
-  } catch (error) {
-    console.error(error);
-    setNotice(explainFirebaseError(error, "部屋にはいれませんでした。"), true, "join");
-  }
-}
-
-async function subscribeToRoom(roomCode) {
-  if (state.roomUnsubscribe) {
-    state.roomUnsubscribe();
-  }
-  state.roomCode = roomCode;
-  els.leaveRoomButton.hidden = false;
-  updateRoomMode();
-
-  const roomRef = ref(state.db, `rooms/${roomCode}`);
-  state.roomUnsubscribe = onValue(roomRef, async (snapshot) => {
-    if (!snapshot.exists()) {
-      await cancelDisconnectHandlers();
-      clearRoomState("部屋が閉じられました。");
-      return;
-    }
-    state.roomData = snapshot.val();
-
-    if (isRoomExpired(state.roomData)) {
-      await destroyRoomIfAllowed(roomCode);
-      return;
-    }
-
-    await refreshRoomDisconnectHandler(roomCode);
-    renderRoom();
-    await maybeCleanupAbandonedRoom(roomCode);
-    await maybeAdvanceOwnedGameState();
-  });
-}
-
-async function attachPresence(roomCode) {
-  await cancelDisconnectHandlers();
-  const uid = state.auth.currentUser?.uid || state.playerId;
-  state.playerId = uid;
-  const playerRef = ref(state.db, `rooms/${roomCode}/players/${uid}`);
-  const existingScore = state.roomData?.players?.[uid]?.score || 0;
-  const playerData = makePlayerRecord(readPlayerName() || "Player", existingScore);
-
-  await update(playerRef, playerData);
-
-  // Use update-on-disconnect (not remove). remove() was rejected by rules
-  // after room create and blocked entering the lobby.
-  try {
-    state.playerDisconnect = onDisconnect(playerRef);
-    await state.playerDisconnect.update({
-      connected: false,
-      leftAt: Date.now()
-    });
-  } catch (error) {
-    console.warn("onDisconnect player setup failed", error);
-    state.playerDisconnect = null;
-  }
-
-  state.presenceReady = true;
-
-  try {
-    await refreshRoomDisconnectHandler(roomCode);
-  } catch (error) {
-    console.warn("room disconnect setup failed", error);
-  }
-}
-
-async function refreshRoomDisconnectHandler(roomCode) {
-  if (!roomCode || !state.roomData) {
-    return;
-  }
-  const connected = getConnectedPlayers(state.roomData);
-  const onlyMe =
-    connected.length === 0 ||
-    (connected.length === 1 && connected[0].id === state.playerId);
-
-  if (state.roomDisconnect) {
-    try {
-      await state.roomDisconnect.cancel();
-    } catch (error) {
-      console.warn("Failed to cancel room disconnect", error);
-    }
-    state.roomDisconnect = null;
-  }
-
-  if (!onlyMe) {
-    return;
-  }
-
-  try {
-    state.roomDisconnect = onDisconnect(ref(state.db, `rooms/${roomCode}`));
-    await state.roomDisconnect.remove();
-  } catch (error) {
-    console.warn("onDisconnect room remove not permitted; relying on leave/expiry cleanup", error);
-    state.roomDisconnect = null;
-  }
-}
-
-async function cancelDisconnectHandlers() {
-  if (state.playerDisconnect) {
-    try {
-      await state.playerDisconnect.cancel();
-    } catch (error) {
-      console.warn("Failed to cancel player disconnect", error);
-    }
-    state.playerDisconnect = null;
-  }
-  if (state.roomDisconnect) {
-    try {
-      await state.roomDisconnect.cancel();
-    } catch (error) {
-      console.warn("Failed to cancel room disconnect", error);
-    }
-    state.roomDisconnect = null;
-  }
-}
-
-async function maybeCleanupAbandonedRoom(roomCode) {
-  const room = state.roomData;
-  if (!room || !roomCode) {
-    return;
-  }
-  if (hasConnectedPlayers(room)) {
-    return;
-  }
-  await destroyRoomIfAllowed(roomCode);
-}
-
-async function destroyRoomIfAllowed(roomCode) {
-  if (!roomCode) {
-    return;
-  }
-  try {
-    await cancelDisconnectHandlers();
-    await remove(ref(state.db, `rooms/${roomCode}`));
-  } catch (error) {
-    console.warn("Failed to destroy room", roomCode, error);
-  }
-}
-
-function renderRoom() {
-  const room = state.roomData;
-  const settings = room.settings || {};
-  const players = getPlayersArray(room);
-  const me = room.players?.[state.playerId];
-  const isOwner = room.ownerId === state.playerId;
-  const isDrawer = room.drawerId === state.playerId;
-
-  els.roomTitle.textContent = room.code || "----";
-  els.roundLabel.textContent = `${room.round || 0}/${settings.rounds || "-"}`;
-  els.phaseLabel.textContent = phaseLabelJa(room.phase);
-  els.wordHintLabel.textContent = buildHintLabel(room);
-
-  els.drawerWordBadge.hidden = !(isDrawer && room.currentWord?.english);
-  els.drawerWordLabel.textContent = room.currentWord?.english || "";
-  els.startGameButton.hidden = !isOwner;
-  els.startGameButton.disabled = room.phase !== "lobby" && room.phase !== "gameOver";
-  const drawingToolsActive = isDrawer && room.phase === "drawing";
-  els.toolbox.hidden = !drawingToolsActive;
-  els.clearBoardButton.disabled = !drawingToolsActive;
-  els.undoButton.disabled = !drawingToolsActive;
-
-  els.playersList.replaceChildren(
-    ...players.map((player) => {
-      const row = document.createElement("div");
-      row.className = "player-row";
-      if (player.id === room.drawerId) {
-        row.classList.add("active-drawer");
-      }
-      const badges = [];
-      if (player.id === room.drawerId) {
-        badges.push("かく番");
-      }
-      if (player.guessed) {
-        badges.push("正解");
-      }
-      const badgeText = badges.length ? ` · ${badges.join(" · ")}` : "";
-      row.innerHTML = `<strong>${escapeHtml(player.name)}</strong> ${player.score || 0}点${badgeText}`;
-      return row;
-    })
-  );
-
-  renderChat(room);
-  renderWordChoices(room);
-  renderGameOver(room);
-  renderBoard(room.board);
-  startOrRefreshTimer();
-
-  els.showRoomQrButton.hidden = !isOwner;
-  if (me && me.name !== els.playerName.value.trim()) {
-    els.playerName.value = me.name;
-  }
-  updateRoomMode();
-  ensureWebRtcSession();
-}
-
-function renderGameOver(room) {
-  const isGameOver = room.phase === "gameOver";
-  els.gameOverPanel.hidden = !isGameOver;
-  if (!isGameOver) {
-    els.changeDeckPanel.hidden = true;
-    els.leaderboardList.replaceChildren();
-    return;
-  }
-
-  const isOwner = room.ownerId === state.playerId;
-  const lastWord = room.lastWord || room.currentWord;
-  els.gameOverLastWord.textContent = lastWord?.english
-    ? `さいごのことば: ${lastWord.english}`
-    : "";
-  els.gameOverActions.hidden = false;
-  els.gameOverWaiting.hidden = isOwner;
-  els.playAgainButton.hidden = !isOwner;
-  els.changeDeckButton.hidden = !isOwner;
-  els.quitGameButton.hidden = false;
-
-  const ranked = getPlayersArray(room).sort((a, b) => (b.score || 0) - (a.score || 0));
-  els.leaderboardList.replaceChildren(
-    ...ranked.map((player, index) => {
-      const row = document.createElement("li");
-      if (index === 0) {
-        row.classList.add("rank-1");
-      }
-      const crown = index === 0 ? `<span class="leaderboard-crown" aria-hidden="true">👑</span>` : `<span>${index + 1}</span>`;
-      row.innerHTML = `${crown}<span>${escapeHtml(player.name)}</span><strong>${player.score || 0}点</strong>`;
-      return row;
-    })
-  );
-}
-
-function renderWordChoices(room) {
-  const isDrawer = room.drawerId === state.playerId;
-  const isChoosing = room.phase === "choosing";
-  const options = toList(room.choice?.options).map(hydrateChoiceOption);
-
-  els.wordChoicePanel.hidden = !(isDrawer && isChoosing);
-  if (!(isDrawer && isChoosing)) {
-    els.wordChoiceGrid.replaceChildren();
-    return;
-  }
-
-  if (options.length === 0) {
-    const empty = document.createElement("p");
-    empty.className = "notice";
-    empty.textContent = "このカテゴリーの単語を読み込めませんでした。別のカテゴリーを選んでください。";
-    els.wordChoiceGrid.replaceChildren(empty);
-    return;
-  }
-
-  els.wordChoiceGrid.replaceChildren(
-    ...options.map((option, index) =>
-      buildCard(
-        option.english,
-        option.image,
-        [option.japanese?.kanji, option.japanese?.furigana].filter(Boolean).join(" "),
-        false,
-        () => chooseWord(index)
-      )
-    )
-  );
-}
-
-function renderChat(room) {
-  const chatEntries = Object.entries(room.chat || {})
-    .map(([id, entry]) => ({ id, ...entry }))
-    .sort((a, b) => (a.createdAt || 0) - (b.createdAt || 0));
-  els.chatLog.replaceChildren(
-    ...chatEntries.slice(-80).map((entry) => {
-      const row = document.createElement("div");
-      const kind = entry.kind || (entry.authorName === "System" ? "system" : "chat");
-      row.className = `chat-row ${kind}`;
-      if (kind === "correct") {
-        row.innerHTML = `○ <strong>${escapeHtml(entry.authorName || "")}</strong> ${escapeHtml(entry.text || "正解！")}`;
-      } else if (kind === "incorrect") {
-        row.innerHTML = `× <strong>${escapeHtml(entry.authorName || "")}</strong> ${escapeHtml(entry.text || "")}`;
-      } else if (kind === "system") {
-        row.textContent = entry.text || "";
-      } else {
-        row.innerHTML = `<strong>${escapeHtml(entry.authorName || "")}</strong> ${escapeHtml(entry.text || "")}`;
-      }
-      return row;
-    })
-  );
-  els.chatLog.scrollTop = els.chatLog.scrollHeight;
-}
-
-function renderBoard(board) {
-  const revision = board?.revision ?? 0;
-  if (revision === state.renderedBoardRevision) {
-    return;
-  }
-  // While WebRTC is live, peers already see strokes; still apply RTDB checkpoints
-  // when not mid-stroke so late join / reconnect stay consistent.
-  if (state.webrtc?.isLive() && state.isDrawing) {
-    return;
-  }
-  state.renderedBoardRevision = revision;
-  redrawBoard(board);
-}
-
-function redrawBoard(board) {
-  ctx.fillStyle = "#ffffff";
-  ctx.fillRect(0, 0, els.board.width, els.board.height);
-  const strokes = Object.entries(board?.strokes || {})
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([, stroke]) => stroke);
-  for (const stroke of strokes) {
-    applyBoardAction(stroke);
-  }
-  cacheCommittedBoard(board?.revision ?? 0);
-}
-
-function cacheCommittedBoard(revision) {
-  if (!state.boardCache) {
-    state.boardCache = document.createElement("canvas");
-  }
-  if (state.boardCache.width !== els.board.width || state.boardCache.height !== els.board.height) {
-    state.boardCache.width = els.board.width;
-    state.boardCache.height = els.board.height;
-  }
-  state.boardCache.getContext("2d").drawImage(els.board, 0, 0);
-  state.boardCacheRevision = revision;
-}
-
-async function startGame() {
-  if (!state.roomCode || state.roomData?.ownerId !== state.playerId) {
-    return;
-  }
-  await advanceToNextTurn("start");
-}
-
-async function resetMatchScoresAndBoard(extraUpdates = {}) {
-  if (!state.roomCode || state.roomData?.ownerId !== state.playerId) {
-    return;
-  }
-  const roomRef = ref(state.db, `rooms/${state.roomCode}`);
-  await runTransaction(roomRef, (room) => {
-    if (!room || room.ownerId !== state.playerId) {
-      return room;
-    }
-    for (const playerId of Object.keys(room.players || {})) {
-      room.players[playerId].score = 0;
-      room.players[playerId].guessed = false;
-    }
-    room.round = 0;
-    room.drawerId = "";
-    room.phase = "lobby";
-    room.choice = { expiresAt: 0 };
-    room.currentWord = null;
-    room.hint = "";
-    room.turnEndsAt = null;
-    room.board = { revision: (room.board?.revision || 0) + 1, strokes: {} };
-    room.chat = {};
-    Object.assign(room, extraUpdates);
-    return room;
-  });
-}
-
-async function playAgain() {
-  if (!state.roomCode || state.roomData?.ownerId !== state.playerId) {
-    return;
-  }
-  els.changeDeckPanel.hidden = true;
-  await resetMatchScoresAndBoard();
-  await advanceToNextTurn("start");
-}
-
-function openChangeDeckPanel() {
-  if (!state.roomCode || state.roomData?.ownerId !== state.playerId) {
-    return;
-  }
-  const textbook = state.catalog?.textbooks?.[0];
-  if (!textbook) {
-    return;
-  }
-  els.changeDeckPanel.hidden = false;
-  els.changeDeckGrid.replaceChildren(
-    ...textbook.decks.map((deck) =>
-      buildCard(
-        deck.name,
-        deck.image,
-        `${deck.words.length} 語`,
-        deck.id === (state.roomData.settings?.deckId || state.selectedDeckId),
-        () => changeDeckAndRestart(deck)
-      )
-    )
-  );
-}
-
-async function changeDeckAndRestart(deck) {
-  if (!state.roomCode || state.roomData?.ownerId !== state.playerId || !deck) {
-    return;
-  }
-  state.selectedDeckId = deck.id;
-  els.changeDeckPanel.hidden = true;
-  const textbook = state.catalog.textbooks[0];
-  await resetMatchScoresAndBoard({
-    settings: {
-      ...(state.roomData.settings || {}),
-      deckId: deck.id,
-      deckName: deck.name,
-      textbookId: textbook?.id || "",
-      textbookName: textbook?.name || PICTURE_DICTIONARY_NAME
-    }
-  });
-  await advanceToNextTurn("start");
-}
-
-async function advanceToNextTurn(reason) {
-  const roomRef = ref(state.db, `rooms/${state.roomCode}`);
-  const preparedOptions = pickRandomWords(getRoomDeckWords(state.roomData), WORDS_PER_TURN).map(slimWord);
-
-  await runTransaction(roomRef, (room) => {
-    if (!room) {
-      return room;
-    }
-
-    const order = toList(room.playerOrder).filter((playerId) => room.players?.[playerId]);
-    const activePlayers = order.filter((playerId) => room.players[playerId]?.connected !== false);
-    if (activePlayers.length < 1) {
-      return room;
-    }
-
-    let nextRound = room.round || 0;
-    let drawerIndex = order.indexOf(room.drawerId);
-    drawerIndex = drawerIndex === -1 ? 0 : drawerIndex + 1;
-    if (!room.drawerId) {
-      drawerIndex = 0;
-      nextRound = 1;
-    } else if (drawerIndex >= order.length) {
-      drawerIndex = 0;
-      nextRound += 1;
-    }
-
-    if (nextRound > (room.settings?.rounds || 4)) {
-      room.phase = "gameOver";
-      room.drawerId = "";
-      room.choice = { expiresAt: 0 };
-      if (room.currentWord) {
-        room.lastWord = room.currentWord;
-      }
-      room.currentWord = null;
-      room.hint = "";
-      room.turnEndsAt = null;
-      return room;
-    }
-
-    if (reason === "timer-ended" && room.currentWord?.english) {
-      const chatKey = `reveal-${room.round || 0}-${room.drawerId || "none"}`;
-      room.chat = room.chat || {};
-      room.chat[chatKey] = {
-        kind: "system",
-        authorName: "システム",
-        text: `時間切れ！ こたえは「${room.currentWord.english}」でした。`,
-        createdAt: Date.now()
-      };
-    }
-
-    const nextDrawerId = order[drawerIndex];
-    const options =
-      preparedOptions.length > 0
-        ? preparedOptions
-        : pickRandomWords(getRoomDeckWords(room), WORDS_PER_TURN).map(slimWord);
-
-    room.round = nextRound;
-    room.drawerId = nextDrawerId;
-    room.phase = "choosing";
-    room.choice = {
-      options,
-      expiresAt: Date.now() + 20000
-    };
-    room.currentWord = null;
-    room.hint = "";
-    room.turnEndsAt = null;
-    room.board = { revision: (room.board?.revision || 0) + 1, strokes: {} };
-    for (const playerId of Object.keys(room.players || {})) {
-      room.players[playerId].guessed = false;
-      room.players[playerId].lastAction = Date.now();
-    }
-    room.lastEvent = reason;
-    return room;
-  });
-}
-
-async function chooseWord(index, options = {}) {
-  if (!state.roomCode) {
-    return;
-  }
-
-  const allowOwnerOverride = Boolean(options.allowOwnerOverride);
-  const roomRef = ref(state.db, `rooms/${state.roomCode}`);
-  await runTransaction(roomRef, (room) => {
-    if (!room || room.phase !== "choosing") {
-      return room;
-    }
-    const isDrawer = room.drawerId === state.playerId;
-    const isOwner = room.ownerId === state.playerId;
-    if (!isDrawer && !(allowOwnerOverride && isOwner)) {
-      return room;
-    }
-    const option = toList(room.choice?.options)[index];
-    if (!option?.english) {
-      return room;
-    }
-    room.currentWord = slimWord(option);
-    room.phase = "drawing";
-    room.hint = buildMaskedHint(option.english);
-    room.turnEndsAt = Date.now() + (room.settings?.drawingTime || 90) * 1000;
-    room.choice = { expiresAt: 0 };
-    return room;
-  });
-}
-
-async function maybeAdvanceOwnedGameState() {
-  const room = state.roomData;
-  if (!room || room.ownerId !== state.playerId) {
-    return;
-  }
-  if (state.advancing) {
-    return;
-  }
-
-  const now = Date.now();
-  if (room.phase === "choosing") {
-    const expiresAt = Number(room.choice?.expiresAt) || 0;
-    if (expiresAt && now >= expiresAt) {
-      state.advancing = true;
-      try {
-        await chooseWord(0, { allowOwnerOverride: true });
-      } finally {
-        state.advancing = false;
-      }
-      return;
-    }
-  }
-
-  if (room.phase === "drawing") {
-    const guessers = getPlayersArray(room).filter((player) => player.id !== room.drawerId && player.connected !== false);
-    const everyoneGuessed = guessers.length > 0 && guessers.every((player) => player.guessed);
-    const turnEndsAt = Number(room.turnEndsAt) || 0;
-    if ((turnEndsAt && now >= turnEndsAt) || everyoneGuessed) {
-      state.advancing = true;
-      try {
-        await advanceToNextTurn(everyoneGuessed ? "everyone-guessed" : "timer-ended");
-      } finally {
-        state.advancing = false;
-      }
-    }
-  }
-}
-
-async function submitChat() {
-  const text = els.chatInput.value.trim();
-  if (!text || !state.roomCode || !state.roomData) {
-    return;
-  }
-
-  const room = state.roomData;
-  const player = room.players?.[state.playerId];
-  const isDrawer = room.drawerId === state.playerId;
-  const normalized = normalizeWord(text);
-  const authorName = player?.name || readPlayerName();
-
-  if (!isDrawer && room.phase === "drawing" && room.currentWord?.normalized && !player?.guessed) {
-    if (room.currentWord.normalized === normalized) {
-      const roomRef = ref(state.db, `rooms/${state.roomCode}`);
-      await runTransaction(roomRef, (current) => {
-        if (!current || current.phase !== "drawing" || !current.players?.[state.playerId] || current.drawerId === state.playerId) {
-          return current;
-        }
-        if (current.players[state.playerId].guessed) {
-          return current;
-        }
-        current.players[state.playerId].guessed = true;
-        current.players[state.playerId].score = (current.players[state.playerId].score || 0) + 1;
-        if (current.players[current.drawerId]) {
-          current.players[current.drawerId].score = (current.players[current.drawerId].score || 0) + 2;
-        }
-        const chatKey = makeClientEventKey();
-        current.chat = current.chat || {};
-        current.chat[chatKey] = {
-          kind: "correct",
-          authorId: state.playerId,
-          authorName,
-          text: "正解！",
-          createdAt: Date.now()
-        };
-        return current;
-      });
-    } else {
-      await push(ref(state.db, `rooms/${state.roomCode}/chat`), {
-        kind: "incorrect",
-        authorId: state.playerId,
-        authorName,
-        text,
-        createdAt: Date.now()
-      });
-    }
-  } else {
-    await push(ref(state.db, `rooms/${state.roomCode}/chat`), {
-      kind: "chat",
-      authorId: state.playerId,
-      authorName,
-      text,
-      createdAt: Date.now()
-    });
-  }
-
-  els.chatInput.value = "";
-}
-
-function onPointerDown(event) {
-  if (!canDraw()) {
-    return;
-  }
-
-  if (state.tool === "fill") {
-    const point = getCanvasPoint(event);
-    floodFill(point[0], point[1], state.color);
-    cacheCommittedBoard(state.boardCacheRevision ?? state.renderedBoardRevision ?? 0);
-    sendDrawLive({ t: "fill", c: state.color, x: point[0], y: point[1] });
-    commitFill(point[0], point[1]);
-    return;
-  }
-
-  state.isDrawing = true;
-  state.activeStroke = [getCanvasPoint(event)];
-  els.board.setPointerCapture?.(event.pointerId);
-}
-
-function onPointerMove(event) {
-  if (!state.isDrawing || !canDraw()) {
-    return;
-  }
-  const point = getCanvasPoint(event);
-  const previous = state.activeStroke[state.activeStroke.length - 1];
-  state.activeStroke.push(point);
-  // Draw only the newest segment. Never rebuild fills on every move.
-  if (previous) {
-    const color = getActiveDrawColor();
-    const width = state.brushSize;
-    drawStrokeSegment(previous, point, color, width);
-    sendDrawLive({
-      t: "seg",
-      c: color,
-      w: width,
-      x1: previous[0],
-      y1: previous[1],
-      x2: point[0],
-      y2: point[1]
-    });
-  }
-}
-
-async function onPointerUp(event) {
-  if (!state.isDrawing) {
-    return;
-  }
-  state.isDrawing = false;
-  if (canDraw()) {
-    const point = getCanvasPoint(event);
-    const previous = state.activeStroke[state.activeStroke.length - 1];
-    state.activeStroke.push(point);
-    if (previous) {
-      const color = getActiveDrawColor();
-      const width = state.brushSize;
-      drawStrokeSegment(previous, point, color, width);
-      sendDrawLive({
-        t: "seg",
-        c: color,
-        w: width,
-        x1: previous[0],
-        y1: previous[1],
-        x2: point[0],
-        y2: point[1]
-      });
-    }
-    await commitStroke();
-  }
-  state.activeStroke = [];
-}
-
-function getActiveDrawColor() {
-  return state.tool === "rubber" ? "#ffffff" : state.color;
-}
-
-function drawStrokeSegment(from, to, color, width) {
-  ctx.strokeStyle = color || "#000000";
-  ctx.lineWidth = width || 8;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
-  ctx.beginPath();
-  ctx.moveTo(from[0], from[1]);
-  ctx.lineTo(to[0], to[1]);
-  ctx.stroke();
-}
-
-async function commitStroke() {
-  const points = dedupePoints(state.activeStroke);
-  if (points.length < 2 || !state.roomCode) {
-    return;
-  }
-
-  const strokeId = makeClientEventKey();
-  const roomRef = ref(state.db, `rooms/${state.roomCode}`);
-  await runTransaction(roomRef, (room) => {
-    if (!room || room.phase !== "drawing" || room.drawerId !== state.playerId) {
-      return room;
-    }
-    room.board = room.board || { revision: 0, strokes: {} };
-    room.board.strokes = room.board.strokes || {};
-    room.board.strokes[strokeId] = {
-      type: "stroke",
-      authorId: state.playerId,
-      color: getActiveDrawColor(),
-      width: state.brushSize,
-      points
-    };
-    room.board.revision = (room.board.revision || 0) + 1;
-    return room;
-  });
-}
-
-async function commitFill(x, y) {
-  if (!state.roomCode) {
-    return;
-  }
-
-  const strokeId = makeClientEventKey();
-  const roomRef = ref(state.db, `rooms/${state.roomCode}`);
-  await runTransaction(roomRef, (room) => {
-    if (!room || room.phase !== "drawing" || room.drawerId !== state.playerId) {
-      return room;
-    }
-    room.board = room.board || { revision: 0, strokes: {} };
-    room.board.strokes = room.board.strokes || {};
-    room.board.strokes[strokeId] = {
-      type: "fill",
-      authorId: state.playerId,
-      color: state.color,
-      x,
-      y
-    };
-    room.board.revision = (room.board.revision || 0) + 1;
-    return room;
-  });
-}
-
-async function clearBoard() {
-  if (!canDraw() || !state.roomCode) {
-    return;
-  }
-  ctx.fillStyle = "#ffffff";
-  ctx.fillRect(0, 0, els.board.width, els.board.height);
-  cacheCommittedBoard((state.boardCacheRevision || 0) + 1);
-  sendDrawLive({ t: "clear" });
-  const roomRef = ref(state.db, `rooms/${state.roomCode}`);
-  await runTransaction(roomRef, (room) => {
-    if (!room || room.drawerId !== state.playerId) {
-      return room;
-    }
-    room.board = { revision: (room.board?.revision || 0) + 1, strokes: {} };
-    return room;
-  });
-}
-
-async function undoLastStroke() {
-  if (!canDraw() || !state.roomCode) {
-    return;
-  }
-  sendDrawLive({ t: "undo" });
-  const roomRef = ref(state.db, `rooms/${state.roomCode}`);
-  await runTransaction(roomRef, (room) => {
-    if (!room || room.drawerId !== state.playerId) {
-      return room;
-    }
-    const strokes = room.board?.strokes || {};
-    const keys = Object.keys(strokes)
-      .filter((key) => strokes[key]?.authorId === state.playerId)
-      .sort((a, b) => a.localeCompare(b));
-    if (keys.length === 0) {
-      return room;
-    }
-    delete strokes[keys[keys.length - 1]];
-    room.board.strokes = strokes;
-    room.board.revision = (room.board.revision || 0) + 1;
-    return room;
-  });
-}
-
-function applyBoardAction(action) {
-  if (action?.type === "fill") {
-    floodFill(action.x, action.y, action.color || "#000000");
-    return;
-  }
-  drawStroke(action);
-}
-
-function drawStroke(stroke) {
-  const points = stroke.points || [];
-  if (points.length < 2) {
-    return;
-  }
-  ctx.strokeStyle = stroke.color || "#000000";
-  ctx.lineWidth = stroke.width || 8;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
-  ctx.beginPath();
-  ctx.moveTo(points[0][0], points[0][1]);
-  for (let i = 1; i < points.length; i += 1) {
-    ctx.lineTo(points[i][0], points[i][1]);
-  }
-  ctx.stroke();
-}
-
-function floodFill(startX, startY, fillColorHex) {
-  const width = els.board.width;
-  const height = els.board.height;
-  const imageData = ctx.getImageData(0, 0, width, height);
-  const data = imageData.data;
-  const x0 = Math.max(0, Math.min(width - 1, Math.round(startX)));
-  const y0 = Math.max(0, Math.min(height - 1, Math.round(startY)));
-  const fill = hexToRgba(fillColorHex);
-  const startIndex = (y0 * width + x0) * 4;
-  const tr = data[startIndex];
-  const tg = data[startIndex + 1];
-  const tb = data[startIndex + 2];
-  const ta = data[startIndex + 3];
-
-  if (tr === fill[0] && tg === fill[1] && tb === fill[2] && ta === fill[3]) {
-    return;
-  }
-
-  const match = (index) =>
-    data[index] === tr && data[index + 1] === tg && data[index + 2] === tb && data[index + 3] === ta;
-
-  const paint = (index) => {
-    data[index] = fill[0];
-    data[index + 1] = fill[1];
-    data[index + 2] = fill[2];
-    data[index + 3] = 255;
-  };
-
-  // Scanline fill — much faster than per-pixel stack for large areas.
-  const stack = [[x0, y0]];
-  while (stack.length > 0) {
-    let [x, y] = stack.pop();
-    let index = (y * width + x) * 4;
-    while (x > 0 && match(index - 4)) {
-      x -= 1;
-      index -= 4;
-    }
-
-    let spanUp = false;
-    let spanDown = false;
-    while (x < width && match(index)) {
-      paint(index);
-
-      if (y > 0) {
-        const up = index - width * 4;
-        if (match(up)) {
-          if (!spanUp) {
-            stack.push([x, y - 1]);
-            spanUp = true;
-          }
-        } else {
-          spanUp = false;
-        }
-      }
-
-      if (y < height - 1) {
-        const down = index + width * 4;
-        if (match(down)) {
-          if (!spanDown) {
-            stack.push([x, y + 1]);
-            spanDown = true;
-          }
-        } else {
-          spanDown = false;
-        }
-      }
-
-      x += 1;
-      index += 4;
-    }
-  }
-
-  ctx.putImageData(imageData, 0, 0);
-}
-
-function hexToRgba(hex) {
-  const normalized = hex.replace("#", "");
-  const full = normalized.length === 3
-    ? normalized.split("").map((char) => char + char).join("")
-    : normalized;
-  return [
-    Number.parseInt(full.slice(0, 2), 16),
-    Number.parseInt(full.slice(2, 4), 16),
-    Number.parseInt(full.slice(4, 6), 16),
-    255
-  ];
-}
-
-async function leaveRoom() {
-  const roomCode = state.roomCode;
-  await stopWebRtcSession();
-  if (roomCode && state.playerId) {
-    await cancelDisconnectHandlers();
-    try {
-      await update(ref(state.db, `rooms/${roomCode}/players/${state.playerId}`), {
-        connected: false,
-        leftAt: Date.now()
-      });
-      const snapshot = await get(ref(state.db, `rooms/${roomCode}`));
-      if (snapshot.exists()) {
-        const room = snapshot.val();
-        if (!hasConnectedPlayers(room)) {
-          await remove(ref(state.db, `rooms/${roomCode}`));
-        }
-      }
-    } catch (error) {
-      console.warn("Leave room cleanup failed", error);
-      try {
-        await remove(ref(state.db, `rooms/${roomCode}`));
-      } catch (removeError) {
-        console.warn("Room remove failed", removeError);
-      }
-    }
-  }
-  clearRoomState("部屋をでました。");
-  updateHash("");
-}
-
-function clearRoomState(message) {
-  stopWebRtcSession();
-  if (state.roomUnsubscribe) {
-    state.roomUnsubscribe();
-    state.roomUnsubscribe = null;
-  }
-  state.roomCode = null;
-  state.roomData = null;
-  state.presenceReady = false;
-  state.playerDisconnect = null;
-  state.roomDisconnect = null;
-  els.leaveRoomButton.hidden = true;
-  els.wordChoicePanel.hidden = true;
-  els.gameOverPanel.hidden = true;
-  els.changeDeckPanel.hidden = true;
-  els.roomQrModal.hidden = true;
-  els.showRoomQrButton.hidden = true;
-  els.toolbox.hidden = true;
-  els.roomTitle.textContent = "----";
-  els.playersList.replaceChildren();
-  els.chatLog.replaceChildren();
-  els.wordHintLabel.textContent = "-";
-  els.timerLabel.textContent = "-";
-  els.phaseLabel.textContent = "待機中";
-  els.drawerWordBadge.hidden = true;
-  ctx.fillStyle = "#ffffff";
-  ctx.fillRect(0, 0, els.board.width, els.board.height);
-  state.renderedBoardRevision = null;
-  showHomeView("entry");
-  if (message) {
-    setNotice(message, false, "entry");
-  }
-  updateRoomMode();
-}
-
-function startOrRefreshTimer() {
-  if (state.timerIntervalId) {
-    clearInterval(state.timerIntervalId);
-  }
-
-  const tick = () => {
-    const room = state.roomData;
-    if (!room) {
-      els.timerLabel.textContent = "-";
-      return;
-    }
-
-    let target = null;
-    if (room.phase === "choosing") {
-      target = Number(room.choice?.expiresAt) || 0;
-    } else if (room.phase === "drawing") {
-      target = Number(room.turnEndsAt) || 0;
-    }
-
-    if (!target) {
-      els.timerLabel.textContent = room.phase === "lobby" || room.phase === "gameOver" ? "-" : "0";
-      return;
-    }
-    const seconds = Math.max(0, Math.ceil((target - Date.now()) / 1000));
-    els.timerLabel.textContent = String(seconds);
-
-    if (seconds <= 0 && room.ownerId === state.playerId) {
-      maybeAdvanceOwnedGameState();
-    }
-  };
-
-  tick();
-  state.timerIntervalId = window.setInterval(tick, 250);
-}
-
-function getPlayersArray(room) {
-  return Object.entries(room.players || {})
-    .map(([id, player]) => ({ id, ...player }))
-    .sort((a, b) => (b.score || 0) - (a.score || 0) || a.name.localeCompare(b.name));
-}
-
-function getConnectedPlayers(room) {
-  return getPlayersArray(room).filter((player) => player.connected !== false);
-}
-
-function hasConnectedPlayers(room) {
-  return getConnectedPlayers(room).length > 0;
-}
-
-function isRoomExpired(room) {
-  const expiresAt = Number(room?.expiresAt) || 0;
-  return Boolean(expiresAt && Date.now() >= expiresAt);
-}
-
-function getSelectedTextbook() {
-  return state.catalog.textbooks.find((textbook) => textbook.id === state.selectedTextbookId) || null;
-}
-
-function getSelectedDeck() {
-  return getSelectedTextbook()?.decks.find((deck) => deck.id === state.selectedDeckId) || null;
-}
-
-function getRoomDeckWords(room) {
-  if (!room?.settings || !state.catalog) {
-    return [];
-  }
-  const textbook =
-    state.catalog.textbooks.find((item) => item.id === room.settings.textbookId) ||
-    state.catalog.textbooks[0];
-  const deck = textbook?.decks.find((item) => item.id === room.settings.deckId);
-  return deck?.words || [];
-}
-
-function slimWord(word) {
-  return {
-    english: word.english,
-    japanese: {
-      kanji: word.japanese?.kanji || "",
-      furigana: word.japanese?.furigana || ""
-    },
-    image: word.image || "",
-    normalized: word.normalized || normalizeWord(word.english)
-  };
-}
-
-function hydrateChoiceOption(option) {
-  if (!option) {
-    return option;
-  }
-  const image = option.image || "";
-  return {
-    ...option,
-    image: image.startsWith("./") || image.startsWith("../") || image.startsWith("http") ? image : toStaticAssetUrl(image)
-  };
-}
-
-function toList(value) {
-  if (!value) {
-    return [];
-  }
-  if (Array.isArray(value)) {
-    return value.filter((item) => item != null);
-  }
-  if (typeof value === "object") {
-    return Object.keys(value)
-      .sort((a, b) => Number(a) - Number(b) || String(a).localeCompare(String(b)))
-      .map((key) => value[key])
-      .filter((item) => item != null);
-  }
-  return [];
+  openSettings("create");
 }
 
 function clearNotices() {
   for (const el of [els.homeError, els.createError, els.joinError]) {
-    if (!el) {
-      continue;
-    }
     el.hidden = true;
     el.textContent = "";
   }
@@ -1748,200 +391,1089 @@ function setNotice(message, isError = true, view = null) {
             : !els.homeJoin.hidden
               ? els.joinError
               : els.homeError;
-  if (!target) {
-    return;
-  }
   target.hidden = false;
   target.textContent = message;
   target.classList.toggle("notice-error", Boolean(isError));
 }
 
-function phaseLabelJa(phase) {
-  switch (phase) {
-    case "lobby":
-      return "待機中";
-    case "choosing":
-      return "単語選択";
-    case "drawing":
-      return "お絵かき中";
-    case "gameOver":
-      return "終了";
-    default:
-      return phase || "待機中";
+/* ----- teacher launch link ----------------------------------------- */
+
+function applyLaunchConfig(config) {
+  const known = new Set(state.catalog.decks.map((deck) => deck.id));
+  const deckIds = config.deckIds.filter((id) => known.has(id));
+  if (deckIds.length === 0) {
+    setNotice("このQRのカテゴリーが見つかりません。先生にQRを作りなおしてもらってください。", true, "entry");
+    return;
   }
+  state.launchConfig = normalizeConfig({ ...config, deckIds });
+  renderLaunchSummary();
 }
 
-function buildHintLabel(room) {
-  if (room.phase === "lobby") {
-    return "スタートを待っています";
-  }
-  if (room.phase === "choosing") {
-    return room.drawerId === state.playerId ? "単語を選んでください" : "かく人が単語を選んでいます";
-  }
-  if (room.phase === "gameOver") {
-    return room.currentWord?.english ? `さいごの単語: ${room.currentWord.english}` : "ゲーム終了";
-  }
-  return room.hint || "-";
+function deckNames(ids) {
+  return ids.map((id) => state.catalog.decks.find((deck) => deck.id === id)?.name).filter(Boolean);
 }
 
-function buildMaskedHint(word) {
-  return word
-    .split("")
-    .map((char) => (char === " " || char === "-" ? char : "_"))
-    .join(" ");
-}
-
-function pickRandomWords(words, count) {
-  const copy = [...words];
-  shuffle(copy);
-  return copy.slice(0, Math.max(1, Math.min(count, copy.length)));
-}
-
-function shuffle(items) {
-  for (let i = items.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [items[i], items[j]] = [items[j], items[i]];
+function chipsHtml(config) {
+  const names = deckNames(config.deckIds);
+  const shown = names.slice(0, 4).map((name) => `<span class="chip chip-accent">${escapeHtml(name)}</span>`);
+  if (names.length > 4) {
+    shown.push(`<span class="chip chip-accent">ほか ${names.length - 4}</span>`);
   }
+  shown.push(`<span class="chip">${config.rounds} ラウンド</span>`);
+  shown.push(`<span class="chip">${config.drawSec} びょう</span>`);
+  if (config.jpHint) {
+    shown.push('<span class="chip">かんたんモード</span>');
+  }
+  return shown.join("");
 }
 
-function dedupePoints(points) {
-  const compact = [];
-  for (const point of points) {
-    const last = compact[compact.length - 1];
-    if (!last || last[0] !== point[0] || last[1] !== point[1]) {
-      compact.push(point);
+function renderLaunchSummary() {
+  const config = state.launchConfig;
+  els.launchSummary.hidden = !config;
+  if (config) {
+    els.launchChips.innerHTML = chipsHtml(config);
+  }
+  renderHomeQr();
+}
+
+function launchUrlFor(config) {
+  return `${location.origin}${location.pathname}#${encodeLaunchHash(config)}`;
+}
+
+function currentLaunchUrl() {
+  return state.launchConfig ? launchUrlFor(state.launchConfig) : siteUrl();
+}
+
+function renderHomeQr() {
+  renderQr(els.homeSiteQr, currentLaunchUrl(), 160);
+  els.homeQrCaption.textContent = state.launchConfig
+    ? "おなじ設定で ひらけます。タッチでおおきく"
+    : "タッチするとおおきくひらきます";
+}
+
+/* ----- settings (used by students creating a room and by the teacher) */
+
+function openSettings(mode) {
+  state.setupMode = mode;
+  const teacher = mode === "teacher";
+  els.settingsKicker.textContent = teacher ? "先生用" : "せってい";
+  els.settingsTitle.textContent = teacher ? "ゲームの設定" : "部屋の設定";
+  els.createRoomButton.hidden = teacher;
+  showHomeView("create");
+  renderDeckGrid();
+}
+
+function restoreTeacherSettings() {
+  let saved = null;
+  try {
+    saved = JSON.parse(localStorage.getItem(TEACHER_KEY) || "null");
+  } catch {
+    saved = null;
+  }
+  const config = normalizeConfig(saved || DEFAULT_CONFIG);
+  const known = new Set(state.catalog.decks.map((deck) => deck.id));
+  state.selectedDeckIds = new Set(config.deckIds.filter((id) => known.has(id)));
+  if (state.selectedDeckIds.size === 0) {
+    const first = state.catalog.decks.find((deck) => deck.id !== ALL_DECK_ID);
+    if (first) {
+      state.selectedDeckIds.add(first.id);
     }
   }
-  return compact;
+  els.roundsInput.value = config.rounds;
+  els.drawingTimeInput.value = config.drawSec;
+  els.maxPlayersInput.value = config.maxPlayers;
+  els.jpHintInput.checked = config.jpHint;
+}
+
+function readSettings() {
+  return normalizeConfig({
+    deckIds: [...state.selectedDeckIds],
+    rounds: clamp(els.roundsInput.value, LIMITS.rounds, DEFAULT_CONFIG.rounds),
+    drawSec: clamp(els.drawingTimeInput.value, LIMITS.drawSec, DEFAULT_CONFIG.drawSec),
+    maxPlayers: clamp(els.maxPlayersInput.value, LIMITS.maxPlayers, DEFAULT_CONFIG.maxPlayers),
+    jpHint: els.jpHintInput.checked
+  });
+}
+
+function saveTeacherSettings(config) {
+  try {
+    localStorage.setItem(TEACHER_KEY, JSON.stringify(config));
+  } catch {
+    /* ignore */
+  }
+}
+
+function renderDeckGrid() {
+  if (!state.catalog) {
+    return;
+  }
+  els.deckGrid.replaceChildren(
+    ...state.catalog.decks.map((deck) =>
+      buildCard(
+        deck.id === ALL_DECK_ID ? "ぜんぶ (All)" : deck.name,
+        deck.image,
+        `${deck.playable} 語`,
+        state.selectedDeckIds.has(deck.id),
+        () => {
+          if (state.selectedDeckIds.has(deck.id)) {
+            state.selectedDeckIds.delete(deck.id);
+          } else {
+            state.selectedDeckIds.add(deck.id);
+          }
+          renderDeckGrid();
+        }
+      )
+    )
+  );
+  const pool = buildPool(state.catalog, [...state.selectedDeckIds]);
+  els.deckSummary.textContent =
+    state.selectedDeckIds.size === 0
+      ? "カテゴリーを 1つ以上えらんでね"
+      : `${state.selectedDeckIds.size} カテゴリー・${pool.length} ことば`;
+}
+
+function validateConfig(config, view) {
+  if (config.deckIds.length === 0) {
+    setNotice("カテゴリーを選んでください。", true, view);
+    return false;
+  }
+  if (buildPool(state.catalog, config.deckIds).length < MIN_POOL) {
+    setNotice("えらんだカテゴリーは ことばが少なすぎます。ほかのカテゴリーも えらんでね。", true, view);
+    return false;
+  }
+  return true;
+}
+
+function makeLaunchQr() {
+  const config = readSettings();
+  if (!validateConfig(config, "create")) {
+    return;
+  }
+  saveTeacherSettings(config);
+  state.launchUrl = launchUrlFor(config);
+  state.pendingLaunchConfig = config;
+  els.launchResultChips.innerHTML = chipsHtml(config);
+  els.launchLink.textContent = state.launchUrl;
+  renderQr(els.launchQr, state.launchUrl, 220);
+  showHomeView("launch");
+}
+
+function playLaunchedConfig() {
+  const config = state.pendingLaunchConfig;
+  if (!config) {
+    return;
+  }
+  state.launchConfig = config;
+  history.replaceState(null, "", `${location.pathname}${location.search}#${encodeLaunchHash(config)}`);
+  renderLaunchSummary();
+  showHomeView("entry");
+}
+
+async function copyLaunchLink() {
+  try {
+    await navigator.clipboard.writeText(state.launchUrl);
+    els.copyLaunchButton.textContent = "コピーしました！";
+  } catch {
+    els.copyLaunchButton.textContent = "リンクを長押ししてコピー";
+  }
+  setTimeout(() => {
+    els.copyLaunchButton.textContent = "リンクをコピー";
+  }, 2000);
+}
+
+function buildCard(title, image, subtitle, isSelected, onClick) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "card";
+  if (isSelected) {
+    button.classList.add("selected");
+  }
+  button.innerHTML = `
+    <img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" loading="lazy">
+    <div class="card-copy">
+      <div class="card-title">${escapeHtml(title)}</div>
+      <div class="card-subtitle">${escapeHtml(subtitle)}</div>
+    </div>
+  `;
+  button.addEventListener("click", onClick);
+  return button;
+}
+
+/* ================================================================== */
+/* Rooms: create / join / resume / leave                                */
+/* ================================================================== */
+
+function hostMeta(config) {
+  const now = Date.now();
+  return {
+    hostUid: state.signaling.uid,
+    hostSid: state.signaling.sid,
+    createdAt: now,
+    expiresAt: now + ROOM_TTL_MS,
+    hb: now,
+    phase: PHASE.LOBBY,
+    players: 1,
+    max: config.maxPlayers,
+    v: 2
+  };
+}
+
+async function createRoom(config) {
+  const view = els.homeCreate.hidden ? "entry" : "create";
+  if (state.busy || !requireName(view)) {
+    return;
+  }
+  if (!validateConfig(config, view)) {
+    return;
+  }
+  state.busy = true;
+  try {
+    saveTeacherSettings(config);
+    let code = null;
+    for (let attempt = 0; attempt < 8 && !code; attempt += 1) {
+      const candidate = makeRoomCode();
+      if (await state.signaling.createRoom(candidate, hostMeta(config))) {
+        code = candidate;
+      }
+    }
+    if (!code) {
+      setNotice("部屋をつくれませんでした。もう一度ためしてください。", true, view);
+      return;
+    }
+    await startHost({ code, config, pool: buildPool(state.catalog, config.deckIds), name: readPlayerName() });
+  } catch (error) {
+    console.error(error);
+    setNotice(explainFirebaseError(error, "部屋をつくれませんでした。"), true, view);
+  } finally {
+    state.busy = false;
+  }
+}
+
+async function joinRoom(raw) {
+  const code = cleanRoomCode(raw);
+  const view = els.homeJoin.hidden ? "entry" : "join";
+  if (state.busy || !requireName(view)) {
+    return;
+  }
+  if (!isRoomCode(code)) {
+    setNotice("部屋コードを入力してください。", true, view);
+    return;
+  }
+  state.busy = true;
+  try {
+    const meta = await state.signaling.getMeta(code);
+    if (!meta || meta.closed) {
+      setNotice(`部屋 ${code} は見つかりません。`, true, view);
+      return;
+    }
+    if (meta.expiresAt && Date.now() > meta.expiresAt) {
+      setNotice("この部屋の期限がきれました。新しい部屋をつくってください。", true, view);
+      return;
+    }
+    startClient(code, readPlayerName());
+  } catch (error) {
+    console.error(error);
+    setNotice(explainFirebaseError(error, "部屋にはいれませんでした。"), true, view);
+  } finally {
+    state.busy = false;
+  }
+}
+
+async function openRoomFromLink(code) {
+  // Only the tab that created the room resumes it by itself; another tab (or another
+  // student's browser) with the same link simply joins as a player.
+  const saved = readHostSession();
+  if (saved && saved.code === code && saved.sid === state.signaling.sid) {
+    await resumeHost(saved);
+    return;
+  }
+  els.joinRoomInput.value = code;
+  const name = (localStorage.getItem(NAME_KEY) || "").trim();
+  if (name) {
+    els.playerName.value = name;
+    await joinRoom(code);
+  } else {
+    openNameGate(code);
+  }
+}
+
+function openNameGate(code) {
+  state.pendingJoinCode = code;
+  els.nameGateError.hidden = true;
+  els.nameGateInput.value = els.playerName.value || "";
+  els.nameGateModal.hidden = false;
+  els.nameGateInput.focus();
+}
+
+async function submitNameGate() {
+  const name = els.nameGateInput.value.trim();
+  if (!name) {
+    els.nameGateError.hidden = false;
+    els.nameGateError.textContent = "なまえをいれてね";
+    return;
+  }
+  els.playerName.value = name;
+  persistName();
+  els.nameGateModal.hidden = true;
+  const code = state.pendingJoinCode;
+  state.pendingJoinCode = null;
+  if (code) {
+    await joinRoom(code);
+  }
+}
+
+/* ----- host ----------------------------------------------------------- */
+
+async function startHost({ code, config, pool, name, snapshot = null }) {
+  teardownSession();
+  state.role = "host";
+  state.code = code;
+  state.view = null;
+  state.chat = [];
+  state.board.reset();
+
+  const deps = { pool, send: hostSend };
+  const engine = snapshot
+    ? GameHost.restore(snapshot, deps)
+    : new GameHost({ code, hostId: state.signaling.sid, config, ...deps });
+  state.engine = engine;
+  engine.onChange = scheduleHostPersist;
+
+  state.hub = new HostHub({
+    signaling: state.signaling,
+    code,
+    iceServers,
+    onMessage: onPeerMessage,
+    onPeerDown: (sid) => engine.setConnected(sid, false)
+  });
+
+  engine.join(engine.hostId, name);
+  state.hub.start();
+  state.timers.tick = setInterval(() => engine.tick(), 250);
+  state.timers.heartbeat = setInterval(sendHeartbeat, HEARTBEAT_MS);
+  sendHeartbeat();
+  scheduleHostPersist();
+  updateHash(code);
+  enterGameScreen();
+}
+
+function hostSend(id, msg) {
+  const engine = state.engine;
+  if (!engine) {
+    return false;
+  }
+  if (id === engine.hostId) {
+    queueMicrotask(() => onServerMessage(msg));
+    return true;
+  }
+  return state.hub ? state.hub.send(id, msg) : false;
+}
+
+function onPeerMessage(sid, msg) {
+  const engine = state.engine;
+  if (!engine) {
+    return;
+  }
+  if (msg.t === "hello") {
+    const result = engine.join(sid, msg.name);
+    if (!result.ok) {
+      state.hub.send(sid, { t: "reject", reason: result.reason });
+    }
+    return;
+  }
+  if (msg.t === "leave") {
+    engine.setConnected(sid, false);
+    return;
+  }
+  engine.handle(sid, msg);
+}
+
+function sendHeartbeat() {
+  const engine = state.engine;
+  if (!engine || !state.code) {
+    return;
+  }
+  state.signaling
+    .updateMeta(state.code, {
+      hb: Date.now(),
+      players: engine.connectedIds().length,
+      phase: engine.s.phase,
+      closed: false
+    })
+    .catch((error) => console.info("heartbeat failed", error));
+}
+
+function persistHostNow() {
+  clearTimeout(state.timers.persist);
+  state.timers.persist = 0;
+  if (!state.engine || state.role !== "host") {
+    return;
+  }
+  try {
+    localStorage.setItem(
+      HOST_SESSION_KEY,
+      JSON.stringify({ code: state.code, sid: state.signaling.sid, snapshot: state.engine.snapshot() })
+    );
+  } catch {
+    /* storage full or blocked: resume simply is not offered */
+  }
+}
+
+// Throttle (not debounce): constant drawing traffic must not starve the save.
+function scheduleHostPersist() {
+  if (!state.timers.persist) {
+    state.timers.persist = setTimeout(persistHostNow, 600);
+  }
+}
+
+window.addEventListener("pagehide", persistHostNow);
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") {
+    persistHostNow();
+  }
+});
+
+function readHostSession() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(HOST_SESSION_KEY) || "null");
+    return saved?.code && saved?.snapshot ? saved : null;
+  } catch {
+    return null;
+  }
+}
+
+function forgetHostSession() {
+  try {
+    localStorage.removeItem(HOST_SESSION_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
+function offerHostResume(hashRoom) {
+  const saved = readHostSession();
+  const fresh = saved && Date.now() - (saved.snapshot.savedAt || 0) < ROOM_TTL_MS;
+  if (!fresh) {
+    if (saved) {
+      forgetHostSession();
+    }
+    els.resumeHostButton.hidden = true;
+    return;
+  }
+  els.resumeHostButton.hidden = hashRoom === saved.code && saved.sid === state.signaling.sid; // that case resumes by itself
+  els.resumeHostButton.textContent = `まえの部屋 ${saved.code} にもどる`;
+}
+
+async function resumeHostFromButton() {
+  const saved = readHostSession();
+  if (saved) {
+    await resumeHost(saved);
+  }
+}
+
+async function resumeHost(saved) {
+  if (state.busy) {
+    return;
+  }
+  state.busy = true;
+  try {
+    state.signaling.useSid(saved.sid);
+    if (state.signaling.sid !== saved.snapshot.hostId) {
+      throw new Error("different browser identity");
+    }
+    const config = normalizeConfig(saved.snapshot.config);
+    const meta = await state.signaling.getMeta(saved.code);
+    if (!meta) {
+      if (!(await state.signaling.createRoom(saved.code, hostMeta(config)))) {
+        throw new Error("room code taken");
+      }
+    } else if (meta.hostUid !== state.signaling.uid) {
+      throw new Error("not our room");
+    } else {
+      await state.signaling.updateMeta(saved.code, { hb: Date.now(), closed: false });
+    }
+    const name = saved.snapshot.s.players?.[saved.snapshot.hostId]?.name || readPlayerName() || "Host";
+    await startHost({
+      code: saved.code,
+      config,
+      pool: buildPool(state.catalog, config.deckIds),
+      name,
+      snapshot: saved.snapshot
+    });
+  } catch (error) {
+    console.warn("Could not resume host session", error);
+    forgetHostSession();
+    els.resumeHostButton.hidden = true;
+    updateHash("");
+    setNotice("まえの部屋にもどれませんでした。あたらしい部屋をつくってください。", true, "entry");
+  } finally {
+    state.busy = false;
+  }
+}
+
+/* ----- client --------------------------------------------------------- */
+
+function startClient(code, name) {
+  teardownSession();
+  state.role = "client";
+  state.code = code;
+  state.view = null;
+  state.chat = [];
+  state.board.reset();
+
+  const link = new ClientLink({
+    signaling: state.signaling,
+    code,
+    iceServers,
+    onMessage: onServerMessage,
+    onStatus: onLinkStatus,
+    onOpen: () => link.send({ t: "hello", name })
+  });
+  state.link = link;
+  updateHash(code);
+  enterGameScreen();
+  onLinkStatus("connecting");
+  link.start();
+}
+
+function onLinkStatus(status, reason) {
+  const labels = {
+    connecting: "つなぎ中…",
+    reconnecting: "つなぎなおし中…",
+    hostAway: "ホストを まっています…"
+  };
+  const label = labels[status];
+  els.linkStatus.hidden = !label;
+  els.linkStatus.textContent = label || "";
+  if (status === "ended") {
+    const messages = {
+      expired: "この部屋の期限がきれました。",
+      "host-gone": "ホストが もどってきませんでした。",
+      closed: "部屋が閉じられました。"
+    };
+    endSession(messages[reason] || "部屋が閉じられました。");
+  }
+}
+
+/* ----- leaving -------------------------------------------------------- */
+
+async function leaveRoom() {
+  const code = state.code;
+  if (state.role === "host" && state.engine) {
+    for (const id of state.engine.connectedIds()) {
+      if (id !== state.engine.hostId) {
+        state.hub.send(id, { t: "bye" });
+      }
+    }
+    forgetHostSession();
+    state.signaling.closeRoom(code).catch(() => {});
+  } else if (state.role === "client") {
+    state.link?.send({ t: "leave" });
+  }
+  endSession("部屋をでました。");
+}
+
+function endSession(message) {
+  if (state.role === "host") {
+    forgetHostSession();
+  }
+  teardownSession();
+  state.role = null;
+  state.code = null;
+  state.view = null;
+  state.chat = [];
+  state.renderKeys = {};
+  state.board.reset();
+  els.leaveRoomButton.hidden = true;
+  els.wordChoicePanel.hidden = true;
+  els.revealPanel.hidden = true;
+  els.gameOverPanel.hidden = true;
+  els.roomQrModal.hidden = true;
+  els.showRoomQrButton.hidden = true;
+  els.toolbox.hidden = true;
+  els.linkStatus.hidden = true;
+  els.roomTitle.textContent = "----";
+  els.playersList.replaceChildren();
+  els.chatLog.replaceChildren();
+  els.wordHintLabel.textContent = "-";
+  els.timerLabel.textContent = "-";
+  els.phaseLabel.textContent = "待機中";
+  els.drawerWordBadge.hidden = true;
+  els.resumeHostButton.hidden = true;
+  updateHash("");
+  showHomeView("entry");
+  if (message) {
+    setNotice(message, false, "entry");
+  }
+  updateRoomMode();
+}
+
+function teardownSession() {
+  clearInterval(state.timers.tick);
+  clearInterval(state.timers.heartbeat);
+  clearInterval(state.timers.ui);
+  clearTimeout(state.timers.persist);
+  state.timers = { tick: null, heartbeat: null, persist: null, ui: null };
+  state.hub?.close();
+  state.link?.stop();
+  state.hub = null;
+  state.link = null;
+  if (state.engine) {
+    state.engine.onChange = null;
+  }
+  state.engine = null;
+  state.stroke = null;
+}
+
+function enterGameScreen() {
+  els.leaveRoomButton.hidden = false;
+  els.roomTitle.textContent = state.code;
+  els.showRoomQrButton.hidden = state.role !== "host";
+  state.timers.ui = setInterval(tickUi, 250);
+  updateRoomMode();
+}
+
+function updateRoomMode() {
+  const inRoom = Boolean(state.role);
+  document.body.classList.toggle("in-room", inRoom);
+  els.homeScreen.hidden = inRoom;
+  els.gameScreen.hidden = !inRoom;
+}
+
+/* ================================================================== */
+/* Messages from the host                                               */
+/* ================================================================== */
+
+/** What the player does (host acts on the engine directly; guests send over the data channel). */
+function sendIntent(msg) {
+  if (state.role === "host" && state.engine) {
+    state.engine.handle(state.engine.hostId, msg);
+  } else if (state.role === "client") {
+    state.link?.send(msg);
+  }
+}
+
+function onServerMessage(msg) {
+  if (!msg || !state.role) {
+    return;
+  }
+  switch (msg.t) {
+    case "view":
+      state.view = msg;
+      state.deadlineAt = msg.endsIn == null ? 0 : performance.now() + msg.endsIn;
+      renderView();
+      break;
+    case "chat":
+      state.chat.push(msg.e);
+      state.chat = state.chat.slice(-100);
+      renderChat();
+      break;
+    case "chats":
+      state.chat = msg.list;
+      renderChat();
+      break;
+    case "sync":
+      state.board.setStrokes(msg.strokes);
+      break;
+    case "sb":
+    case "sp":
+    case "fill":
+    case "clear":
+    case "undo":
+      state.board.apply(msg);
+      break;
+    case "notice":
+      setFlash(msg.x);
+      break;
+    case "reject":
+      endSession(msg.reason === "full" ? "この部屋は満員です。" : "この部屋にははいれません。");
+      break;
+    case "bye":
+      endSession("ホストが部屋をとじました。");
+      break;
+    default:
+      break;
+  }
+}
+
+function setFlash(text) {
+  els.wordHintLabel.textContent = text;
+  state.renderKeys.hint = null;
+  setTimeout(() => renderView(), 2500);
+}
+
+/* ================================================================== */
+/* Rendering                                                            */
+/* ================================================================== */
+
+const PHASE_JA = {
+  [PHASE.LOBBY]: "待機中",
+  [PHASE.CHOOSING]: "単語選択",
+  [PHASE.DRAWING]: "お絵かき中",
+  [PHASE.REVEAL]: "こたえ",
+  [PHASE.GAME_OVER]: "終了"
+};
+
+function changed(key, value) {
+  const next = typeof value === "string" ? value : JSON.stringify(value);
+  if (state.renderKeys[key] === next) {
+    return false;
+  }
+  state.renderKeys[key] = next;
+  return true;
+}
+
+function renderView() {
+  const v = state.view;
+  if (!v) {
+    return;
+  }
+  const isHost = v.you === v.hostId;
+  const isDrawer = v.you === v.drawerId;
+  const connected = v.players.filter((p) => p.on).length;
+
+  els.roomTitle.textContent = v.code;
+  els.roundLabel.textContent = v.phase === PHASE.LOBBY ? `-/${v.rounds}` : `${Math.min(v.round, v.rounds)}/${v.rounds}`;
+  els.phaseLabel.textContent = PHASE_JA[v.phase] || v.phase;
+
+  // hint line
+  let hint = "-";
+  if (v.phase === PHASE.LOBBY) {
+    hint = isHost
+      ? v.note || (connected < 2 ? "ともだちを まってね（2人いじょう）" : `${connected}人 そろったら スタート！`)
+      : v.note || "ホストが スタートするのを まっています";
+  } else if (v.phase === PHASE.CHOOSING) {
+    hint = isDrawer ? "ことばを えらんでね" : "かく人が ことばを えらんでいます";
+  } else if (v.phase === PHASE.DRAWING) {
+    hint = isDrawer ? "えを かこう！" : v.hint;
+  } else if (v.phase === PHASE.REVEAL) {
+    hint = `こたえ: ${v.word?.english || ""}`;
+  } else if (v.phase === PHASE.GAME_OVER) {
+    hint = "ゲームしゅうりょう！";
+  }
+  if (changed("hint", hint)) {
+    els.wordHintLabel.textContent = hint;
+  }
+  const jp = v.phase === PHASE.DRAWING && !isDrawer ? v.jp || "" : "";
+  els.jpHintLabel.hidden = !jp;
+  els.jpHintLabel.textContent = jp;
+
+  els.drawerWordBadge.hidden = !(isDrawer && v.phase === PHASE.DRAWING && v.word);
+  els.drawerWordLabel.textContent = v.word?.english || "";
+
+  els.startGameButton.hidden = !(isHost && v.phase === PHASE.LOBBY);
+  els.startGameButton.disabled = !v.canStart;
+
+  const drawing = isDrawer && v.phase === PHASE.DRAWING;
+  els.toolbox.hidden = !drawing;
+  els.clearBoardButton.disabled = !drawing;
+  els.undoButton.disabled = !drawing;
+  els.board.classList.toggle("can-draw", drawing);
+
+  renderPlayers(v);
+  renderWordChoices(v, isDrawer);
+  renderReveal(v);
+  renderGameOver(v, isHost);
+  tickUi();
+}
+
+function renderPlayers(v) {
+  if (!changed("players", [v.players, v.drawerId, v.phase])) {
+    return;
+  }
+  const ranked = [...v.players].sort((a, b) => b.s - a.s);
+  els.playersList.replaceChildren(
+    ...ranked.map((player) => {
+      const row = document.createElement("div");
+      row.className = "player-row";
+      if (player.id === v.drawerId) {
+        row.classList.add("active-drawer");
+      }
+      if (!player.on) {
+        row.classList.add("offline");
+      }
+      const badges = [];
+      if (player.id === v.drawerId) {
+        badges.push("かく番");
+      }
+      if (player.g && v.phase === PHASE.DRAWING) {
+        badges.push("正解");
+      }
+      if (!player.on) {
+        badges.push("つながってない");
+      }
+      const badgeText = badges.length ? ` · ${badges.join(" · ")}` : "";
+      row.innerHTML = `<strong>${escapeHtml(player.n)}</strong> ${player.s}点${badgeText}`;
+      return row;
+    })
+  );
+}
+
+function renderWordChoices(v, isDrawer) {
+  const show = isDrawer && v.phase === PHASE.CHOOSING && Array.isArray(v.options);
+  els.wordChoicePanel.hidden = !show;
+  if (!show) {
+    state.renderKeys.options = null;
+    els.wordChoiceGrid.replaceChildren();
+    return;
+  }
+  if (!changed("options", v.options.map((o) => o.id))) {
+    return;
+  }
+  els.wordChoiceGrid.replaceChildren(
+    ...v.options.map((option, index) =>
+      buildCard(option.english, option.image, [option.kanji, option.furigana].filter(Boolean).join(" "), false, () =>
+        sendIntent({ t: "pick", i: index })
+      )
+    )
+  );
+}
+
+function renderReveal(v) {
+  const show = v.phase === PHASE.REVEAL && v.word;
+  els.revealPanel.hidden = !show;
+  if (!show) {
+    state.renderKeys.reveal = null;
+    return;
+  }
+  if (!changed("reveal", [v.round, v.word.id, v.result?.gains])) {
+    return;
+  }
+  const kickers = {
+    time: "じかんぎれ！",
+    all: "みんな せいかい！",
+    alone: "こたえ",
+    "drawer-left": "かく人が いなくなりました"
+  };
+  els.revealKicker.textContent = kickers[v.result?.reason] || "こたえ";
+  els.revealImage.src = v.word.image || "";
+  els.revealImage.alt = v.word.english;
+  els.revealWord.textContent = v.word.english;
+  els.revealJp.textContent = [v.word.kanji, v.word.furigana].filter(Boolean).join("　");
+  const names = new Map(v.players.map((p) => [p.id, p.n]));
+  const gains = Object.entries(v.result?.gains || {}).sort((a, b) => b[1] - a[1]);
+  els.revealGains.replaceChildren(
+    ...(gains.length
+      ? gains.map(([id, gain]) => {
+          const li = document.createElement("li");
+          const icon = id === v.result.drawerId ? "🎨 " : "";
+          li.innerHTML = `${icon}${escapeHtml(names.get(id) || "")} <span class="gain">+${gain}</span>`;
+          return li;
+        })
+      : [Object.assign(document.createElement("li"), { textContent: "だれも わからなかった…" })])
+  );
+}
+
+function renderGameOver(v, isHost) {
+  const over = v.phase === PHASE.GAME_OVER;
+  els.gameOverPanel.hidden = !over;
+  if (!over) {
+    state.renderKeys.over = null;
+    return;
+  }
+  els.gameOverWaiting.hidden = isHost;
+  els.gameOverActions.hidden = false;
+  els.playAgainButton.hidden = !isHost;
+  els.playAgainButton.disabled = !v.canStart;
+  els.quitGameButton.hidden = false;
+  els.gameOverLastWord.textContent = "";
+
+  if (!changed("over", [v.players, v.review?.map((w) => w.id)])) {
+    return;
+  }
+  const ranked = [...v.players].sort((a, b) => b.s - a.s);
+  els.leaderboardList.replaceChildren(
+    ...ranked.map((player, index) => {
+      const row = document.createElement("li");
+      if (index === 0) {
+        row.classList.add("rank-1");
+      }
+      const crown = index === 0 ? '<span class="leaderboard-crown" aria-hidden="true">👑</span>' : `<span>${index + 1}</span>`;
+      row.innerHTML = `${crown}<span>${escapeHtml(player.n)}</span><strong>${player.s}点</strong>`;
+      return row;
+    })
+  );
+  els.reviewGrid.replaceChildren(
+    ...(v.review || []).map((word) => {
+      const item = document.createElement("div");
+      item.className = "review-item";
+      item.innerHTML = `<img src="${escapeHtml(word.image)}" alt="" loading="lazy"><span>${escapeHtml(word.english)}</span><small>${escapeHtml(word.kanji || "")}</small>`;
+      return item;
+    })
+  );
+}
+
+function renderChat() {
+  els.chatLog.replaceChildren(
+    ...state.chat.slice(-80).map((entry) => {
+      const row = document.createElement("div");
+      row.className = `chat-row ${entry.k === "wrong" ? "incorrect" : entry.k}`;
+      const name = `<strong>${escapeHtml(entry.n || "")}</strong>`;
+      const text = escapeHtml(entry.x || "");
+      switch (entry.k) {
+        case "correct":
+          row.innerHTML = `○ ${name} 正解！`;
+          break;
+        case "wrong":
+          row.innerHTML = `× ${name} ${text}`;
+          break;
+        case "close":
+          row.innerHTML = `△ ${name} ${text} <em>おしい！</em>`;
+          break;
+        case "closeNote":
+          row.innerHTML = `△ ${name} おしい！`;
+          break;
+        case "team":
+          row.innerHTML = `🔒 ${name} ${text}`;
+          break;
+        case "system":
+          row.textContent = entry.x || "";
+          break;
+        default:
+          row.innerHTML = `${name} ${text}`;
+      }
+      return row;
+    })
+  );
+  els.chatLog.scrollTop = els.chatLog.scrollHeight;
+}
+
+function tickUi() {
+  const v = state.view;
+  if (!v || v.endsIn == null) {
+    els.timerLabel.textContent = "-";
+    els.revealTimer.textContent = "-";
+    return;
+  }
+  const seconds = String(Math.max(0, Math.ceil((state.deadlineAt - performance.now()) / 1000)));
+  els.timerLabel.textContent = seconds;
+  els.revealTimer.textContent = seconds;
+}
+
+/* ================================================================== */
+/* Chat                                                                 */
+/* ================================================================== */
+
+function submitChat() {
+  const text = els.chatInput.value.trim();
+  if (!text || !state.role) {
+    return;
+  }
+  sendIntent({ t: "chat", x: text });
+  els.chatInput.value = "";
+}
+
+/* ================================================================== */
+/* Drawing                                                              */
+/* ================================================================== */
+
+function setActiveColor(color) {
+  state.color = color;
+  document.querySelectorAll(".color-button").forEach((button) => {
+    button.classList.toggle("selected", button.dataset.color.toLowerCase() === color.toLowerCase());
+  });
+}
+
+function canDraw() {
+  const v = state.view;
+  return Boolean(v && v.phase === PHASE.DRAWING && v.drawerId === v.you);
+}
+
+function newId() {
+  return `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
 }
 
 function getCanvasPoint(event) {
   const rect = els.board.getBoundingClientRect();
-  const x = ((event.clientX - rect.left) / rect.width) * els.board.width;
-  const y = ((event.clientY - rect.top) / rect.height) * els.board.height;
-  return [Math.round(x), Math.round(y)];
+  return [
+    Math.round(((event.clientX - rect.left) / rect.width) * els.board.width),
+    Math.round(((event.clientY - rect.top) / rect.height) * els.board.height)
+  ];
 }
 
-function canDraw() {
-  return Boolean(state.roomData && state.roomData.phase === "drawing" && state.roomData.drawerId === state.playerId);
-}
-
-function makePlayerRecord(name, score = 0) {
-  return {
-    name,
-    score,
-    connected: true,
-    guessed: false,
-    lastSeen: Date.now()
-  };
-}
-
-function readPlayerName() {
-  return els.playerName.value.trim();
-}
-
-function persistName() {
-  const name = readPlayerName();
-  localStorage.setItem("classroom-scribble-name", name);
-}
-
-function hydrateName() {
-  els.playerName.value = localStorage.getItem("classroom-scribble-name") || "";
-}
-
-function normalizeWord(value) {
-  return value.toLowerCase().trim().replace(/\s+/g, " ");
-}
-
-function cleanAssetPath(path) {
-  return String(path || "").replace(/^\/+/, "").replace(/\/+$/, "").replace(/%20/g, " ");
-}
-
-function toStaticAssetUrl(path) {
-  const cleaned = normalizeImagePath(path);
-  return cleaned ? `./${cleaned.replace(/ /g, "%20")}` : "";
-}
-
-function normalizeDeckPath(path) {
-  const cleaned = cleanAssetPath(path);
-  const aliases = {
-    "assets/vocab/NH5/alphabet.json": "",
-    "assets/vocab/PD/SchoolEvents.json": "assets/vocab/PD/schoolevents.json",
-    "assets/vocab/PD/ClubActivities.json": "assets/vocab/PD/clubactivities.json",
-    "assets/vocab/PD/SeaAnimals.json": "assets/vocab/PD/seaanimals.json",
-    "assets/vocab/PD/PastTense.json": "assets/vocab/PD/pasttense.json",
-    "assets/vocab/PD/body.json/": "assets/vocab/PD/body.json"
-  };
-  return aliases[cleaned] ?? cleaned;
-}
-
-function normalizeImagePath(path) {
-  const cleaned = cleanAssetPath(path);
-  const aliases = {
-    "assets/images/categories/jobs/Zookeeper.jpg": "assets/images/categories/Jobs/Zookeeper.jpg"
-  };
-  return aliases[cleaned] ?? cleaned;
-}
-
-async function readJsonFile(url) {
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`Could not load ${url}`);
-  }
-  const text = await response.text();
-  if (!text.trim()) {
-    throw new Error(`File was empty: ${url}`);
-  }
-  return JSON.parse(text);
-}
-
-function slug(value) {
-  return String(value)
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-function clampNumber(value, min, max, fallback) {
-  const parsed = Number(value);
-  if (!Number.isFinite(parsed)) {
-    return fallback;
-  }
-  return Math.max(min, Math.min(max, Math.round(parsed)));
-}
-
-function makeRoomCode() {
-  const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-  let code = "";
-  const bytes = crypto.getRandomValues(new Uint8Array(ROOM_CODE_LENGTH));
-  for (let i = 0; i < ROOM_CODE_LENGTH; i += 1) {
-    code += alphabet[bytes[i] % alphabet.length];
-  }
-  return code;
-}
-
-function makeClientEventKey() {
-  return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-}
-
-function updateHash(roomCode) {
-  if (!roomCode) {
-    history.replaceState(null, "", location.pathname);
+/** Apply a drawing op locally right away and send it to the host. */
+function drawerOp(op) {
+  if (!canDraw()) {
     return;
   }
-  history.replaceState(null, "", `${location.pathname}#${roomCode}`);
+  state.board.apply(op);
+  sendIntent(op);
 }
 
-function readRoomCodeFromHash() {
-  return location.hash.replace(/^#/, "").trim().toUpperCase();
+function onPointerDown(event) {
+  if (!canDraw() || event.button > 0) {
+    return;
+  }
+  event.preventDefault();
+  const [x, y] = getCanvasPoint(event);
+
+  if (state.tool === "fill") {
+    drawerOp({ t: "fill", id: newId(), c: state.color, x, y });
+    return;
+  }
+
+  const id = newId();
+  state.stroke = { id, last: [x, y], pending: [], frame: 0 };
+  drawerOp({ t: "sb", id, c: state.tool === "rubber" ? "#ffffff" : state.color, w: state.brushSize, x, y });
+  els.board.setPointerCapture?.(event.pointerId);
 }
 
-function updateRoomMode() {
-  const inRoom = Boolean(state.roomCode);
-  document.body.classList.toggle("in-room", inRoom);
-  els.homeScreen.hidden = inRoom;
-  els.gameScreen.hidden = !inRoom;
+function onPointerMove(event) {
+  const stroke = state.stroke;
+  if (!stroke) {
+    return;
+  }
+  if (!canDraw()) {
+    state.stroke = null;
+    return;
+  }
+  const events = event.getCoalescedEvents?.() || [event];
+  for (const item of events) {
+    const point = getCanvasPoint(item);
+    if (Math.hypot(point[0] - stroke.last[0], point[1] - stroke.last[1]) >= 2) {
+      stroke.pending.push(point[0], point[1]);
+      stroke.last = point;
+    }
+  }
+  if (stroke.pending.length > 0 && !stroke.frame) {
+    stroke.frame = requestAnimationFrame(() => flushStroke(stroke));
+  }
+}
+
+function flushStroke(stroke) {
+  stroke.frame = 0;
+  if (stroke.pending.length === 0) {
+    return;
+  }
+  const p = stroke.pending.splice(0, stroke.pending.length);
+  for (let i = 0; i < p.length; i += 300) {
+    if (canDraw()) {
+      drawerOp({ t: "sp", id: stroke.id, p: p.slice(i, i + 300) });
+    }
+  }
+}
+
+function onPointerUp(event) {
+  const stroke = state.stroke;
+  if (!stroke) {
+    return;
+  }
+  const point = getCanvasPoint(event);
+  if (point[0] !== stroke.last[0] || point[1] !== stroke.last[1]) {
+    stroke.pending.push(point[0], point[1]);
+  }
+  cancelAnimationFrame(stroke.frame);
+  flushStroke(stroke);
+  state.stroke = null;
+}
+
+/* ================================================================== */
+/* URLs and QR codes                                                    */
+/* ================================================================== */
+
+function updateHash(roomCode) {
+  const hash = roomCode ? `#${encodeRoomHash(roomCode)}` : "";
+  history.replaceState(null, "", `${location.pathname}${location.search}${hash}`);
 }
 
 function siteUrl() {
@@ -1949,7 +1481,7 @@ function siteUrl() {
 }
 
 function roomJoinUrl(roomCode) {
-  return `${siteUrl()}#${roomCode}`;
+  return `${siteUrl()}#${encodeRoomHash(roomCode)}`;
 }
 
 function renderQr(imageEl, text, sizePx = 180) {
@@ -1975,15 +1507,11 @@ function renderQr(imageEl, text, sizePx = 180) {
   }
 }
 
-function renderHomeSiteQr() {
-  renderQr(els.homeSiteQr, siteUrl(), 160);
-}
-
 function showRoomQrModal() {
-  if (!state.roomCode) {
+  if (!state.code) {
     return;
   }
-  const link = roomJoinUrl(state.roomCode);
+  const link = roomJoinUrl(state.code);
   els.roomQrLink.textContent = link;
   renderQr(els.roomJoinQr, link, 200);
   els.roomQrModal.hidden = false;
@@ -2000,136 +1528,11 @@ function closeQrEnlarge() {
   els.qrEnlargeModal.hidden = true;
 }
 
-function openNameGate(roomCode) {
-  state.pendingJoinCode = roomCode.toUpperCase().replace(/[^A-Z0-9]/g, "");
-  els.joinRoomInput.value = state.pendingJoinCode;
-  els.nameGateError.hidden = true;
-  els.nameGateInput.value = els.playerName.value || "";
-  els.nameGateModal.hidden = false;
-  els.nameGateInput.focus();
-}
-
-async function submitNameGate() {
-  const name = els.nameGateInput.value.trim();
-  if (!name) {
-    els.nameGateError.hidden = false;
-    els.nameGateError.textContent = "なまえをいれてね";
-    return;
-  }
-  els.playerName.value = name;
-  persistName();
-  const code = state.pendingJoinCode;
-  els.nameGateModal.hidden = true;
-  state.pendingJoinCode = null;
-  if (code) {
-    await joinRoom(code);
-  }
-}
-
-function sendDrawLive(msg) {
-  if (!state.webrtc) {
-    return false;
-  }
-  return state.webrtc.send(msg);
-}
-
-function handleWebRtcDrawMessage(msg) {
-  if (!msg || state.webrtcApplyingRemote) {
-    return;
-  }
-  // Ignore echo while we are the active drawer painting locally.
-  if (canDraw() && (msg.t === "seg" || msg.t === "fill")) {
-    return;
-  }
-  state.webrtcApplyingRemote = true;
-  try {
-    if (msg.t === "seg") {
-      drawStrokeSegment([msg.x1, msg.y1], [msg.x2, msg.y2], msg.c, msg.w);
-      return;
-    }
-    if (msg.t === "fill") {
-      floodFill(msg.x, msg.y, msg.c || "#000000");
-      cacheCommittedBoard(state.boardCacheRevision ?? 0);
-      return;
-    }
-    if (msg.t === "clear") {
-      ctx.fillStyle = "#ffffff";
-      ctx.fillRect(0, 0, els.board.width, els.board.height);
-      cacheCommittedBoard((state.boardCacheRevision || 0) + 1);
-      return;
-    }
-    if (msg.t === "undo") {
-      const board = state.roomData?.board;
-      if (!board?.strokes) {
-        return;
-      }
-      const keys = Object.keys(board.strokes).sort((a, b) => a.localeCompare(b));
-      if (keys.length === 0) {
-        return;
-      }
-      const clone = {
-        revision: (board.revision || 0) + 1,
-        strokes: { ...board.strokes }
-      };
-      delete clone.strokes[keys[keys.length - 1]];
-      state.renderedBoardRevision = null;
-      redrawBoard(clone);
-      return;
-    }
-    if (msg.t === "sync" && msg.board) {
-      state.renderedBoardRevision = null;
-      redrawBoard(msg.board);
-      state.renderedBoardRevision = msg.board.revision ?? state.renderedBoardRevision;
-    }
-  } finally {
-    state.webrtcApplyingRemote = false;
-  }
-}
-
-function ensureWebRtcSession() {
-  if (!state.roomCode || !state.playerId || !state.db) {
-    return;
-  }
-  if (state.webrtc && state.webrtc.roomCode === state.roomCode) {
-    return;
-  }
-  stopWebRtcSession();
-  const roomCode = state.roomCode;
-  const session = createWebRtcDraw({
-    db: state.db,
-    ref,
-    set,
-    remove,
-    push,
-    onValue,
-    onChildAdded,
-    roomCode,
-    playerId: state.playerId,
-    getIsHost: () => state.roomData?.ownerId === state.playerId,
-    getPlayerName: () => readPlayerName() || "Player",
-    iceServers,
-    onDrawMessage: handleWebRtcDrawMessage,
-    getSyncPayload: () => state.roomData?.board || { revision: 0, strokes: {} }
-  });
-  session.roomCode = roomCode;
-  state.webrtc = session;
-  session.start().catch((error) => console.warn("WebRTC start failed", error));
-}
-
-function stopWebRtcSession() {
-  if (!state.webrtc) {
-    return Promise.resolve();
-  }
-  const session = state.webrtc;
-  state.webrtc = null;
-  return session.stop().catch((error) => console.warn("WebRTC stop failed", error));
-}
-
 function escapeHtml(value) {
-  return String(value)
+  return String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
-    .replaceAll("\"", "&quot;")
+    .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 }

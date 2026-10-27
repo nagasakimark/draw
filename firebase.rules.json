@@ -3,55 +3,33 @@
     ".read": false,
     ".write": false,
     "rooms": {
-      "$roomId": {
-        ".read": "auth != null && $roomId.matches(/^[A-Z0-9]{6,12}$/)",
-        ".write": "auth != null && $roomId.matches(/^[A-Z0-9]{6,12}$/) && (
-          (!data.exists() && newData.exists() && newData.child('ownerId').val() == auth.uid && newData.child('code').val() == $roomId) ||
-          (data.exists() && newData.exists() && newData.child('code').val() == $roomId) ||
-          (data.exists() && !newData.exists())
-        )",
-        ".validate": "newData.hasChildren(['code', 'ownerId', 'createdAt', 'expiresAt', 'phase', 'settings', 'players'])",
-        "code": {
-          ".validate": "newData.isString() && newData.val() == $roomId"
+      "$code": {
+        ".write": "auth != null && $code.matches(/^[A-Z0-9]{6}$/) && data.child('meta/hostUid').val() == auth.uid",
+        "meta": {
+          ".read": "auth != null",
+          ".write": "auth != null && $code.matches(/^[A-Z0-9]{6}$/) && ((!data.exists() && newData.child('hostUid').val() == auth.uid) || (data.exists() && data.child('hostUid').val() == auth.uid))",
+          ".validate": "!newData.exists() || (newData.hasChildren(['hostUid', 'createdAt', 'expiresAt']) && newData.child('hostUid').isString())",
+          "hostUid": { ".validate": "newData.isString() && newData.val().length <= 128" },
+          "createdAt": { ".validate": "newData.isNumber()" },
+          "expiresAt": { ".validate": "newData.isNumber()" },
+          "hb": { ".validate": "newData.isNumber()" },
+          "closed": { ".validate": "newData.isBoolean()" },
+          "config": { ".validate": "newData.hasChildren()" },
+          "$other": { ".validate": "false" }
         },
-        "ownerId": {
-          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 128"
-        },
-        "createdAt": {
-          ".validate": "newData.isNumber()"
-        },
-        "expiresAt": {
-          ".validate": "newData.isNumber()"
-        },
-        "phase": {
-          ".validate": "newData.isString()"
-        },
-        "settings": {
-          ".validate": "newData.hasChildren(['rounds', 'drawingTime', 'maxPlayers', 'deckId', 'deckName'])"
-        },
-        "players": {
-          "$playerId": {
-            ".write": "auth != null && auth.uid == $playerId",
-            ".validate": "newData.hasChildren(['name', 'score', 'connected'])"
-          }
-        },
-        "chat": {
-          "$chatId": {
-            ".validate": "newData.hasChildren(['text', 'createdAt']) && newData.child('text').isString() && newData.child('text').val().length <= 120"
-          }
-        },
-        "webrtc": {
-          "peers": {
-            "$uid": {
-              ".validate": "!newData.exists() || (newData.hasChildren(['name', 'joinedAt']) && newData.child('name').isString() && newData.child('joinedAt').isNumber())"
-            }
-          },
-          "signals": {
-            "$toUid": {
-              "$signalId": {
-                ".validate": "!newData.exists() || (newData.hasChildren(['type', 'ts', 'from']) && newData.child('from').isString() && newData.child('type').isString() && newData.child('ts').isNumber())"
-              }
-            }
+        "signal": {
+          ".read": "auth != null && root.child('rooms').child($code).child('meta/hostUid').val() == auth.uid",
+          "$sid": {
+            ".read": "auth != null && $sid.beginsWith(auth.uid)",
+            ".write": "auth != null && root.child('rooms').child($code).child('meta').exists() && ($sid.beginsWith(auth.uid) || root.child('rooms').child($code).child('meta/hostUid').val() == auth.uid)",
+            ".validate": "!newData.exists() || newData.hasChildren(['state'])",
+            "offer": { ".validate": "newData.hasChildren(['type', 'sdp']) && newData.child('sdp').isString() && newData.child('sdp').val().length < 12000" },
+            "answer": { ".validate": "newData.hasChildren(['type', 'sdp']) && newData.child('sdp').isString() && newData.child('sdp').val().length < 12000" },
+            "offerSeq": { ".validate": "newData.isNumber()" },
+            "answerSeq": { ".validate": "newData.isNumber()" },
+            "state": { ".validate": "newData.isString()" },
+            "updatedAt": { ".validate": "newData.isNumber()" },
+            "$other": { ".validate": "false" }
           }
         }
       }
